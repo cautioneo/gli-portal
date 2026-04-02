@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modèles de Bail de Location | Cautioneo Bailleurs</title>
+    <meta name="description" content="Téléchargez nos modèles de baux conformes loi Alur : vide, meublé, bail mobilité.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+                        <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" data-reveal="fade-up">
+        <div class="container">
+            <h1>Modèles de Baux & Documents Locatifs</h1>
+            <p>Accédez à notre bibliothèque de documents juridiques certifiés conformes (Loi Alur 2024).</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumb">
+                <a href="procedures.html">&larr; Retour aux Démarches & Procédures</a>
+            </div>
+
+            <div class="guide-layout">
+                <!-- Sidebar Sommaire -->
+                <aside class="sidebar-sticky">
+                    <h3 class="text-lg mb-24">Sommaire</h3>
+                    <ul class="sidebar-nav">
+                        <li class="mb-12"><a href="#loialur" class="text-main font-medium">Contrat Type (Loi Alur)</a></li>
+                        <li class="mb-12"><a href="#clauses" class="text-main font-medium">Les clauses obligatoires / abusives</a></li>
+                        <li class="mb-12"><a href="#telechargement" class="text-main font-medium">Téléchargement PDF Modèles</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="content-body">
+                    <div id="loialur" class="mb-48">
+                        <h2 class="text-2xl mb-16">1. Le Contrat Type issu de la Loi Alur</h2>
+                        <p class="text-lg text-muted mb-16">Depuis le 1er août 2015, la rédaction du bail n'est plus libre. Bailleur et locataire ont l'obligation formelle d'utiliser un <strong>contrat type encadré par l'État</strong>.</p>
+                        <div class="info-note">
+                            <p>Il est impératif d'annexer la "Notice d'Information du Locataire" au bail, sous peine de nullité de certaines clauses.</p>
+                        </div>
+                    </div>
+
+                    <div id="clauses" class="mb-48">
+                        <h2 class="text-2xl mb-16">2. Clauses Obligatoires vs Clauses Interdites</h2>
+                        
+                        <div class="guide-grid-2">
+                            <div class="card p-24 border accent-primary">
+                                <h4 class="mb-12">Mentions Obligatoires</h4>
+                                <ul class="pl-20 text-sm text-muted line-height-1-8">
+                                    <li>Identité complète des parties.</li>
+                                    <li>Surface habitable exacte (Loi Boutin).</li>
+                                    <li>Modalités de paiement du loyer.</li>
+                                    <li>Loyer du précédent locataire.</li>
+                                    <li>Montant du dépôt de garantie.</li>
+                                </ul>
+                            </div>
+                            <div class="card p-24 border accent-danger">
+                                <h4 class="mb-12 text-danger">Clauses Interdites</h4>
+                                <ul class="pl-20 text-sm line-height-1-8 text-danger">
+                                    <li>Imposer le prélèvement automatique.</li>
+                                    <li>Interdire les animaux de compagnie.</li>
+                                    <li>Facturer l'état des lieux (hors huissier).</li>
+                                    <li>Imposer une assurance spécifique.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="telechargement" class="mb-48">
+                        <h2 class="text-2xl mb-16">3. Téléchargez vos modèles de bail (Gratuit)</h2>
+                        <p class="text-lg text-muted mb-32">Accédez gratuitement à nos modèles rédigés par des juristes, mis à jour selon les dernières réglementations 2024.</p>
+                        
+                        <div class="grid-2-cols mb-32">
+                            <div class="card p-24 border hover-lift">
+                                <div class="flex items-center gap-16 mb-16">
+                                    <div class="text-3xl">📄</div>
+                                    <div>
+                                        <h4 class="mb-4">Bail Location Nue</h4>
+                                        <div class="badge badge-primary">V.2024 - PDF</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-full" onclick="openModal(event)">Télécharger</button>
+                            </div>
+
+                            <div class="card p-24 border hover-lift">
+                                <div class="flex items-center gap-16 mb-16">
+                                    <div class="text-3xl">🏠</div>
+                                    <div>
+                                        <h4 class="mb-4">Bail Meublé (LMNP)</h4>
+                                        <div class="badge badge-primary">V.2024 - PDF</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-full" onclick="openModal(event)">Télécharger</button>
+                            </div>
+                        </div>
+
+                        <!-- CTA Box -->
+                        <div class="cta-banner" data-reveal="fade-up">
+                            <h3 class="text-white mb-16">Ne signez pas avant d'avoir sécurisé vos revenus</h3>
+                            <p class="mb-24 opacity-90">Cautioneo sécurise vos loyers jusqu'à 96 000 €, prend en charge les procédures de contentieux et paie dès le premier mois d'impayé.</p>
+                            <a href="comparatif-gli.html" class="btn btn-white">Découvrir les garanties</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale Lead -->
+    <div class="modal-overlay" id="lead-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
+            <h2 class="mb-12">Votre document est prêt !</h2>
+            <p class="text-muted mb-24">Laissez-nous vos coordonnées pour recevoir le lien de téléchargement immédiat.</p>
+            
+            <form id="lead-form">
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Nom complet</label>
+                    <input type="text" class="form-control" placeholder="Jean Dupont" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Adresse e-mail</label>
+                    <input type="email" class="form-control" placeholder="jean@exemple.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-16">Accéder au document (Gratuit)</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Riche -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+                    <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                    <div class="mt-32">
+                        <h4 class="text-white mb-12">Rejoignez la communauté</h4>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="votre@email.com" required aria-label="Email Newsletter">
+                            <button type="submit" class="newsletter-btn">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures.html">Guide des Procédures</a></li>
+                        <li><a href="fiscalite.html">Fiscalité Immobilière</a></li>
+                        <li><a href="glossaire.html">Glossaire Juridique</a></li>
+                        <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs.html">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs.html">Estimateur GLI</a></li>
+                        <li><a href="index.html#solvabilite">Testeur de Solvabilité</a></li>
+                        <li><a href="boite-a-outils.html">Boîte à Outils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgs.html">CGS / CGU</a></li>
+                        <li><a href="confidentialite.html">Protection des données</a></li>
+                        <li><a href="reclamation.html">Réclamations</a></li>
+                        <li><a href="conciergerie.html">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

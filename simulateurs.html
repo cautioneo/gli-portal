@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateurs & Outils Bailleurs | Cautioneo Bailleurs</title>
+    <meta name="description" content="Estimez votre rentabilité nette et votre prime d'assurance GLI en quelques clics grâce à nos outils gratuits.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+                    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero" data-reveal="fade-up">
+        <div class="container">
+            <h1>Outils & Simulateurs Bailleurs</h1>
+            <p>Estimez la rentabilité de votre projet et le coût de votre protection en quelques clics.</p>
+        </div>
+    </header>
+
+    <!-- Simulateurs Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-2-cols items-start gap-48">
+                
+                <!-- Simulateur de Rentabilité -->
+                <div class="card p-32 border" data-reveal="fade-up">
+                    <h2 class="mb-16">Calculateur de Rentabilité</h2>
+                    <p class="text-muted mb-32">Évaluez la performance réelle de votre investissement locatif (Brute vs Nette).</p>
+                    
+                    <form id="renta-form">
+                        <div class="form-group mb-16">
+                            <label class="mb-8 block text-sm font-medium">Prix d'achat TTC (€)</label>
+                            <input type="number" id="prix-achat" class="form-control" placeholder="Ex: 220000" required>
+                        </div>
+                        <div class="form-group mb-16">
+                            <label class="mb-8 block text-sm font-medium">Loyer mensuel HC (€)</label>
+                            <input type="number" id="loyer-mensuel" class="form-control" placeholder="Ex: 950" required>
+                        </div>
+                        <div class="form-group mb-16">
+                            <label class="mb-8 block text-sm font-medium">Charges & Taxe foncière annuelle (€)</label>
+                            <input type="number" id="charges-annuelles" class="form-control" placeholder="Ex: 1800">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full mt-16">Calculer ma rentabilité</button>
+                    </form>
+
+                    <div id="result-renta" class="hidden mt-32 pt-32 border-top">
+                        <div class="flex-center gap-24">
+                            <div class="text-center">
+                                <span class="text-muted text-xs uppercase font-bold">Rendement Brut</span>
+                                <div id="val-renta-brute" class="text-2xl font-bold text-primary">--</div>
+                            </div>
+                            <div class="vr"></div>
+                            <div class="text-center">
+                                <span class="text-muted text-xs uppercase font-bold">Rendement Net</span>
+                                <div id="val-renta-nette" class="text-2xl font-bold text-success">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estimateur Prime GLI -->
+                <div class="card p-32 border" data-reveal="fade-up">
+                    <h2 class="mb-16">Estimateur de Prime GLI</h2>
+                    <p class="text-muted mb-32">Combien coûte la protection Cautioneo ? Estimez votre cotisation mensuelle.</p>
+                    
+                    <form id="gli-form">
+                        <div class="form-group mb-16">
+                            <label class="mb-8 block text-sm font-medium">Loyer mensuel charges comprises (€)</label>
+                            <input type="number" id="loyer-cc" class="form-control" placeholder="Ex: 1050" required>
+                        </div>
+                        <div class="form-group mb-16">
+                            <label class="mb-8 block text-sm font-medium">Le locataire a-t-il le Garant Cautioneo ?</label>
+                            <select id="statut-locataire" class="form-control" title="Le locataire a-t-il le Garant Cautioneo ?">
+                                <option value="non">Non, GLI classique</option>
+                                <option value="oui">Oui, il est certifié</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full mt-16">Estimer ma prime</button>
+                    </form>
+
+                    <div id="result-gli" class="hidden mt-32 p-24 bg-subtle radius-lg text-center">
+                        <span class="text-muted text-xs uppercase font-bold">Estimation Prime Mensuelle</span>
+                        <div class="text-3xl font-bold mb-8 text-main"><span id="val-prime">--</span> € / mois</div>
+                        <p id="desc-prime" class="text-sm text-muted mb-16"></p>
+                        <button class="btn btn-primary btn-sm" onclick="openModal(event)">Obtenir mon devis final</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Nouveau : Calculateur de Risque Impayé -->
+            <div class="mt-48 p-40 bg-light border-radius-20 shadow-sm" data-reveal="fade-up">
+                <div class="text-center mb-32">
+                    <span class="badge badge-danger">Outil de Risque</span>
+                    <h2 class="text-3xl mb-12">Le coût réel d'un impayé</h2>
+                    <p class="text-muted">Savez-vous combien vous coûte réellement un défaut de paiement sans protection ?</p>
+                </div>
+                
+                <div class="grid-2-cols gap-32">
+                    <div class="card p-24 bg-white">
+                        <form id="risk-form">
+                            <div class="form-group mb-16">
+                                <label for="risk-loyer">Votre Loyer Mensuel (€)</label>
+                                <input type="number" id="risk-loyer" class="form-control" value="800" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-full">Calculer l'exposition au risque</button>
+                        </form>
+                    </div>
+                    <div id="risk-result" class="card p-24 bg-dark text-white hidden">
+                        <h4 class="text-xl mb-16">Estimation de perte totale</h4>
+                        <div class="text-4xl font-bold mb-16 text-accent" id="val-risk-total">0 €</div>
+                        <div class="p-16 border-radius-10 mb-16" style="background-color: rgba(255,255,255,0.05);">
+                            <h5 class="text-md mb-8">Détail du calcul estime (Moyenne Nationale) :</h5>
+                            <ul class="text-sm opacity-90 list-none p-0">
+                                <li class="mb-8 flex-between border-bottom pb-8 opacity-80" style="border-color: rgba(255,255,255,0.1) !important;">
+                                    <span>Loyer mensuel pris en compte</span>
+                                    <strong id="detail-loyer"></strong>
+                                </li>
+                                <li class="mb-8 flex-between text-danger font-bold mt-12">
+                                    <span>1. Loyers impayés accumulés (18 mois de procédure type)</span>
+                                    <strong id="val-risk-loyers"></strong>
+                                </li>
+                                <li class="mb-8 flex-between">
+                                    <span>2. Frais de procédure (Commandement, Huissier, Avocat)</span>
+                                    <strong>3 000 €</strong>
+                                </li>
+                                <li class="mb-8 flex-between">
+                                    <span>3. Remise en état suite à  dégradations ou salubrité</span>
+                                    <strong>2 000 €</strong>
+                                </li>
+                                <li class="mt-12 mb-8 pt-12 border-top flex-between">
+                                    <span class="text-warning font-bold" style="color: #f59e0b;">4. Frais cachés annexes ignorés par les assurances classiques :</span>
+                                </li>
+                                <li class="mb-4 flex-between text-muted text-sm pl-12" style="padding-left: 12px;">
+                                    <span>- Charges de copropriété perdues et impôts locaux</span>
+                                    <span>~ 800 €</span>
+                                </li>
+                                <li class="mb-4 flex-between text-muted text-sm pl-12" style="padding-left: 12px;">
+                                    <span>- Changement de serrures et Frais de Garde-meuble</span>
+                                    <span>~ 600 €</span>
+                                </li>
+                                <li class="mb-4 flex-between text-muted text-sm pl-12" style="padding-left: 12px;">
+                                    <span>- Agios bancaires / Intérêts liés ou découverts sur crédit</span>
+                                    <span>~ 150 €</span>
+                                </li>
+                                <li class="mb-8 flex-between text-muted text-sm pl-12" style="padding-left: 12px;">
+                                    <span>- Vacance locative (2 mois perdus de plus pour les travaux)</span>
+                                    <strong id="val-risk-vacance"></strong>
+                                </li>
+                                <li class="mt-12 pt-12 border-top flex-between text-accent">
+                                    <strong>Perte Totale (Votre reste à charge effectif)</strong>
+                                    <strong id="detail-total" class="text-2xl"></strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="my-16 opacity-20">
+                        <p class="text-sm">Contre seulement <strong id="val-cost-gli"></strong> / mois avec Cautioneo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale Lead -->
+    <div class="modal-overlay" id="lead-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
+            <h2 class="mb-12">Finalisez votre étude</h2>
+            <p class="text-muted mb-24">Nos conseillers analysent votre simulation et vous proposent la meilleure structure de garantie.</p>
+            
+            <form id="lead-form">
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Nom complet</label>
+                    <input type="text" class="form-control" placeholder="Jean Dupont" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Adresse e-mail</label>
+                    <input type="email" class="form-control" placeholder="jean@exemple.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-16">Consolider mon projet</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Riche -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+                    <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                    <div class="mt-32">
+                        <h4 class="text-white mb-12">Rejoignez la communauté</h4>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="votre@email.com" required aria-label="Email Newsletter">
+                            <button type="submit" class="newsletter-btn">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures.html">Guide des Procédures</a></li>
+                        <li><a href="fiscalite.html">Fiscalité Immobilière</a></li>
+                        <li><a href="glossaire.html">Glossaire Juridique</a></li>
+                        <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs.html">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs.html">Estimateur GLI</a></li>
+                        <li><a href="index.html#solvabilite">Testeur de Solvabilité</a></li>
+                        <li><a href="boite-a-outils.html">Boîte à Outils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgs.html">CGS / CGU</a></li>
+                        <li><a href="confidentialite.html">Protection des données</a></li>
+                        <li><a href="reclamation.html">Réclamations</a></li>
+                        <li><a href="conciergerie.html">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

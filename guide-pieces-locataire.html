@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste Légale des Pièces Justificatives | Cautioneo Bailleurs</title>
+    <meta name="description" content="La liste légale et exhaustive des pièces justificatives autorisées pour un dossier de location.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+                        <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container">
+            <h1>Liste Légale des Pièces Justificatives</h1>
+            <p>Ce que vous avez le droit de demander (et ce qui est interdit) lors de la constitution du dossier locataire.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumb">
+                <a href="procedures.html">&larr; Retour aux Procédures</a>
+            </div>
+
+            <div class="guide-layout">
+                <!-- Sidebar Sommaire -->
+                <aside class="sidebar-sticky">
+                    <h3 class="text-lg mb-24">Sommaire</h3>
+                    <ul class="sidebar-nav">
+                        <li class="mb-12"><a href="#identite" class="text-main font-medium">Identité & Domicile</a></li>
+                        <li class="mb-12"><a href="#ressources" class="text-main font-medium">Activités & Ressources</a></li>
+                        <li class="mb-12"><a href="#interdits" class="text-main font-medium">❌ Documents Interdits</a></li>
+                        <li class="mb-12"><a href="#garant" class="text-main font-medium">Et le Garant physique ?</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="content-body">
+                    <div class="mb-48">
+                        <p class="text-lg text-muted mb-16">La loi Alur (Décret du 5 novembre 2015) a encadré de manière très stricte et limitative les documents qu'un propriétaire bailleur <strong>a le droit d'exiger</strong> d'un candidat locataire.</p>
+                        
+                        <div id="identite" class="mb-48">
+                            <h2 class="text-2xl mb-24">1. Identité et Domicile</h2>
+                            <div class="checklist">
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Pièce d'Identité :</strong> CNI, Passeport ou Titre de séjour (valide).</span>
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Dernières quittances :</strong> Les 3 derniers mois de loyer.</span>
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Justificatif d'hébergement :</strong> Attestation si hébergé.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="ressources" class="mb-48">
+                            <h2 class="text-2xl mb-24">2. Activités et Ressources</h2>
+                            <div class="checklist">
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Contrat de travail :</strong> Ou attestation employeur récente.</span>
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Bulletins de paie :</strong> Les 3 derniers mois complets.</span>
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Avis d'imposition :</strong> Le dernier avis reçu.</span>
+                                </label>
+                                <label class="checklist-item">
+                                    <input type="checkbox" checked disabled>
+                                    <span><strong>Kbis :</strong> Pour les indépendants ou sociétés.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="interdits" class="mb-48">
+                            <h2 class="text-2xl mb-16">3. ❌ Les documents formellement interdits</h2>
+                            <p class="text-lg text-muted mb-16">Il est strictement illégal de demander l'une de ces pièces, sous peine d'une amende pouvant aller jusqu'à <strong>3 000 €</strong>.</p>
+                            
+                            <div class="info-note accent-danger text-danger">
+                                <ul class="pl-20 line-height-1-8">
+                                    <li>Photographies (hors pièce d'identité).</li>
+                                    <li>Relevé de compte bancaire.</li>
+                                    <li>Attestation d'absence de crédit.</li>
+                                    <li>Dossier médical personnel.</li>
+                                    <li>Extrait de casier judiciaire.</li>
+                                    <li>Copie de la carte vitale.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="garant" class="mb-48">
+                            <h2 class="text-2xl mb-16">4. Les garants physiques</h2>
+                            <p class="text-lg text-muted mb-24">Si le locataire présente un garant, les pièces autorisées sont strictement identiques à celles listées ci-dessus.</p>
+
+                            <!-- CTA Cautioneo -->
+                            <div class="cta-banner" data-reveal="fade-up">
+                                <h3>Oubliez la paperasse !</h3>
+                                <p>L'agrément Cautioneo certifie le dossier locataire en ligne via l'analyse instantanée des documents. Plus besoin de trier manuellement.</p>
+                                <a href="comparatif-gli.html" class="btn btn-primary">Certifier un dossier candidat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Partagé Riche -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+                    <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                    <div class="mt-32">
+                        <h4 class="text-white mb-12">Rejoignez la communauté</h4>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="votre@email.com" required aria-label="Email Newsletter">
+                            <button type="submit" class="newsletter-btn">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures.html">Guide des Procédures</a></li>
+                        <li><a href="fiscalite.html">Fiscalité Immobilière</a></li>
+                        <li><a href="glossaire.html">Glossaire Juridique</a></li>
+                        <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs.html">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs.html">Estimateur GLI</a></li>
+                        <li><a href="index.html#solvabilite">Testeur de Solvabilité</a></li>
+                        <li><a href="boite-a-outils.html">Boîte à Outils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgs.html">CGS / CGU</a></li>
+                        <li><a href="confidentialite.html">Protection des données</a></li>
+                        <li><a href="reclamation.html">Réclamations</a></li>
+                        <li><a href="conciergerie.html">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

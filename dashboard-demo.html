@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Propriétaire (Démo) | Cautioneo Bailleurs</title>
+    <meta name="description" content="Découvrez l'expérience zéro paperasse de l'Espace Bailleur Cautioneo. Suivez vos revenus garantis, analysez les dossiers locataires certifiés et gérez vos biens.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Header inséré dynamiquement via fix_header.js -->
+            <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-navigation App-like -->
+    <div class="dash-subnav">
+        <div class="container">
+            <ul class="dash-tabs">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Vue d'ensemble</a></li>
+                <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-building"></i> Mes Biens</a></li>
+                <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-users"></i> Candidatures</a></li>
+                <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-file-invoice-dollar"></i> Sinistres</a></li>
+                <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-cog"></i> Paramètres</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <main class="dash-main pb-80">
+        <div class="container mt-48">
+            <div class="dash-header flex-between mb-32" data-reveal="fade-up">
+                <div>
+                    <h1 class="dash-title">Bonjour, Jean 👋</h1>
+                    <p class="text-muted">Voici le résumé de votre activité locative.</p>
+                </div>
+                <div class="dash-actions">
+                    <button class="btn btn-primary" onclick="openDemoModal(event)"><i class="fas fa-plus"></i> Ajouter un bien</button>
+                    <button class="btn btn-outline" onclick="openDemoModal(event)"><i class="fas fa-user-check"></i> Inviter un candidat</button>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid-4-cols gap-24 mb-48" data-reveal="fade-up">
+                <div class="kpi-card">
+                    <div class="kpi-icon bg-green-light text-green"><i class="fas fa-shield-alt"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Revenus Sécurisés</span>
+                        <div class="kpi-value text-green">2 450 € <span class="kpi-unit">/ mois</span></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon bg-blue-light text-blue"><i class="fas fa-key"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Biens sous garantie</span>
+                        <div class="kpi-value">2</div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon bg-orange-light text-orange"><i class="fas fa-clock"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Candidats en attente</span>
+                        <div class="kpi-value">3</div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon bg-gray-light text-gray"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Impayés</span>
+                        <div class="kpi-value">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Grid -->
+            <div class="dash-grid" data-reveal="fade-up">
+                <!-- Left Col (Mes Biens) -->
+                <div class="dash-panel">
+                    <div class="panel-header flex-between mb-24">
+                        <h2 class="panel-title">Mes Biens</h2>
+                        <a href="#" class="text-primary text-sm font-600" onclick="openDemoModal(event)">Voir tout</a>
+                    </div>
+                    
+                    <!-- Property 1 -->
+                    <div class="property-card">
+                        <div class="prop-info">
+                            <i class="fas fa-building prop-icon"></i>
+                            <div>
+                                <h3 class="font-600">T3 - Paris 11ème</h3>
+                                <p class="text-sm text-muted">Avenue de la République</p>
+                            </div>
+                        </div>
+                        <div class="prop-status">
+                            <span class="badge badge-success"><i class="fas fa-check-circle"></i> Garantie Active</span>
+                        </div>
+                        <div class="prop-tenant">
+                            <span class="text-sm">Locataire : <strong>Marie Dupont</strong></span>
+                        </div>
+                        <div class="prop-rent text-right font-700">1 450 €</div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="property-card mt-16">
+                        <div class="prop-info">
+                            <i class="fas fa-home prop-icon"></i>
+                            <div>
+                                <h3 class="font-600">Studio - Lyon 3ème</h3>
+                                <p class="text-sm text-muted">Rue Garibaldi</p>
+                            </div>
+                        </div>
+                        <div class="prop-status">
+                            <span class="badge badge-success"><i class="fas fa-check-circle"></i> Garantie Active</span>
+                        </div>
+                        <div class="prop-tenant">
+                            <span class="text-sm">Locataire : <strong>Thomas Martin</strong></span>
+                        </div>
+                        <div class="prop-rent text-right font-700">1 000 €</div>
+                    </div>
+                    
+                    <!-- Vacant Property -->
+                    <div class="property-card disabled mt-16">
+                        <div class="prop-info">
+                            <i class="fas fa-home prop-icon text-muted"></i>
+                            <div>
+                                <h3 class="font-600">T2 - Bordeaux</h3>
+                                <p class="text-sm text-muted">En recherche de locataire</p>
+                            </div>
+                        </div>
+                        <div class="prop-status">
+                            <span class="badge badge-warning"><i class="fas fa-hourglass-half"></i> Vacant</span>
+                        </div>
+                        <div class="prop-tenant">
+                            <button class="btn btn-outline text-sm py-8 px-16" onclick="openDemoModal(event)">Déposer une annonce</button>
+                        </div>
+                        <div class="prop-rent text-right font-700 text-muted">-- €</div>
+                    </div>
+
+                </div>
+
+                <!-- Right Col (Candidatures & Actions) -->
+                <div class="dash-sidebar">
+                    <div class="dash-panel mb-24">
+                        <div class="panel-header mb-24">
+                            <h2 class="panel-title">Profils Certifiés <span class="text-sm font-400 bg-orange-light text-orange px-8 py-4 border-radius ml-8">3 Nouveaux</span></h2>
+                            <p class="text-sm text-muted mt-8">Candidats ayant passé l'algorithme "Zéro Fausse Pièce" Cautioneo.</p>
+                        </div>
+                        
+                        <div class="candidate-list">
+                            <!-- Candidat 1 -->
+                            <div class="candidate-item">
+                                <div class="cand-avatar bg-primary text-white">S</div>
+                                <div class="cand-info">
+                                    <h4 class="font-600 text-sm">Sophie L.</h4>
+                                    <p class="text-xs text-muted">CDI • 3x le loyer</p>
+                                </div>
+                                <div class="cand-score score-A">A+</div>
+                            </div>
+                            <!-- Candidat 2 -->
+                            <div class="candidate-item">
+                                <div class="cand-avatar bg-blue text-white">L</div>
+                                <div class="cand-info">
+                                    <h4 class="font-600 text-sm">Léo V.</h4>
+                                    <p class="text-xs text-muted">Étudiant (Garant Certifié)</p>
+                                </div>
+                                <div class="cand-score score-A">A</div>
+                            </div>
+                             <!-- Candidat 3 -->
+                             <div class="candidate-item">
+                                <div class="cand-avatar bg-gray text-white">A</div>
+                                <div class="cand-info">
+                                    <h4 class="font-600 text-sm">Amira B.</h4>
+                                    <p class="text-xs text-muted">Indépendante (> 2 ans)</p>
+                                </div>
+                                <div class="cand-score score-B">B+</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline w-full mt-16 text-sm" onclick="openDemoModal(event)">Voir tous les dossiers</button>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dash-panel bg-primary text-white text-center">
+                        <h3 class="mb-16 font-600 text-white">Un impayé ? Pas de panique.</h3>
+                        <p class="text-sm mb-24 opacity-90">Déclarez le sinistre en 2 clics. Cautioneo prend le relais des démarches et vous indemnise dès le 1er jour.</p>
+                        <button class="btn btn-white w-full" onclick="openDemoModal(event)">Déclarer un impayé</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal d'Interception (Fake action -> Conversion) -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal text-center">
+            <button class="modal-close" onclick="closeDemoModal()" aria-label="Fermer">&times;</button>
+            <div class="icon-circle bg-primary-light text-primary mx-auto mb-24 demo-modal-icon">
+                <i class="fas fa-magic"></i>
+            </div>
+            <h2 class="mb-16 text-2xl">L'Espace Bailleur vous plaît ?</h2>
+            <p class="text-muted mb-24">Ceci est une démonstration interactive gratuite. Pour certifier vos locataires, sécuriser vos loyers et profiter du Dashboard complet, créez votre compte Bailleur Cautioneo en 2 minutes.</p>
+            
+            <a href="https://app.cautioneo.com/inscription" class="btn btn-primary w-full mb-16 h-50 font-600 text-lg">Je crée mon compte gratuit</a>
+            <button class="btn btn-outline w-full h-50 font-600" onclick="closeDemoModal()">Continuer à explorer la démo</button>
+        </div>
+    </div>
+
+    <!-- Footer inséré dynamiquement via fix_footer.js -->
+    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Logique spécifique à la modale de démo
+        function openDemoModal(e) {
+            e.preventDefault();
+            document.getElementById('demo-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDemoModal() {
+            document.getElementById('demo-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

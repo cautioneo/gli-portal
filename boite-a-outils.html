@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boîte à Outils du Bailleur | Cautioneo Bailleurs</title>
+    <meta name="description" content="Modèles de lettres, baux, checklists et outils gratuits pour simplifier votre gestion locative au quotidien.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+                    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="hero-mini">
+            <div class="container">
+                <h1 class="text-huge mb-16">La Boîte à Outils</h1>
+                <p class="text-xl opacity-90 max-w-700 mx-auto">Concentrez-vous sur l'humain, nous gérons la paperasse. Tous vos documents types en un seul clic.</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid-3-cols gap-24">
+                    <!-- Outil 1 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-file-contract text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Indexation IRL</h3>
+                        <p class="text-muted mb-24">Générez votre lettre de révision annuelle de loyer basée sur le dernier indice IRL.</p>
+                        <button class="btn btn-outline w-full" onclick="openModal(event)">Générer la lettre</button>
+                    </div>
+
+                    <!-- Outil 2 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-user-shield text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Caution Solidaire</h3>
+                        <p class="text-muted mb-24">Modèle conforme ALUR d'acte d'engagement de caution solidaire pour vos garants physiques.</p>
+                        <button class="btn btn-outline w-full" onclick="openModal(event)">Télécharger le modèle</button>
+                    </div>
+
+                    <!-- Outil 3 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-key text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Quittance de Loyer</h3>
+                        <p class="text-muted mb-24">Un modèle de quittance simple et légal à envoyer chaque mois à vos locataires.</p>
+                        <button class="btn btn-outline w-full" onclick="openModal(event)">Télécharger</button>
+                    </div>
+
+                    <!-- Outil 4 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-search-location text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Checklist Diagnostics</h3>
+                        <p class="text-muted mb-24">Ne rien oublier : DPE, ERP, Gaz, Elec... La liste complète des diagnostics obligatoires par bien.</p>
+                        <a href="guide-ddt.html" class="btn btn-outline w-full">Consulter la liste</a>
+                    </div>
+
+                    <!-- Outil 5 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-balance-scale text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Mise en demeure</h3>
+                        <p class="text-muted mb-24">Premier impayé ? Agissez vite avec notre modèle de lettre de mise en demeure amiable.</p>
+                        <button class="btn btn-outline w-full" onclick="openDemeureModal(event)">Générer le PDF</button>
+                    </div>
+
+                    <!-- Outil 6 -->
+                    <div class="card p-32 text-center" data-reveal="fade-up">
+                        <i class="fas fa-magic text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Scanner de Faux</h3>
+                        <p class="text-muted mb-24">Testez notre technologie de détection de faux documents en temps réel.</p>
+                        <a href="scanner-demo.html" class="btn btn-primary w-full">Lancer le Scanner</a>
+                    </div>
+                </div>
+
+                <!-- Section Banner Promo -->
+                <div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center" data-reveal="fade-up">
+                    <h2 class="text-3xl mb-16">Trop de paperasse ?</h2>
+                    <p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">La Protection Cautioneo inclut une assistance juridique complète et gère tous vos litiges à votre place. Libérez-vous l'esprit.</p>
+                    <a href="comparatif-gli.html" class="btn btn-primary">Passer à la gestion zéro-stress</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+                    <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                    <div class="mt-32">
+                        <h4 class="text-white mb-12">Rejoignez la communauté</h4>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="votre@email.com" required aria-label="Email Newsletter">
+                            <button type="submit" class="newsletter-btn">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures.html">Guide des Procédures</a></li>
+                        <li><a href="fiscalite.html">Fiscalité Immobilière</a></li>
+                        <li><a href="glossaire.html">Glossaire Juridique</a></li>
+                        <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs.html">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs.html">Estimateur GLI</a></li>
+                        <li><a href="index.html#solvabilite">Testeur de Solvabilité</a></li>
+                        <li><a href="boite-a-outils.html">Boîte à Outils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgs.html">CGS / CGU</a></li>
+                        <li><a href="confidentialite.html">Protection des données</a></li>
+                        <li><a href="reclamation.html">Réclamations</a></li>
+                        <li><a href="conciergerie.html">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="lead-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
+            <h2>Votre document est prêt</h2>
+            <p>Saisissez votre e-mail pour recevoir le modèle personnalisable instantanément.</p>
+            <form id="lead-form">
+                <div class="form-group">
+                    <label for="lead-email">Adresse e-mail</label>
+                    <input type="email" id="lead-email" class="form-control" placeholder="votre@email.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-16">Recevoir mon document</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- NOUVELLE MODALE : GÉNÉRATEUR JSPDF -->
+    <div class="modal-overlay" id="demeure-modal">
+        <div class="modal modal-tall">
+            <button class="modal-close" onclick="closeDemeureModal()" aria-label="Fermer">&times;</button>
+            <h2 class="mb-12">Générateur PPDF Instantané</h2>
+            <p class="text-muted mb-24">Remplissez les informations ci-dessous pour générer instantanément votre Mise en Demeure Amiable au format PDF, prête à être envoyée.</p>
+            
+            <form id="demeure-form">
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Votre nom et prénom (Bailleur)</label>
+                    <input type="text" id="pdf-owner-name" class="form-control" placeholder="Ex: Marie Martin" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Votre adresse (Bailleur)</label>
+                    <input type="text" id="pdf-owner-address" class="form-control" placeholder="Ex: 10 avenue Victor Hugo, 75016 Paris" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Nom complet du locataire</label>
+                    <input type="text" id="pdf-tenant-name" class="form-control" placeholder="Ex: Jean Dupont" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Adresse du logement concerné</label>
+                    <input type="text" id="pdf-property-address" class="form-control" placeholder="Ex: 12 rue de la Paix, 75000 Paris" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Montant total de la dette (€)</label>
+                    <input type="number" id="pdf-debt-amount" class="form-control" placeholder="Ex: 850" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Mois de l'impayé concerné</label>
+                    <input type="text" id="pdf-debt-month" class="form-control" placeholder="Ex: Octobre 2026" required>
+                </div>
+                <div class="form-group mb-16">
+                    <label class="mb-8 block text-sm font-medium">Jour de paiement prévu au bail (ex: le 5)</label>
+                    <input type="text" id="pdf-payment-day" class="form-control" placeholder="Ex: 5" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-16"><i class="fas fa-file-pdf"></i> Générer mon fichier PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

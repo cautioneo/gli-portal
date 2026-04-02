@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner d'Authenticité | Cautioneo Bailleurs</title>
+    <meta name="description" content="Testez notre technologie de détection de faux documents. Ne vous laissez plus tromper par des dossiers falsifiés.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+                    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures.html">Procédures</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                <li><a href="simulateurs.html">Simulateurs</a></li>
+                <li><a href="boite-a-outils.html">Outils</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="hero-mini">
+            <div class="container">
+                <h1 class="text-huge mb-16">Scanner d'Authenticité</h1>
+                <p class="text-xl opacity-90 max-w-700 mx-auto">Découvrez comment notre technologie détecte les dossiers falsifiés en quelques secondes.</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="scanner-container" id="scanner-wrapper">
+                    <div class="text-center mb-32" id="scanner-intro">
+                        <h2 class="text-2xl mb-12">Prêt pour le test ?</h2>
+                        <p class="text-muted">Cliquez sur le cadre ci-dessous pour simuler l'analyse d'un dossier locataire.</p>
+                    </div>
+
+                    <div class="scanner-box" id="scanner-box">
+                        <div class="scan-progress" id="scan-progress">Analyse en cours : 0%</div>
+                        
+                        <img src="assets/fake-paystub.png" alt="Bulletin de paie factice" class="doc-preview" id="doc-preview">
+                        
+                        <!-- Points d'analyse (Hotspots) -->
+                        <div class="analysis-dot dot-qr" id="dot-qr">
+                            <i class="fas fa-exclamation"></i>
+                            <div class="analysis-tooltip">
+                                <strong>Anomalie : QR Code</strong><br>
+                                Les données encodées ne correspondent pas aux informations visibles sur le document.
+                            </div>
+                        </div>
+
+                        <div class="analysis-dot dot-net" id="dot-net">
+                            <i class="fas fa-exclamation"></i>
+                            <div class="analysis-tooltip">
+                                <strong>Anomalie : Net Fiscal</strong><br>
+                                Incohérence mathématique entre le brut, les cotisations et le net à payer.
+                            </div>
+                        </div>
+
+                        <div class="analysis-dot dot-font" id="dot-font">
+                            <i class="fas fa-exclamation"></i>
+                            <div class="analysis-tooltip">
+                                <strong>Anomalie : Typographie</strong><br>
+                                Utilisation d'une police de caractères non-standard pour les montants financiers.
+                            </div>
+                        </div>
+
+                        <div id="drop-text" class="text-center">
+                            <i class="fas fa-file-upload text-4xl mb-16 text-primary"></i>
+                            <p class="font-600">Simuler un téléchargement</p>
+                        </div>
+                    </div>
+
+                    <div class="verdict-box verdict-fake" id="verdict-box">
+                        <h3 class="text-xl mb-8">Verdict : DOCUMENT FALSIFIÉ</h3>
+                        <p>Notre algorithme a détecté 3 points d'incohérence majeure. Ce dossier aurait été validé par 85% des bailleurs particuliers.</p>
+                    </div>
+
+                    <div class="text-center" id="scanner-cta">
+                        <h3 class="text-2xl mb-24">Ne prenez plus ce risque seul</h3>
+                        <p class="mb-32 text-muted">Cautioneo analyse automatiquement chaque document de vos candidats pour vous protéger des impayés.</p>
+                        <div class="flex-center gap-16">
+                            <a href="comparatif-gli.html" class="btn btn-primary">Découvrir la Protection</a>
+                            <a href="index.html#solvabilite" class="btn btn-outline">Tester un autre dossier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    </div>
+                    <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                    <div class="mt-32">
+                        <h4 class="text-white mb-12">Rejoignez la communauté</h4>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="votre@email.com" required aria-label="Email Newsletter">
+                            <button type="submit" class="newsletter-btn">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures.html">Guide des Procédures</a></li>
+                        <li><a href="fiscalite.html">Fiscalité Immobilière</a></li>
+                        <li><a href="glossaire.html">Glossaire Juridique</a></li>
+                        <li><a href="comparatif-gli.html">Comparatif GLI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs.html">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs.html">Estimateur GLI</a></li>
+                        <li><a href="index.html#solvabilite">Testeur de Solvabilité</a></li>
+                        <li><a href="boite-a-outils.html">Boîte à Outils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgs.html">CGS / CGU</a></li>
+                        <li><a href="confidentialite.html">Protection des données</a></li>
+                        <li><a href="reclamation.html">Réclamations</a></li>
+                        <li><a href="conciergerie.html">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scannerBox = document.getElementById('scanner-box');
+            const dropText = document.getElementById('drop-text');
+            const progress = document.getElementById('scan-progress');
+            const verdict = document.getElementById('verdict-box');
+            const cta = document.getElementById('scanner-cta');
+            const dots = document.querySelectorAll('.analysis-dot');
+
+            scannerBox.addEventListener('click', () => {
+                if (scannerBox.classList.contains('scanning') || scannerBox.classList.contains('scanned')) return;
+
+                // Start animation
+                scannerBox.classList.add('scanning');
+                dropText.style.display = 'none';
+                progress.style.display = 'block';
+
+                let percent = 0;
+                const interval = setInterval(() => {
+                    percent += 2;
+                    progress.innerText = `Analyse en cours : ${percent}%`;
+                    
+                    if (percent >= 100) {
+                        clearInterval(interval);
+                        completeScan();
+                    }
+                }, 50);
+            });
+
+            function completeScan() {
+                scannerBox.classList.remove('scanning');
+                scannerBox.classList.add('scanned');
+                progress.style.display = 'none';
+                
+                // Show hotspots with delay
+                setTimeout(() => {
+                    dots.forEach((dot, index) => {
+                        setTimeout(() => {
+                            dot.style.display = 'flex';
+                        }, index * 400);
+                    });
+                }, 500);
+
+                // Show verdict and CTA
+                setTimeout(() => {
+                    verdict.style.display = 'block';
+                    cta.style.display = 'block';
+                    window.scrollTo({
+                        top: verdict.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
