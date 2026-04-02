@@ -83,7 +83,7 @@ function generatePage(title, desc, bodyHtml) {
                 <li><a href="simulateurs.html">Simulateurs</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="https://app.cautioneo.com" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="https://caut.io/Ffr6hkV" target="_blank" class="btn btn-outline nav-btn-client">Espace Client</a>
                 <a href="comparatif-gli.html" class="btn btn-primary">Sécuriser un loyer</a>
             </div>
         </div>
