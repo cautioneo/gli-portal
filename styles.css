@@ -1415,3 +1415,11 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 .dot-qr { top: 15%; left: 80%; }
 .dot-net { bottom: 25%; left: 75%; }
 .dot-font { top: 45%; left: 20%; }
+.no-underline { text-decoration: none; }
+.black-link { color: var(--dark, #1B2B41); transition: color 0.3s ease; }
+.black-link:hover { color: var(--primary, #6E56FF); }
+.leading-taller { line-height: 1.8; }
+.sticky { position: sticky; }
+.top-120 { top: 120px; }
+.inline-block { display: inline-block; }
+.mt-8 { margin-top: 8px; }
