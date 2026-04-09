@@ -349,11 +349,11 @@ const createPageHTML = (term) => `<!DOCTYPE html>
                 </div>
 
                 <div class="sidebar sticky top-120" data-reveal="fade-up">
-                    <div class="cta-box bg-dark text-white p-32 border-radius-20 text-center">
-                        <div class="icon-circle bg-primary-10 text-primary mx-auto mb-16" style="width: 64px; height: 64px; font-size: 24px;">🛡️</div>
-                        <h3 class="mb-16">Sécurisez votre investissement</h3>
-                        <p class="mb-24 opacity-80 text-sm">Garantissez vos revenus locatifs contre les impayés dès aujourd'hui. Laissez notre expertise compenser les failles du droit classique.</p>
-                        <a href="https://caut.io/Ffr6hkV" target="_blank" class="btn btn-primary w-full shadow-lg">Lancer une simulation offerte</a>
+                    <div class="cta-box bg-primary text-white p-32 border-radius-20 text-center shadow-lg">
+                        <div class="icon-circle mb-16 mx-auto flex-center" style="width: 64px; height: 64px; font-size: 32px; opacity: 0.9;">🛡️</div>
+                        <h3 class="mb-16 text-white">Sécurisez votre investissement</h3>
+                        <p class="mb-24 opacity-90 text-md">Garantissez vos revenus locatifs contre les impayés dès aujourd'hui. Laissez notre expertise compenser les failles du droit classique.</p>
+                        <a href="https://caut.io/Ffr6hkV" target="_blank" class="btn btn-white text-primary w-full shadow-lg border-radius-pill font-600">Lancer une simulation offerte</a>
                     </div>
                     
                     <div class="info-box bg-subtle p-24 border-radius-20 mt-32">
@@ -412,6 +412,10 @@ const createPageHTML = (term) => `<!DOCTYPE html>
                         <li><a href="conciergerie.html">Conciergerie</a></li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="footer-disclaimer text-sm opacity-70 mb-16 mt-32 text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                ⚠️ Avertissement : Les informations, modèles et simulateurs présents sur ce site sont mis à disposition à titre indicatif pour accompagner les bailleurs, mais ne remplacent en aucun cas l'avis personnalisé d'un expert juridique, d'un avocat ou d'un notaire.
             </div>
             <div class="footer-bottom">
                 <div>© 2026 Cautioneo. Tous droits réservés.</div>
