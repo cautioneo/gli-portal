@@ -32,7 +32,7 @@ htmlFiles.forEach(file => {
     }
 
     sitemapXml += `  <url>\n`;
-    sitemapXml += `    <loc>${baseUrl}${file}</loc>\n`;
+    sitemapXml += `    <loc>${baseUrl}${file.replace('.html', '')}</loc>\n`;
     sitemapXml += `    <lastmod>${today}</lastmod>\n`;
     sitemapXml += `    <changefreq>${changefreq}</changefreq>\n`;
     sitemapXml += `    <priority>${priority}</priority>\n`;
