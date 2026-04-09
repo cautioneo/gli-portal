@@ -371,9 +371,9 @@ const createPageHTML = (term) => `<!DOCTYPE html>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px;">
-                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1);">
-                        <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px; display: flex; align-items: center;">
+                        <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1); height: 32px; width: auto;">
+                        <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
                     </div>
                     <p class="footer-tagline">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
                     <div class="mt-32">
