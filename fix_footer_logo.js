@@ -6,7 +6,7 @@ const rootDir = 'c:/Users/OussamaElAmel/.gemini/antigravity/scratch/cautioneo se
 const files = fs.readdirSync(rootDir).filter(f => f.endsWith('.html'));
 
 const logoTemplate = `<div class="logo-wrapper mb-16" style="flex: none; gap: 8px; display: flex; align-items: center;">
-                    <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1); height: 32px; width: auto;">
+                    <img src="logo.png" alt="Cautioneo" class="header-logo" style="height: 32px; width: auto; filter: drop-shadow(0 0 1px white);">
                     <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
                 </div>`;
 

@@ -1225,6 +1225,10 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
     text-align: center;
 }
 
+.hero-mini h1, .hero-mini h2, .hero-mini h3, .hero-mini p {
+    color: white !important;
+}
+
 .checklist-page {
     padding: 60px 0;
     background: #f8fafc;
