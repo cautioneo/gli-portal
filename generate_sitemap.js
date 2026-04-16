@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://www.cautioneo.com/bailleurs/';
+const baseUrl = 'https://www.cautioneo-gli.com/';
 const directory = './'; // Current Directory (portail-bailleurs)
 
 const htmlFiles = fs.readdirSync(directory).filter(f => f.endsWith('.html'));
