@@ -68,61 +68,11 @@
 
         <section class="section">
             <div class="container">
-                <div class="scanner-container" id="scanner-wrapper">
-                    <div class="text-center mb-32" id="scanner-intro">
-                        <h2 class="text-2xl mb-12">Prêt pour le test ?</h2>
-                        <p class="text-muted">Cliquez sur le cadre ci-dessous pour simuler l'analyse d'un dossier locataire.</p>
-                    </div>
-
-                    <div class="scanner-box" id="scanner-box">
-                        <div class="scan-progress" id="scan-progress">Analyse en cours : 0%</div>
-                        
-                        <img src="assets/fake-paystub.png" alt="Bulletin de paie factice" class="doc-preview" id="doc-preview">
-                        
-                        <!-- Points d'analyse (Hotspots) -->
-                        <div class="analysis-dot dot-qr" id="dot-qr">
-                            <i class="fas fa-exclamation"></i>
-                            <div class="analysis-tooltip">
-                                <strong>Anomalie : QR Code</strong><br>
-                                Les données encodées ne correspondent pas aux informations visibles sur le document.
-                            </div>
-                        </div>
-
-                        <div class="analysis-dot dot-net" id="dot-net">
-                            <i class="fas fa-exclamation"></i>
-                            <div class="analysis-tooltip">
-                                <strong>Anomalie : Net Fiscal</strong><br>
-                                Incohérence mathématique entre le brut, les cotisations et le net à payer.
-                            </div>
-                        </div>
-
-                        <div class="analysis-dot dot-font" id="dot-font">
-                            <i class="fas fa-exclamation"></i>
-                            <div class="analysis-tooltip">
-                                <strong>Anomalie : Typographie</strong><br>
-                                Utilisation d'une police de caractères non-standard pour les montants financiers.
-                            </div>
-                        </div>
-
-                        <div id="drop-text" class="text-center">
-                            <i class="fas fa-file-upload text-4xl mb-16 text-primary"></i>
-                            <p class="font-600">Simuler un téléchargement</p>
-                        </div>
-                    </div>
-
-                    <div class="verdict-box verdict-fake" id="verdict-box">
-                        <h3 class="text-xl mb-8">Verdict : DOCUMENT FALSIFIÉ</h3>
-                        <p>Notre algorithme a détecté 3 points d'incohérence majeure. Ce dossier aurait été validé par 85% des bailleurs particuliers.</p>
-                    </div>
-
-                    <div class="text-center" id="scanner-cta">
-                        <h3 class="text-2xl mb-24">Ne prenez plus ce risque seul</h3>
-                        <p class="mb-32 text-muted">Cautioneo analyse automatiquement chaque document de vos candidats pour vous protéger des impayés.</p>
-                        <div class="flex-center gap-16">
-                            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary">Découvrir la Protection</a>
-                            <a href="./#solvabilite" class="btn btn-outline">Tester un autre dossier</a>
-                        </div>
-                    </div>
+                                <div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center" data-reveal="fade-up">
+                    <div class="badge badge-accent mb-16">Délégation Garantie</div>
+                    <h2 class="text-3xl mb-16">Ne prenez plus ce risque seul</h2>
+                    <p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">Notre technologie certifie automatiquement l'authenticité des dossiers locataires. Protégez-vous des documents falsifiés en 1 seul clic.</p>
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary">Je délègue la certification du dossier locataire à Cautioneo</a>
                 </div>
             </div>
         </section>
@@ -176,60 +126,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const scannerBox = document.getElementById('scanner-box');
-            const dropText = document.getElementById('drop-text');
-            const progress = document.getElementById('scan-progress');
-            const verdict = document.getElementById('verdict-box');
-            const cta = document.getElementById('scanner-cta');
-            const dots = document.querySelectorAll('.analysis-dot');
-
-            scannerBox.addEventListener('click', () => {
-                if (scannerBox.classList.contains('scanning') || scannerBox.classList.contains('scanned')) return;
-
-                // Start animation
-                scannerBox.classList.add('scanning');
-                dropText.style.display = 'none';
-                progress.style.display = 'block';
-
-                let percent = 0;
-                const interval = setInterval(() => {
-                    percent += 2;
-                    progress.innerText = `Analyse en cours : ${percent}%`;
-                    
-                    if (percent >= 100) {
-                        clearInterval(interval);
-                        completeScan();
-                    }
-                }, 50);
-            });
-
-            function completeScan() {
-                scannerBox.classList.remove('scanning');
-                scannerBox.classList.add('scanned');
-                progress.style.display = 'none';
-                
-                // Show hotspots with delay
-                setTimeout(() => {
-                    dots.forEach((dot, index) => {
-                        setTimeout(() => {
-                            dot.style.display = 'flex';
-                        }, index * 400);
-                    });
-                }, 500);
-
-                // Show verdict and CTA
-                setTimeout(() => {
-                    verdict.style.display = 'block';
-                    cta.style.display = 'block';
-                    window.scrollTo({
-                        top: verdict.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }, 2000);
-            }
-        });
-    </script>
+    
 </body>
 </html>
