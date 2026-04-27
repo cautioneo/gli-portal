@@ -84,7 +84,7 @@
                         <i class="fas fa-file-contract text-4xl text-primary mb-24"></i>
                         <h3 class="text-xl mb-12">Indexation IRL</h3>
                         <p class="text-muted mb-24">Générez votre lettre de révision annuelle de loyer basée sur le dernier indice IRL.</p>
-                        <button class="btn btn-outline w-full border-radius-pill" onclick="openModal(event)">Générer la lettre</button>
+                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill"  style="display: inline-block; text-align: center; text-decoration: none;">Générer la lettre</a>
                     </div>
 
                     <!-- Outil 2 -->
@@ -92,7 +92,7 @@
                         <i class="fas fa-user-shield text-4xl text-primary mb-24"></i>
                         <h3 class="text-xl mb-12">Caution Solidaire</h3>
                         <p class="text-muted mb-24">Modèle conforme ALUR d'acte d'engagement de caution solidaire pour vos garants physiques.</p>
-                        <button class="btn btn-outline w-full border-radius-pill" onclick="openModal(event)">Télécharger le modèle</button>
+                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill"  style="display: inline-block; text-align: center; text-decoration: none;">Télécharger le modèle</a>
                     </div>
 
                     <!-- Outil 3 -->
@@ -100,7 +100,7 @@
                         <i class="fas fa-key text-4xl text-primary mb-24"></i>
                         <h3 class="text-xl mb-12">Quittance de Loyer</h3>
                         <p class="text-muted mb-24">Un modèle de quittance simple et légal à envoyer chaque mois à vos locataires.</p>
-                        <button class="btn btn-outline w-full border-radius-pill" onclick="openModal(event)">Télécharger</button>
+                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill"  style="display: inline-block; text-align: center; text-decoration: none;">Télécharger</a>
                     </div>
 
                     <!-- Outil 4 -->
@@ -116,7 +116,7 @@
                         <i class="fas fa-balance-scale text-4xl text-primary mb-24"></i>
                         <h3 class="text-xl mb-12">Mise en demeure</h3>
                         <p class="text-muted mb-24">Premier impayé ? Agissez vite avec notre modèle de lettre de mise en demeure amiable.</p>
-                        <button class="btn btn-outline w-full border-radius-pill" onclick="openDemeureModal(event)">Générer le PDF</button>
+                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill" style="display: inline-block; text-align: center; text-decoration: none;">Générer le PDF</a>
                     </div>
 
                     <!-- Outil 6 -->
@@ -185,61 +185,9 @@
         </div>
     </footer>
 
-    <div class="modal-overlay" id="lead-modal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
-            <h2>Votre document est prêt</h2>
-            <p>Saisissez votre e-mail pour recevoir le modèle personnalisable instantanément.</p>
-            <form id="lead-form">
-                <div class="form-group">
-                    <label for="lead-email">Adresse e-mail</label>
-                    <input type="email" id="lead-email" class="form-control" placeholder="votre@email.com" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-full mt-16">Recevoir mon document</button>
-            </form>
-        </div>
-    </div>
+    
 
-    <!-- NOUVELLE MODALE : GÉNÉRATEUR JSPDF -->
-    <div class="modal-overlay" id="demeure-modal">
-        <div class="modal modal-tall">
-            <button class="modal-close" onclick="closeDemeureModal()" aria-label="Fermer">&times;</button>
-            <h2 class="mb-12">Générateur PDF Instantané</h2>
-            <p class="text-muted mb-24">Remplissez les informations ci-dessous pour générer instantanément votre Mise en Demeure Amiable au format PDF, prête à être envoyée.</p>
-            
-            <form id="demeure-form">
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Votre nom et prénom (Bailleur)</label>
-                    <input type="text" id="pdf-owner-name" class="form-control" placeholder="Ex: Marie Martin" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Votre adresse (Bailleur)</label>
-                    <input type="text" id="pdf-owner-address" class="form-control" placeholder="Ex: 10 avenue Victor Hugo, 75016 Paris" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Nom complet du locataire</label>
-                    <input type="text" id="pdf-tenant-name" class="form-control" placeholder="Ex: Jean Dupont" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Adresse du logement concerné</label>
-                    <input type="text" id="pdf-property-address" class="form-control" placeholder="Ex: 12 rue de la Paix, 75000 Paris" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Montant total de la dette (€)</label>
-                    <input type="number" id="pdf-debt-amount" class="form-control" placeholder="Ex: 850" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Mois de l'impayé concerné</label>
-                    <input type="text" id="pdf-debt-month" class="form-control" placeholder="Ex: Octobre 2026" required>
-                </div>
-                <div class="form-group mb-16">
-                    <label class="mb-8 block text-sm font-medium">Jour de paiement prévu au bail (ex: le 5)</label>
-                    <input type="text" id="pdf-payment-day" class="form-control" placeholder="Ex: 5" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-full mt-16"><i class="fas fa-file-pdf"></i> Générer mon fichier PDF</button>
-            </form>
-        </div>
-    </div>
+    
 
     <script src="script.js"></script>
 </body>
