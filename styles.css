@@ -1433,21 +1433,21 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 
 /* --- Blog Section --- */
 .blog-header {
-    background: var(--color-bg-alt);
+    background: var(--bg-subtle);
     padding: 100px 0 60px;
     text-align: center;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--border);
 }
 
 .blog-header h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--color-primary);
+    color: var(--primary);
 }
 
 .blog-header p {
     font-size: 1.2rem;
-    color: var(--color-text-muted);
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -1467,20 +1467,20 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--border);
 }
 
 .blog-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-accent);
+    border-color: var(--accent);
 }
 
 .blog-card-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background-color: var(--color-bg-alt);
+    background-color: var(--bg-subtle);
 }
 
 .blog-card-content {
@@ -1493,7 +1493,7 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 .blog-category {
     display: inline-block;
     background: rgba(217, 119, 6, 0.1);
-    color: var(--color-accent);
+    color: var(--accent);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -1505,11 +1505,11 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 .blog-card h3 {
     font-size: 1.25rem;
     margin-bottom: 12px;
-    color: var(--color-primary);
+    color: var(--primary);
 }
 
 .blog-card p {
-    color: var(--color-text-muted);
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 20px;
     flex-grow: 1;
@@ -1519,20 +1519,20 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--border);
     padding-top: 16px;
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: var(--text-muted);
 }
 
 .blog-read-more {
-    color: var(--color-accent);
+    color: var(--accent);
     font-weight: 600;
     transition: color 0.2s;
 }
 
 .blog-read-more:hover {
-    color: var(--color-accent-hover);
+    color: var(--accent);
 }
 
 /* --- Article Reading Layout --- */
@@ -1545,14 +1545,14 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 .article-content {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text-main);
+    color: var(--text-main);
 }
 
 .article-content h2 {
     font-size: 2rem;
-    color: var(--color-primary);
+    color: var(--primary);
     margin: 40px 0 20px;
-    border-bottom: 2px solid var(--color-bg-alt);
+    border-bottom: 2px solid var(--bg-subtle);
     padding-bottom: 10px;
 }
 
@@ -1575,8 +1575,8 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 }
 
 .article-cta {
-    background: var(--color-bg-alt);
-    border-left: 4px solid var(--color-accent);
+    background: var(--bg-subtle);
+    border-left: 4px solid var(--accent);
     padding: 30px;
     margin: 40px 0;
     border-radius: 0 8px 8px 0;
@@ -1585,7 +1585,7 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 
 .article-cta h3 {
     margin-top: 0;
-    color: var(--color-primary);
+    color: var(--primary);
 }
 
 .article-meta {
@@ -1593,7 +1593,7 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
     align-items: center;
     justify-content: center;
     gap: 16px;
-    color: var(--color-text-muted);
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-top: 24px;
 }
