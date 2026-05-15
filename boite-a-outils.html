@@ -80,12 +80,12 @@
                         <a href="https://www.smartloc.fr/bail/creation?utm_source=cautioneo&skip=1" target="_blank" class="btn btn-primary w-full shadow-lg">Générer mon bail</a>
                     </div>
 
-                    <!-- Outil 1 -->
+                    <!-- Simulateur Loyer / Salaire -->
                     <div class="card p-32 text-center" data-reveal="fade-up">
-                        <i class="fas fa-file-contract text-4xl text-primary mb-24"></i>
-                        <h3 class="text-xl mb-12">Indexation IRL</h3>
-                        <p class="text-muted mb-24">Générez votre lettre de révision annuelle de loyer basée sur le dernier indice IRL.</p>
-                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill"  style="display: inline-block; text-align: center; text-decoration: none;">Générer la lettre</a>
+                        <i class="fas fa-calculator text-4xl text-primary mb-24"></i>
+                        <h3 class="text-xl mb-12">Simulateur Loyer & Salaire</h3>
+                        <p class="text-muted mb-24">Calculez instantanément la capacité locative selon la règle des 33% ou le revenu minimum exigé.</p>
+                        <a href="simulateur-loyer-salaire" class="btn btn-primary w-full shadow-lg border-radius-pill">Lancer le Simulateur</a>
                     </div>
 
                     <!-- Outil 2 -->
@@ -112,20 +112,60 @@
                         <a href="guide-ddt" class="btn btn-outline w-full border-radius-pill">Consulter la liste</a>
                     </div>
 
-                    <!-- Outil 5 -->
-                    <div class="card p-32 text-center" data-reveal="fade-up">
-                        <i class="fas fa-balance-scale text-4xl text-primary mb-24"></i>
-                        <h3 class="text-xl mb-12">Mise en demeure</h3>
-                        <p class="text-muted mb-24">Premier impayé ? Agissez vite avec notre modèle de lettre de mise en demeure amiable.</p>
-                        <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline w-full border-radius-pill" style="display: inline-block; text-align: center; text-decoration: none;">Générer le PDF</a>
-                    </div>
-
                     <!-- Outil 6 -->
                     <div class="card p-32 text-center" data-reveal="fade-up">
                         <i class="fas fa-magic text-4xl text-primary mb-24"></i>
                         <h3 class="text-xl mb-12">Scanner de Faux</h3>
                         <p class="text-muted mb-24">Testez notre technologie de détection de faux documents en temps réel.</p>
                         <a href="scanner-demo" class="btn btn-primary w-full shadow-lg border-radius-pill">Lancer le Scanner</a>
+                    </div>
+                </div>
+
+                <!-- Section Guides Experts -->
+                <div class="mt-64 mb-32" data-reveal="fade-up">
+                    <h2 class="text-3xl mb-16 text-center">Guides Experts 2026</h2>
+                    <p class="text-lg opacity-80 text-center mb-32 max-w-700 mx-auto">Les réponses précises à toutes vos problématiques juridiques et locatives.</p>
+                    
+                    <div class="grid-3-cols gap-32">
+                        <!-- Guide Anti Squat -->
+                        <div class="card p-24">
+                            <span class="badge bg-primary-light text-primary font-600 mb-12 d-inline-block p-4 border-radius-4 text-sm">Législation</span>
+                            <h3 class="text-xl mb-12">Loi Anti-Squat 2026</h3>
+                            <p class="text-muted mb-24 text-sm">Comprenez la nouvelle procédure express de 48h et comment expulser un squatteur.</p>
+                            <a href="guide-loi-anti-squat-2026" class="text-primary font-600 no-decoration">&rarr; Lire le guide</a>
+                        </div>
+                        
+                        <!-- Guide Caution Solidaire -->
+                        <div class="card p-24">
+                            <span class="badge bg-primary-light text-primary font-600 mb-12 d-inline-block p-4 border-radius-4 text-sm">Location</span>
+                            <h3 class="text-xl mb-12">La Caution Solidaire</h3>
+                            <p class="text-muted mb-24 text-sm">Définition, limites, clauses abusives et comment s'en libérer proprement.</p>
+                            <a href="guide-caution-solidaire" class="text-primary font-600 no-decoration">&rarr; Lire le guide</a>
+                        </div>
+                        
+                        <!-- Guide Locataire sans garant -->
+                        <div class="card p-24">
+                            <span class="badge bg-primary-light text-primary font-600 mb-12 d-inline-block p-4 border-radius-4 text-sm">Location</span>
+                            <h3 class="text-xl mb-12">Louer sans Garant / CDI</h3>
+                            <p class="text-muted mb-24 text-sm">Quelles solutions pour les freelances, CDD, et les locataires sans garant physique ?</p>
+                            <a href="guide-location-sans-garant" class="text-primary font-600 no-decoration">&rarr; Lire le guide</a>
+                        </div>
+                        
+                        <!-- Guide Litiges Locataires -->
+                        <div class="card p-24">
+                            <span class="badge bg-primary-light text-primary font-600 mb-12 d-inline-block p-4 border-radius-4 text-sm">Litiges</span>
+                            <h3 class="text-xl mb-12">Locataire agressif ou logement insalubre</h3>
+                            <p class="text-muted mb-24 text-sm">Les démarches pour faire constater les faits et obtenir la résiliation du bail.</p>
+                            <a href="guide-litiges-locataire" class="text-primary font-600 no-decoration">&rarr; Lire le guide</a>
+                        </div>
+                        
+                        <!-- Guide Recours Dégradations -->
+                        <div class="card p-24">
+                            <span class="badge bg-primary-light text-primary font-600 mb-12 d-inline-block p-4 border-radius-4 text-sm">État des lieux</span>
+                            <h3 class="text-xl mb-12">Dégâts constatés après signature de l'EDL</h3>
+                            <p class="text-muted mb-24 text-sm">Vos recours face aux vices cachés et dissimulations volontaires.</p>
+                            <a href="guide-recours-degradations-sortie" class="text-primary font-600 no-decoration">&rarr; Lire le guide</a>
+                        </div>
                     </div>
                 </div>
 
