@@ -151,21 +151,32 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="container navbar-container">
-            <div class="logo">
-                <a href="./" class="logo-text">Cautioneo</a>
-            </div>
-            <nav class="nav-links">
-                <a href="./">Accueil</a>
-                <a href="#">Simulateur</a>
-                <a href="#">Propriétaires</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="./" class="logo-wrapper">
+                <img src="logo.png" alt="Cautioneo" class="header-logo">
+                <span class="logo-text">Bailleurs</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="procedures">Procédures</a></li>
+                <li><a href="fiscalite">Fiscalité</a></li>
+                <li><a href="comparatif-gli">Comparatif GLI</a></li>
+                <li><a href="simulateurs">Simulateurs</a></li>
+                <li><a href="boite-a-outils">Outils</a></li>
+                <li><a href="blog">Blog</a></li>
+            </ul>
             <div class="nav-actions">
-                <a href="#" class="btn btn-primary">Mon Dossier Garant</a>
+                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline nav-btn-client">Espace Client</a>
+                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary">Sécuriser un loyer</a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main>
         <article>
@@ -254,14 +265,49 @@
         </article>
     </main>
 
-    <footer style="background: #0B132B; color: white; padding: 60px 0 24px; text-align: center;">
+    <!-- Footer basique B2B -->
+    <footer class="footer">
         <div class="container">
-            <div class="logo" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 24px;">Cautioneo</div>
-            <p style="color: rgba(255, 255, 255, 0.6); max-width: 500px; margin: 0 auto 24px;">La solution n°1 des
-                profils atypiques (Étudiants sans garant, Indépendants, Expatriés) pour décrocher un logement.</p>
-            <div
-                style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; font-size: 0.875rem; color: rgba(255, 255, 255, 0.4);">
-                &copy; 2026 Cautioneo - Tous droits réservés.
+            <div class="footer-grid">
+                <div class="footer-col" style="grid-column: span 2;">
+                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px; display: flex; align-items: center;">
+                    <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1); height: 32px; width: auto;">
+                    <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
+                </div>
+                    <p style="color: var(--primary-light); max-width: 400px; font-size: 1.05rem;">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="procedures">Guide des Procédures</a></li>
+                        <li><a href="fiscalite">Fiscalité Immobilière</a></li>
+                        <li><a href="comparatif-gli">Comparatif Garanties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Outils</h4>
+                    <ul class="footer-links">
+                        <li><a href="simulateurs">Simulateur Rentabilité</a></li>
+                        <li><a href="simulateurs">Estimateur GLI</a></li>
+                        <li><a href="./#solvabilite">Testeur de Solvabilité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informations Légales</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales">Mentions légales</a></li>
+                        <li><a href="cgs">CGS / CGU</a></li>
+                        <li><a href="confidentialite">Protection des données</a></li>
+                        <li><a href="reclamation">Réclamations</a></li>
+                        <li><a href="conciergerie">Conciergerie</a></li>
+                    </ul>
+                </div>
+            </div>
+                        <div class="footer-disclaimer text-sm opacity-70 mb-16 mt-32 text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                ⚠️ Avertissement : Les informations, modèles et simulateurs présents sur ce site sont mis à disposition à titre indicatif pour accompagner les bailleurs, mais ne remplacent en aucun cas l'avis personnalisé d'un expert juridique, d'un avocat ou d'un notaire.
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 Cautioneo. Tous droits réservés.</div>
             </div>
         </div>
     </footer>
