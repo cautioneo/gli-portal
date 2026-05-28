@@ -217,9 +217,9 @@
             <p>La formule standard est un **taux de prime** appliqué au montant du loyer mensuel charges comprises (CC). Sur le marché français en 2026, les tarifs varient généralement de :</p>
             <ul>
                 <li><strong>2,2% à 2,8%</strong> du loyer CC pour les contrats groupes négociés par les syndics ou agences de gestion immobilière.</li>
-                <li><strong>2,8% à 3,7%</strong> du loyer CC pour un propriétaire bailleur individuel souscrivant en direct auprès d'une compagnie d'assurance ou d'un courtier digital.</li>
+                <li><strong>2,75% en direct</strong> du loyer CC pour un propriétaire bailleur individuel souscrivant en direct auprès d'une compagnie d'assurance ou d'un courtier digital.</li>
             </ul>
-            <p>Par exemple, pour un loyer charges comprises de 1 000 € par mois, une prime au taux de 2,5% représentera une charge mensuelle de **25 €** pour le propriétaire.</p>
+            <p>Par exemple, pour un loyer charges comprises de 1 000 € par mois, une prime au taux de 2,75% représentera une charge mensuelle de **25 €** pour le propriétaire.</p>
 
             <h2>2. Simulateur d'Impôts et Déductibilité Fiscale</h2>
             <p>C'est l'atout fiscal majeur trop souvent ignoré des propriétaires particuliers. Si vous déclarez vos revenus fonciers sous **le régime réel** (obligatoire au-delà de 15 000 € de revenus fonciers par an, ou sur option), **les cotisations d'assurance loyer impayé sont déductibles à 100% de vos revenus fonciers**.</p>
@@ -247,7 +247,7 @@
                     </div>
                     <div class="sim-results">
                         <div class="sim-result-row">
-                            <span>Cotisation GLI estimée (2,5%) :</span>
+                            <span>Cotisation GLI estimée (2,75%) :</span>
                             <span class="sim-result-value" id="res-prime">20,00 € / mois</span>
                         </div>
                         <div class="sim-result-row">
@@ -404,8 +404,8 @@
                 const loyer = parseFloat(inputLoyer.value) || 0;
                 const tmi = parseFloat(selectTmi.value) || 0;
 
-                // Prime is 2.5% of rent
-                const prime = loyer * 0.025;
+                // Prime is 2.75% of rent
+                const prime = loyer * 0.0275;
                 // Tax savings = prime * (TMI + 17.2% social contributions)
                 const eco = prime * (tmi + 0.172);
                 const net = prime - eco;
