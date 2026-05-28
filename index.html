@@ -1,357 +1,421 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portail Bailleurs Cautioneo | Louez en toute sérénité</title>
 
-    <!-- SEO & Canonical -->
-    <meta name="description" content="Le hub d'excellence pour les propriétaires bailleurs. Guides, procédures, fiscalité et comparatifs pour sécuriser vos revenus locatifs.">
-    <link rel="canonical" href="https://www.cautioneo-gli.com/">
+<head>
+
+
+    <!-- === SEO BLOCK === -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.cautioneo-gli.com">
+
+    <!-- Primary Meta -->
+    <meta name="description" content="Sécurisez vos revenus locatifs avec la GLI Cautioneo : indemnisation dès le 1er impayé, couverture jusqu'à 96 000 €, frais d'expulsion pris en charge. Devis en 2 minutes.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cautioneo">
 
     <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Cautioneo GLI">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cautioneo-gli.com/">
-    <meta property="og:title" content="Portail Bailleurs Cautioneo | Louez en toute sérénité">
-    <meta property="og:description" content="Le hub d'excellence pour les propriétaires bailleurs. Guides, procédures, fiscalité et comparatifs pour sécuriser vos revenus locatifs.">
-    <meta property="og:image" content="https://www.cautioneo-gli.com/logo.png">
+    <meta property="og:url" content="https://www.cautioneo-gli.com">
+    <meta property="og:title" content="Garantie Loyers Impayés nouvelle génération | Cautioneo Propriétaires">
+    <meta property="og:description" content="Sécurisez vos revenus locatifs avec la GLI Cautioneo : indemnisation dès le 1er impayé, couverture jusqu'à 96 000 €, frais d'expulsion pris en charge. Devis en 2 minutes.">
+    <meta property="og:image" content="https://www.cautioneo-gli.com/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
 
-    <!-- Twitter -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.cautioneo-gli.com/">
-    <meta name="twitter:title" content="Portail Bailleurs Cautioneo | Louez en toute sérénité">
-    <meta name="twitter:description" content="Le hub d'excellence pour les propriétaires bailleurs. Guides, procédures, fiscalité et comparatifs pour sécuriser vos revenus locatifs.">
-    <meta name="twitter:image" content="https://www.cautioneo-gli.com/logo.png">
+    <meta name="twitter:site" content="@cautioneo">
+    <meta name="twitter:url" content="https://www.cautioneo-gli.com">
+    <meta name="twitter:title" content="Garantie Loyers Impayés nouvelle génération | Cautioneo Propriétaires">
+    <meta name="twitter:description" content="Sécurisez vos revenus locatifs avec la GLI Cautioneo : indemnisation dès le 1er impayé, couverture jusqu'à 96 000 €, frais d'expulsion pris en charge. Devis en 2 minutes.">
+    <meta name="twitter:image" content="https://www.cautioneo-gli.com/og-image.jpg">
 
-    <!-- Additional Resources -->
-<!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5HGD8NV2');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Cautioneo – GLI & Assurance Loyers Impayés",
+  "url": "https://www.cautioneo-gli.com",
+  "description": "Sécurisez vos revenus locatifs avec la GLI Cautioneo : indemnisation dès le 1er impayé, couverture jusqu'à 96 000 €, frais d'expulsion pris en charge. Devis en 2 minutes.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cautioneo",
+    "url": "https://www.cautioneo-gli.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.cautioneo-gli.com/logo.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.cautioneo-gli.com/blog?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+    </script>
+    <!-- === /SEO BLOCK === -->
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garantie Loyers Impayés nouvelle génération | Cautioneo Propriétaires</title>
+
+    <!-- Polices B2B Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- SEO & Structured Data -->
-    <meta name="robots" content="index, follow">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Qu'est-ce que Cautioneo pour les bailleurs ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cautioneo propose deux solutions : une garantie où le locataire paie pour se porter responsable, sécurisant ainsi le bailleur efficacement, et une Assurance Loyers Impayés (GLI) classique souscrite par le propriétaire."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Quelle est la différence entre Garant Locataire et GLI ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La Garantie Locataire est payée par le locataire et certifie son dossier. La GLI est payée par le bailleur et offre une protection souvent plus étendue en cas de dégradations."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Les honoraires d'avocat sont-ils inclus ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, nos deux formules incluent une protection juridique complète prenant en charge les frais d'avocat et d'huissier en cas de litige ou d'impayé."
-        }
-      }]
-    }
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S02V4XNGEE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-      gtag('config', 'G-S02V4XNGEE');
-    </script>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="/styles-b2b.css">
 </head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HGD8NV2"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation Partagée -->
-                    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="./" class="logo-wrapper">
-                <img src="logo.png" alt="Cautioneo" class="header-logo">
-                <span class="logo-text">Bailleurs</span>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <a href="/index.html" class="logo" style="text-decoration:none;">
+                <div class="logo-brand">Cautioneo</div>
+                <div class="logo-sub">Assurance Loyers Impayés</div>
             </a>
+
             
-            <button class="nav-toggle" aria-label="Ouvrir le menu">
-                <i class="fas fa-bars"></i>
+            <button class="nav-toggle" id="nav-toggle-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                &#9776;
             </button>
 
-            <ul class="nav-links">
-                <li><a href="procedures">Procédures</a></li>
-                <li><a href="fiscalite">Fiscalité</a></li>
-                <li class="nav-dropdown">
-                    <a href="comparatif-gli" style="cursor: pointer;">Guides & Comparatifs ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="comparatif-gli">Comparatif Classique GLI</a>
-                        <a href="mega-comparatif-garanties-locatives.html">Le Méga-Comparatif 2026</a>
-                        <a href="guide-choisir-assurance-loyer-impaye.html">Guide Ultime : Choisir sa GLI</a>
-                    </div>
-                </li>
-                <li><a href="simulateurs">Simulateurs</a></li>
-                <li><a href="boite-a-outils">Outils</a></li>
-                <li><a href="blog">Blog</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="#garanties">Nos Garanties</a>
+                <a href="#tarifs">Tarifs & Simulation</a>
+                <a href="#agences">Espace Agences</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+
             <div class="nav-actions">
-                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline nav-btn-client">Espace Client</a>
-                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary">Sécuriser un loyer</a>
+                <a href="https://app.cautioneo.com/connexion" target="_blank" class="btn btn-outline">Espace Assuré</a>
+                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" class="btn btn-primary">Obtenir un devis</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" data-reveal="fade-up">
-        <div class="container text-center">
-            <span class="badge mb-16">Le Hub de l'Investisseur Immobilier</span>
-            <h1 class="mb-24">Louez, encaissez, dormez sur vos deux oreilles.</h1>
-            <p class="mb-40 mx-auto max-w-700">Le portail ultime des propriétaires bailleurs. Optimisez votre fiscalité, sécurisez vos revenus à 100% et maîtrisez chaque étape de la gestion locative grâce à l'expertise Cautioneo.</p>
-            <div class="flex items-center justify-center gap-16 mix-flex-wrap" style="margin-top: 80px;">
-                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary px-32 py-16 text-md border-radius-pill">Découvrir la GLI Cautioneo</a>
-                <a href="#ressources" class="btn btn-outline px-32 py-16 text-md border-radius-pill">Explorer les Guides</a>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>L'Assurance Loyers Impayés <br><span class="highlight-gold">100% Digitale & Sécurisée.</span></h1>
+                <p class="hero-subtitle">
+                    Sécurisez votre rendement locatif avec une Garantie Loyers Impayés (GLI) premium. Indemnisation sans
+                    carence, prise en charge des expulsions et détériorations, à un tarif ultra-compétitif (déductible
+                    des impôts fonciers).
+                </p>
+                <div class="hero-cta-group" style="flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" class="btn btn-accent" style="font-size: 1.1rem; padding: 16px 32px;">Calculer ma prime d'assurance</a>
+                    <span style="font-size: 0.9rem; opacity: 0.8; font-family: var(--font-main);">✓ Accord immédiat en
+                        ligne ✓ Profils locataires flexibles</span>
+                </div>
+            </div>
+
+            <!-- Visuel illustratif Premium -->
+            <div class="hero-visual"
+                style="background: white; border-radius: 12px; padding: 30px; color: var(--color-primary); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative;">
+                <div
+                    style="position: absolute; top: -15px; right: -15px; background: var(--color-success); color: white; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    Devis en 2 min
+                </div>
+                <h3
+                    style="font-size: 1.3rem; margin-bottom: 20px; border-bottom: 2px solid var(--color-border); padding-bottom: 10px;">
+                    Simulation GLI (Propriétaire)</h3>
+
+                <div style="margin-bottom: 15px;">
+                    <label
+                        style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 5px;">Montant
+                        du loyer cible (CC)</label>
+                    <div
+                        style="background: var(--color-bg-alt); padding: 12px; border-radius: 6px; border: 1px solid var(--color-border); font-size: 1.1rem; font-weight: 500;">
+                        1 200 € / mois
+                    </div>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <label
+                        style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 5px;">Prime
+                        d'assurance estimée*</label>
+                    <div style="color: var(--color-accent); font-size: 1.8rem; font-weight: 800;">
+                        À partir de 2,5%
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--color-success); margin-top: 5px;">
+                        *100% Déductible de vos revenus fonciers
+                    </div>
+                </div>
+
+                <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" class="btn btn-primary" style="width: 100%; display: block; text-align: center;">Démarrer la simulation réelle</a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Piliers Section -->
-    <section class="section" id="ressources">
-        <div class="container">
-            <div class="text-center mb-48" data-reveal="fade-up">
-                <h2>Un concentré d'expertise pour votre patrimoine</h2>
-                <p class="text-muted text-lg mx-auto max-w-700">Quatre piliers fondamentaux pour rentabiliser et sécuriser vos investissements locatifs jour après jour.</p>
+    <!-- Bandeau de réassurance B2B -->
+    <div class="trust-banner">
+        <div class="container trust-content">
+            <div class="trust-item">
+                <span style="color: var(--color-accent); font-size: 1.2rem;">🛡️</span> Couverture par Odealim & Allianz
             </div>
+            <div class="trust-item">
+                <span style="color: var(--color-accent); font-size: 1.2rem;">⏱️</span> Indemnisation dès le premier
+                impayé
+            </div>
+            <div class="trust-item">
+                <span style="color: var(--color-accent); font-size: 1.2rem;">⚖️</span> Frais d'expulsion pris en charge
+            </div>
+        </div>
+    </div>
 
-            <div class="grid-cards">
-                <!-- Procédures -->
-                <div class="card" data-reveal="fade-up">
-                    <div class="card-icon">📋</div>
-                    <h3>Procédures Bailleurs</h3>
-                    <p>De la rédaction de l'annonce immobilière aux recours en cas d'impayé. Nos guides juridiques pas à pas.</p>
-                    <a href="procedures" class="card-link">Consulter les guides pratiques</a>
+    <!-- Explication du Concept -->
+    <section id="garanties" class="concept-section">
+        <div class="container">
+            <h2>L'Assurance Loyers Impayés Nouvelle Génération</h2>
+            <p class="concept-subtitle">
+                Nous avons repensé la GLI pour la rendre plus rapide, plus claire et plus protectrice. Protégez votre
+                patrimoine immobilier contre tous les aléas locatifs.
+            </p>
+
+            <div class="concept-grid">
+                <div class="concept-card card-blue">
+                    <div class="concept-icon">⏱️</div>
+                    <h3>1. Simulation & Accord en 2 min</h3>
+                    <p style="font-family: var(--font-main); font-size: 0.95rem; color: var(--color-text-muted);">
+                        Finis les allers-retours interminables avec les courtiers classiques. Obtenez votre tarif et
+                        l'agrément de votre locataire 100% en ligne.
+                    </p>
                 </div>
 
-                <!-- Fiscalité -->
-                <div class="card" data-reveal="fade-up">
-                    <div class="card-icon">📈</div>
-                    <h3>Fiscalité & Revenus</h3>
-                    <p><a href="blog-lmnp-vs-location-nue">LMNP</a>, micro-foncier, Pinel : décryptez le labyrinthe fiscal français et optimisez l'imposition de vos loyers.</p>
-                    <a href="fiscalite" class="card-link">Optimiser ma fiscalité</a>
+                <div class="concept-card card-gold">
+                    <div class="concept-icon">🛡️</div>
+                    <h3>2. Protection Intégrale</h3>
+                    <p style="font-family: var(--font-main); font-size: 0.95rem; color: var(--color-text-muted);">
+                        Nous couvrons jusqu'à 96 000€ d'impayés sans durée limitée, les dégradations jusqu'à 10 000€, et
+                        vos frais de procédure (avocats, huissiers).
+                    </p>
                 </div>
 
-                <!-- Comparatif GLI -->
-                <div class="card" data-reveal="fade-up">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Le Vrai Comparatif GLI</h3>
-                    <p>Visale, garanties bancaires, GLI classiques... Quelle est la vraie meilleure solution pour protéger vos loyers ?</p>
-                    <a href="comparatif-gli" class="card-link">Comparer les garanties</a>
-                </div>
-
-                <!-- Simulateurs -->
-                <div class="card" data-reveal="fade-up">
-                    <div class="card-icon">🧮</div>
-                    <h3>Outils & Simulateurs</h3>
-                    <p>Calculez le rendement net de votre investissement et vérifiez l'éligibilité d'un candidat locataire.</p>
-                    <div class="flex-column gap-8 mt-12">
-                        <a href="simulateurs" class="card-link">Accéder aux simulateurs</a>
-                        <a href="checklist-bailleur" class="card-link accent-secondary">Checklist de mise en location</a>
-                    </div>
+                <div class="concept-card card-green">
+                    <div class="concept-icon">📉</div>
+                    <h3>3. Zéro Franchise / 100% Déductible</h3>
+                    <p style="font-family: var(--font-main); font-size: 0.95rem; color: var(--color-text-muted);">
+                        Vous êtes indemnisé dès le premier mois d'impayé constaté. Et bonne nouvelle : votre prime est
+                        entièrement déductible de vos revenus fonciers.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testeur de Solvabilité Section -->
-    <section class="section bg-subtle" id="solvabilite">
+    <!-- ===== TARIFS SECTION ===== -->
+    <section id="tarifs" class="tarifs-section">
         <div class="container">
-            <div class="grid-2-cols items-center gap-48">
-                <div data-reveal="fade-up">
-                    <div class="badge mb-16">Outil Inclus</div>
-                    <h2 class="mb-24">Testeur de Solvabilité Express</h2>
-                    <p class="text-muted mb-32">Vérifiez instantanément si votre candidat locataire respecte les critères de revenus standards des assureurs (33% d'endettement).</p>
-                    
-                    <div class="card text-left p-40">
-                        <form id="scoring-form" class="form-grid-2">
+            <h2>Nos Tarifs &amp; Simulations</h2>
+            <p class="concept-subtitle">Une prime transparente, déductible à 100 % de vos revenus fonciers. Pas de franchise, pas de mauvaise surprise.</p>
+
+            <div class="tarifs-grid">
+                <!-- Offre Essentielle -->
+                <div class="tarif-card">
+                    <div class="tarif-badge">Essentielle</div>
+                    <div class="tarif-price">2,5 %<span> du loyer CC</span></div>
+                    <ul class="tarif-features">
+                        <li>✅ Loyers impayés couverts (24 mois max)</li>
+                        <li>✅ Charges &amp; taxes incluses</li>
+                        <li>✅ Frais de contentieux remboursés</li>
+                        <li>✅ Indemnisation dès le 1er impayé</li>
+                        <li>⛔ Détériorations immobilières non incluses</li>
+                        <li>⛔ Protection juridique basique</li>
+                    </ul>
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" class="btn btn-outline" style="width:100%;display:block;text-align:center;margin-top:24px;">Obtenir ce devis</a>
+                </div>
+
+                <!-- Offre Premium -->
+                <div class="tarif-card tarif-card--featured">
+                    <div class="tarif-badge tarif-badge--accent">Premium ⭐ Recommandé</div>
+                    <div class="tarif-price">3,2 %<span> du loyer CC</span></div>
+                    <ul class="tarif-features">
+                        <li>✅ Loyers impayés couverts (96 000 € max)</li>
+                        <li>✅ Charges, taxes &amp; dépôt de garantie</li>
+                        <li>✅ Frais d'expulsion &amp; d'avocat pris en charge</li>
+                        <li>✅ Dégradations immobilières (10 000 € max)</li>
+                        <li>✅ Protection juridique renforcée</li>
+                        <li>✅ Locataires en CDI / CDD / Auto-entrepreneur</li>
+                    </ul>
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" class="btn btn-accent" style="width:100%;display:block;text-align:center;margin-top:24px;">Calculer ma prime</a>
+                </div>
+
+                <!-- Offre Agences -->
+                <div class="tarif-card">
+                    <div class="tarif-badge">Agences &amp; Syndics</div>
+                    <div class="tarif-price">Sur mesure</div>
+                    <ul class="tarif-features">
+                        <li>✅ Tarif négocié au volume</li>
+                        <li>✅ Dashboard de suivi centralisé</li>
+                        <li>✅ API d'intégration à vos logiciels</li>
+                        <li>✅ Gestionnaire de compte dédié</li>
+                        <li>✅ Formation équipes incluse</li>
+                        <li>✅ SLA de réponse garanti sous 4h</li>
+                    </ul>
+                    <a href="#agences" class="btn btn-outline" style="width:100%;display:block;text-align:center;margin-top:24px;">Contacter notre équipe</a>
+                </div>
+            </div>
+
+            <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--color-text-muted);">
+                * Prime annuelle exprimée en % du loyer charges comprises. Déductible des revenus fonciers (régime réel). Produit souscrit auprès d'Odealim / Allianz.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== AGENCES SECTION ===== -->
+    <section id="agences" class="agences-section">
+        <div class="container">
+            <div class="agences-inner">
+                <div class="agences-text">
+                    <span class="agences-eyebrow">Espace Partenaires</span>
+                    <h2>Agences Immobilières &amp; Administrateurs de Biens</h2>
+                    <p>Intégrez la GLI Cautioneo directement dans vos mandats de gestion. Offrez à vos bailleurs une protection premium sans friction, et bénéficiez d'une commission attractive sur chaque souscription.</p>
+
+                    <ul class="agences-avantages">
+                        <li>
+                            <span class="avantage-icon">🏆</span>
                             <div>
-                                <label class="font-bold mb-8 text-main block">Loyer Mensuel CC (€)</label>
-                                <input type="number" id="loyer" placeholder="Ex: 800" required class="form-control">
+                                <strong>Rémunération transparente</strong>
+                                <p>Commission fixe sur chaque contrat souscrit via votre lien partenaire, versée mensuellement.</p>
                             </div>
+                        </li>
+                        <li>
+                            <span class="avantage-icon">🔗</span>
                             <div>
-                                <label class="font-bold mb-8 text-main block">Revenus du foyer (€)</label>
-                                <input type="number" id="revenus" placeholder="Ex: 2500" required class="form-control">
+                                <strong>Intégration clé en main</strong>
+                                <p>API RESTful compatible Apimo, Hektor, Adaptimmo. Connexion en moins d'une journée.</p>
                             </div>
-                            <div class="grid-span-2">
-                                <label class="font-bold mb-8 text-main block">Situation Professionnelle</label>
-                                <select id="statut" class="form-control" title="Situation professionnelle du locataire">
-                                    <option value="cdi-confirme">CDI (Hors période d'essai)</option>
-                                    <option value="cdi-essai">CDI (En période d'essai)</option>
-                                    <option value="cdd">CDD / Intérim</option>
-                                    <option value="independant">Indépendant / Freelance</option>
-                                    <option value="etudiant">Étudiant avec garants</option>
-                                </select>
+                        </li>
+                        <li>
+                            <span class="avantage-icon">📊</span>
+                            <div>
+                                <strong>Dashboard temps réel</strong>
+                                <p>Suivez l'état de tous vos contrats, les sinistres en cours et vos commissions en un coup d'œil.</p>
                             </div>
-                            <div class="text-center mt-16 grid-span-2">
-                                <button type="submit" class="btn btn-primary w-full">Lancer l'analyse du profil</button>
-                            </div>
-                        </form>
+                        </li>
+                    </ul>
 
-                        <div id="result-box" class="hidden mt-32 pt-32 border-top text-center">
-                            <div id="score-display" class="score-circular mx-auto mb-24">?</div>
-                            <h4 id="result-title" class="text-2xl mb-8">Analyse en cours...</h4>
-                            <p id="result-desc" class="text-muted mx-auto max-w-500 mb-24"></p>
-                            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-outline"  style="display: inline-block; text-align: center; text-decoration: none;">Sécuriser ce dossier avec Cautioneo</a>
-                        </div>
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-accent" style="margin-top:32px;">Devenir partenaire Cautioneo</a>
+                </div>
+
+                <div class="agences-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">+2 400</div>
+                        <div class="stat-label">Agences partenaires</div>
                     </div>
-                </div>
-                <div data-reveal="fade-up">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Sérénité locative" class="rounded-24 shadow-lg w-full" loading="lazy">
-                </div>
-            </div>
-
-            <!-- Innovation : Scanner d'Authenticité -->
-            <div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center" data-reveal="fade-up">
-                <div class="badge badge-accent mb-16">Innovation Cautioneo</div>
-                <h2 class="text-3xl mb-16">Détectez les <a href="blog-faux-dossiers-location">faux dossiers</a> en 1 clic</h2>
-                <p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">Notre technologie d'analyse documentaire repère les incohérences invisibles à l'œil nu. Ne laissez plus passer un dossier falsifié.</p>
-                <div class="flex-center">
-                    <a href="scanner-demo" class="btn btn-primary">Tester le Scanner interactif</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof Section -->
-    <section class="section bg-dark text-center" data-reveal="fade-up">
-        <div class="container">
-            <h2 class="text-white mb-24">La référence de la garantie locative en France</h2>
-            <p class="text-white opacity-90 mx-auto max-w-700 mb-48">Rejoignez des milliers de propriétaires qui sécurisent leurs revenus chaque mois sans paperasse interminable.</p>
-            
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-value">100%</div>
-                    <div class="stat-label">Loyers couverts</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">24h</div>
-                    <div class="stat-label">Temps de réponse</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">0€</div>
-                    <div class="stat-label">Franchise bailleur</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <div class="text-center mb-48" data-reveal="fade-up">
-                <span class="badge">Questions Fréquentes</span>
-                <h2>Tout ce qu'un bailleur doit savoir</h2>
-                <p class="text-muted text-lg mx-auto max-w-700">Vous avez des questions sur la sécurisation de vos loyers ? Nous avons les réponses.</p>
-            </div>
-
-            <div class="faq-grid">
-                <div class="faq-item" data-reveal="fade-up">
-                    <button class="faq-question">
-                        Qu'est-ce que Cautioneo pour les bailleurs ? <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Cautioneo est un service qui sécurise les revenus des propriétaires bailleurs. Nous analysons les dossiers des locataires et nous portons garant pour eux. En cas d'impayé, nous réglons le loyer à votre place sans délai, puis nous gérons toutes les démarches de recouvrement.</p>
+                    <div class="stat-box">
+                        <div class="stat-number">98 %</div>
+                        <div class="stat-label">Taux de satisfaction bailleurs</div>
                     </div>
-                </div>
-
-                <div class="faq-item" data-reveal="fade-up">
-                    <button class="faq-question">
-                        Quelle est la différence entre la Garantie Locataire et la GLI ? <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>La <strong>Garantie Locataire</strong> est une solution où le locataire paie pour être certifié et protégé par Cautioneo. Pour vous bailleur, c'est inclus. La <strong>GLI (Assurance <a href="blog-loyer-impaye-procedure">Loyers Impayés</a>)</strong> est un contrat que vous souscrivez en tant que propriétaire pour couvrir l'ensemble de votre parc ou un locataire spécifique (cotisation déductible de vos <a href="blog-declaration-revenus-fonciers">revenus fonciers</a>).</p>
+                    <div class="stat-box">
+                        <div class="stat-number">&lt; 30j</div>
+                        <div class="stat-label">Délai moyen d'indemnisation</div>
                     </div>
-                </div>
-
-                <div class="faq-item" data-reveal="fade-up">
-                    <button class="faq-question">
-                        Que se passe-t-il en cas d'impayé ? <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Dès le premier euro d'impayé, vous nous prévenez via votre espace client. Après vérification simple, nous prenons le relais du paiement de votre loyer chaque mois à date fixe. Nous finançons et gérons intégralement la procédure juridique (huissier, avocat) jusqu'au recouvrement ou au départ du locataire.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-reveal="fade-up">
-                    <button class="faq-question">
-                        Combien de temps faut-il pour obtenir un accord ? <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Notre analyse est extrêmement rapide. Une fois le dossier complet déposé par le locataire, vous obtenez une réponse définitive en moins de 24 heures ouvrées. L'Accord de Garantie Cautioneo est une preuve de fiabilité reconnue sur le marché.</p>
+                    <div class="stat-box">
+                        <div class="stat-number">0 €</div>
+                        <div class="stat-label">Franchise sur loyers impayés</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Partagé Riche -->
-    <footer class="footer">
+    <!-- ===== FAQ HOME ===== -->
+    <section class="faq-section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="grid-column: span 2;">
-                    <div class="logo-wrapper mb-16" style="flex: none; gap: 8px; display: flex; align-items: center;">
-                    <img src="logo.png" alt="Cautioneo" class="header-logo" style="filter: brightness(0) invert(1); height: 32px; width: auto;">
-                    <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
-                </div>
-                    <p style="color: var(--primary-light); max-width: 400px; font-size: 1.05rem;">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Ressources</h4>
-                    <ul class="footer-links">
-                        <li><a href="procedures">Guide des Procédures</a></li>
-                        <li><a href="fiscalite">Fiscalité Immobilière</a></li>
-                        <li><a href="comparatif-gli">Comparatif Garanties</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Outils</h4>
-                    <ul class="footer-links">
-                        <li><a href="simulateurs">Simulateur Rentabilité</a></li>
-                        <li><a href="simulateurs">Estimateur GLI</a></li>
-                        <li><a href="./#solvabilite">Testeur de Solvabilité</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Informations Légales</h4>
-                    <ul class="footer-links">
-                        <li><a href="mentions-legales">Mentions légales</a></li>
-                        <li><a href="cgs">CGS / CGU</a></li>
-                        <li><a href="confidentialite">Protection des données</a></li>
-                        <li><a href="reclamation">Réclamations</a></li>
-                        <li><a href="conciergerie">Conciergerie</a></li>
-                    </ul>
+            <h2>Questions fréquentes sur la GLI</h2>
+            <p class="faq-subtitle">Tout ce que vous devez savoir sur la Garantie Loyers Impayés Cautioneo.</p>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">Qu'est-ce que la Garantie Loyers Impayés (GLI) ?</summary>
+                    <div class="faq-answer"><p>La GLI est une assurance souscrite par le propriétaire bailleur qui le protège contre les impayés de loyers et les dégradations locatives. En cas de défaut de paiement du locataire, l'assureur se substitue et verse les loyers directement au bailleur, généralement dès le premier mois de retard.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">La prime GLI est-elle déductible des impôts ?</summary>
+                    <div class="faq-answer"><p>Oui, et c'est l'un de ses atouts majeurs. Au régime réel d'imposition, la prime d'assurance GLI est intégralement déductible des revenus fonciers. Concrètement, pour un propriétaire imposé à 30 %, une prime de 100 € ne vous coûte réellement que 70 €.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Quels profils de locataires sont acceptés ?</summary>
+                    <div class="faq-answer"><p>Cautioneo accepte les locataires en CDI (période d'essai validée), CDD de longue durée, fonctionnaires, retraités et auto-entrepreneurs sous conditions de revenus. Le critère principal est un taux d'effort inférieur à 33 % (loyer ≤ 1/3 des revenus nets).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Combien de temps dure l'indemnisation en cas d'impayé ?</summary>
+                    <div class="faq-answer"><p>Avec l'offre Premium, vous êtes couvert jusqu'à 96 000 € d'impayés sans limite de durée, jusqu'à la libération effective du logement. Les frais d'expulsion (avocat, huissier, serrurier) sont également pris en charge.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Comment souscrire à la GLI Cautioneo ?</summary>
+                    <div class="faq-answer"><p>La souscription est 100 % en ligne en moins de 5 minutes. Il vous suffit de renseigner le montant du loyer, de télécharger les justificatifs du locataire (avis d'imposition, fiches de paie), et Cautioneo vous communique un accord en temps réel ainsi que votre prime définitive.</p></div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG PREVIEW ===== -->
+    <section style="background:var(--color-bg-alt);padding:80px 0;text-align:center;border-top:1px solid var(--color-border);">
+        <div class="container">
+            <h2 style="font-size:2rem;margin-bottom:12px;">Le Hub du Propriétaire Bailleur</h2>
+            <p style="color:var(--color-text-muted);max-width:600px;margin:0 auto 32px;">Conseils juridiques, fiscalité, actualités immobilières — nos experts décryptent pour vous.</p>
+            <a href="/blog.html" class="btn btn-primary">Accéder au Blog →</a>
+        </div>
+    </section>
+
+    <!-- Footer basique B2B -->
+    <footer class="footer-b2b">
+        <div class="container" style="text-align: center;">
+            <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">Cautioneo <span
+                    style="color: var(--color-accent);">Propriétaires</span></div>
+            <p style="opacity: 0.7; max-width: 500px; margin: 0 auto; font-family: var(--font-main);">
+                L'infrastructure de confiance entre locataires performants et bailleurs exigeants en France.
+            </p>
+
+            <!-- Section Villes Implantations B2B -->
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
+                <h4 style="margin-bottom:15px; color: white; font-size: 1.1rem;">Assurance Loyer Impayé par Ville</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; font-size: 0.8rem; text-align: left;">
+                    <a href="/blog/assurance-loyer-impaye-paris" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Paris</a>
+                    <a href="/blog/assurance-loyer-impaye-lyon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Lyon</a>
+                    <a href="/blog/assurance-loyer-impaye-marseille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Marseille</a>
+                    <a href="/blog/assurance-loyer-impaye-toulouse" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Toulouse</a>
+                    <a href="/blog/assurance-loyer-impaye-nice" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Nice</a>
+                    <a href="/blog/assurance-loyer-impaye-nantes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Nantes</a>
+                    <a href="/blog/assurance-loyer-impaye-strasbourg" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Strasbourg</a>
+                    <a href="/blog/assurance-loyer-impaye-montpellier" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Montpellier</a>
+                    <a href="/blog/assurance-loyer-impaye-bordeaux" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Bordeaux</a>
+                    <a href="/blog/assurance-loyer-impaye-lille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Lille</a>
+                    <a href="/blog/assurance-loyer-impaye-rennes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Rennes</a>
+                    <a href="/blog/assurance-loyer-impaye-reims" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Reims</a>
+                    <a href="/blog/assurance-loyer-impaye-le-havre" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Le Havre</a>
+                    <a href="/blog/assurance-loyer-impaye-saint-etienne" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Saint-Étienne</a>
+                    <a href="/blog/assurance-loyer-impaye-toulon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Toulon</a>
                 </div>
             </div>
-                        <div class="footer-disclaimer text-sm opacity-70 mb-16 mt-32 text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
-                ⚠️ Avertissement : Les informations, modèles et simulateurs présents sur ce site sont mis à disposition à titre indicatif pour accompagner les bailleurs, mais ne remplacent en aucun cas l'avis personnalisé d'un expert juridique, d'un avocat ou d'un notaire.
-            </div>
-            <div class="footer-bottom">
-                <div>© 2026 Cautioneo. Tous droits réservés.</div>
+            <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">
+                © 2026 Cautioneo - Numéro ORIAS 1800XXXX - Produit d'assurance professionnel.
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+
+    <script>
+        // Mobile nav toggle
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('open');
+                });
+            }
+        })();
+    </script>
 </body>
+
 </html>
