@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            if (path.length > 1 && path.endsWith('/')) {
+                path = path.slice(0, -1);
+            }
+            var segments = path.split('/');
+            if (segments.length === 0) return;
+            var lastSegment = segments[segments.length - 1];
+            if (!lastSegment || lastSegment.indexOf('.') !== -1) return;
+            var targetSegment = lastSegment;
+            if (lastSegment.indexOf('assurance-loyer-impaye-') === 0) {
+                targetSegment = 'blog-' + lastSegment + '.html';
+            } else {
+                targetSegment = lastSegment + '.html';
+            }
+            segments[segments.length - 1] = targetSegment;
+            var targetPath = segments.join('/');
+            var target = window.location.origin + targetPath + window.location.search + window.location.hash;
+            window.location.replace(target);
+        })();
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
