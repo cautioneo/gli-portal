@@ -237,8 +237,8 @@
   <url>
     <loc>https://www.cautioneo-gli.com/blog-gli-tarif-comparatif</loc>
     <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/blog-gli-vs-garant-physique</loc>
@@ -350,12 +350,6 @@
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/blog-pno-obligatoire</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.cautioneo-gli.com/blog-post</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -485,12 +479,6 @@
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.cautioneo-gli.com/dashboard-demo</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/fiscalite</loc>
@@ -687,14 +675,14 @@
   <url>
     <loc>https://www.cautioneo-gli.com/mega-comparatif-garanties-locatives</loc>
     <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/mentions-legales</loc>
     <lastmod>2026-06-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/modeles-bail</loc>
@@ -713,12 +701,6 @@
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.cautioneo-gli.com/scanner-demo</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cautioneo-gli.com/simulateur-eligibilite-gli</loc>
