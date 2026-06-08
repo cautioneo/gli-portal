@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cautioneo-gli.com/sitemap.xml
+Sitemap: https://cautioneo-gli.com/sitemap.xml
