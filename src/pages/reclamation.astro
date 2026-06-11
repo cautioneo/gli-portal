@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Réclamations | Cautioneo Bailleurs";
+const pageDescription = "Service réclamation et assistance pour les propriétaires bailleurs Cautioneo. Trouvez rapidement des réponses à vos questions.";
+const pageCanonical = "https://cautioneo-gli.com/reclamation";
+const pageNoindex = true;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
+<div class="container">
+<h1>Réclamations</h1>
+<p>Procédure de traitement de vos réclamations</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<div class="content-body mx-auto max-w-900 line-height-1-8 legal-doc" data-reveal="fade-up">
+<p>CAUTIONEO et ses collaborateurs s’engagent à vous offrir le meilleur service possible à tout moment. Si toutefois vous veniez à ne pas être satisfait(e), nous vous invitons à nous en faire part sans attendre.</p>
+<p>Toute réclamation est à nous adresser aux coordonnées suivantes :</p>
+<p>CAUTIONEO<br/>Service de traitement des réclamations<br/>Euratechnologies<br/>165, Avenue de Bretagne<br/>59000 LILLE</p>
+<p>Vous pouvez également nous solliciter par mail à contact@cautioneo.com (en spécifiant dans l’objet : « RECLAMATION + objet du mail »), via notre agent conversationnel (chatbot) sur notre site https://www.cautioneo.com/  ou encore par téléphone au 09.72.50.40.51</p>
+<p>Nous nous engageons à :<br/>Accuser réception de votre réclamation dans un délai maximum de dix (10) jours ouvrables à compter de son envoi<br/>Apporter une réponse (positive ou négative) dans un délai de deux (2) mois suivant l’envoi de votre réclamation, sauf survenance de circonstances particulières dûment justifiées. Si tel est le cas, une information vous sera communiquée en ce sens.</p>
+<p>Si vous estimez que la réponse qui vous a été apportée n’est toujours pas satisfaisante, sans préjudice des autres voies de recours légales à votre disposition, vous pouvez saisir le Médiateur compétent.</p>
+<h2>1. Lorsque votre demande concerne la distribution ou le conseil apporté au titre de l’activité de Courtier d’assurance (COA) de CAUTIONEO, il s’agit du Médiateur de l’Assurance. Vous avez la possibilité de saisir la médiation :</h2>
+<p>soit par internet : https://formulaire.mediation-assurance.org<br/>Vous pouvez via cette adresse accéder directement au formulaire en ligne pour déposer votre demande et documents associés.</p>
+<p>soit par voie postale en envoyant votre demande à l’adresse :</p>
+<p>Médiation de l’Assurance<br/>TSA 50110<br/>75441 PARIS CEDEX 09</p>
+<h2>2. Lorsque votre demande concerne la distribution ou le conseil apporté au titre de l’activité de Courtier en opérations de banque et en services de paiement (COBSP) de CAUTIONEO, il s’agit de la Médiation de la consommation. Vous avez la possibilité de saisir la médiation :</h2>
+<p>soit par voie électronique, en complétant le formulaire de contact disponible dans la rubrique « Nous contacter » du site ANM Conso https://www.anm-conso.com</p>
+<p>soit par voie postale en envoyant votre demande à l’adresse :</p>
+<p>ANM Conso<br/>2 rue de Colmar<br/>94300 VINCENNES</p>
+<p>Pour tous les autres domaines, le Médiateur varie selon l’organisme d’assurance. Nous vous invitons à vous reporter aux Conditions Générales de votre contrat.</p>
+<p>Le Médiateur, personnalité extérieure à CAUTIONEO rend son avis en toute indépendance. Il ne peut être saisi qu’après épuisement des voies de recours amiables auprès de CAUTIONEO et avant l’ouverture de toute action en justice. Une fois l’avis du Médiateur rendu, si un désaccord persiste, le recours à une action en justice reste toujours possible. Toutes contestations éventuelles à défaut d’accord amiable sont de la compétence des tribunaux civils français.</p>
+<p>La dernière mise à jour de cette rubrique figure en date du 15/11/2023.</p>
+</div>
+</div>
+</section>
+<!-- Footer Partagé Riche -->`} />
+</Layout>

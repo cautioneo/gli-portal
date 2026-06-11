@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Page Non Trouvée | Cautioneo Bailleurs";
+const pageDescription = "La page demandée n";
+const pageCanonical = "https://cautioneo-gli.com/404";
+const pageNoindex = true;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero vh-80 flex-center" data-reveal="fade-up">
+<div class="container text-center">
+<span class="badge mb-24">Erreur 404</span>
+<h1 class="text-huge">Où est passé votre bail ?</h1>
+<p class="text-lg mb-48 mx-auto max-w-700">La page que vous recherchez semble s'être égarée. Pas d'inquiétude, nos experts sont là pour vous remettre sur le bon chemin.</p>
+<div class="flex-center gap-16">
+<a class="btn btn-primary" href="./">Retour à l'accueil</a>
+<a class="btn btn-outline-white" href="procedures">Consulter nos guides</a>
+</div>
+</div>
+</header>
+<!-- Footer Partagé Riche -->`} />
+</Layout>

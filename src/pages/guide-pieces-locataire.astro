@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Liste Légale des Pièces Justificatives | Cautioneo Bailleurs";
+const pageDescription = "La liste légale et exhaustive des pièces justificatives autorisées pour un dossier de location.";
+const pageCanonical = "https://cautioneo-gli.com/guide-pieces-locataire";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero">
+<div class="container">
+<h1>Liste Légale des Pièces Justificatives</h1>
+<p>Ce que vous avez le droit de demander (et ce qui est interdit) lors de la constitution du dossier locataire.</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<!-- Fil d'Ariane -->
+<div class="breadcrumb">
+<a href="procedures">← Retour aux Procédures</a>
+</div>
+<div class="guide-layout">
+<!-- Sidebar Sommaire -->
+<aside class="sidebar-sticky">
+<h3 class="text-lg mb-24">Sommaire</h3>
+<ul class="sidebar-nav">
+<li class="mb-12"><a class="text-main font-medium" href="#identite">Identité &amp; Domicile</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#ressources">Activités &amp; Ressources</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#interdits">❌ Documents Interdits</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#garant">Et le Garant physique ?</a></li>
+</ul>
+</aside>
+<!-- Main Content -->
+<div class="content-body">
+<div class="mb-48">
+<p class="text-lg text-muted mb-16">La <a href="blog-modele-contrat-location">loi Alur</a> (Décret du 5 novembre 2015) a encadré de manière très stricte et limitative les documents qu'un propriétaire bailleur <strong>a le droit d'exiger</strong> d'un candidat locataire.</p>
+<div class="mb-48" id="identite">
+<h2 class="text-2xl mb-24">1. Identité et Domicile</h2>
+<div class="checklist">
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Pièce d'Identité :</strong> CNI, Passeport ou Titre de séjour (valide).</span>
+</label>
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Dernières quittances :</strong> Les 3 derniers mois de loyer.</span>
+</label>
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Justificatif d'hébergement :</strong> Attestation si hébergé.</span>
+</label>
+</div>
+</div>
+<div class="mb-48" id="ressources">
+<h2 class="text-2xl mb-24">2. Activités et Ressources</h2>
+<div class="checklist">
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Contrat de travail :</strong> Ou attestation employeur récente.</span>
+</label>
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Bulletins de paie :</strong> Les 3 derniers mois complets.</span>
+</label>
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Avis d'imposition :</strong> Le dernier avis reçu.</span>
+</label>
+<label class="checklist-item">
+<input checked="" disabled="" type="checkbox"/>
+<span><strong>Kbis :</strong> Pour les indépendants ou sociétés.</span>
+</label>
+</div>
+</div>
+<div class="mb-48" id="interdits">
+<h2 class="text-2xl mb-16">3. ❌ Les documents formellement interdits</h2>
+<p class="text-lg text-muted mb-16">Il est strictement illégal de demander l'une de ces pièces, sous peine d'une amende pouvant aller jusqu'à <strong>3 000 €</strong>.</p>
+<div class="info-note accent-danger text-danger">
+<ul class="pl-20 line-height-1-8">
+<li>Photographies (hors pièce d'identité).</li>
+<li>Relevé de compte bancaire.</li>
+<li>Attestation d'absence de crédit.</li>
+<li>Dossier médical personnel.</li>
+<li>Extrait de casier judiciaire.</li>
+<li>Copie de la carte vitale.</li>
+</ul>
+</div>
+</div>
+<div class="mb-48" id="garant">
+<h2 class="text-2xl mb-16">4. Les garants physiques</h2>
+<p class="text-lg text-muted mb-24">Si le locataire présente un garant, les pièces autorisées sont strictement identiques à celles listées ci-dessus.</p>
+<!-- CTA Cautioneo -->
+<div class="cta-banner bg-primary text-white p-40 border-radius-20" data-reveal="fade-up">
+<h3 class="text-white">Oubliez la paperasse !</h3>
+<p class="opacity-90">L'agrément Cautioneo certifie le dossier locataire en ligne via l'analyse instantanée des documents. Plus besoin de trier manuellement.</p>
+<a class="btn btn-white text-primary font-600 border-radius-pill" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">Certifier un dossier candidat</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Partagé Riche -->
+<!-- Footer Partagé Riche -->`} />
+</Layout>

@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Garantme ou Cautioneo : Quel est le meilleur garant pour votre location ?";
+const pageDescription = "Découvrez notre comparatif impartial entre Cautioneo et Garantme. Taux de fraude, plateforme technologique, assurance de vos loyers et accompagnement.";
+const pageCanonical = "https://cautioneo-gli.com/comparatif-garantme";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
+<div class="container">
+<h1>Garantme vs Cautioneo</h1>
+<p>Le match des leaders de la garantie locative dématérialisée. Faites le choix technologique qui protège le mieux votre patrimoine.</p>
+</div>
+</header>
+<main class="pb-80">
+<section class="section">
+<div class="container">
+<div class="grid-2-cols gap-48 align-items-center mb-64" data-reveal="fade-up">
+<div>
+<h2 class="text-3xl mb-16">Le choix du Premium technologique</h2>
+<p class="text-lg text-muted mb-24">Si Garantme a longtemps été l'un des pionniers historiques de la garantie locative en ligne, l'exigence croissante des bailleurs face au risque de fraude nécessitait une solution nouvelle génération.</p>
+<p class="text-lg text-muted"><strong>Cautioneo</strong> s'est imposé comme l'alternative premium de confiance en alliant deux facteurs critiques : Une analyse anti-fraude impitoyable ("Zéro fausse pièce"), et une suite logicielle (SaaS) conçue spécifiquement pour retirer la charge mentale d'un propriétaire 100% autonome ou géré.</p>
+</div>
+<div>
+<div class="bg-dark text-white radius-lg p-32" style="box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);">
+<h3 class="mb-16 text-2xl text-white">Pourquoi basculer chez Cautioneo ?</h3>
+<ul style="list-style: none; padding: 0;">
+<li class="mb-16 flex"><i class="fas fa-check-circle mt-4 mr-12 text-white opacity-90"></i> L'algorithme de détection de faux documents le plus réputé.</li>
+<li class="mb-16 flex"><i class="fas fa-check-circle mt-4 mr-12 text-white opacity-90"></i> Un Dashboard complet de gestion (suivi sinistre temps-réel).</li>
+<li class="flex"><i class="fas fa-check-circle mt-4 mr-12 text-white opacity-90"></i> Un service client "humain" basé en France très accessible.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Analyse détaillée -->
+<div class="content-body max-w-900 mx-auto" data-reveal="fade-up">
+<h3 class="text-2xl mt-48 mb-24 text-primary">1. La Détection des Fraudes : Un enjeu crucial</h3>
+<p>Avec l'explosion du télétravail et l'IA générative, falsifier des relevés de comptes et des fiches de paie (Photoshop) est devenu effroyablement simple. Les assureurs sont tous confrontés à ce fléau.</p>
+<p>C'est pourquoi Cautioneo s'est focalisé sur un logiciel de <em>scoring et d'Open Banking</em> intraitable. Nos analystes accompagnés d'une intelligence artificielle recoupent l'empreinte numérique et les données institutionnelles des locataires avec une précision redoutable.</p>
+<h3 class="text-2xl mt-48 mb-24 text-primary">2. L'Espace Bailleur "Zéro Paperasse"</h3>
+<p>Certains organismes concurrents se limitent à vous envoyer un e-mail avec un "Certificat de Garantie" en PDF, vous laissant gérer vos archives et la procédure en cas d'impayé. Cautioneo vous fournit un <a class="text-primary font-600" href="dashboard-demo">véritable espace logiciel (Dashboard)</a>.</p>
+<p>Vous avez une vue d'ensemble sur tous vos biens garantis, vous pouvez valider un futur locataire certifié en un clic (il vous invite numériquement), et si un impayé survient ? Vous indiquez le montant et la date dans l'outil, et le service contentieux intégré prend la relève, s'occupant d'envoyer les mises en demeure automatiquement.</p>
+<h3 class="text-2xl mt-48 mb-24 text-primary">3. La force de la réactivité</h3>
+<p>Dans l'immobilier locatif, une semaine perdue avec un appartement vacant à Paris ou Lyon coûte plusieurs centaines d'euros. Le délai de réponse "Garantme" est bon, mais la fluidité d'octroi Cautioneo bat des records dès que le locataire lie ses comptes de manière sécurisée en API. L'agrément remonte au propriétaire en parfois moins de 3 heures !</p>
+</div>
+<div class="cta-box mt-64 bg-primary text-white p-40 border-radius-20 shadow-lg" data-reveal="fade-up">
+<h3 class="text-white">Laissez le doute derrière vous.</h3>
+<p class="text-white opacity-90">Rejoignez un gestionnaire de risque de nouvelle génération. Testez l'interface Cautioneo dès maintenant.</p>
+<a class="btn btn-white font-700 h-50 px-32 text-lg" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F">Créer un compte et tester</a>
+</div>
+</div>
+</section>
+</main>`} />
+</Layout>

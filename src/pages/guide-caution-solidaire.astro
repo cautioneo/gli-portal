@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Caution Solidaire en Location : Définition, Pièges et Alternatives | Cautioneo";
+const pageDescription = "Qu'est-ce qu'une caution solidaire ? Comprenez l'engagement du garant physique, les clauses abusives, comment s'en libérer et les alternatives (garant en ligne).";
+const pageCanonical = "https://cautioneo-gli.com/guide-caution-solidaire";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero">
+<div class="container">
+<h1>La Caution Solidaire en Location</h1>
+<p class="opacity-90">Définition, engagements du garant, clauses abusives et comment s'en libérer.</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<!-- Fil d'Ariane -->
+<div class="breadcrumb">
+<a href="procedures">← Retour aux Procédures</a>
+</div>
+<div class="guide-layout">
+<!-- Sidebar Sommaire -->
+<aside class="sidebar-sticky">
+<h3 class="text-lg mb-24">Sommaire</h3>
+<ul class="sidebar-nav">
+<li class="mb-12"><a class="text-main font-medium" href="#definition">1. La caution solidaire, c'est quoi ?</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#pieges">2. Clauses abusives et limites</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#annuler-caution">3. Comment ne plus être garant ?</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#alternative">4. L'alternative : Le garant institutionnel</a></li>
+</ul>
+</aside>
+<!-- Main Content -->
+<div class="content-body">
+<div class="mb-48" id="definition">
+<h2 class="text-2xl mb-16">1. La caution solidaire : définition et fonctionnement</h2>
+<p class="text-lg text-muted mb-16">En location immobilière, la <strong>caution solidaire</strong> est un acte juridique par lequel une personne (le garant) s'engage à payer le loyer, les charges et les éventuelles dégradations à la place du locataire, si ce dernier ne paie pas.</p>
+<div class="info-note mb-24">
+<p class="opacity-90"><strong>Caution Simple vs Caution Solidaire :</strong><br/>
+                            - En <em>caution simple</em>, le propriétaire doit d'abord poursuivre le locataire défaillant (huissier, saisie) avant de se retourner vers le garant.<br/>
+                            - En <strong>caution solidaire</strong>, le propriétaire peut exiger le paiement directement au garant dès le premier impayé, sans même avoir à poursuivre le locataire au préalable. C'est le format le plus utilisé en France.</p>
+</div>
+</div>
+<div class="mb-48" id="pieges">
+<h2 class="text-2xl mb-16">2. Clauses abusives et limites (ex: EHPAD)</h2>
+<p class="text-lg text-muted mb-16">S'engager en tant que garant n'est pas anodin, et les litiges sont nombreux. Certaines clauses peuvent être considérées comme abusives par les tribunaux.</p>
+<p class="text-lg text-muted mb-16">C'est souvent le cas pour les <strong>cautions solidaires en EHPAD</strong>. Les maisons de retraite exigent souvent des enfants qu'ils signent une caution solidaire illimitée pour payer les frais de séjour de leurs parents. La jurisprudence considère parfois ces clauses comme abusives si elles créent un déséquilibre significatif ou si le signataire n'a pas été informé de l'étendue exacte de son engagement financier.</p>
+<p class="text-lg text-muted">Dans une location classique, le contrat de cautionnement doit mentionner un <strong>montant maximum garanti</strong> (en chiffres et en lettres) pour être valide, ou une durée précise.</p>
+</div>
+<div class="mb-48" id="annuler-caution">
+<h2 class="text-2xl mb-16">3. Comment ne plus être garant d'un locataire ?</h2>
+<p class="text-lg text-muted mb-16">Annuler son engagement de garant dépend de la rédaction de l'acte de cautionnement :</p>
+<ul class="text-muted pl-20 line-height-1-8 mb-24">
+<li><strong>Si la caution a une durée déterminée :</strong> (ex: "pour la durée initiale du bail de 3 ans"). Il est <strong>impossible</strong> de se rétracter avant la fin de cette période. L'engagement prend fin automatiquement à l'échéance.</li>
+<li><strong>Si la caution est à durée indéterminée :</strong> Le garant peut résilier son engagement à tout moment par lettre recommandée avec accusé de réception. Cependant, la résiliation ne prendra effet qu'à l'expiration du bail en cours (souvent lors de la prochaine reconduction tacite).</li>
+<li><strong>En cas de <a href="blog-coliving-sous-location">colocation</a> :</strong> Depuis la loi Alur, si le locataire garanti quitte la colocation, l'engagement du garant cesse six mois après le départ de ce locataire, sauf s'il est remplacé avant.</li>
+</ul>
+</div>
+<div class="mb-48" id="alternative">
+<h2 class="text-2xl mb-16">4. L'alternative plus sûre : Le garant institutionnel en ligne</h2>
+<p class="text-lg text-muted mb-24">Pour les locataires qui n'ont pas de <a href="blog-gli-vs-garant-physique">garant physique</a> solvable (ou qui ne veulent pas faire peser ce poids sur leurs proches), et pour les propriétaires qui veulent une vraie certitude d'être payés (les garants physiques font parfois eux-mêmes défaut), la solution est le garant institutionnel.</p>
+<div class="cta-banner bg-primary text-white p-40 border-radius-20" data-reveal="fade-up">
+<h3 class="text-white">Cautioneo : Le garant en ligne gratuit pour le propriétaire</h3>
+<p class="opacity-90">Fini les actes de cautionnement complexes et les garants physiques qui refusent de payer :</p>
+<ul class="text-white opacity-90 pl-20 line-height-1-8 mb-24">
+<li><strong>Certitude :</strong> C'est Cautioneo, un organisme financier solide, qui se porte garant pour le locataire.</li>
+<li><strong>Rapidité :</strong> Certification du dossier locataire en 24h.</li>
+<li><strong>Gratuit pour le bailleur :</strong> C'est le locataire qui paie une petite cotisation mensuelle pour bénéficier de ce garant de poids (<a href="comparatif-gli">GLI inversée</a>).</li>
+</ul>
+<a class="btn btn-white text-primary font-600 border-radius-pill" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">Découvrir le garant Cautioneo</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Partagé Riche -->`} />
+</Layout>

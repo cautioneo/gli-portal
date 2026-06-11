@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Scanner d'Authenticité | Cautioneo Bailleurs";
+const pageDescription = "Testez notre technologie de détection de faux documents. Ne vous laissez plus tromper par des dossiers falsifiés.";
+const pageCanonical = "https://cautioneo-gli.com/scanner-demo";
+const pageNoindex = true;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<main class="page-content">
+<header class="hero-mini">
+<div class="container">
+<h1 class="text-huge mb-16">Scanner d'Authenticité</h1>
+<p class="text-xl opacity-90 max-w-700 mx-auto">Découvrez comment notre technologie détecte les dossiers falsifiés en quelques secondes.</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center" data-reveal="fade-up">
+<div class="badge badge-accent mb-16">Délégation Garantie</div>
+<h2 class="text-3xl mb-16">Ne prenez plus ce risque seul</h2>
+<p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">Notre technologie certifie automatiquement l'authenticité des dossiers locataires. Protégez-vous des documents falsifiés en 1 seul clic.</p>
+<a class="btn btn-primary" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">Je délègue la certification du dossier locataire à Cautioneo</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Partagé Riche -->`} />
+</Layout>

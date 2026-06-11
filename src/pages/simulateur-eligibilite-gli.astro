@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Simulateur d'Éligibilité GLI Locataire | Cautioneo Bailleurs";
+const pageDescription = "Votre candidat locataire est-il éligible à la Garantie Loyers Impayés (GLI) ? Calculez son taux d'effort et découvrez si son dossier est assurable instantanément.";
+const pageCanonical = "https://cautioneo-gli.com/simulateur-eligibilite-gli";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
+<div class="container">
+<h1>Testeur d'Éligibilité GLI Locataire</h1>
+<p>Déterminez instantanément si le dossier de votre candidat locataire est assurable par la GLI Cautioneo ou s'il nécessite notre dispositif de Garant.</p>
+</div>
+</header>
+<main class="pb-80">
+<section class="section">
+<div class="container">
+<div class="grid-2-cols gap-48 items-start">
+<!-- Formulaire de simulation -->
+<div class="card p-32 border" data-reveal="fade-up">
+<h2 class="mb-16">Simuler le dossier du locataire</h2>
+<p class="text-muted mb-32">Renseignez la situation de votre candidat locataire pour tester son éligibilité aux conditions d'assurance.</p>
+<form id="eligibility-form">
+<div class="form-group mb-16">
+<label class="mb-8 block text-sm font-medium" for="loc-situation">Situation professionnelle du locataire</label>
+<select class="form-control" id="loc-situation" required="">
+<option value="cdi_valide">CDI (Période d'essai validée ou confirmée)</option>
+<option value="cdi_essai">CDI (Période d'essai en cours)</option>
+<option value="cdd">CDD / Contrat temporaire</option>
+<option value="interim">Intérimaire</option>
+<option value="indep_more_2">Indépendant / Freelance / Artisan (plus de 2 ans d'activité)</option>
+<option value="indep_less_2">Indépendant / Freelance / Artisan (moins de 2 ans d'activité)</option>
+<option value="etudiant">Étudiant / Alternant / Apprenti</option>
+<option value="retraite">Retraité</option>
+<option value="sans_activite">Sans activité / Chômeur / Allocataire</option>
+</select>
+</div>
+<div class="form-group mb-16">
+<label class="mb-8 block text-sm font-medium" for="loc-loyer">Loyer mensuel charges comprises (€)</label>
+<input class="form-control" id="loc-loyer" min="100" placeholder="Ex: 850" required="" type="number"/>
+</div>
+<div class="form-group mb-16">
+<label class="mb-8 block text-sm font-medium" for="loc-revenus">Revenus nets mensuels cumulés du locataire (€)</label>
+<input class="form-control" id="loc-revenus" min="0" placeholder="Ex: 2600" required="" type="number"/>
+</div>
+<div class="form-group mb-24" id="garant-group">
+<label class="mb-8 block text-sm font-medium" for="loc-garant">Revenus nets mensuels du garant physique (facultatif) (€)</label>
+<input class="form-control" id="loc-garant" min="0" placeholder="Ex: 3200" type="number"/>
+</div>
+<button class="btn btn-primary w-full" type="submit">Tester le dossier candidat</button>
+</form>
+</div>
+<!-- Zone de Résultats -->
+<div>
+<!-- Loader pendant le calcul -->
+<div class="card p-32 border text-center hidden" id="eligibility-loader">
+<h3 class="mb-16">Analyse du dossier en cours...</h3>
+<div class="loader"></div>
+<p class="text-sm text-muted">Vérification de la conformité du taux d'effort et des conditions d'octroi de l'assureur.</p>
+</div>
+<!-- Card de Résultat par défaut (Intro) -->
+<div class="card p-32 border text-center" id="result-intro">
+<i class="fas fa-shield-alt text-primary mb-24" style="font-size: 3.5rem;"></i>
+<h2 class="mb-16">Rapport d'éligibilité</h2>
+<p class="text-muted">Remplissez le formulaire à gauche pour simuler instantanément la conformité de votre candidat face aux règles de l'assurance GLI classique et du programme Garant Cautioneo.</p>
+</div>
+<!-- Card de Résultat dynamically updated -->
+<div class="hidden" id="result-eligibility">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+<h3 id="result-title" style="margin-bottom: 0;">Résultat de la simulation</h3>
+<span class="badge" id="eligibility-badge">--</span>
+</div>
+<div class="p-16 border-radius-10 mb-20 bg-gray-light" style="background-color: var(--color-bg-alt); display: flex; justify-content: space-around; text-align: center;">
+<div>
+<span class="text-muted text-xs uppercase font-bold" style="font-size: 0.75rem;">Loyer saisi</span>
+<div class="text-lg font-bold" id="result-loyer-val" style="margin-top: 4px;">-- €</div>
+</div>
+<div style="width: 1px; background: var(--color-border);"></div>
+<div>
+<span class="text-muted text-xs uppercase font-bold" style="font-size: 0.75rem;">Revenus locataire</span>
+<div class="text-lg font-bold" id="result-revenus-val" style="margin-top: 4px;">-- €</div>
+</div>
+<div style="width: 1px; background: var(--color-border);"></div>
+<div>
+<span class="text-muted text-xs uppercase font-bold" style="font-size: 0.75rem;">Taux d'effort</span>
+<div class="text-lg font-bold text-primary" id="effort-rate-val" style="margin-top: 4px;">-- %</div>
+</div>
+</div>
+<p class="text-muted mb-24" id="result-text"></p>
+<a class="btn" href="#" id="result-cta" target="_blank">Prendre rendez-vous</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+<script>
+        document.getElementById('eligibility-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loader
+            var resultIntro = document.getElementById('result-intro');
+            var resultDiv = document.getElementById('result-eligibility');
+            var loader = document.getElementById('eligibility-loader');
+            
+            resultIntro.classList.add('hidden');
+            resultDiv.classList.add('hidden');
+            loader.classList.remove('hidden');
+            
+            setTimeout(function() {
+                loader.classList.add('hidden');
+                resultDiv.classList.remove('hidden');
+                
+                var situation = document.getElementById('loc-situation').value;
+                var loyer = parseFloat(document.getElementById('loc-loyer').value);
+                var revenus = parseFloat(document.getElementById('loc-revenus').value) || 0;
+                var garant = parseFloat(document.getElementById('loc-garant').value) || 0;
+                
+                var effortRate = (loyer / (revenus || 1)) * 100;
+                
+                var isClassicGli = false;
+                var isCautioneoGarant = false;
+                
+                if (revenus === 0) {
+                    effortRate = 100;
+                }
+                
+                // Compute eligibility logic
+                if (situation === 'cdi_valide') {
+                    if (effortRate <= 33) {
+                        isClassicGli = true;
+                    } else if (effortRate <= 50) {
+                        isCautioneoGarant = true;
+                    }
+                } else if (situation === 'cdi_essai' || situation === 'cdd' || situation === 'interim' || situation === 'indep_less_2') {
+                    if (effortRate <= 50) {
+                        isCautioneoGarant = true;
+                    }
+                } else if (situation === 'indep_more_2') {
+                    if (effortRate <= 33) {
+                        isClassicGli = true;
+                    } else if (effortRate <= 50) {
+                        isCautioneoGarant = true;
+                    }
+                } else if (situation === 'etudiant') {
+                    var garantEffort = (loyer / (garant || 1)) * 100;
+                    if (garant > 0 && garantEffort <= 33) {
+                        isClassicGli = true;
+                    } else if (effortRate <= 50) {
+                        isCautioneoGarant = true;
+                    }
+                } else if (situation === 'retraite') {
+                    if (effortRate <= 33) {
+                        isClassicGli = true;
+                    } else if (effortRate <= 50) {
+                        isCautioneoGarant = true;
+                    }
+                } else if (situation === 'sans_activite') {
+                    if (garant > 0 && (loyer / garant * 100) <= 33) {
+                        isClassicGli = true;
+                    } else if (effortRate <= 50 && garant > 0) {
+                        isCautioneoGarant = true;
+                    }
+                }
+                
+                // Set text values
+                document.getElementById('result-loyer-val').textContent = loyer + " €";
+                document.getElementById('result-revenus-val').textContent = revenus + " €";
+                
+                var rateSpan = document.getElementById('effort-rate-val');
+                rateSpan.textContent = effortRate.toFixed(1) + " %";
+                
+                var statusBadge = document.getElementById('eligibility-badge');
+                var resultTitle = document.getElementById('result-title');
+                var resultText = document.getElementById('result-text');
+                var ctaBtn = document.getElementById('result-cta');
+                
+                if (isClassicGli) {
+                    statusBadge.textContent = "Éligible GLI Classique";
+                    statusBadge.className = "badge badge-success";
+                    rateSpan.className = "text-lg font-bold text-success";
+                    resultTitle.textContent = "Félicitations ! Votre locataire est éligible à la GLI.";
+                    resultText.textContent = "Le dossier remplit l'ensemble des critères réglementaires de la GLI classique. Le taux d'effort est de " + effortRate.toFixed(1) + "% (sous le maximum de 33%). Vous êtes couvert à 100% sans frais supplémentaires.";
+                    ctaBtn.textContent = "Souscrire à la GLI classique (2,75%)";
+                    ctaBtn.href = "https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F";
+                    ctaBtn.className = "btn btn-primary w-full mt-16";
+                    resultDiv.className = "card p-32 border accent-success";
+                } else if (isCautioneoGarant) {
+                    statusBadge.textContent = "Éligible via Garant Cautioneo";
+                    statusBadge.className = "badge badge-warning";
+                    rateSpan.className = "text-lg font-bold text-warning";
+                    resultTitle.textContent = "Dossier éligible avec le Garant Cautioneo !";
+                    resultText.textContent = "Le locataire ne rentre pas dans les cases de la GLI classique (taux d'effort de " + effortRate.toFixed(1) + "% ou statut non-standard comme CDD/Freelance/Période d'essai). Cautioneo se porte garant pour lui gratuitement pour vous. Demandez-lui simplement de se faire certifier en ligne !";
+                    ctaBtn.textContent = "Faire certifier mon locataire";
+                    ctaBtn.href = "https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F";
+                    ctaBtn.className = "btn btn-accent w-full mt-16";
+                    resultDiv.className = "card p-32 border accent-warning";
+                } else {
+                    statusBadge.textContent = "Dossier Non Éligible";
+                    statusBadge.className = "badge badge-danger";
+                    rateSpan.className = "text-lg font-bold text-danger";
+                    resultTitle.textContent = "Le dossier locataire n'est pas éligible";
+                    resultText.textContent = "Le taux d'effort du locataire est de " + effortRate.toFixed(1) + "%, ce qui dépasse les limites de sécurité de 50%. Pour sécuriser ce bail, nous vous recommandons d'ajouter des co-locataires ou de demander un garant physique complémentaire.";
+                    ctaBtn.textContent = "Parler à un conseiller Cautioneo";
+                    ctaBtn.href = "https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F";
+                    ctaBtn.className = "btn btn-outline w-full mt-16";
+                    resultDiv.className = "card p-32 border accent-danger";
+                }
+            }, 500);
+        });
+    </script>`} />
+</Layout>

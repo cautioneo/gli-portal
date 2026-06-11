@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Comparatif GLI (Cautioneo vs Visale) | Cautioneo Bailleurs";
+const pageDescription = "Le comparatif ultime des Garanties Loyers Impayés (GLI) : Visale, Mila vs Cautioneo. Trouvez la meilleure protection.";
+const pageCanonical = "https://cautioneo-gli.com/comparatif-gli";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero">
+<div class="container">
+<h1>Comparatif Objectif des Garanties Locatives</h1>
+<p>Arrêtez d'hésiter entre Visale, garant d'agence, Assurance classique et Cautioneo. Voici les vrais chiffres.</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<div class="table-wrapper" data-reveal="fade-up">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Critères</th>
+<th>Garantie <a href="blog-gli-vs-visale">Visale</a></th>
+<th class="table-accent">Cautioneo</th>
+<th>Mila (Sécurité)</th>
+<th>Mila (Sérénité)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="font-600">Cotisation</td>
+<td>Certifié</td>
+<td class="table-accent price-cell">2,75% <span class="label-sub">du loyer charges comprises</span></td>
+<td class="price-cell">2,70% <span class="label-sub">du loyer CC</span></td>
+<td class="price-cell">2,95% <span class="label-sub">du loyer CC</span></td>
+</tr>
+<tr>
+<td class="font-600">Mode de paiement</td>
+<td class="text-muted">-</td>
+<td class="table-accent">Trimestriel / Annuel <span class="label-sub">(au choix)</span></td>
+<td>Mensuel</td>
+<td>Mensuel</td>
+</tr>
+<tr>
+<td class="font-600">Déduction fiscale</td>
+<td class="text-muted">-</td>
+<td class="table-accent text-check">✅</td>
+<td class="text-check">✅</td>
+<td class="text-check">✅</td>
+</tr>
+<tr>
+<td class="font-600">Plafond d'impayés</td>
+<td>36 mois</td>
+<td class="table-accent price-cell">96 000€ <span class="label-sub">(Sans limite de durée)</span></td>
+<td>90 000€</td>
+<td>Illimité</td>
+</tr>
+<tr>
+<td class="font-600">Indemnisation</td>
+<td>Après 2 mois</td>
+<td class="table-accent">Dès le 1er mois <span class="label-sub">à date fixe</span></td>
+<td>Après 1 mois</td>
+<td>Après 1 mois</td>
+</tr>
+<tr>
+<td class="font-600">Protection juridique</td>
+<td class="text-cross">❌ Non incluse</td>
+<td class="table-accent price-cell">16 000€</td>
+<td class="text-cross">❌</td>
+<td class="price-cell">15 000€</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Maillage SEO Nouveaux Comparatifs -->
+<div class="mt-80" data-reveal="fade-up">
+<h2 class="text-3xl mb-32 text-center">Nos guides comparatifs spécialisés</h2>
+<div class="grid-2-cols gap-32">
+<div class="info-box bg-white border box-shadow-sm text-center">
+<i class="fas fa-balance-scale text-primary mb-16" style="font-size: 32px;"></i>
+<h3 class="mb-16 text-xl">Cautioneo vs Garantme</h3>
+<p class="text-muted mb-24">Découvrez les différences majeures entre les deux pure-players technologiques : analyse anti-fraude, réactivité et indemnisation.</p>
+<a class="btn btn-outline w-full" href="comparatif-garantme">Lire le match complet</a>
+</div>
+<div class="info-box bg-white border box-shadow-sm text-center">
+<i class="fas fa-university text-primary mb-16" style="font-size: 32px;"></i>
+<h3 class="mb-16 text-xl">Cautioneo vs Visale</h3>
+<p class="text-muted mb-24">Garantie publique incluse d'Action Logement ou Garantie privée sur-mesure ? Déterminez le meilleur outil pour votre rendement.</p>
+<a class="btn btn-outline w-full" href="comparatif-visale">Voir l'analyse détaillée</a>
+</div>
+</div>
+</div>
+<!-- Section GEO Maillage -->
+<div class="mt-80" data-reveal="fade-up">
+<h2 class="text-3xl mb-32 text-center">Ressources &amp; Guides pour choisir</h2>
+<div class="grid-2-cols gap-32">
+<div class="info-box bg-light border box-shadow-sm p-32 radius-lg">
+<h3 class="mb-16 text-xl text-primary">Comment choisir sa GLI ?</h3>
+<p class="text-muted mb-24">Découvrez notre guide ultime pour comparer les franchises, carences et plafonds d'indemnisation des assurances loyers impayés en 2026.</p>
+<a class="font-600 text-primary" href="guide-choisir-assurance-loyer-impaye">Lire le guide complet →</a>
+</div>
+<div class="info-box bg-light border box-shadow-sm p-32 radius-lg">
+<h3 class="mb-16 text-xl text-primary">Le Méga-Comparatif des Garanties</h3>
+<p class="text-muted mb-24"><a href="blog-gli-vs-garant-physique">Garant physique</a>, Visale, Assurance classique ou Garant institutionnel ? Pesez le pour et le contre (Pros &amp; Cons) de chaque solution.</p>
+<a class="font-600 text-primary" href="mega-comparatif-garanties-locatives">Voir le comparatif 360° →</a>
+</div>
+</div>
+</div>
+<div class="cta-box mt-80 text-center bg-primary text-white p-40 border-radius-20 shadow-lg" data-reveal="fade-up">
+<h3 class="text-white">Sécurisez votre loyer en 2 minutes</h3>
+<p class="text-white opacity-90">Rejoignez des milliers de propriétaires qui dorment sur leurs deux oreilles. Déductible de vos <a href="blog-declaration-revenus-fonciers">revenus fonciers</a> (GLI).</p>
+<div class="flex-center gap-16">
+<a class="btn btn-white text-primary font-700 h-50 px-32 text-lg" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" style="display: flex; align-items: center;" target="_blank">Obtenir mon étude personnalisée</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Partagé Riche -->
+<!-- Footer Partagé Riche -->`} />
+</Layout>

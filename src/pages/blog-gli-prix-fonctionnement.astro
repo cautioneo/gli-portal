@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Prix et fonctionnement d'une Assurance Loyer Impayé (GLI) | Cautioneo";
+const pageDescription = "Quel est le prix réel d'une Assurance Loyer Impayé (GLI) en 2026 ? Taux, coût de la gestion des sinistres, conditions et déduction fiscale à 100% expliqués.";
+const pageCanonical = "https://cautioneo-gli.com/blog-gli-prix-fonctionnement";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<!-- Navigation -->
+
+<!-- Post Header -->
+<header class="blog-header">
+<div class="container">
+<span class="blog-category" style="margin-bottom: 20px;">Gestion &amp; Investissement</span>
+<h1 style="max-width: 900px; margin: 0 auto 20px;">Quel est le prix réel d'une Assurance Loyer Impayé (GLI) en 2026 ?</h1>
+<div class="article-meta">
+<img alt="Expert Cautioneo" class="article-author-img" src="images/photo-1573496359142-b8d87734a5a2.webp"/>
+<span>Par <strong>L'Équipe Cautioneo</strong></span>
+<span>•</span>
+<span>Publié le 26 Mai 2026</span>
+<span>•</span>
+<span>Lecture : 6 min</span>
+</div>
+</div>
+</header>
+<!-- Post Content -->
+<main class="article-container">
+<article class="article-content">
+
+        <!-- Callout Silo B2B -->
+        <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+            <strong>💡 Guide Pratique :</strong> Comment choisir la meilleure assurance loyer impayé ? Retrouvez notre <a href="guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Guide Ultime de l'Assurance Loyer Impayé (GLI)</a>.
+        </div>
+
+<p>La rentabilité d'un investissement locatif repose sur une règle simple mais implacable : la régularité du versement des loyers. En France, un dossier de bailleur sur cinq fait face à un retard de paiement en cours de vie du contrat de bail, et les procédures d'expulsion de locataires défaillants peuvent coûter des milliers d'euros en frais de procédure.</p>
+<p>Pour se couvrir contre ce risque majeur, de nombreux investisseurs souscrivent à une **Garantie Loyers Impayés (GLI)**. Mais quel est le coût réel de cette sérénité ? Quelles sont les cotisations moyennes du marché, comment fonctionnent les franchises et comment tirer parti de la <a href="blog-gli-fiscalite">fiscalité</a> avantageuse ? Ce guide complet vous dévoile tout ce que vous devez savoir pour arbitrer intelligemment.</p>
+<h2>1. Comment est calculé le prix d'une GLI ?</h2>
+<p>Contrairement à une assurance habitation classique dont le tarif dépend de la surface ou de la localisation, le coût d'une assurance loyer impayé est indexé directement sur les revenus générés par votre bien immobilier.</p>
+<p>La formule standard est un **taux de prime** appliqué au montant du loyer mensuel charges comprises (CC). Sur le marché français en 2026, les tarifs varient généralement de :</p>
+<ul>
+<li><strong>2,2% à 2,8%</strong> du loyer CC pour les contrats groupes négociés par les syndics ou agences de gestion immobilière.</li>
+<li><strong>2,75% en direct</strong> du loyer CC pour un propriétaire bailleur individuel souscrivant en direct auprès d'une compagnie d'assurance ou d'un courtier digital.</li>
+</ul>
+<p>Par exemple, pour un loyer charges comprises de 1 000 € par mois, une prime au taux de 2,75% représentera une charge mensuelle de **25 €** pour le propriétaire.</p>
+<h2>2. Simulateur d'Impôts et Déductibilité Fiscale</h2>
+<p>C'est l'atout fiscal majeur trop souvent ignoré des propriétaires particuliers. Si vous déclarez vos revenus fonciers sous **le régime réel** (obligatoire au-delà de 15 000 € de revenus fonciers par an, ou sur option), **les cotisations d'assurance loyer impayé sont déductibles à 100% de vos revenus fonciers**.</p>
+<p>Cela signifie que le coût net réel de votre assurance est fortement réduit en fonction de votre tranche marginale d'imposition (TMI) et des prélèvements sociaux (17,2%).</p>
+<!-- Simulator Component -->
+<div class="simulator-box">
+<h3 style="margin-top:0; margin-bottom: 24px; color: var(--color-primary-dark); font-size: 1.4rem; text-align: center;">Simulateur de Coût Réel Après Déduction</h3>
+<div class="simulator-grid">
+<div>
+<div class="sim-input-group">
+<label for="loyer-cc">Loyer mensuel charges comprises (€)</label>
+<input class="sim-input" id="loyer-cc" type="number" value="800"/>
+</div>
+<div class="sim-input-group">
+<label for="tmi">Votre Tranche Marginale d'Imposition (TMI)</label>
+<select class="sim-input" id="tmi">
+<option value="0.11">11% (Revenus modestes)</option>
+<option selected="" value="0.30">30% (Classe moyenne supérieure)</option>
+<option value="0.41">41% (Revenus élevés)</option>
+<option value="0.45">45% (Revenus très élevés)</option>
+</select>
+</div>
+</div>
+<div class="sim-results">
+<div class="sim-result-row">
+<span>Cotisation GLI estimée (2,75%) :</span>
+<span class="sim-result-value" id="res-prime">20,00 € / mois</span>
+</div>
+<div class="sim-result-row">
+<span>Économie d'impôt (TMI + 17,2% PS) :</span>
+<span class="sim-result-value" id="res-economie" style="color: #10b981;">-9,44 € / mois</span>
+</div>
+<div class="sim-result-row" style="margin-top: 12px; padding-top: 12px; border-top: 2px solid var(--color-primary);">
+<strong>Coût net réel de l'assurance :</strong>
+<strong class="sim-result-value accent" id="res-net">10,56 € / mois</strong>
+</div>
+</div>
+</div>
+</div>
+<h2>3. Quels critères justifient les différences de prix ?</h2>
+<p>Toutes les GLI ne se valent pas. Une prime anormalement basse (inférieure à 2%) doit vous inviter à une vigilance accrue quant aux conditions générales de vente :</p>
+<ul>
+<li><strong>Le délai de carence :</strong> C'est la période suivant la souscription durant laquelle la garantie ne s'applique pas (parfois 3 à 6 mois). Privilégiez les contrats sans carence.</li>
+<li><strong>La franchise :</strong> Certains assureurs appliquent une franchise de 2 ou 3 mois d'impayés qui restent à votre charge définitive. Une GLI premium rembourse dès le **1er euro d'impayé** rétroactivement.</li>
+<li><strong>Le plafond de garantie :</strong> Les contrats d'entrée de gamme plafonnent l'indemnisation globale à 30 000 € ou 50 000 €. Une procédure d'expulsion classique d'un locataire défaillant pouvant durer plus de 24 mois (contrairement à l'expulsion rapide de <a href="blog-comment-expulser-squatteur">squatteurs</a> facilitée par la <a href="blog-loi-anti-squat-2026" style="font-weight: bold; color: var(--color-primary);">nouvelle loi anti-squat 2026</a>), un plafond de 90 000 € ou plus est indispensable pour sécuriser les loyers élevés.</li>
+<li><strong>La prise en charge des dégradations :</strong> Assurez-vous que les dégradations immobilières causées par le locataire et constatées par huissier soient couvertes, de préférence avec un plafond minimal de 10 000 €.</li>
+</ul>
+<h2>4. L'alternative disruptive : Le Garant Institutionnel Cautioneo</h2>
+<p>Si la déductibilité fiscale adoucit le prix de la GLI classique, il existe une alternative 100% technologique qui supprime intégralement cette charge pour le propriétaire : **le garant institutionnel locataire**.</p>
+<p>Dans ce modèle plébiscité par les gestionnaires de patrimoine, **c'est le locataire qui finance sa propre garantie** (cotisation de 4,1% du loyer, payée par le locataire). Pour vous, propriétaire bailleur, le service est entièrement **gratuit**.</p>
+<p>Les garanties offertes sont équivalentes, voire supérieures, aux meilleures assurances GLI traditionnelles :</p>
+<ol>
+<li><strong>Zéro franchise, zéro carence :</strong> Indemnisation dès le premier impayé de loyer.</li>
+<li><strong>Plafond de 96 000 € :</strong> Une couverture financière de très haut niveau, active sur toute la durée du bail (sans limite de temps).</li>
+<li><strong>Frais de procédure inclus :</strong> Prise en charge intégrale des huissiers et avocats en cas de litige, sans frais de dossier ou charge mentale pour vous.</li>
+<li><strong>Zéro risque de fraude :</strong> Les dossiers locataires sont certifiés via Open Banking par les algorithmes anti-fraude performants de Cautioneo.</li>
+</ol>
+<div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-primary);">
+<h3>Rapprochez-vous de la tranquillité absolue</h3>
+<p>Ne payez plus pour vous garantir contre les impayés. Exigez simplement un locataire certifié et garanti par Cautioneo pour votre prochain bail. C'est l'assurance d'obtenir un profil rigoureusement validé, sans débourser un seul euro.</p>
+<a class="btn btn-primary" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">En savoir plus sur la garantie gratuite Cautioneo</a>
+</div>
+<!-- Dynamic City Interlinking Widget -->
+<div class="city-interlinking-wrapper" style="width: 100%; max-width: 800px; margin: 40px auto; padding: 0 24px; box-sizing: border-box; clear: both;">
+<div class="city-interlinking-box" style="padding: 24px; background-color: var(--color-bg-alt); border-radius: 8px; border: 1px solid var(--color-border);">
+<h4 style="margin-top: 0; margin-bottom: 12px; color: var(--color-primary); font-size: 1.15rem; font-family: var(--font-heading);"><i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-right: 8px;"></i>Assurance Loyer Impayé par Ville</h4>
+<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; color: var(--color-text-muted);">Sécurisez vos investissements locatifs avec nos guides et analyses de la tension locative dans les grandes métropoles françaises :</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; font-size: 0.9rem;">
+<a href="blog-assurance-loyer-impaye-paris" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Paris</a>
+<a href="blog-assurance-loyer-impaye-lyon" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Lyon</a>
+<a href="blog-assurance-loyer-impaye-marseille" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Marseille</a>
+<a href="blog-assurance-loyer-impaye-bordeaux" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Bordeaux</a>
+<a href="blog-assurance-loyer-impaye-toulouse" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Toulouse</a>
+<a href="blog-assurance-loyer-impaye-nantes" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Nantes</a>
+<a href="blog-assurance-loyer-impaye-lille" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Lille</a>
+<a href="blog-assurance-loyer-impaye-strasbourg" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Strasbourg</a>
+<a href="blog-assurance-loyer-impaye-nice" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Nice</a>
+<a href="blog-assurance-loyer-impaye-montpellier" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">GLI à Montpellier</a>
+</div>
+</div>
+</div>
+</article>
+</main>
+<!-- === FAQ SECTION (GEO-optimized) === -->
+<section class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<div class="container">
+<h2>Questions fréquentes sur le tarif de la GLI</h2>
+<p class="faq-subtitle">Nos réponses d'experts à toutes vos interrogations sur la couverture de loyers impayés.</p>
+<div class="faq-list">
+<details class="faq-item">
+<summary class="faq-question">Le prix de la GLI est-il vraiment déductible des impôts fonciers ?</summary>
+<div class="faq-answer">
+<p>Oui, à 100%. Si vous déclarez vos loyers perçus sous le régime fiscal réel (locatif vide ou meublé <a href="blog-lmnp-vs-location-nue-fiscalite">LMNP</a>), les primes versées au titre de l'assurance loyers impayés constituent des frais déductibles de vos revenus imposables. Cette déduction s'opère sur la ligne 220 de votre déclaration 2044.</p>
+</div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Qu'est-ce qu'une franchise de GLI et comment impacte-t-elle le tarif ?</summary>
+<div class="faq-answer">
+<p>La franchise correspond à la période de non-indemnisation qui reste à la charge exclusive du propriétaire bailleur lors d'un sinistre (généralement entre 2 et 4 mois). Les contrats proposant des tarifs très bas (inférieurs à 2%) intègrent presque toujours une franchise lourde. Les contrats premium ou le garant Cautioneo indemnisent rétroactivement dès le 1er euro d'impayé.</p>
+</div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Peut-on cumuler une GLI avec un <a href="blog-gli-vs-garant-physique">garant physique</a> classique ?</summary>
+<div class="faq-answer">
+<p>Non. La loi Boutin interdit formellement de cumuler une assurance loyer impayé (GLI) avec une caution solidaire physique (un garant), sauf si le locataire est étudiant ou apprenti. En revanche, le modèle de garant institutionnel comme Cautioneo remplace les deux et contourne légalement cette limitation au profit du propriétaire.</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- === /FAQ SECTION === -->
+<!-- Footer B2B -->
+
+<script>
+        // Mobile nav toggle
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('open');
+                });
+            }
+        })();
+
+        // Interactive Simulator Logic
+        (function() {
+            const inputLoyer = document.getElementById('loyer-cc');
+            const selectTmi = document.getElementById('tmi');
+            const resPrime = document.getElementById('res-prime');
+            const resEco = document.getElementById('res-economie');
+            const resNet = document.getElementById('res-net');
+
+            function updateCalculations() {
+                const loyer = parseFloat(inputLoyer.value) || 0;
+                const tmi = parseFloat(selectTmi.value) || 0;
+
+                // Prime is 2.75% of rent
+                const prime = loyer * 0.0275;
+                // Tax savings = prime * (TMI + 17.2% social contributions)
+                const eco = prime * (tmi + 0.172);
+                const net = prime - eco;
+
+                resPrime.textContent = prime.toFixed(2).replace('.', ',') + ' € / mois';
+                resEco.textContent = '-' + eco.toFixed(2).replace('.', ',') + ' € / mois';
+                resNet.textContent = net.toFixed(2).replace('.', ',') + ' € / mois';
+            }
+
+            if (inputLoyer && selectTmi) {
+                inputLoyer.addEventListener('input', updateCalculations);
+                selectTmi.addEventListener('change', updateCalculations);
+                updateCalculations();
+            }
+        })();
+    </script>
+<!-- CTA Sticky -->
+
+<button class="sticky-cta-close" onclick="document.getElementById('sticky-cta').style.display='none'">✕</button>
+</div>
+<style>
+.sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #b45309, #92400e); color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 9999; box-shadow: 0 -4px 20px rgba(180,83,9,0.4); animation: slideUp 0.5s ease; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sticky-cta-content { display: flex; align-items: center; gap: 20px; flex: 1; }
+.sticky-cta-text { font-size: 0.95rem; font-weight: 600; }
+.sticky-cta-btn { background: white; color: #b45309; padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+.sticky-cta-btn:hover { background: #fffbeb; transform: scale(1.03); }
+.sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
+@media (max-width: 640px) { .sticky-cta-text { display: none; } }
+</style>`} />
+</Layout>

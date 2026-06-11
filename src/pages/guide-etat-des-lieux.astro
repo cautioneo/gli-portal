@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Réussir son État des Lieux | Cautioneo Bailleurs";
+const pageDescription = "Réaliser un état des lieux d'entrée et de sortie incontestable pour protéger votre patrimoine.";
+const pageCanonical = "https://cautioneo-gli.com/guide-etat-des-lieux";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<header class="page-hero">
+<div class="container">
+<h1>Réussir son État des Lieux</h1>
+<p>Les clés pour un état des lieux d'entrée et de sortie incontestable, protégeant votre <a href="glossaire-depot-garantie">dépôt de garantie</a>.</p>
+</div>
+</header>
+<section class="section">
+<div class="container">
+<!-- Fil d'Ariane -->
+<div class="breadcrumb">
+<a href="procedures">← Retour aux Démarches &amp; Procédures</a>
+</div>
+<div class="guide-layout">
+<!-- Sidebar Sommaire -->
+<aside class="sidebar-sticky">
+<h3 class="text-lg mb-24">Sommaire</h3>
+<ul class="sidebar-nav">
+<li class="mb-12"><a class="text-main font-medium" href="#imporance">Valeur Juridique</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#usure">Usure Normale vs Dégradations</a></li>
+<li class="mb-12"><a class="text-main font-medium" href="#retenue">Retenue sur Dépôt de Garantie</a></li>
+</ul>
+</aside>
+<!-- Main Content -->
+<div class="content-body">
+<div class="mb-48" id="imporance">
+<h2 class="text-2xl mb-16">1. La photo juridique de votre bien</h2>
+<p class="text-lg text-muted mb-16">L'<a href="blog-etat-des-lieux-parfait">État des Lieux</a> (EDL) est un acte juridique fondamental. Sans EDL précis et contradictoire, la loi présume que le logement a été remis en parfait état.</p>
+<div class="info-note">
+<p>C'est la comparaison point par point entre l'entrée et la sortie qui permet d'imputer des frais de réparation au locataire sur son <a href="glossaire-depot-garantie">dépôt de garantie</a>.</p>
+</div>
+</div>
+<div class="mb-48" id="usure">
+<h2 class="text-2xl mb-16">2. Vétusté vs Dégradations Locatives</h2>
+<p class="text-lg text-muted mb-24">C'est la source de la majorité des litiges. Savoir les distinguer est crucial pour le bailleur.</p>
+<div class="guide-grid-2 mb-24">
+<div class="card p-24 border accent-primary">
+<h4 class="mb-12">La Vétusté (À votre charge)</h4>
+<p class="text-sm text-muted line-height-1-8">Usure naturelle liée au temps (peinture qui jaunit après 8 ans, joints usés). <strong>Aucune retenue possible</strong> sur le dépôt de garantie pour la vétusté.</p>
+</div>
+<div class="card p-24 border accent-danger">
+<h4 class="mb-12 text-danger">Dégradations (Locataire)</h4>
+<p class="text-sm line-height-1-8 text-danger">Dommages liés à la négligence ou au choc (trous non bouchés, parquet brûlé, calcaire extrême, vitres cassées).</p>
+</div>
+</div>
+</div>
+<div class="mb-48" id="retenue">
+<h2 class="text-2xl mb-16">3. La retenue sur Dépôt de Garantie</h2>
+<p class="text-lg text-muted mb-16">Pour effectuer une retenue légale, certaines règles strictes s'appliquent :</p>
+<ul class="pl-20 text-muted line-height-1-8 mb-32">
+<li class="mb-12"><strong>Le Délai :</strong> 1 mois si l'EDL de sortie est identique, 2 mois s'il y a des dégradations.</li>
+<li class="mb-12"><strong>La Preuve :</strong> Chaque euro retenu doit être justifié par un devis d'artisan ou une facture de matériel.</li>
+<li><strong>Prudence :</strong> Un retard de restitution peut entraîner une pénalité de 10% du loyer par mois de retard.</li>
+</ul>
+<!-- CTA Cautioneo -->
+<div class="cta-banner bg-primary text-white p-40 border-radius-20" data-reveal="fade-up">
+<h3 class="text-white mb-16">La Caution ne suffit pas ?</h3>
+<p class="mb-24 opacity-90">Un mois de dépôt de garantie ne couvre souvent pas les gros sinistres. Cautioneo sécurise vos revenus jusqu'à 96 000€ et prend en charge les frais de contentieux.</p>
+<a class="btn btn-white" href="comparatif-gli">Découvrir les garanties</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Riche -->
+<!-- Footer Partagé Riche -->`} />
+</Layout>

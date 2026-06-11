@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Renouvellement Bail 2026 : Conditions, Augmentation Loyer et Refus Légal";
+const pageDescription = "Votre bail arrive à terme ? Découvrez les conditions de renouvellement, comment réviser le loyer légalement et quand vous pouvez refuser le renouvellement.";
+const pageCanonical = "https://cautioneo-gli.com/blog-renouvellement-bail";
+const pageNoindex = false;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+  <Fragment set:html={`<!-- Navigation -->
+
+<!-- Post Header -->
+<header class="blog-header">
+<div class="container">
+<span class="blog-category" style="margin-bottom: 20px;">Réglementation &amp; Bail</span>
+<h1 style="max-width: 900px; margin: 0 auto 20px;">Renouvellement de Bail : Droits du Bailleur et du Locataire en 2026</h1>
+<div class="article-meta">
+<img alt="Expert Cautioneo" class="article-author-img" src="images/photo-1573496359142-b8d87734a5a2.webp"/>
+<span>Par <strong>L'Équipe Cautioneo</strong></span>
+<span>•</span>
+<span>Publié le 27 Mai 2026</span>
+<span>•</span>
+<span>Lecture : 7 min</span>
+</div>
+</div>
+</header>
+<!-- Post Content -->
+<main class="article-container">
+<article class="article-content">
+
+        <!-- Callout Silo B2B -->
+        <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+            <strong>💡 Guide Pratique :</strong> Comment choisir la meilleure assurance loyer impayé ? Retrouvez notre <a href="guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Guide Ultime de l'Assurance Loyer Impayé (GLI)</a>.
+        </div>
+
+<p>La fin d'un contrat de bail est un moment charnière pour tout propriétaire bailleur. Le bail va-t-il se renouveler automatiquement ? Peut-on augmenter le loyer ? Dans quels cas peut-on légalement refuser le renouvellement ? Ces questions, apparemment simples, cachent une réglementation précise que tout bailleur se doit de maîtriser en 2026 pour protéger ses intérêts sans exposer son bien à des risques juridiques.</p>
+<h2>1. Les trois scénarios possibles à l'échéance du bail</h2>
+<div class="scenario-grid">
+<div class="scenario-card auto">
+<div class="sc-header"><span>🔄</span> Tacite reconduction</div>
+<div class="sc-body">Le bail se renouvelle automatiquement pour la même durée (3 ans vide / 1 an meublé) si aucune des parties ne donne congé. Aucune démarche n'est nécessaire. C'est le scénario le plus courant.</div>
+</div>
+<div class="scenario-card express">
+<div class="sc-header"><span>📝</span> Renouvellement express</div>
+<div class="sc-body">Bailleur et locataire signent un nouveau bail ou un avenant au bail existant, avec d'éventuelles modifications (loyer, clauses). Nécessite l'accord des deux parties.</div>
+</div>
+<div class="scenario-card refuse">
+<div class="sc-header"><span>🚫</span> Congé du bailleur</div>
+<div class="sc-body">Le bailleur donne congé au locataire pour l'un des motifs légaux (reprise, vente, motif légitime et sérieux). Délai de préavis : 6 mois avant l'échéance du bail.</div>
+</div>
+</div>
+<h2>2. La tacite reconduction : fonctionnement et pièges</h2>
+<p>La <strong>tacite reconduction</strong> est le mécanisme par défaut prévu par la loi du 6 juillet 1989. Si ni le bailleur ni le locataire ne donnent congé avant l'échéance du bail, celui-ci est automatiquement reconduit pour une nouvelle période équivalente à la durée initiale.</p>
+<div class="warning-card">
+<h4>⚠️ Le piège du contrat sans date d'échéance précise</h4>
+<p>Certains bailleurs signent des contrats mal rédigés, sans date d'anniversaire clairement établie, ou avec des clauses ambiguës sur la durée. Dans ce cas, calculer la date limite pour donner congé devient complexe. Si vous ratez la fenêtre de préavis (6 mois avant l'échéance), le bail est reconduit pour une nouvelle période complète et vous devez attendre l'échéance suivante. Faites toujours valider votre bail par un professionnel de l'immobilier.</p>
+</div>
+<h2>3. Révision du loyer à l'IRL : calcul et limites légales</h2>
+<p>La révision annuelle du loyer est encadrée par l'<strong>Indice de Référence des Loyers (IRL)</strong>, publié chaque trimestre par l'INSEE. Elle ne peut avoir lieu qu'une fois par an, à la date anniversaire du bail, et uniquement si une clause de révision est expressément stipulée dans le contrat.</p>
+<div class="irl-calculator">
+<h3>📊 Simulateur de Révision IRL</h3>
+<div class="irl-grid">
+<div>
+<div class="irl-input-group">
+<label for="loyer-actuel">Loyer actuel (€ HC)</label>
+<input class="irl-input" id="loyer-actuel" type="number" value="800"/>
+</div>
+<div class="irl-input-group">
+<label for="irl-ancien">IRL de référence (ancien)</label>
+<input class="irl-input" id="irl-ancien" step="0.01" type="number" value="140.49"/>
+</div>
+<div class="irl-input-group">
+<label for="irl-nouveau">IRL de référence (nouveau)</label>
+<input class="irl-input" id="irl-nouveau" step="0.01" type="number" value="143.97"/>
+</div>
+</div>
+<div class="irl-result">
+<div class="irl-result-row">
+<span>Loyer actuel :</span>
+<span class="irl-result-value" id="res-loyer-actuel">800,00 €</span>
+</div>
+<div class="irl-result-row">
+<span>Hausse IRL applicable :</span>
+<span class="irl-result-value" id="res-hausse-pct">+2,48%</span>
+</div>
+<div class="irl-result-row">
+<span>Augmentation mensuelle :</span>
+<span class="irl-result-value" id="res-hausse-eur">+19,80 €</span>
+</div>
+<div class="irl-result-row" style="border-top: 2px solid var(--color-primary); margin-top: 10px; padding-top: 10px;">
+<strong>Nouveau loyer maximum :</strong>
+<strong class="irl-result-value big" id="res-nouveau-loyer">819,80 €</strong>
+</div>
+</div>
+</div>
+<p style="font-size: 0.82rem; color: var(--color-text-muted); margin: 12px 0 0; text-align: center;">* Simulateur indicatif. Les indices IRL sont publiés trimestriellement par l'INSEE. Consultez le dernier indice en vigueur pour votre calcul.</p>
+</div>
+<div class="info-card">
+<h4>🚨 Encadrement des loyers en zone tendue</h4>
+<p>Dans les communes soumises à l'encadrement des loyers (Paris, Lyon, Bordeaux, Montpellier, Grenoble, Lille, Nantes, etc.), la révision du loyer est doublement encadrée : par l'IRL ET par les loyers de référence fixés par arrêté préfectoral. En cas de relocation, le loyer ne peut pas dépasser le loyer de référence majoré de la commune, même si le marché local le permettrait.</p>
+</div>
+<h2>4. Les motifs légaux pour refuser le renouvellement</h2>
+<p>Le bailleur peut donner congé au locataire à l'échéance du bail, mais uniquement pour l'un des <strong>trois motifs légaux</strong> suivants :</p>
+<ul class="motifs-list">
+<li>
+<span class="motif-icon">🏠</span>
+<div>
+<strong>Reprise pour habiter personnelle</strong><br/>
+                        Le bailleur peut reprendre le logement pour l'habiter lui-même, ou pour y loger un proche (conjoint, partenaire PACS, ascendant, descendant direct). La reprise doit être <strong>réelle et sérieuse</strong> : le logement doit effectivement servir de résidence principale pendant au moins 18 mois. Toute manœuvre frauduleuse expose le bailleur à des poursuites.
+                    </div>
+</li>
+<li>
+<span class="motif-icon">💰</span>
+<div>
+<strong>Congé pour vente</strong><br/>
+                        Si le bailleur souhaite vendre le logement libre de toute occupation. Le locataire bénéficie d'un <strong>droit de préemption</strong> : il doit être informé en premier et dispose de 2 mois pour se porter acquéreur aux conditions proposées.
+                    </div>
+</li>
+<li>
+<span class="motif-icon">⚖️</span>
+<div>
+<strong>Motif légitime et sérieux</strong><br/>
+                        Le bailleur doit justifier d'un motif reconnu par la jurisprudence : impayés répétés, troubles de voisinage graves, sous-location non autorisée, défaut d'entretien caractérisé, etc. Ce motif doit être <strong>prouvé et documenté</strong>. Un simple désaccord avec le locataire ne suffit pas.
+                    </div>
+</li>
+</ul>
+<div class="warning-card">
+<h4>⚠️ Protection des locataires âgés ou modestes</h4>
+<p>Attention : si votre locataire est âgé de <strong>65 ans ou plus</strong> et que ses ressources sont inférieures au plafond HLM, ou si un tel locataire se trouve dans votre entourage, des protections renforcées s'appliquent. Le bailleur doit obligatoirement proposer un relogement adapté avant de pouvoir donner congé, sauf s'il se trouve lui-même dans la même situation que le locataire protégé.</p>
+</div>
+<h2>5. La GLI se renouvelle-t-elle automatiquement ?</h2>
+<p>C'est une question cruciale que beaucoup de propriétaires oublient de poser. La réponse dépend du type de garantie souscrite :</p>
+<ul>
+<li><strong>GLI traditionnelle :</strong> La garantie est souscrite pour une durée déterminée, généralement liée à la durée initiale du bail. En cas de tacite reconduction ou de renouvellement express, il faut vérifier si le contrat GLI se renouvelle automatiquement ou s'il faut une démarche active pour maintenir la couverture.</li>
+<li><strong>Garantie Cautioneo :</strong> La garantie Cautioneo est valable pour toute la durée du bail, y compris lors des reconductions tacites, sans démarche supplémentaire de votre part. La couverture est continue tant que le locataire reste en place et honore sa cotisation.</li>
+</ul>
+<div class="info-card">
+<h4>💡 Conseil à la reconduction</h4>
+<p>Si votre bail est reconduit tacitement et que vous avez une GLI classique, vérifiez systématiquement votre contrat d'assurance. Certains assureurs exigent une notification formelle de reconduction pour maintenir la garantie. Ne laissez pas s'installer un "trou de couverture" par inattention.</p>
+</div>
+<div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-primary);">
+<h3>Une garantie qui dure aussi longtemps que votre bail</h3>
+<p>Avec Cautioneo, la garantie s'adapte à votre bail, pas l'inverse. Tacite reconduction, avenant, renouvellement express : la couverture reste active sans démarche supplémentaire. Et si vous trouvez un nouveau locataire, la garantie repart de zéro sur de nouvelles bases.</p>
+<a class="btn btn-primary" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&amp;kind=lessor&amp;returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">Découvrir la garantie continue Cautioneo →</a>
+</div>
+<!-- Dynamic City Interlinking Widget -->
+<div class="city-interlinking-wrapper" style="width: 100%; max-width: 800px; margin: 40px auto; padding: 0 24px; box-sizing: border-box; clear: both;">
+<div class="city-interlinking-box" style="padding: 24px; background-color: var(--color-bg-alt); border-radius: 8px; border: 1px solid var(--color-border);">
+<h4 style="margin-top: 0; margin-bottom: 12px; color: var(--color-primary); font-size: 1.15rem;">🗺️ Articles liés</h4>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; font-size: 0.9rem;">
+<a href="blog-bail-meuble-2026" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Bail meublé 2026 →</a>
+<a href="blog-resiliation-bail-locataire" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Résiliation bail →</a>
+<a href="blog-depot-garantie-regles" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Dépôt de garantie →</a>
+<a href="blog-refuser-locataire-legalement" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Refuser locataire →</a>
+<a href="blog-gli-conditions-locataire" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Conditions GLI →</a>
+<a href="blog-gli-fiscalite" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Fiscalité GLI →</a>
+</div>
+</div>
+</div>
+</article>
+</main>
+<!-- === FAQ SECTION === -->
+<section class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<div class="container">
+<h2>Questions fréquentes sur le renouvellement de bail</h2>
+<p class="faq-subtitle">Nos réponses d'experts sur les droits et obligations lors du renouvellement de bail.</p>
+<div class="faq-list">
+<details class="faq-item">
+<summary class="faq-question">Peut-on changer les conditions du bail lors du renouvellement ?</summary>
+<div class="faq-answer">
+<p>En cas de tacite reconduction, les conditions du bail existant (loyer, clauses, durée) restent identiques, hormis la révision annuelle du loyer à l'IRL. Pour modifier d'autres conditions (durée, répartition des charges, clauses particulières), il faut l'accord écrit du locataire via un avenant signé des deux parties. Un bailleur ne peut pas imposer unilatéralement de nouvelles conditions à la reconduction.</p>
+</div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Quel est le délai pour donner congé au locataire avant l'échéance du bail ?</summary>
+<div class="faq-answer">
+<p>Le bailleur doit donner congé au locataire au moins <strong>6 mois avant la date d'échéance</strong> du bail (en location nue). Pour un <a href="blog-bail-meuble-2026">bail meublé</a>, ce délai est de <strong>3 mois</strong>. Le congé doit être adressé par lettre recommandée avec accusé de réception ou par acte d'huissier. Si ces délais ne sont pas respectés, le congé est nul et le bail se reconduit automatiquement.</p>
+</div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Le locataire peut-il refuser le renouvellement de son bail ?</summary>
+<div class="faq-answer">
+<p>Le locataire peut toujours quitter le logement à l'échéance du bail en donnant son préavis (1 mois en meublé, 3 mois en vide ou 1 mois en zone tendue). S'il souhaite rester mais que le bailleur lui propose des conditions différentes qu'il refuse, le bail se poursuit aux anciennes conditions, sauf si le bailleur donne congé pour l'un des motifs légaux prévus.</p>
+</div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">La hausse de loyer à l'IRL est-elle automatique ou doit-elle être réclamée ?</summary>
+<div class="faq-answer">
+<p>La révision du loyer à l'IRL n'est <strong>pas automatique</strong>. Elle doit être expressément réclamée par le bailleur, par écrit, à la date anniversaire du bail. Si le bailleur oublie de la réclamer, il perd définitivement le bénéfice de la révision pour l'année écoulée. De plus, certaines interprétations jurisprudentielles limitent le rattrapage à 1 an en arrière. Ne laissez pas s'accumuler des révisions non réclamées.</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- === /FAQ SECTION === -->
+<!-- Footer B2B -->
+
+<script>
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('open');
+                });
+            }
+        })();
+
+        // IRL Simulator
+        (function() {
+            var loyerInput = document.getElementById('loyer-actuel');
+            var irlAncienInput = document.getElementById('irl-ancien');
+            var irlNouveauInput = document.getElementById('irl-nouveau');
+            var resLoyerActuel = document.getElementById('res-loyer-actuel');
+            var resHaussePct = document.getElementById('res-hausse-pct');
+            var resHausseEur = document.getElementById('res-hausse-eur');
+            var resNouveauLoyer = document.getElementById('res-nouveau-loyer');
+
+            function calc() {
+                var loyer = parseFloat(loyerInput.value) || 0;
+                var ancien = parseFloat(irlAncienInput.value) || 1;
+                var nouveau = parseFloat(irlNouveauInput.value) || 1;
+                var pct = ((nouveau - ancien) / ancien) * 100;
+                var nouveauLoyer = loyer * (nouveau / ancien);
+                var hausse = nouveauLoyer - loyer;
+
+                resLoyerActuel.textContent = loyer.toFixed(2).replace('.', ',') + ' €';
+                resHaussePct.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2).replace('.', ',') + '%';
+                resHausseEur.textContent = (hausse >= 0 ? '+' : '') + hausse.toFixed(2).replace('.', ',') + ' €';
+                resNouveauLoyer.textContent = nouveauLoyer.toFixed(2).replace('.', ',') + ' €';
+            }
+
+            if (loyerInput) {
+                [loyerInput, irlAncienInput, irlNouveauInput].forEach(function(el) {
+                    el.addEventListener('input', calc);
+                });
+                calc();
+            }
+        })();
+    </script>
+<!-- CTA Sticky -->
+
+<button class="sticky-cta-close" onclick="document.getElementById('sticky-cta').style.display='none'">✕</button>
+</div>
+<style>
+.sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #b45309, #92400e); color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 9999; box-shadow: 0 -4px 20px rgba(180,83,9,0.4); animation: slideUp 0.5s ease; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sticky-cta-content { display: flex; align-items: center; gap: 20px; flex: 1; }
+.sticky-cta-text { font-size: 0.95rem; font-weight: 600; }
+.sticky-cta-btn { background: white; color: #b45309; padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+.sticky-cta-btn:hover { background: #fffbeb; transform: scale(1.03); }
+.sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
+@media (max-width: 640px) { .sticky-cta-text { display: none; } }
+</style>`} />
+</Layout>
