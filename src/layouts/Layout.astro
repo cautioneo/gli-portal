@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, description, canonical, noindex = false } = Astro.props;
+const canonicalUrl = new URL(canonical, Astro.site).href;
 ---
 
 <!DOCTYPE html>
@@ -16,19 +17,19 @@ const { title, description, canonical, noindex = false } = Astro.props;
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>{title}</title>
     <meta name="description" content={description}/>
-    <link rel="canonical" href={canonical}/>
+    <link rel="canonical" href={canonicalUrl}/>
     {noindex && <meta name="robots" content="noindex, follow"/>}
     
     <!-- Open Graph / Facebook -->
     <meta content="website" property="og:type"/>
-    <meta content={canonical} property="og:url"/>
+    <meta content={canonicalUrl} property="og:url"/>
     <meta content={title} property="og:title"/>
     <meta content={description} property="og:description"/>
     <meta content="https://cautioneo-gli.com/logo.png" property="og:image"/>
     
     <!-- Twitter -->
     <meta content="summary_large_image" name="twitter:card"/>
-    <meta content={canonical} name="twitter:url"/>
+    <meta content={canonicalUrl} name="twitter:url"/>
     <meta content={title} name="twitter:title"/>
     <meta content={description} name="twitter:description"/>
     <meta content="https://cautioneo-gli.com/logo.png" property="twitter:image"/>
