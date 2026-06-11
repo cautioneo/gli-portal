@@ -10,10 +10,19 @@ const today = new Date().toISOString().split('T')[0];
 
 let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
+const excludeFiles = [
+    '404.html',
+    'blog-post.html',
+    'mentions-legales.html',
+    'confidentialite.html',
+    'cgs.html',
+    'reclamation.html'
+];
+
 // Add pages
 htmlFiles.forEach(file => {
-    // Ne pas indexer la page d'erreur
-    if (file === '404.html') return;
+    // Ne pas indexer les pages d'erreur, stubs, démos ou pages légales noindex
+    if (excludeFiles.includes(file) || file.includes('demo')) return;
 
     // Determine priority and frequency based on file type
     let priority = '0.7';
@@ -24,10 +33,10 @@ htmlFiles.forEach(file => {
         priority = '1.0';
         changefreq = 'weekly';
         urlSlug = ''; // L'index pointe vers la racine du domaine pure
-    } else if (file.startsWith('comparatif') || file.startsWith('simulateurs')) {
+    } else if (file.includes('comparatif') || file.includes('simulateurs')) {
         priority = '0.9';
         changefreq = 'weekly';
-    } else if (file.startsWith('guide')) {
+    } else if (file.includes('guide')) {
         priority = '0.8';
     } else if (file.includes('demo')) {
         priority = '0.6';
