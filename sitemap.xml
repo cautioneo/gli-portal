@@ -439,12 +439,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cautioneo-gli.com/cgs</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cautioneo-gli.com/checklist-bailleur</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -470,12 +464,6 @@
   </url>
   <url>
     <loc>https://cautioneo-gli.com/conciergerie</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cautioneo-gli.com/confidentialite</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -679,12 +667,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cautioneo-gli.com/mentions-legales</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://cautioneo-gli.com/modeles-bail</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -692,12 +674,6 @@
   </url>
   <url>
     <loc>https://cautioneo-gli.com/procedures</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cautioneo-gli.com/reclamation</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
