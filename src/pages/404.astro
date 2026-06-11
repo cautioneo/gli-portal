@@ -8,7 +8,16 @@ const pageNoindex = true;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
-  <Fragment set:html={`<header class="page-hero vh-80 flex-center" data-reveal="fade-up">
+  <Fragment set:html={`<script is:inline>
+  if (window.location.pathname.endsWith('.html')) {
+    var cleanPath = window.location.pathname.slice(0, -5);
+    if (cleanPath === '/index') {
+      cleanPath = '/';
+    }
+    window.location.replace(window.location.origin + cleanPath + window.location.search + window.location.hash);
+  }
+</script>
+<header class="page-hero vh-80 flex-center" data-reveal="fade-up">
 <div class="container text-center">
 <span class="badge mb-24">Erreur 404</span>
 <h1 class="text-huge">Où est passé votre bail ?</h1>
