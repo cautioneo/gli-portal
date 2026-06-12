@@ -826,7 +826,7 @@ details[open] .faq-question::after {
 }
 
 /* Link overrides inside articles */
-.article-body a, .article-content a {
+.article-body a:not(.btn), .article-content a:not(.btn) {
     color: var(--color-primary) !important;
     font-weight: 600 !important;
     text-decoration: underline !important;
@@ -838,7 +838,7 @@ details[open] .faq-question::after {
     border-radius: 4px !important;
 }
 
-.article-body a:hover, .article-content a:hover {
+.article-body a:not(.btn):hover, .article-content a:not(.btn):hover {
     color: var(--color-primary-light) !important;
     text-decoration-color: var(--color-primary-light) !important;
     background-color: rgba(108, 92, 231, 0.08) !important;

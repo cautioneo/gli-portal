@@ -5,6 +5,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect old B2B /blog/* URLs to flat /blog-* URLs
+RewriteRule ^blog/(.+)$ /blog-$1 [R=301,L]
+
 # Redirect /page.html to /page (External Redirect for SEO)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
