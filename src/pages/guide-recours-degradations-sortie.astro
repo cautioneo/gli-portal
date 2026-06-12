@@ -5,9 +5,14 @@ const pageTitle = "Dégâts constatés après état des lieux de sortie signé :
 const pageDescription = "Un dégât caché découvert après le départ du locataire ? Découvrez vos recours légaux, la gestion du dépôt de garantie et la protection de la GLI Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/guide-recours-degradations-sortie";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Recours Degradations Sortie" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
         <div class="container">
             <h1>Dégâts constatés après l'état des lieux de sortie signé</h1>

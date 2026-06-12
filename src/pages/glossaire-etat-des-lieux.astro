@@ -5,9 +5,14 @@ const pageTitle = "Définition : État des Lieux | Glossaire Immo Cautioneo";
 const pageDescription = "Document contradictoire établi à l'entrée et à la sortie, décrivant l'état précis du logement.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-etat-des-lieux";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Etat Des Lieux" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

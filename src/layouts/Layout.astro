@@ -4,10 +4,12 @@ interface Props {
   description: string;
   canonical: string;
   noindex?: boolean;
+  breadcrumbs?: Array<{ name: string; item?: string }>;
 }
 
-const { title, description, canonical, noindex = false } = Astro.props;
+const { title, description, canonical, noindex = false, breadcrumbs } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site).href;
+const isBlogPost = Astro.url.pathname.includes('/blog-');
 ---
 
 <!DOCTYPE html>
@@ -39,6 +41,19 @@ const canonicalUrl = new URL(canonical, Astro.site).href;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     
+    {breadcrumbs && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((bc, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": bc.name,
+          ...(bc.item ? { "item": bc.item } : {})
+        }))
+      })} />
+    )}
+
     <!-- Google Tag Manager -->
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -133,21 +148,31 @@ const canonicalUrl = new URL(canonical, Astro.site).href;
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
                 <h4 style="margin-bottom:15px; color: white; font-size: 1.1rem;">Assurance Loyer Impayé par Ville</h4>
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; font-size: 0.8rem; text-align: left;">
-                    <a href="/blog-assurance-loyer-impaye-paris" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Paris</a>
+                    <a href="/blog-assurance-loyer-impaye-aix-en-provence" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Aix-en-Provence</a>
+                    <a href="/blog-assurance-loyer-impaye-angers" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Angers</a>
+                    <a href="/blog-assurance-loyer-impaye-bordeaux" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Bordeaux</a>
+                    <a href="/blog-assurance-loyer-impaye-brest" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Brest</a>
+                    <a href="/blog-assurance-loyer-impaye-caen" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Caen</a>
+                    <a href="/blog-assurance-loyer-impaye-dijon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Dijon</a>
+                    <a href="/blog-assurance-loyer-impaye-grenoble" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Grenoble</a>
+                    <a href="/blog-assurance-loyer-impaye-le-havre" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Le Havre</a>
+                    <a href="/blog-assurance-loyer-impaye-lille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Lille</a>
                     <a href="/blog-assurance-loyer-impaye-lyon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Lyon</a>
                     <a href="/blog-assurance-loyer-impaye-marseille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Marseille</a>
-                    <a href="/blog-assurance-loyer-impaye-toulouse" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Toulouse</a>
-                    <a href="/blog-assurance-loyer-impaye-nice" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Nice</a>
-                    <a href="/blog-assurance-loyer-impaye-nantes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Nantes</a>
-                    <a href="/blog-assurance-loyer-impaye-strasbourg" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Strasbourg</a>
+                    <a href="/blog-assurance-loyer-impaye-metz" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Metz</a>
                     <a href="/blog-assurance-loyer-impaye-montpellier" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Montpellier</a>
-                    <a href="/blog-assurance-loyer-impaye-bordeaux" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Bordeaux</a>
-                    <a href="/blog-assurance-loyer-impaye-lille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Lille</a>
-                    <a href="/blog-assurance-loyer-impaye-rennes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Rennes</a>
+                    <a href="/blog-assurance-loyer-impaye-nancy" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Nancy</a>
+                    <a href="/blog-assurance-loyer-impaye-nantes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Nantes</a>
+                    <a href="/blog-assurance-loyer-impaye-nice" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Nice</a>
+                    <a href="/blog-assurance-loyer-impaye-paris" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Paris</a>
                     <a href="/blog-assurance-loyer-impaye-reims" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Reims</a>
-                    <a href="/blog-assurance-loyer-impaye-le-havre" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Le Havre</a>
+                    <a href="/blog-assurance-loyer-impaye-rennes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Rennes</a>
+                    <a href="/blog-assurance-loyer-impaye-rouen" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Rouen</a>
                     <a href="/blog-assurance-loyer-impaye-saint-etienne" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Saint-Étienne</a>
+                    <a href="/blog-assurance-loyer-impaye-strasbourg" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Strasbourg</a>
                     <a href="/blog-assurance-loyer-impaye-toulon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Toulon</a>
+                    <a href="/blog-assurance-loyer-impaye-toulouse" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Toulouse</a>
+                    <a href="/blog-assurance-loyer-impaye-tours" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;">GLI à Tours</a>
                 </div>
             </div>
             <div class="footer-disclaimer text-sm opacity-70 mb-16 mt-32 text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
@@ -160,5 +185,122 @@ const canonicalUrl = new URL(canonical, Astro.site).href;
     </footer>
     
     <script is:inline src="/script.js"></script>
+
+    {isBlogPost && (
+      <div class="sticky-cta">
+        <div class="sticky-cta-container">
+          <div class="sticky-cta-text">
+            <span class="sticky-cta-title">Sécurisez vos revenus locatifs en 2026</span>
+            <span class="sticky-cta-desc">Protégez-vous contre les impayés avec la Garantie Loyers Impayés (GLI) Cautioneo.</span>
+          </div>
+          <a href="https://caut.io/NulUSf7" target="_blank" rel="noopener" class="btn btn-primary sticky-cta-btn">
+            Assurer mon logement <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    )}
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        var cta = document.querySelector('.sticky-cta');
+        if (cta) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+              cta.classList.add('visible');
+              document.body.classList.add('has-sticky-cta');
+            } else {
+              cta.classList.remove('visible');
+              document.body.classList.remove('has-sticky-cta');
+            }
+          });
+        }
+      });
+    </script>
+
+    <style is:global>
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+        z-index: 2000;
+        padding: 14px 0;
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .sticky-cta.visible {
+        transform: translateY(0);
+      }
+      .sticky-cta-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .sticky-cta-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .sticky-cta-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 2px;
+      }
+      .sticky-cta-desc {
+        font-size: 0.9rem;
+        color: #475569;
+      }
+      .sticky-cta-btn {
+        white-space: nowrap;
+        padding: 12px 24px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background-color 0.2s, transform 0.2s;
+      }
+      body.has-sticky-cta {
+        padding-bottom: 80px;
+      }
+      @media (max-width: 768px) {
+        .sticky-cta {
+          padding: 12px 0;
+        }
+        .sticky-cta-container {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .sticky-cta-text {
+          text-align: center;
+        }
+        .sticky-cta-title {
+          font-size: 1rem;
+        }
+        .sticky-cta-desc {
+          display: none;
+        }
+        .sticky-cta-btn {
+          width: 100%;
+          justify-content: center;
+          padding: 10px 20px;
+        }
+        body.has-sticky-cta {
+          padding-bottom: 120px;
+        }
+      }
+    </style>
 </body>
 </html>

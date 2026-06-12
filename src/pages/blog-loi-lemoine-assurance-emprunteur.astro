@@ -1,13 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Loi Lemoine 2026 : Résilier votre Assurance Emprunteur à tout moment";
-const pageDescription = "Découvrez comment la Loi Lemoine vous permet de résilier votre assurance de prêt immobilier à tout moment en 2026. Guide étape par étape & modèle de lettre.";
+const pageTitle = "Loi Lemoine 2026 : Changez d'Assurance de Prêt à tout moment | Économisez 50%";
+const pageDescription = "Tout savoir sur la Loi Lemoine en 2026 pour changer d'assurance emprunteur à tout moment sans frais. Critères, suppression du questionnaire de santé & lettre type.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-lemoine-assurance-emprunteur";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que la loi Lemoine pour l'assurance emprunteur ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La loi Lemoine est une législation française qui permet aux emprunteurs immobiliers de résilier et de changer leur assurance de prêt à tout moment, sans frais ni pénalités. Elle supprime également le questionnaire de santé sous certaines conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La loi Lemoine s'applique-t-elle aux investissements locatifs ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, la loi Lemoine s'applique à tous les prêts immobiliers octroyés à des personnes physiques, qu'il s'agisse de l'acquisition d'une résidence principale, secondaire ou d'un investissement locatif."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La banque peut-elle augmenter mon taux d'intérêt si je change d'assurance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, c'est strictement interdit par la loi. La banque ne peut modifier aucune condition de votre offre de prêt initiale (comme le taux d'intérêt, les frais de dossier, etc.) sous prétexte que vous décidez de déléguer l'assurance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles sont les conditions pour bénéficier de la suppression du questionnaire médical avec la Loi Lemoine ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pour éviter le questionnaire de santé, la part assurée par personne doit être inférieure ou égale à 200 000 € (cumul de 400 000 € pour un couple co-emprunteur) et le remboursement complet du prêt doit intervenir avant le 60ème anniversaire de l'assuré."
+        }
+      }
+    ]
+  })} />
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">
@@ -28,6 +72,10 @@ const pageNoindex = false;
     <article class="article-body">
       <div class="intro-box">
         <p>Dans un contexte immobilier marqué par des taux d'intérêt élevés et une pression fiscale forte sur les bailleurs, chaque euro économisé sur les charges d'exploitation immobilière est une victoire. Parmi ces charges, **l'assurance emprunteur** représente souvent la deuxième part la plus importante du coût total du crédit après les intérêts. C'est ici que la **Loi Lemoine** s'impose comme une arme redoutable pour les investisseurs locatifs désirant optimiser leur trésorerie.</p>
+      </div>
+
+      <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0;">
+          <p style="margin: 0; font-size: 1rem; line-height: 1.7;"><strong>La Loi Lemoine en bref :</strong> Promulguée pour libéraliser l'assurance de prêt immobilier, la <strong>Loi Lemoine</strong> permet de résilier et changer d'assurance emprunteur <strong>à tout moment, sans frais ni pénalité</strong>. Elle supprime aussi le questionnaire de santé pour les encours de moins de 200 000 € remboursés avant 60 ans.</p>
       </div>
 
       <h2 id="fonctionnement">1. Qu'est-ce que la Loi Lemoine et ses principes clés ?</h2>
@@ -182,6 +230,11 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
         <div class="faq-item">
           <h3>La banque peut-elle augmenter mon taux d'intérêt si je change d'assurance ?</h3>
           <p>Non, c'est strictement interdit par la loi. La banque ne peut modifier aucune condition de votre offre de prêt initiale (comme le taux d'intérêt, les frais de dossier, etc.) sous prétexte que vous décidez de déléguer l'assurance.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Quelles sont les conditions pour bénéficier de la suppression du questionnaire médical avec la Loi Lemoine ?</h3>
+          <p>Pour éviter le questionnaire de santé, la part assurée par personne doit être inférieure ou égale à 200 000 € (cumul de 400 000 € pour un couple co-emprunteur) et le remboursement complet du prêt doit intervenir avant le 60ème anniversaire de l'assuré.</p>
         </div>
       </section>
       

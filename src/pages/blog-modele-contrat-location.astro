@@ -5,9 +5,15 @@ const pageTitle = "Contrat de bail type Loi Alur 2026 (Modèle Gratuit) | Cautio
 const pageDescription = "Téléchargez notre modèle gratuit de contrat de location conforme à la loi Alur pour la location nue ou meublée, et évitez les pièges de rédaction.";
 const pageCanonical = "https://cautioneo-gli.com/blog-modele-contrat-location";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Gestion Courante</span>

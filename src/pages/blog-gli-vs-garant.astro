@@ -5,9 +5,15 @@ const pageTitle = "GLI ou Garant Physique : Que préfèrent les agences en 2026 
 const pageDescription = "Garantie Loyers Impayés (GLI) du propriétaire ou Garant physique du locataire ? Découvrez ce qu'exigent les agences immobilières et comment booster votre dossier avec Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-vs-garant";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <main>
@@ -40,8 +46,8 @@ const pageNoindex = false;
 <li><strong>Tranquillité absolue :</strong> En cas d'impayé, l'assurance rembourse le
                                 propriétaire sans avoir à poursuivre en justice les parents du locataire (qui n'ont pas
                                 toujours les fonds disponibles).</li>
-<li><strong>Processus standardisé :</strong> C'est la compagnie d'assurance (Allianz, AXA,
-                                etc.) qui dicte les règles pour valider un dossier.</li>
+<li><strong>Processus standardisé :</strong> C'est la compagnie d'assurance (SADA Assurance, AXA,
+                                 etc.) qui dicte les règles pour valider un dossier.</li>
 </ul>
 <div class="pro-tip">
 <p><strong>Le problème légal : Loi Boutin</strong><br/>

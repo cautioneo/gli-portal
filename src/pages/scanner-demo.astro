@@ -5,9 +5,14 @@ const pageTitle = "Scanner d'Authenticité | Cautioneo Bailleurs";
 const pageDescription = "Testez notre technologie de détection de faux documents. Ne vous laissez plus tromper par des dossiers falsifiés.";
 const pageCanonical = "https://cautioneo-gli.com/scanner-demo";
 const pageNoindex = true;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Démo Scanner" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<main class="page-content">
 <header class="hero-mini">
 <div class="container">

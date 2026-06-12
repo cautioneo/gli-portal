@@ -5,9 +5,15 @@ const pageTitle = "Garant Insolvable 2026 : Recours Légaux et Alternatives pour
 const pageDescription = "Votre garant ne peut pas payer ? Découvrez vos recours légaux, les délais de procédure et pourquoi une GLI est préférable à un garant physique.";
 const pageCanonical = "https://cautioneo-gli.com/blog-garant-insolvable";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

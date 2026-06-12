@@ -5,9 +5,14 @@ const pageTitle = "CGS / CGU | Cautioneo Bailleurs";
 const pageDescription = "Consultez les Conditions Générales de Service (CGS) et d'Utilisation du Portail Bailleurs Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/cgs";
 const pageNoindex = true;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Conditions Générales" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>CGS / CGU</h1>

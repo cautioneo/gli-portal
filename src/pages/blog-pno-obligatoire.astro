@@ -5,9 +5,15 @@ const pageTitle = "Assurance PNO : Est-elle vraiment obligatoire ? Ce que dit la
 const pageDescription = "Propriétaire Non Occupant : devez-vous obligatoirement souscrire une assurance PNO ? Découvrez la législation et comment vous protéger efficacement.";
 const pageCanonical = "https://cautioneo-gli.com/blog-pno-obligatoire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Sécurisation des Revenus</span>

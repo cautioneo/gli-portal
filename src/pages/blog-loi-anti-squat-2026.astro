@@ -5,9 +5,15 @@ const pageTitle = "Nouvelle loi anti-squat 2026 : Ce qui change pour les bailleu
 const pageDescription = "Nouvelle loi anti-squat 2026 : Décryptage des procédures légales accélérées, des nouvelles sanctions pénales et des protections réelles pour les propriétaires bailleurs.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-anti-squat-2026";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->
@@ -36,6 +42,11 @@ const pageNoindex = false;
 
 <p>Le <a href="/blog-comment-expulser-squatteur">squat</a> de propriété immobilière est la hantise absolue de tout propriétaire bailleur. Au-delà du préjudice financier direct lié aux loyers non perçus, les procédures d'expulsion classiques pouvaient s'étaler sur plusieurs années, plongeant les investisseurs dans de graves difficultés de trésorerie.</p>
 <p>Pour répondre à cette détresse, la **nouvelle loi anti-<a href="/blog-comment-expulser-squatteur">squat</a> de 2026** vient d'entrer en vigueur. Elle apporte des modifications substantielles au Code pénal et au Code des procédures civiles d'exécution. Objectif affiché : accélérer drastiquement les expulsions et protéger plus fermement la propriété privée. Décryptons ensemble ce qui change concrètement pour vous et vos investissements immobiliers.</p>
+
+<div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0;">
+    <p style="margin: 0; font-size: 1rem; line-height: 1.7;"><strong>Ce qui change avec la loi anti-squat 2026 :</strong> La nouvelle loi triple les sanctions contre les squatteurs (jusqu'à 3 ans de prison et 45 000 € d'amende), protège également les résidences secondaires et logements vacants, et rend obligatoire l'instruction par le préfet sous 48h de toute demande d'expulsion administrative rapide.</p>
+</div>
+
 <h2>1. Le durcissement historique des peines pénales</h2>
 <p>La nouvelle réglementation opère un rééquilibrage fort en triplant les sanctions à l'encontre des contrevenants. Désormais, l'introduction ou le maintien dans le domicile d'autrui à l'aide de manœuvres, menaces, voies de fait ou contrainte est puni de :</p>
 <ul>
@@ -55,7 +66,7 @@ const pageNoindex = false;
 </ol>
 <div class="article-cta" style="background-color: rgba(217, 119, 6, 0.1); border-color: var(--color-accent);">
 <h3 style="color: var(--color-accent);">L'exception des loyers impayés classiques</h3>
-<p>Attention à ne pas confondre **<a href="/blog-comment-expulser-squatteur">squat</a>** (occupation sans titre ni droit dès le départ) et **loyers impayés** (locataire entré légalement avec un bail mais qui cesse de payer). Pour les impayés de loyer classiques, la procédure reste judiciaire et soumise à des règles strictes. C'est ici que la souscription à une <a href="/blog-gli-prix-fonctionnement" style="font-weight: bold; color: var(--color-accent);">GLI Cautioneo</a> s'avère indispensable pour sécuriser vos revenus locatifs quoi qu'il arrive.</p>
+<p>Attention à ne pas confondre **<a href="/blog-comment-expulser-squatteur">squat</a>** (occupation sans titre ni droit dès le départ) et **loyers impayés** (locataire entré légalement avec un bail mais qui cesse de payer). Pour les impayés de loyer classiques, la procédure reste judiciaire et soumise à des règles strictes. C'est ici que la souscription à une <a href="/blog-gli-prix-fonctionnement" style="font-weight: bold; color: var(--color-accent);">GLI Cautioneo</a> (au taux compétitif de 2,75 % CC, assurée par SADA Assurance, groupe Odealim) s'avère indispensable pour sécuriser vos revenus locatifs quoi qu'il arrive.</p>
 </div>
 <h2>3. Fin de la trêve hivernale pour les <a href="/blog-comment-expulser-squatteur">squatteurs</a></h2>
 <p>Une autre avancée majeure de la loi de 2026 concerne l'exclusion définitive des <a href="/blog-comment-expulser-squatteur">squatteurs</a> du bénéfice de la trêve hivernale. Les personnes entrées sans droit ni titre par voie de fait dans un logement ne peuvent plus demander de délais de grâce au juge, et l'expulsion forcée peut être exécutée toute l'année, y compris entre le 1er novembre et le 31 mars.</p>

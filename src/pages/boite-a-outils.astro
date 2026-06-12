@@ -5,9 +5,14 @@ const pageTitle = "Boîte à Outils du Bailleur | Cautioneo Bailleurs";
 const pageDescription = "Modèles de lettres, baux, checklists et outils experts pour simplifier votre gestion locative au quotidien.";
 const pageCanonical = "https://cautioneo-gli.com/boite-a-outils";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Boîte à Outils" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<main class="page-content">
 <header class="hero-mini">
 <div class="container">

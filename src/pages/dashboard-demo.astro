@@ -5,9 +5,14 @@ const pageTitle = "Espace Propriétaire (Démo) | Cautioneo Bailleurs";
 const pageDescription = "Découvrez l'expérience zéro paperasse de l'Espace Bailleur Cautioneo. Suivez vos revenus garantis, analysez les dossiers locataires certifiés et gérez vos biens.";
 const pageCanonical = "https://cautioneo-gli.com/dashboard-demo";
 const pageNoindex = true;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Démo Dashboard" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Header inséré dynamiquement via fix_header.js -->
 
 <!-- Sub-navigation App-like -->

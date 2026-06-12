@@ -5,9 +5,15 @@ const pageTitle = "Nouvelle Loi Anti-Squat 2026 : Ce qui change pour les propri�
 const pageDescription = "Décryptage de la nouvelle loi anti-squat 2026 (Loi Kasbarian). Découvrez comment expulser plus rapidement et sécuriser vos loyers.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-anti-squat";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <main>

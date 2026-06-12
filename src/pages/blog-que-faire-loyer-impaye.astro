@@ -5,9 +5,15 @@ const pageTitle = "Loyer Impayé Que Faire ? Démarches & Recours Bailleur (2026
 const pageDescription = "Votre locataire ne paie plus son loyer ? Découvrez les démarches amiables, judiciaires et les recours du bailleur pour faire face à un loyer impayé.";
 const pageCanonical = "https://cautioneo-gli.com/blog-que-faire-loyer-impaye";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

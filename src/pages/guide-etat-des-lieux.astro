@@ -5,9 +5,14 @@ const pageTitle = "Réussir son État des Lieux | Cautioneo Bailleurs";
 const pageDescription = "Réaliser un état des lieux d'entrée et de sortie incontestable pour protéger votre patrimoine.";
 const pageCanonical = "https://cautioneo-gli.com/guide-etat-des-lieux";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Etat Des Lieux" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Réussir son État des Lieux</h1>

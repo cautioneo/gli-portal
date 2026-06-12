@@ -5,9 +5,15 @@ const pageTitle = "SCI à l'IR vs SCI à l'IS : Quel Impact sur la Déduction de
 const pageDescription = "SCI à l'IR ou SCI à l'IS : comment déduire votre assurance Loyer Impayé (GLI) en 2026. Découvrez les impacts fiscaux comparés pour optimiser votre investissement.";
 const pageCanonical = "https://cautioneo-gli.com/blog-sci-ir-vs-sci-is-gli";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

@@ -5,9 +5,15 @@ const pageTitle = "Dispositif Relance Logement (Jeanbrun) 2026 : Le remplaçant 
 const pageDescription = "Découvrez le dispositif Jeanbrun (Relance Logement) qui remplace la loi Pinel en 2026. Explication de l'amortissement fiscal et conditions d'éligibilité.";
 const pageCanonical = "https://cautioneo-gli.com/blog-dispositif-jeanbrun-2026";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Fiscalité et Rentabilité</span>

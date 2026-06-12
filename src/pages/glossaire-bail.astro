@@ -5,9 +5,14 @@ const pageTitle = "Définition : Bail (Contrat de location) | Glossaire Immo Cau
 const pageDescription = "Contrat écrit par lequel le propriétaire s'engage à procurer la jouissance d'un logement au locataire.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-bail";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Bail" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

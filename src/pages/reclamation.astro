@@ -5,9 +5,14 @@ const pageTitle = "Réclamations | Cautioneo Bailleurs";
 const pageDescription = "Service réclamation et assistance pour les propriétaires bailleurs Cautioneo. Trouvez rapidement des réponses à vos questions.";
 const pageCanonical = "https://cautioneo-gli.com/reclamation";
 const pageNoindex = true;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Réclamations" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Réclamations</h1>

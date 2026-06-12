@@ -5,9 +5,14 @@ const pageTitle = "Garantie Visale ou Cautioneo : Quel garant locatif choisir en
 const pageDescription = "Découvrez notre comparatif complet entre la Garantie Visale de l'État et Cautioneo. Plafonds, types de contrats, limites et avantages pour bien sécuriser vos loyers.";
 const pageCanonical = "https://cautioneo-gli.com/comparatif-visale";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Comparatif Visale" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Visale vs Cautioneo : Le Duel</h1>

@@ -5,9 +5,15 @@ const pageTitle = "Comment louer un appartement sans garant physique en 2026 ? |
 const pageDescription = "Impossible de trouver un garant pour votre logement ? Découvrez toutes les solutions légales en 2026 et l'alternative rapide du garant institutionnel en ligne.";
 const pageCanonical = "https://cautioneo-gli.com/blog-louer-sans-garant";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <main>

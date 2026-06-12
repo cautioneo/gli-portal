@@ -5,9 +5,14 @@ const pageTitle = "Procédures Bailleurs | Cautioneo Bailleurs";
 const pageDescription = "Maîtrisez toutes les étapes de la gestion locative : de la sélection du locataire au congé pour vente ou reprise.";
 const pageCanonical = "https://cautioneo-gli.com/procedures";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Procédures et Recours" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Le Guide des Procédures Bailleurs</h1>

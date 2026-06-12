@@ -5,9 +5,15 @@ const pageTitle = "LMNP Régime Réel 2026 : Le Guide fiscal ultime | Cautioneo"
 const pageDescription = "Comment déclarer vos revenus locatifs en LMNP régime réel en 2026 ? Retrouvez le guide complet : calcul d'amortissement, charges déductibles et simulateur fiscal.";
 const pageCanonical = "https://cautioneo-gli.com/blog-lmnp-regime-reel";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

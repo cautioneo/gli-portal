@@ -2,12 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "La GLI est-elle déductible des revenus fonciers ? Guide fiscal 2026";
-const pageDescription = "La prime d";
+const pageDescription = "La prime d'assurance Garantie Loyers Impayés (GLI) est-elle déductible de vos impôts ? Découvrez comment déduire vos cotisations au régime réel foncier en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-fiscalite";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">

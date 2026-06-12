@@ -5,9 +5,14 @@ const pageTitle = "Glossaire Juridique de l'Immobilier | Cautioneo Bailleurs";
 const pageDescription = "Découvrez les définitions clés du droit immobilier : bail, caution, dépôt de garantie, IRL, LMNP. Tout pour comprendre vos contrats.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation Partagée -->
 
 <header class="page-hero" data-reveal="fade-up">

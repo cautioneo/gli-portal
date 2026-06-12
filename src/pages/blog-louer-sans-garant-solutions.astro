@@ -5,9 +5,15 @@ const pageTitle = "Louer sans garant : Les solutions légales pour se protéger 
 const pageDescription = "Votre candidat locataire n'a pas de garant solide ? Ne passez pas à côté d'un bon profil. Explorez les alternatives légales 100% sécurisées pour les propriétaires.";
 const pageCanonical = "blog-louer-sans-garant-solutions";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

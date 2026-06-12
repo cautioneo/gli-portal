@@ -5,9 +5,15 @@ const pageTitle = "Toutes les charges déductibles pour un bailleur en 2026 | Ca
 const pageDescription = "Quelles charges pouvez-vous déduire de vos impôts fonciers en 2026 ? Retrouvez la liste complète : travaux, intérêts d'emprunt, taxe foncière et la GLI.";
 const pageCanonical = "https://cautioneo-gli.com/blog-charges-deductibles-bailleur";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

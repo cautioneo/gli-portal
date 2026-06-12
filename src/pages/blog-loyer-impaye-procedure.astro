@@ -5,9 +5,15 @@ const pageTitle = "Que faire en cas de loyer impayé en 2026 ? (Procédure de A 
 const pageDescription = "Découvrez les étapes légales et la procédure complète pour récupérer vos loyers impayés et expulser un locataire défaillant en toute légalité.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loyer-impaye-procedure";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Sécurisation des Revenus</span>

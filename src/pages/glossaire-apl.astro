@@ -5,9 +5,14 @@ const pageTitle = "Définition : Allocation Logement (APL) | Glossaire Immo Caut
 const pageDescription = "Aide financière versée par la CAF pour réduire le montant du loyer des ménages aux revenus modestes.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-apl";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Apl" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

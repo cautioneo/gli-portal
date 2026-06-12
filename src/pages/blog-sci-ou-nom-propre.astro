@@ -5,9 +5,15 @@ const pageTitle = "Investir en SCI ou en nom propre : le comparatif complet 2026
 const pageDescription = "SCI ou nom propre pour investir : avantages fiscaux, flexibilité patrimoniale, transmission et impact sur la GLI. Guide complet pour choisir en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-sci-ou-nom-propre";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
     
 
@@ -152,69 +158,5 @@ const pageNoindex = false;
         </div>
     </section>
     <!-- === /FAQ SECTION === -->
-
-    <!-- Footer B2B -->
-    <footer class="footer-b2b">
-        <div class="container" style="text-align: center;">
-            <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">Cautioneo <span style="color: var(--color-accent);">Propriétaires</span></div>
-            <p style="opacity: 0.7; max-width: 500px; margin: 0 auto; font-family: var(--font-main);">
-                L'infrastructure de confiance entre locataires performants et bailleurs exigeants en France.
-            </p>
-
-            <!-- Section Villes Implantations B2B -->
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
-                <h4 style="margin-bottom:15px; color: white; font-size: 1.1rem;">Assurance Loyer Impayé par Ville</h4>
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; font-size: 0.8rem; text-align: left;">
-                    <a href="/blog-assurance-loyer-impaye-paris" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Paris</a>
-                    <a href="/blog-assurance-loyer-impaye-lyon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Lyon</a>
-                    <a href="/blog-assurance-loyer-impaye-marseille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Marseille</a>
-                    <a href="/blog-assurance-loyer-impaye-toulouse" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Toulouse</a>
-                    <a href="/blog-assurance-loyer-impaye-nice" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Nice</a>
-                    <a href="/blog-assurance-loyer-impaye-nantes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Nantes</a>
-                    <a href="/blog-assurance-loyer-impaye-strasbourg" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Strasbourg</a>
-                    <a href="/blog-assurance-loyer-impaye-montpellier" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Montpellier</a>
-                    <a href="/blog-assurance-loyer-impaye-bordeaux" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Bordeaux</a>
-                    <a href="/blog-assurance-loyer-impaye-lille" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Lille</a>
-                    <a href="/blog-assurance-loyer-impaye-rennes" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Rennes</a>
-                    <a href="/blog-assurance-loyer-impaye-reims" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Reims</a>
-                    <a href="/blog-assurance-loyer-impaye-le-havre" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Le Havre</a>
-                    <a href="/blog-assurance-loyer-impaye-saint-etienne" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Saint-Étienne</a>
-                    <a href="/blog-assurance-loyer-impaye-toulon" style="color: rgba(255,255,255,0.6); text-decoration:none; transition: color 0.2s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">GLI à Toulon</a>
-                </div>
-            </div>
-            <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">
-                © 2026 Cautioneo - Numéro ORIAS 1800XXXX - Produit d'assurance professionnel.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile nav toggle
-        (function() {
-            var toggle = document.getElementById('nav-toggle-btn');
-            var navLinks = document.querySelector('.nav-links');
-            if (toggle && navLinks) {
-                toggle.addEventListener('click', function() {
-                    var expanded = toggle.getAttribute('aria-expanded') === 'true' || false;
-                    toggle.setAttribute('aria-expanded', !expanded);
-                    navLinks.classList.toggle('open');
-                });
-            }
-        })();
-    </script>
-
-<!-- CTA Sticky -->
-
-  <button class="sticky-cta-close" onclick="document.getElementById('sticky-cta').style.display='none'">✕</button>
-</div>
-<style>
-.sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #b45309, #92400e); color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 9999; box-shadow: 0 -4px 20px rgba(180,83,9,0.4); animation: slideUp 0.5s ease; }
-@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-.sticky-cta-content { display: flex; align-items: center; gap: 20px; flex: 1; }
-.sticky-cta-text { font-size: 0.95rem; font-weight: 600; }
-.sticky-cta-btn { background: white; color: #b45309; padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
-.sticky-cta-btn:hover { background: #fffbeb; transform: scale(1.03); }
-.sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
-@media (max-width: 640px) { .sticky-cta-text { display: none; } }
-</style>`} />
+`} />
 </Layout>

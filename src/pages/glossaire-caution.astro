@@ -5,9 +5,14 @@ const pageTitle = "Définition : Caution (Garant) | Glossaire Immo Cautioneo";
 const pageDescription = "Désigne la personne (ou l'organisme) qui se porte garant en cas d'impayé. Souvent confondu avec le Dépôt de Garantie.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-caution";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Caution" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

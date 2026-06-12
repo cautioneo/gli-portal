@@ -5,9 +5,14 @@ const pageTitle = "Blog du Propriétaire Bailleur | Conseils GLI & Immobilier | 
 const pageDescription = "Actualités immobilières, guides juridiques et conseils d'experts pour sécuriser et optimiser vos revenus locatifs. Le hub du propriétaire bailleur par Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/blog";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Blog Header -->
@@ -20,6 +25,19 @@ const pageNoindex = false;
 <!-- Blog Grid -->
 <section class="container">
 <div class="blog-grid">
+        <!-- Article Indemnité d'Occupation -->
+        <a class="blog-card" href="/blog-indemnite-occupation" style="color: inherit; text-decoration: none;">
+            <img alt="Indemnité d'occupation - tribunal et litiges loyers impayés" class="blog-card-img" src="/images/photo-1450133064473-71024230f91b.webp"/>
+            <div class="blog-card-content">
+                <span class="blog-category">Gestion Locative &amp; Litiges</span>
+                <h3>Indemnité d'Occupation 2026 : Règles, Calcul et Recours pour les Bailleurs</h3>
+                <p>Votre ex-locataire refuse de quitter votre logement ? Découvrez comment calculer et réclamer l'indemnité d'occupation légale en 2026.</p>
+            </div>
+            <div class="blog-card-footer">
+                <span>12 Juin 2026 • Lecture : 7 min</span>
+                <span class="blog-read-more">Lire l'article</span>
+            </div>
+        </a>
         <!-- Article Loi Lemoine Assurance Emprunteur -->
         <a class="blog-card" href="/blog-loi-lemoine-assurance-emprunteur" style="color: inherit; text-decoration: none;">
             <img alt="Loi Lemoine et assurance emprunteur immobilière" class="blog-card-img" src="/images/photo-1554224154-26032ffc0d07.webp"/>

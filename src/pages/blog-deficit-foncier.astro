@@ -5,9 +5,15 @@ const pageTitle = "Déficit Foncier 2026 : Le Guide fiscal ultime pour les baill
 const pageDescription = "Comment générer du déficit foncier pour réduire vos impôts en 2026 ? Guide fiscal complet : charges déductibles, travaux éligibles et déduction de la GLI.";
 const pageCanonical = "https://cautioneo-gli.com/blog-deficit-foncier";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

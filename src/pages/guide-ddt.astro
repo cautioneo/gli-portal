@@ -5,9 +5,14 @@ const pageTitle = "Guide du Dossier de Diagnostic Technique (DDT) | Cautioneo Ba
 const pageDescription = "Liste complète des diagnostics techniques obligatoires pour la location (DPE, ERP, Gaz, Électricité).";
 const pageCanonical = "https://cautioneo-gli.com/guide-ddt";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Ddt" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Guide du Dossier de Diagnostic Technique (DDT)</h1>

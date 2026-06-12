@@ -5,9 +5,15 @@ const pageTitle = "Comment détecter un faux dossier de location en 2026 ? | Cau
 const pageDescription = "Avis d'imposition falsifiés, fausses fiches de paie... Les fraudes à la location explosent. Découvrez comment protéger votre bien immobilier des faux dossiers.";
 const pageCanonical = "https://cautioneo-gli.com/blog-faux-dossiers-location";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

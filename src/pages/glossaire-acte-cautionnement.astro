@@ -5,9 +5,14 @@ const pageTitle = "Définition : Acte de Cautionnement | Glossaire Immo Cautione
 const pageDescription = "Document par lequel un tiers s'engage à payer les dettes locatives en cas de défaillance du locataire.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-acte-cautionnement";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Acte Cautionnement" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

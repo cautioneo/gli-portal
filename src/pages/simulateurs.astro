@@ -5,9 +5,14 @@ const pageTitle = "Simulateurs & Outils Bailleurs | Cautioneo Bailleurs";
 const pageDescription = "Estimez votre rentabilité nette et votre prime d'assurance GLI en quelques clics grâce à nos outils experts.";
 const pageCanonical = "https://cautioneo-gli.com/simulateurs";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Simulateurs Bailleurs" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Outils &amp; Simulateurs Bailleurs</h1>

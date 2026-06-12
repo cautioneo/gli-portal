@@ -5,9 +5,14 @@ const pageTitle = "Locataire agressif ou logement rendu insalubre : Que faire ? 
 const pageDescription = "Démarches juridiques, constat d'huissier et recours pour un propriétaire face à un locataire agressif ou un logement rendu insalubre.";
 const pageCanonical = "https://cautioneo-gli.com/guide-litiges-locataire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Litiges Locataire" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Locataire agressif ou logement rendu insalubre</h1>

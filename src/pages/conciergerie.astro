@@ -5,9 +5,14 @@ const pageTitle = "Conciergerie | Cautioneo Bailleurs";
 const pageDescription = "Découvrez notre service de conciergerie Cautioneo : facilitez et sécurisez la gestion locative de vos biens immobiliers.";
 const pageCanonical = "https://cautioneo-gli.com/conciergerie";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Conciergerie" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Conciergerie</h1>

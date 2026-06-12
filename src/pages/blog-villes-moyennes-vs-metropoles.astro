@@ -5,9 +5,15 @@ const pageTitle = "Où investir en 2026 : Villes moyennes vs Métropoles | Cauti
 const pageDescription = "Découvrez pourquoi les villes moyennes étudiantes offrent de meilleures rentabilités nettes que Paris ou Lyon pour votre investissement locatif en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-villes-moyennes-vs-metropoles";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Stratégie d'Investissement</span>

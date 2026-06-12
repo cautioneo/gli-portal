@@ -5,9 +5,14 @@ const pageTitle = "Définition : Quittance de Loyer | Glossaire Immo Cautioneo";
 const pageDescription = "Document remis par le bailleur attestant du règlement du loyer de la part du locataire.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-quittance-loyer";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Quittance Loyer" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

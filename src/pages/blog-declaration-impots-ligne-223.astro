@@ -5,9 +5,15 @@ const pageTitle = "Ligne 223 Impôts : Comment Déclarer et Déduire votre GLI e
 const pageDescription = "Remplir la ligne 223 de la déclaration 2044 : comment déclarer et déduire à 100 % votre assurance Loyer Impayé (GLI) et PNO de vos revenus fonciers en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-declaration-impots-ligne-223";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

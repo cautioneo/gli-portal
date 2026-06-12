@@ -5,9 +5,14 @@ const pageTitle = "Le comparatif définitif des garanties locatives (Physique, V
 const pageDescription = "Analysez et comparez toutes les options de sécurisation locative en 2026 : Garant physique, Garantie Visale publique, Assurance GLI bancaire et Garant Institutionnel.";
 const pageCanonical = "https://cautioneo-gli.com/mega-comparatif-garanties-locatives";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Comparatif des Garanties" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Le Méga-Comparatif des Garanties Locatives en 2026</h1>

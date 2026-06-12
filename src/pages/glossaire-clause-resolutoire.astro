@@ -5,9 +5,14 @@ const pageTitle = "Définition : Clause Résolutoire | Glossaire Immo Cautioneo"
 const pageDescription = "Clause insérée dans le contrat de bail prévoyant sa résiliation de plein droit en cas de manquement du locataire à ses obligations (loyers impayés, assurance).";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-clause-resolutoire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Clause Resolutoire" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

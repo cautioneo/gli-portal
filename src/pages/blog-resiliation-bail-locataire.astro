@@ -5,9 +5,15 @@ const pageTitle = "Résiliation Bail Locataire 2026 : Préavis, Délais et Droit
 const pageDescription = "Votre locataire veut partir ? Délai de préavis, obligations légales, état des lieux de sortie... Tout ce que le bailleur doit savoir pour protéger ses intérêts.";
 const pageCanonical = "https://cautioneo-gli.com/blog-resiliation-bail-locataire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

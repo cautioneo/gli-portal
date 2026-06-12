@@ -5,9 +5,14 @@ const pageTitle = "Définition : Dépôt de Garantie | Glossaire Immo Cautioneo"
 const pageDescription = "Somme versée à l'entrée dans les lieux pour couvrir d'éventuels manquements (loyers partiels, dégradations).";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-depot-garantie";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Depot Garantie" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

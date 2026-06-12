@@ -5,9 +5,15 @@ const pageTitle = "Les 5 éléments qui rassurent instantanément un propriétai
 const pageDescription = "Comment présenter un dossier de location irréprochable ou comment trier efficacement les candidatures pour vos biens immobiliers. Découvrez nos conseils d'experts.";
 const pageCanonical = "blog-rassurer-proprietaire-bailleur";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

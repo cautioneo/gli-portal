@@ -5,9 +5,15 @@ const pageTitle = "GLI ou Garant Physique : Que préfèrent les agences en 2026 
 const pageDescription = "Découvrez pourquoi les agences immobilières privilégient la Garantie Loyers Impayés (GLI) face au garant physique classique et comment cela impacte vos dossiers.";
 const pageCanonical = "blog-gli-vs-garant-physique";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

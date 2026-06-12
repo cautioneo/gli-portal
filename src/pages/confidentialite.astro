@@ -5,9 +5,14 @@ const pageTitle = "Protection des données | Cautioneo Bailleurs";
 const pageDescription = "Politique de confidentialité et de protection des données personnelles appliquées sur le Portail Bailleurs Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/confidentialite";
 const pageNoindex = true;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Politique de Confidentialité" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Protection des données</h1>

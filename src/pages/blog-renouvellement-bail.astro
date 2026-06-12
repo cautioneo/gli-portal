@@ -5,9 +5,15 @@ const pageTitle = "Renouvellement Bail 2026 : Conditions, Augmentation Loyer et 
 const pageDescription = "Votre bail arrive à terme ? Découvrez les conditions de renouvellement, comment réviser le loyer légalement et quand vous pouvez refuser le renouvellement.";
 const pageCanonical = "https://cautioneo-gli.com/blog-renouvellement-bail";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

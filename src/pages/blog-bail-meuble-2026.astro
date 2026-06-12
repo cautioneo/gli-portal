@@ -5,9 +5,15 @@ const pageTitle = "Bail Meublé 2026 : Tout Ce Qu'un Propriétaire Doit Savoir |
 const pageDescription = "Durée minimale, dépôt de garantie, liste de mobilier obligatoire, fiscalité... Maîtrisez les règles du bail meublé pour louer en toute légalité en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-bail-meuble-2026";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

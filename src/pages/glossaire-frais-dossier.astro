@@ -5,9 +5,14 @@ const pageTitle = "Définition : Frais de Dossier | Glossaire Immo Cautioneo";
 const pageDescription = "Sommes facturées pour la constitution du dossier de location. Ils sont strictement encadrés par la loi Alur.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-frais-dossier";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Frais Dossier" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

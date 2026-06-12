@@ -5,9 +5,14 @@ const pageTitle = "Assurance Loyer Impayé : Comment choisir la meilleure en 202
 const pageDescription = "Comparatif complet pour choisir votre assurance loyer impayé (GLI). Décryptage des pièges, délais de carence, franchises et critères d'éligibilité locataire.";
 const pageCanonical = "https://cautioneo-gli.com/guide-choisir-assurance-loyer-impaye";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Choisir Assurance Loyer Impaye" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Guide Ultime : Comment choisir la meilleure Assurance Loyer Impayé (GLI) ?</h1>

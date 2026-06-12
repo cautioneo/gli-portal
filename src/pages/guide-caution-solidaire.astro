@@ -5,9 +5,14 @@ const pageTitle = "Caution Solidaire en Location : Définition, Pièges et Alter
 const pageDescription = "Qu'est-ce qu'une caution solidaire ? Comprenez l'engagement du garant physique, les clauses abusives, comment s'en libérer et les alternatives (garant en ligne).";
 const pageCanonical = "https://cautioneo-gli.com/guide-caution-solidaire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Caution Solidaire" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>La Caution Solidaire en Location</h1>
@@ -33,6 +38,9 @@ const pageNoindex = false;
 </aside>
 <!-- Main Content -->
 <div class="content-body">
+<div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 0 0 24px 0;">
+    <p style="margin: 0; font-size: 1rem; line-height: 1.7;"><strong>La caution solidaire en bref :</strong> C'est un acte d'engagement par lequel le garant accepte de régler les impayés de loyer et de charges à la place du locataire défaillant dès le premier jour de retard, sans que le propriétaire ait à poursuivre le locataire au préalable.</p>
+</div>
 <div class="mb-48" id="definition">
 <h2 class="text-2xl mb-16">1. La caution solidaire : définition et fonctionnement</h2>
 <p class="text-lg text-muted mb-16">En location immobilière, la <strong>caution solidaire</strong> est un acte juridique par lequel une personne (le garant) s'engage à payer le loyer, les charges et les éventuelles dégradations à la place du locataire, si ce dernier ne paie pas.</p>
@@ -41,12 +49,89 @@ const pageNoindex = false;
                             - En <em>caution simple</em>, le propriétaire doit d'abord poursuivre le locataire défaillant (huissier, saisie) avant de se retourner vers le garant.<br/>
                             - En <strong>caution solidaire</strong>, le propriétaire peut exiger le paiement directement au garant dès le premier impayé, sans même avoir à poursuivre le locataire au préalable. C'est le format le plus utilisé en France.</p>
 </div>
+
+<table class="comparison-table mb-24" style="width: 100%; margin: 20px 0; border-collapse: collapse; border: 1px solid var(--color-border);">
+  <thead>
+    <tr style="background-color: var(--color-bg-alt);">
+      <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Caractéristique</th>
+      <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Caution Simple</th>
+      <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Caution Solidaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Mise en jeu de la garantie</strong></td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);">Après poursuites vaines et constat d'insolvabilité du locataire.</td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Dès le 1er jour de retard</strong>, sans démarches judiciaires préalables.</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Bénéfice de discussion</strong></td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);">Oui (le garant peut exiger que le bailleur poursuive d'abord le locataire).</td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Non</strong> (le garant renonce à ce droit lors de la signature).</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Bénéfice de division</strong></td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);">Oui (si plusieurs garants, la dette est divisée entre eux).</td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Non</strong> (le bailleur peut réclamer la totalité de la dette à un seul garant).</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Délais de recouvrement</strong></td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);">Très longs (plusieurs mois d'actes d'huissier et procédures).</td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Immédiats</strong> (mise en demeure directe du garant).</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Usage sur le marché</strong></td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);">Très rare (souvent refusé par les propriétaires et agences).</td>
+      <td style="padding: 12px; border: 1px solid var(--color-border);"><strong>Quasi-systématique</strong> (format standard en France).</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 <div class="mb-48" id="pieges">
 <h2 class="text-2xl mb-16">2. Clauses abusives et limites (ex: EHPAD)</h2>
 <p class="text-lg text-muted mb-16">S'engager en tant que garant n'est pas anodin, et les litiges sont nombreux. Certaines clauses peuvent être considérées comme abusives par les tribunaux.</p>
 <p class="text-lg text-muted mb-16">C'est souvent le cas pour les <strong>cautions solidaires en EHPAD</strong>. Les maisons de retraite exigent souvent des enfants qu'ils signent une caution solidaire illimitée pour payer les frais de séjour de leurs parents. La jurisprudence considère parfois ces clauses comme abusives si elles créent un déséquilibre significatif ou si le signataire n'a pas été informé de l'étendue exacte de son engagement financier.</p>
 <p class="text-lg text-muted">Dans une location classique, le contrat de cautionnement doit mentionner un <strong>montant maximum garanti</strong> (en chiffres et en lettres) pour être valide, ou une durée précise.</p>
+
+<div class="bg-light p-32 radius-lg border mb-32" style="background: var(--color-bg-alt); border: 1px solid var(--color-border); padding: 24px; border-radius: 8px; margin: 24px 0;">
+  <h3 style="margin-top: 0; color: var(--color-primary); font-size: 1.3rem;">Modèle d'Acte de Cautionnement Solidaire 2026</h3>
+  <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 16px;">Ce modèle gratuit d'acte de cautionnement solidaire respecte les mentions obligatoires imposées par la loi ELAN (prêt à copier).</p>
+  <pre id="modele-caution" style="background: white; border: 1px solid var(--color-border); padding: 16px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; color: var(--color-primary);">ACTE DE CAUTIONNEMENT SOLIDAIRE
+(Loi du 6 juillet 1989 - Article 22-1)
+
+Je soussigné(e), [Nom et Prénom du Garant], né(e) le [Date de naissance] à [Lieu de naissance], demeurant au [Adresse complète du Garant], déclare me porter caution solidaire de :
+[Nom et Prénom du Locataire]
+
+Pour l'exécution des obligations résultant du contrat de bail qui lui a été consenti pour le logement situé à l'adresse suivante :
+[Adresse complète du logement loué]
+Par le bailleur : [Nom du Propriétaire], demeurant au [Adresse du Propriétaire].
+
+Je déclare avoir parfaite connaissance de la nature et de l'étendue de mon engagement. Je confirme avoir pris connaissance des conditions du bail, pour lequel le loyer mensuel s'élève à [Montant du loyer] € hors charges, plus [Montant des charges] € de provisions pour charges, soit un total mensuel de [Montant total en chiffres et lettres] euros.
+
+En renonçant expressément au bénéfice de discussion et de division, je m'oblige à payer au bailleur, sur ses simples réclamations, l'ensemble des sommes dues par le locataire au titre du bail (loyers, charges, réparations locatives, indemnités d'occupation et frais de procédure).
+
+Le présent engagement de caution solidaire est consenti :
+[Option Durée déterminée] : pour la durée du bail initial de [Durée du bail, ex: 3 ans], soit du [Date de début] au [Date de fin], ainsi que pour son renouvellement. Mon engagement est plafonné à la somme maximale de [Montant maximum en chiffres et en lettres] euros.
+[Option Durée indéterminée] : sans limitation de durée. Dans ce cas, je pourrai y mettre fin à tout moment, mais cette résiliation ne prendra effet qu'à l'expiration du bail en cours ou de sa reconduction.
+
+Fait à [Ville], le [Date]
+
+Signature du garant (précédée de la mention manuscrite suivante) :
+« Je me porte caution solidaire pour le paiement des loyers, charges et réparations locatives dans la limite d'un montant maximum de [Montant en lettres et en chiffres] euros. Je confirme avoir parfaite connaissance de la nature et de l'étendue de mon engagement. »</pre>
+  <button onclick="copyCautionToClipboard()" class="btn btn-primary" style="margin-top: 12px; cursor: pointer; padding: 10px 20px; font-size: 0.9rem; border: none; border-radius: 6px;">
+    <i class="fas fa-copy" style="margin-right: 6px;"></i> Copier le modèle d'acte
+  </button>
+</div>
+<script>
+  function copyCautionToClipboard() {
+    var copyText = document.getElementById("modele-caution").innerText;
+    navigator.clipboard.writeText(copyText).then(function() {
+      alert("Modèle d'acte de cautionnement copié !");
+    }, function(err) {
+      console.error("Erreur de copie : ", err);
+    });
+  }
+</script>
 </div>
 <div class="mb-48" id="annuler-caution">
 <h2 class="text-2xl mb-16">3. Comment ne plus être garant d'un locataire ?</h2>

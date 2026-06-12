@@ -5,9 +5,15 @@ const pageTitle = "Coliving et Sous-location : Doper sa rentabilité en 2026 | C
 const pageDescription = "Découvrez comment le coliving et la sous-location professionnelle permettent de booster la rentabilité de vos investissements locatifs en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-coliving-sous-location";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Fiscalité et Rentabilité</span>

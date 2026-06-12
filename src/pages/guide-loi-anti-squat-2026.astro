@@ -5,9 +5,14 @@ const pageTitle = "Nouvelle Loi Anti-Squat 2026 : Le Guide Complet du Propriéta
 const pageDescription = "Tout savoir sur la loi anti-squat 2026 : nouvelles sanctions, délai de 48h, procédures d'expulsion express et comment la loi protège les propriétaires.";
 const pageCanonical = "https://cautioneo-gli.com/guide-loi-anti-squat-2026";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Guide : Loi Anti Squat 2026" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Loi Anti-Squat 2026 : Le Guide du Propriétaire</h1>

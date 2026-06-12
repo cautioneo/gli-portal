@@ -5,9 +5,14 @@ const pageTitle = "Définition : Indice de Référence des Loyers (IRL) | Glossa
 const pageDescription = "Indice publié chaque trimestre par l'INSEE servant de base à la révision annuelle du loyer en cours de bail.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-irl";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Irl" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

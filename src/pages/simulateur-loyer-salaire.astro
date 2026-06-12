@@ -5,9 +5,14 @@ const pageTitle = "Simulateur Loyer Salaire : Calculez votre capacité locative 
 const pageDescription = "Simulateur gratuit : calculez le loyer maximum que vous pouvez payer avec votre salaire (règle des 33%), ou le revenu minimum exigé pour un loyer donné.";
 const pageCanonical = "https://cautioneo-gli.com/simulateur-loyer-salaire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Simulateur Loyer & Salaire" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Simulateur Loyer &amp; Salaire</h1>

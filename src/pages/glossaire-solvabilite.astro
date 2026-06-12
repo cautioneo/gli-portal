@@ -5,9 +5,14 @@ const pageTitle = "Définition : Solvabilité (Taux d'effort locatif) | Glossair
 const pageDescription = "Capacité financière d'un locataire à assumer ses charges par rapport à ses revenus purs (évaluée à 33%).";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-solvabilite";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Solvabilite" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

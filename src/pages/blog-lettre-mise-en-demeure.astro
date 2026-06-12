@@ -5,9 +5,15 @@ const pageTitle = "Lettre de mise en demeure loyer impayé (modèle gratuit 2026
 const pageDescription = "Modèle de lettre de mise en demeure pour loyer impayé à télécharger. Découvrez comment rédiger une mise en demeure efficace et respectant la loi en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-lettre-mise-en-demeure";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1568602471122-7832951cc4c5.webp');">

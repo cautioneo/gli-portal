@@ -2,12 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "Procédure d'Expulsion Locative 2026 : Délais, Étapes & Recours Bailleurs";
-const pageDescription = "Découvrez la durée réelle d";
+const pageDescription = "Découvrez la durée réelle d'une procédure d'expulsion de locataire en 2026. Analyse étape par étape des délais légaux, du commandement de payer au concours de la force publique.";
 const pageCanonical = "https://cautioneo-gli.com/blog-delai-procedure-expulsion";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1589391886645-d51941baf7fb.webp');">

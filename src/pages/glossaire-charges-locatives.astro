@@ -5,9 +5,14 @@ const pageTitle = "Définition : Charges Locatives (Récupérables) | Glossaire 
 const pageDescription = "Dépenses payées initialement par le propriétaire et remboursées par le locataire.";
 const pageCanonical = "https://cautioneo-gli.com/glossaire-charges-locatives";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Glossaire : Charges Locatives" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

@@ -5,9 +5,15 @@ const pageTitle = "Éligibilité GLI : Quelles conditions doit remplir votre loc
 const pageDescription = "Quelles sont les conditions requises pour qu'un locataire soit éligible à la GLI (Garantie Loyers Impayés) ? Taux d'effort, statut professionnel et justificatifs exigés.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-conditions-locataire";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

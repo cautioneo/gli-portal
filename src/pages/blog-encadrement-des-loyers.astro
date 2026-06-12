@@ -5,9 +5,15 @@ const pageTitle = "Encadrement des loyers : Comment fixer son loyer légalement 
 const pageDescription = "Paris, Lyon, Lille... L'encadrement des loyers s'étend. Découvrez comment calculer le loyer de référence majoré et éviter les amendes en tant que bailleur.";
 const pageCanonical = "https://cautioneo-gli.com/blog-encadrement-des-loyers";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Réglementation &amp; Normes</span>

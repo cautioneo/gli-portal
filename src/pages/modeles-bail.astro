@@ -5,9 +5,14 @@ const pageTitle = "Modèles de Bail de Location | Cautioneo Bailleurs";
 const pageDescription = "Téléchargez nos modèles de baux conformes loi Alur : vide, meublé, bail mobilité.";
 const pageCanonical = "https://cautioneo-gli.com/modeles-bail";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Modèles de Contrats" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Modèles de Baux &amp; Documents Locatifs</h1>

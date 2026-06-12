@@ -5,9 +5,15 @@ const pageTitle = "Guide Pratique : Comment déclarer ses revenus fonciers (2044
 const pageDescription = "Découvrez comment remplir votre déclaration de revenus fonciers (formulaire 2044) et quelles charges déduire pour optimiser vos impôts locatifs.";
 const pageCanonical = "https://cautioneo-gli.com/blog-declaration-revenus-fonciers";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="blog-header">
 <div class="container">
 <span class="blog-category" style="margin-bottom: 20px;">Fiscalité et Rentabilité</span>

@@ -5,9 +5,14 @@ const pageTitle = "Checklist Mise en Location - Cautioneo Bailleurs";
 const pageDescription = "Toutes les étapes pour une mise en location réussie : diagnostics, visite, dossier, bail et état des lieux.";
 const pageCanonical = "https://cautioneo-gli.com/checklist-bailleur";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Checklist Bailleur" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="hero-mini">
 <div class="container">
 <h1 class="text-4xl font-bold mb-16">Checklist : Mise en Location</h1>

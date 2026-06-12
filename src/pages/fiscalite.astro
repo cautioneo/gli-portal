@@ -5,9 +5,14 @@ const pageTitle = "Fiscalité & Revenus Locatifs | Cautioneo Bailleurs";
 const pageDescription = "Optimisez vos revenus fonciers. Tout comprendre sur le LMNP, le micro-foncier et le régime réel avec Cautioneo.";
 const pageCanonical = "https://cautioneo-gli.com/fiscalite";
 const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Fiscalité Locative" }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Optimiser votre Fiscalité Immobilière</h1>
