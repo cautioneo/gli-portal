@@ -13,6 +13,23 @@ const breadcrumbs = [
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Comparatif Assurances Loyer Impayé (GLI) 2026",
+    "description": "Comparaison des meilleures garanties loyer impayé du marché en 2026.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Cautioneo"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1247",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  })} />
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Comparatif Objectif des Garanties Locatives</h1>

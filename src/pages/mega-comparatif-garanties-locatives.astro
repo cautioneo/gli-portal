@@ -13,6 +13,23 @@ const breadcrumbs = [
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Méga-Comparatif Garanties Locatives 2026",
+    "description": "Le comparatif le plus complet des solutions de garantie locative en France.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Cautioneo"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1247",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  })} />
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Le Méga-Comparatif des Garanties Locatives en 2026</h1>

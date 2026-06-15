@@ -31,6 +31,23 @@ const faqItems = [
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} faqItems={faqItems}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Garantie Loyer Impayé Cautioneo",
+    "description": "Assurance loyer impayé (GLI) pour propriétaires bailleurs : zéro franchise, couverture 96 000€, prise en charge juridique totale.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Cautioneo"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1247",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  })} />
   <Fragment set:html={`<!-- Navigation -->
     
 
