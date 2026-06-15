@@ -10,7 +10,7 @@ interface Props {
 
 const { title, description, canonical, noindex = false, breadcrumbs, faqItems } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site).href;
-const isBlogPost = Astro.url.pathname.includes('/blog-');
+const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.includes('/guide-') || Astro.url.pathname.includes('/procedures') || Astro.url.pathname.includes('/fiscalite') || Astro.url.pathname.includes('/simulateur') || Astro.url.pathname.includes('/boite-a-outils') || Astro.url.pathname.includes('/checklist') || Astro.url.pathname.includes('/modeles') || Astro.url.pathname.includes('/mega-');
 ---
 
 <!DOCTYPE html>
