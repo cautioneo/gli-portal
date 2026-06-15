@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on louer un studio de 15 m² en meublé ?",
+    answer: "Non. La loi impose une surface habitable minimale de 9 m² pour tout logement loué en résidence principale, quelle que soit la durée du bail. De plus, le logement doit respecter les critères de décence (hauteur sous plafond ≥ 2,20 m, volume habitable ≥ 20 m³). En dessous de ces seuils, le bail est nul."
+  },
+  {
+    question: "Le bailleur peut-il augmenter le loyer d\'un meublé librement ?",
+    answer: "Non. La révision du loyer en cours de bail est encadrée par l\'Indice de Référence des Loyers (IRL) publié trimestriellement par l\'INSEE. Elle n\'est possible qu\'une fois par an, à la date anniversaire du bail, et uniquement si une clause de révision est expressément prévue dans le contrat. De plus, les logements situés en zone tendue sont soumis à l\'encadrement des loyers à la relocation."
+  },
+  {
+    question: "Que se passe-t-il si le locataire meublé ne part pas à l\'échéance du bail étudiant ?",
+    answer: "Le bail étudiant de 9 mois prend fin automatiquement sans que le bailleur ait à donner congé. Si le locataire se maintient dans les lieux après l\'échéance, il est en situation d\'occupation sans droit ni titre. Le bailleur peut saisir le tribunal pour obtenir son expulsion. En pratique, il est conseillé d\'envoyer un rappel par courrier recommandé un mois avant l\'échéance pour éviter toute ambiguïté."
+  },
+  {
+    question: "La GLI couvre-t-elle les impayés sur un bail de 9 mois étudiant ?",
+    answer: "Cela dépend des conditions du contrat de GLI. Chez Cautioneo, les baux étudiants de 9 mois sont éligibles à la garantie. L\'indemnisation intervient dès le premier loyer impayé, avec une prise en charge des frais de procédure et des dégradations locatives. Demandez un devis pour connaître les modalités exactes pour votre situation."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Le prix de la GLI est-il vraiment déductible des impôts fonciers ?",
+    answer: "Oui, à 100%. Si vous déclarez vos loyers perçus sous le régime fiscal réel (locatif vide ou meublé LMNP), les primes versées au titre de l\'assurance loyers impayés constituent des frais déductibles de vos revenus imposables. Cette déduction s\'opère sur la ligne 220 de votre déclaration 2044."
+  },
+  {
+    question: "Qu\'est-ce qu\'une franchise de GLI et comment impacte-t-elle le tarif ?",
+    answer: "La franchise correspond à la période de non-indemnisation qui reste à la charge exclusive du propriétaire bailleur lors d\'un sinistre (généralement entre 2 et 4 mois). Les contrats proposant des tarifs très bas (inférieurs à 2%) intègrent presque toujours une franchise lourde. Les contrats premium ou le garant Cautioneo indemnisent rétroactivement dès le 1er euro d\'impayé."
+  },
+  {
+    question: "Peut-on cumuler une GLI avec un garant physique classique ?",
+    answer: "Non. La loi Boutin interdit formellement de cumuler une assurance loyer impayé (GLI) avec une caution solidaire physique (un garant), sauf si le locataire est étudiant ou apprenti. En revanche, le modèle de garant institutionnel comme Cautioneo remplace les deux et contourne légalement cette limitation au profit du propriétaire."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

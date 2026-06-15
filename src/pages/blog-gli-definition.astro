@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Garantie Loyers Impayés (GLI) : Fonctionnement & Critères 2026";
-const pageDescription = "Qu'est-ce que la Garantie Loyers Impayés (GLI) ? Découvrez le fonctionnement pour le bailleur, les critères d'éligibilité du locataire et les tarifs moyens du marché en 2026.";
+const pageTitle = "Assurance Loyer & GLI : Fonctionnement, Critères & Tarifs 2026";
+const pageDescription = "Qu'est-ce que l'assurance loyer impayé (GLI) ? Découvrez comment fonctionne la garantie pour le bailleur, les critères du locataire et les meilleurs tarifs 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-definition";
 const pageNoindex = false;
 
@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on cumuler une GLI avec un garant physique classique ?",
+    answer: "Non, la loi l\'interdit formellement (loi Boutin). Un bailleur ne peut pas cumuler une assurance loyers impayés (GLI) avec la caution solidaire d\'un garant physique, sauf si le locataire est étudiant ou apprenti. En dehors de cette exception, le cumul rend le bail nul et expose le propriétaire à des sanctions."
+  },
+  {
+    question: "La cotisation de ma GLI est-elle déductible de mes impôts ?",
+    answer: "Oui, si vous déclarez vos revenus fonciers sous le régime réel, les primes d\'assurance pour loyers impayés sont déductibles à 100 % de vos revenus imposables. Lisez notre guide complet sur la déductibilité de la GLI pour en savoir plus."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

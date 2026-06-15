@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Un locataire en période d\'essai est-il éligible à la GLI ?",
+    answer: "Non. Les assureurs de Loyers Impayés considèrent la période d\'essai comme une situation à haut risque de rupture de contrat. Pour être éligible au titre de son CDI, le locataire doit avoir validé sa période d\'essai. Si vous souhaitez absolument loger un profil en période d\'essai, vous devez exiger un garant institutionnel comme Cautioneo pour sécuriser le dossier."
+  },
+  {
+    question: "Puis-je cumuler une assurance GLI et un garant physique ?",
+    answer: "Non, c\'est interdit par la loi Boutin, sauf si le locataire est officiellement étudiant ou apprenti. Si vous cumulez illégalement une GLI et un garant physique pour un locataire en CDI ou en CDD, le cautionnement physique sera automatiquement frappé de nullité devant les tribunaux, et l\'assureur pourra résilier votre contrat d\'assurance."
+  },
+  {
+    question: "Que se passe-t-il si les justificatifs du locataire sont falsifiés ?",
+    answer: "Si l\'assureur découvre lors de la déclaration de sinistre que le locataire a fourni de faux documents (bulletins de paie ou avis d\'imposition falsifiés) et que le propriétaire n\'a pas pris le soin de vérifier leur authenticité auprès des impôts ou de l\'employeur, l\'indemnisation sera refusée. C\'est pourquoi déléguer la certification du dossier à Cautioneo élimine ce risque grâce aux technologies anti-fraude."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

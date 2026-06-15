@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment vérifier l\'authenticité d\'un avis d\'imposition de locataire ?",
+    answer: "Vous pouvez vérifier gratuitement tout avis d\'imposition via le service SVAIR (Service de Vérification des Avis d\'Impôt sur les Revenus) sur le site impots.gouv.fr. Il suffit de saisir le numéro fiscal et la référence de l\'avis fournis par le candidat pour télécharger le document officiel."
+  },
+  {
+    question: "Quels sont les documents de location les plus souvent falsifiés ?",
+    answer: "Les documents les plus souvent falsifiés sont : les fiches de paie (gonflement du salaire), les avis d\'imposition, les contrats de travail (fausses entreprises) et les quittances de loyer. Ces falsifications sont réalisées avec des éditeurs PDF gratuits disponibles en ligne."
+  },
+  {
+    question: "Que se passe-t-il si j\'accepte un faux dossier et que l\'assurance GLI refuse de m\'indemniser ?",
+    answer: "Si vous avez validé vous-même un dossier frauduleux, la plupart des assurances GLI classiques refuseront de vous indemniser, invoquant la fraude à la souscription. Certaines solutions comme Cautioneo, qui vérifient les dossiers avec leur propre technologie, vous indemnisent même dans ce cas car c\'est leur vérification qui était défaillante."
+  },
+  {
+    question: "Qu\'est-ce que l\'Open-Banking et comment aide-t-il à détecter les faux dossiers ?",
+    answer: "L\'Open-Banking est une technologie qui permet, avec l\'accord du locataire, d\'accéder directement à ses relevés bancaires sécurisés pour vérifier que les salaires annoncés sont réellement versés. C\'est la méthode la plus fiable car elle ne repose pas sur des documents qui peuvent être falsifiés."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

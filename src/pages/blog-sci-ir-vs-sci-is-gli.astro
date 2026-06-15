@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment déclarer la prime de GLI pour ma SCI à l\'IR ?",
+    answer: "La prime de Garantie Loyers Impayés (GLI) se déclare sur le formulaire fiscal n° 2044 (déclaration des revenus fonciers), à la ligne 223 intitulée \"Primes d\'assurance\". Vous devez reporter la totalité de la prime payée au cours de l\'année civile pour chacun de vos biens sécurisés."
+  },
+  {
+    question: "Peut-on déduire la GLI en cas de location meublée en SCI ?",
+    answer: "Attention : Une SCI à l\'IR ne peut pas faire de location meublée habituelle sous peine d\'être requalifiée d\'office à l\'impôt sur les sociétés (IS). Si votre SCI fait de la location meublée, elle est obligatoirement soumise à l\'IS. La prime de GLI y sera alors déduite en tant que charge d\'exploitation dans vos frais généraux."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

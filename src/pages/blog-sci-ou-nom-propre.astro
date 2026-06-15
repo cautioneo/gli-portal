@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on créer une SCI seul ?",
+    answer: "Non. La loi exige d\'être au moins deux associés (personnes physiques ou morales) pour constituer une Société Civile Immobilière. Si vous souhaitez investir seul via une structure sociétale, vous devez vous tourner vers une SASU ou une EURL, bien que le nom propre reste privilégié pour un investisseur solo."
+  },
+  {
+    question: "Quelle est la meilleure option pour réduire immédiatement ses impôts ?",
+    answer: "Si vous recherchez une optimisation fiscale immédiate et à court terme, l\'achat en nom propre au statut LMNP (régime réel) est souvent le plus puissant grâce au mécanisme de l\'amortissement comptable du mobilier et des murs. Pour un projet patrimonial à long terme destiné à être transmis à vos enfants, la SCI à l\'IS est imbattable. Pour approfondir, lisez notre analyse du LMNP régime réel."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

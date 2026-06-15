@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Puis-je déduire la taxe foncière en régime micro-foncier ?",
+    answer: "Non, le régime micro-foncier (abattement forfaitaire de 30 %) est incompatible avec la déduction des charges réelles. L\'abattement forfaitaire est censé couvrir l\'intégralité de vos charges, y compris la taxe foncière. Si le montant de vos charges réelles (taxe foncière + travaux + GLI) dépasse 30% de vos loyers, vous avez intérêt à opter pour le régime réel d\'imposition."
+  },
+  {
+    question: "La déduction de la taxe foncière peut-elle créer un déficit foncier ?",
+    answer: "Oui, absolument. Si le cumul de vos charges déductibles (taxe foncière, intérêts d\'emprunt, travaux) est supérieur au montant de vos loyers perçus, vous générez un déficit foncier. Ce déficit peut être déduit de votre revenu global dans la limite de 10 700 € par an, réduisant ainsi drastiquement votre impôt sur le revenu global. Pour en savoir plus, consultez notre guide sur le déficit foncier."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quid des frais de dossier ou d\'adhésion lors de la souscription ?",
+    answer: "Les éventuels frais de dossier, d\'adhésion ou d\'établissement de contrat facturés lors de la souscription d\'une GLI ou d\'une PNO ne se déclarent pas sur la ligne 223 (réservée strictement aux cotisations d\'assurances). Cependant, vous pouvez tout à fait les déduire sur la ligne 224 (\"Autres frais de gestion\") au titre des frais d\'administration réels."
+  },
+  {
+    question: "Puis-je déduire la GLI en régime micro-foncier ?",
+    answer: "Non. Le régime micro-foncier applique un abattement forfaitaire représentatif de charges de 30 % sur vos loyers bruts. Vous ne pouvez donc déduire aucune charge pour sa valeur réelle. Pour pouvoir déduire vos primes d\'assurances sur la ligne 223, vous devez obligatoirement opter pour le régime réel d\'imposition (option globale et irrévocable pendant 3 ans)."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

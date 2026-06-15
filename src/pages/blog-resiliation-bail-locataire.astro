@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Le locataire peut-il partir avant la fin de son préavis ?",
+    answer: "Oui. Le locataire peut quitter le logement avant la fin de son préavis, mais il reste redevable du loyer jusqu\'à la date de fin de préavis, sauf si le bailleur accepte une remise des clés anticipée ou reloue entre-temps. Si un nouveau locataire emménage avant la fin du préavis, le premier locataire est libéré de son obligation de payer les loyers à compter de la date d\'entrée du nouveau locataire."
+  },
+  {
+    question: "Que faire si le locataire utilise son dépôt de garantie comme dernier loyer ?",
+    answer: "C\'est interdit par la loi. Le dépôt de garantie est destiné à couvrir les dégradations et les impayés après la restitution des clés, pas à se substituer au dernier loyer. Si le locataire refuse de payer ses derniers loyers, envoyez un commandement de payer par acte d\'huissier. Si vous bénéficiez d\'une GLI, déclarez le sinistre dès le premier impayé."
+  },
+  {
+    question: "Le bailleur peut-il refuser la résiliation du bail par le locataire ?",
+    answer: "Non. Le locataire a le droit de résilier son bail à tout moment, sous réserve de respecter le délai de préavis légal. Le bailleur ne peut pas s\'y opposer. En revanche, si le préavis n\'est pas respecté (délai insuffisant, absence de justificatif pour préavis réduit), le bailleur peut exiger le paiement des loyers dus jusqu\'à la fin du préavis légal."
+  },
+  {
+    question: "Comment se passe le calcul du loyer prorata temporis en fin de bail ?",
+    answer: "Si le locataire remet les clés en cours de mois, le loyer est calculé au prorata du nombre de jours d\'occupation. Par exemple, pour un loyer de 900 € et une remise de clés le 15 du mois, le locataire doit (900 / 30) × 15 = 450 €. Ce calcul s\'applique au dernier mois de location, quelle que soit la durée habituelle du bail."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

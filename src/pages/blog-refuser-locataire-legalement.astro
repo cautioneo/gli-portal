@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Doit-on expliquer les motifs d\'un refus de location ?",
+    answer: "Non, la loi n\'oblige pas le propriétaire à justifier son refus de candidature. Cependant, si le candidat soupçonne une discrimination, il peut saisir le Défenseur des droits qui peut exiger des explications. Il est donc conseillé de conserver une trace écrite du dossier et des critères objectifs de sélection."
+  },
+  {
+    question: "Peut-on refuser un locataire parce qu\'il a des animaux ?",
+    answer: "Depuis la loi du 20 novembre 2021, un propriétaire ne peut plus refuser un locataire au motif qu\'il détient un animal de compagnie, sauf si l\'immeuble est en copropriété avec un règlement interdisant les animaux. Les animaux dangereux (catégories 1 et 2) restent une exception."
+  },
+  {
+    question: "Peut-on refuser un locataire dont les revenus viennent des APL ?",
+    answer: "Non. Refuser un locataire en raison de la nature de ses ressources (APL, allocations chômage, AAH) constitue une discrimination prohibée par la loi depuis 2014. Les revenus de substitution doivent être traités au même titre que les revenus salariaux pour évaluer la solvabilité."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Juridique Bailleur</span>

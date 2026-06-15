@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quelle est la différence entre la GLI et un garant physique ?",
+    answer: "La GLI (Garantie Loyers Impayés) est une assurance souscrite par le propriétaire qui couvre automatiquement tout impayé. Le garant physique est une personne (souvent les parents) qui s\'engage à payer à la place du locataire. La GLI offre une indemnisation sans recours judiciaire préalable, contrairement au garant physique qui nécessite souvent une procédure longue et coûteuse."
+  },
+  {
+    question: "Est-il légal de cumuler une GLI et un garant physique ?",
+    answer: "Non. La loi Boutin (2009) interdit à un propriétaire de cumuler une Garantie Loyers Impayés (GLI) et un garant physique (caution), sauf exceptions très précises : locataire étudiant ou apprenti."
+  },
+  {
+    question: "Pourquoi les agences immobilières préfèrent-elles la GLI en 2026 ?",
+    answer: "Les agences privilégient la GLI car elle offre une indemnisation rapide (dès le 1er impayé constaté), élimine les démarches judiciaires contre les garants, et standardise la validation des dossiers selon des critères objectifs définis par l\'assureur."
+  },
+  {
+    question: "La prime GLI est-elle déductible des impôts ?",
+    answer: "Oui, la prime d\'assurance GLI est entièrement déductible des revenus fonciers du propriétaire, que ce soit sous le régime réel ou micro-foncier (dans certaines limites). C\'est un avantage fiscal majeur par rapport à d\'autres formes de garantie."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

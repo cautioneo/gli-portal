@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on générer un déficit reportable en LMNP grâce aux amortissements ?",
+    answer: "Oui. Si l\'ensemble de vos charges déductibles (travaux, intérêts) et de l\'amortissement dépasse vos loyers, le résultat comptable est négatif. Les amortissements ne peuvent toutefois pas créer un déficit directement imputable sur vos autres revenus (salaires). Ils sont mis en réserve de manière illimitée dans le temps pour être déduits de vos futurs bénéfices LMNP."
+  },
+  {
+    question: "L\'amortissement en LMNP augmente-t-il la taxe sur la plus-value lors de la revente ?",
+    answer: "Non ! C\'est le plus grand cadeau fiscal du statut LMNP : contrairement aux professionnels (LMP) ou aux sociétés (SCI à l\'IS), les amortissements pratiqués en LMNP ne sont pas réintégrés dans le calcul de la plus-value immobilière lors de la revente. La plus-value reste soumise au régime fiscal des particuliers, avec les abattements pour durée de détention."
+  },
+  {
+    question: "Peut-on passer du micro-BIC au régime réel LMNP facilement ?",
+    answer: "Oui, vous pouvez opter pour le régime réel à tout moment en envoyant un courrier d\'option au Service des Impôts des Entreprises (SIE) avant la date limite de dépôt de la liasse fiscale de l\'année précédente (généralement fin mai). L\'option est valable pour une durée de deux ans renouvelable tacitement."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

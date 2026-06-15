@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on exiger un nouveau garant si l\'ancien devient insolvable en cours de bail ?",
+    answer: "Non. Une fois le bail signé, vous ne pouvez pas légalement exiger que le locataire fournisse un nouveau garant en remplacement d\'un garant devenu insolvable. La solvabilité du garant n\'est contractuellement vérifiée qu\'au moment de la signature. C\'est précisément pour cette raison que la GLI — portée par un assureur professionnel — est structurellement plus sûre qu\'un garant physique."
+  },
+  {
+    question: "Le garant décédé en cours de bail doit-il toujours payer ?",
+    answer: "La caution s\'éteint au décès du garant, sauf si l\'acte de cautionnement prévoit expressément une transmission aux héritiers. Dans ce cas, les héritiers peuvent répudier la succession pour échapper à la dette. Si la caution n\'est pas transmissible et que le garant décède, vous perdez votre garantie et devez vous retourner directement contre le locataire. Une GLI n\'est pas affectée par ce type d\'événement."
+  },
+  {
+    question: "Combien de temps dure la prescription pour agir contre un garant ?",
+    answer: "Le délai de prescription pour agir contre un garant est de 3 ans à compter de la date à laquelle vous pouviez exercer votre droit (date du premier impayé connu). Passé ce délai, votre droit à indemnisation s\'éteint. N\'attendez jamais trop longtemps avant d\'entamer les démarches de recouvrement."
+  },
+  {
+    question: "Puis-je cumuler une GLI et un garant physique pour plus de sécurité ?",
+    answer: "Non. La loi Boutin du 25 mars 2009 interdit formellement de cumuler une assurance loyer impayé (GLI) avec une caution physique, sauf si le locataire est étudiant ou apprenti. En revanche, le garant institutionnel Cautioneo n\'est pas une GLI classique : c\'est un cautionnement professionnel qui peut se substituer avantageusement au garant physique, sans cette restriction légale."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

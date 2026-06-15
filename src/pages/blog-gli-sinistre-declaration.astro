@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quel est le délai maximum pour déclarer un loyer impayé à mon assureur ?",
+    answer: "La majorité des contrats d\'Assurance Loyer Impayé (GLI) imposent un délai de déclaration strict, généralement compris entre 30 et 45 jours maximum à compter du premier terme impayé. Tout dépassement de ce délai réglementaire peut entraîner un refus de prise en charge du sinistre par la compagnie d\'assurance."
+  },
+  {
+    question: "Puis-je être indemnisé si mon locataire paie son loyer de manière partielle ?",
+    answer: "Oui, un paiement partiel constitue également une défaillance. Vous devez lancer la même procédure (relance amiable puis lettre de mise en demeure de payer par LRAR) pour le montant de la dette restante, et déclarer le sinistre à l\'assureur GLI qui complétera la différence pour garantir vos revenus locatifs intégraux."
+  },
+  {
+    question: "L\'assureur GLI prend-il en charge les frais de justice et d\'avocat ?",
+    answer: "Oui, la quasi-totalité des contrats d\'Assurance Loyer Impayé intègrent une garantie « Protection Juridique / Recouvrement » qui prend en charge 100% des frais de commissaire de justice (huissier), d\'avocat et de procédure judiciaire d\'expulsion, sous réserve de validation préalable par l\'assureur."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

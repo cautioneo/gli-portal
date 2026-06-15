@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quelles charges puis-je déduire si je choisis le régime micro-foncier ?",
+    answer: "Aucune. Au régime micro-foncier, vous bénéficiez d\'un abattement forfaitaire représentatif de charges de 30%. Si vos charges réelles (taxe foncière, intérêts d\'emprunt, travaux et assurance GLI) représentent plus de 30% de vos loyers, vous devez opter pour le régime réel."
+  },
+  {
+    question: "Puis-je déduire les frais d\'acquisition (notaire, agence) de mes revenus fonciers ?",
+    answer: "En location nue (régime des revenus fonciers), les frais de notaire et d\'agence payés lors de l\'achat ne sont pas déductibles. En revanche, en location meublée (LMNP au régime réel), vous pouvez choisir de les amortir ou de les déduire immédiatement en charges au cours du premier exercice comptable."
+  },
+  {
+    question: "Comment justifier de la déductibilité de ma prime GLI Cautioneo ?",
+    answer: "Chaque année en amont de votre déclaration d\'impôts, Cautioneo vous transmet une attestation de cotisations acquittées récapitulant toutes les sommes payées. Conservez ce document pour le présenter en cas de demande de l\'administration fiscale."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

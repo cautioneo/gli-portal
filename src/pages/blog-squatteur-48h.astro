@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Puis-je couper l\'électricité ou changer les serrures moi-même ?",
+    answer: "Non, c\'est strictement interdit. La loi française punit plus sévèrement le propriétaire qui se fait justice lui-même (jusqu\'à 3 ans de prison) que le squatteur lui-même. Vous devez impérativement suivre la voie légale administrative ou judiciaire pour récupérer votre bien immobiliers."
+  },
+  {
+    question: "La trêve hivernale protège-t-elle les squatteurs ?",
+    answer: "Non, la loi anti-squat de 2026 a définitivement exclu les squatteurs du bénéfice de la trêve hivernale. Ils peuvent être expulsés par les forces de l\'ordre tout au long de l\'année, y compris entre le 1er novembre et le 31 mars. Pour en savoir plus, consultez notre article sur comment expulser un squatteur."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

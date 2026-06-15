@@ -5,9 +5,32 @@ const pageTitle = "Assurance Loyer Impayé (GLI) 2026 : Zéro Franchise & Carenc
 const pageDescription = "Protégez votre investissement locatif avec la meilleure Assurance Loyer Impayé (GLI). Indemnisation dès le 1er jour sans carence. Simulation gratuite en 2 min.";
 const pageCanonical = "https://cautioneo-gli.com";
 const pageNoindex = false;
+
+const faqItems = [
+  {
+    question: "Qu\'est-ce que la Garantie Loyers Impayés (GLI) ?",
+    answer: "La GLI est une assurance souscrite par le propriétaire bailleur qui le protège contre les impayés de loyers et les dégradations locatives. En cas de défaut de paiement du locataire, l\'assureur se substitue et verse les loyers directement au bailleur, généralement dès le premier mois de retard."
+  },
+  {
+    question: "La prime GLI est-elle déductible des impôts ?",
+    answer: "Oui, et c\'est l\'un de ses atouts majeurs. Au régime réel d\'imposition, la prime d\'assurance GLI est intégralement déductible des revenus fonciers. Concrètement, pour un propriétaire imposé à 30 %, une prime de 100 € ne vous coûte réellement que 70 €."
+  },
+  {
+    question: "Quels profils de locataires sont acceptés ?",
+    answer: "Cautioneo accepte les locataires en CDI (période d\'essai validée), CDD de longue durée, fonctionnaires, retraités et auto-entrepreneurs sous conditions de revenus. Le critère principal est un taux d\'effort inférieur à 33 % (loyer ≤ 1/3 des revenus nets)."
+  },
+  {
+    question: "Combien de temps dure l\'indemnisation en cas d\'impayé ?",
+    answer: "Avec l\'offre Premium, vous êtes couvert jusqu\'à 96 000 € d\'impayés sans limite de durée, jusqu\'à la libération effective du logement. Les frais d\'expulsion (avocat, huissier, serrurier) sont également pris en charge."
+  },
+  {
+    question: "Comment souscrire à la GLI Cautioneo ?",
+    answer: "La souscription est 100 % en ligne en moins de 5 minutes. Il vous suffit de renseigner le montant du loyer, de télécharger les justificatifs du locataire (avis d\'imposition, fiches de paie), et Cautioneo vous communique un accord en temps réel ainsi que votre prime définitive."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

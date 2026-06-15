@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Loyer Impayé Que Faire ? Démarches & Recours Bailleur (2026)";
-const pageDescription = "Votre locataire ne paie plus son loyer ? Découvrez les démarches amiables, judiciaires et les recours du bailleur pour faire face à un loyer impayé.";
+const pageTitle = "Loyer Impayé Que Faire ? Démarches, Recours & Délais (Guide 2026)";
+const pageDescription = "Votre locataire ne paie plus son loyer ? Découvrez la procédure étape par étape, les délais légaux et les recours pour récupérer vos loyers impayés.";
 const pageCanonical = "https://cautioneo-gli.com/blog-que-faire-loyer-impaye";
 const pageNoindex = false;
 
@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quels sont les délais légaux pour lancer une procédure après un loyer impayé ?",
+    answer: "Il est recommandé de réagir sous 48h à l\'amiable. Sans retour, la lettre de mise en demeure de payer (LRAR) doit être envoyée sous 15 jours de retard. Si la situation persiste au-delà de 30 jours, un commissaire de justice doit signifier un commandement de payer pour ouvrir le délai réglementaire de 6 semaines avant de pouvoir assigner le locataire devant le tribunal."
+  },
+  {
+    question: "Qui paie les frais de commissaire de justice lors d\'un commandement de payer ?",
+    answer: "Les frais de recouvrement amiable sont à la charge exclusive du créancier (le propriétaire). Cependant, les frais liés à un commandement de payer signifié par commissaire de justice sont légalement imputables au débiteur (le locataire). C\'est le propriétaire qui doit faire l\'avance des frais à l\'officier ministériel, avant de se les faire rembourser ou de les ajouter à la dette du locataire lors du jugement."
+  },
+  {
+    question: "Le locataire peut-il être expulsé pendant la trêve hivernale pour non-paiement ?",
+    answer: "Non, sauf rares exceptions décidées par le juge (par exemple si le relogement du locataire est assuré ou si le logement se situe dans un immeuble frappé d\'un arrêté de péril). La trêve hivernale, en vigueur du 1er novembre au 31 mars inclus, suspend l\'exécution des décisions d\'expulsion des locataires, même si la procédure judiciaire de résiliation de bail a été menée à son terme."
+  },
+  {
+    question: "Est-il légal de couper l\'électricité ou de changer les serrures d\'un locataire qui ne paie plus ?",
+    answer: "Absolument pas. C\'est un délit pénal passible de 3 ans d\'emprisonnement et 30 000 € d\'amende au titre de la violation de domicile et de l\'expulsion illégale. Toute tentative de forcer le locataire à partir par des menaces, des coupures d\'eau ou d\'électricité, ou en changeant les serrures sans titre exécutoire de justice constitue une infraction grave qui se retournera systématiquement contre le propriétaire devant le tribunal."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

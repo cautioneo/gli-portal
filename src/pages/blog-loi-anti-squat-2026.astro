@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Nouvelle loi anti-squat 2026 : Ce qui change pour les bailleurs | Cautioneo";
-const pageDescription = "Nouvelle loi anti-squat 2026 : Décryptage des procédures légales accélérées, des nouvelles sanctions pénales et des protections réelles pour les propriétaires bailleurs.";
+const pageTitle = "Loi Anti-Squat & Expulsion Locataire 2026 : Droits du Bailleur";
+const pageDescription = "Comment expulser un locataire ou squatteur en 2026 ? Décryptage de la nouvelle loi anti-squat, procédures accélérées en 48h et sanctions pénales.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-anti-squat-2026";
 const pageNoindex = false;
 
@@ -11,9 +11,32 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quelle est la différence entre un squatteur et un locataire qui ne paie plus son loyer ?",
+    answer: "Un squatteur s\'est introduit dans le logement par effraction, manœuvres ou menaces, sans avoir jamais signé de contrat de location (bail). Un locataire qui ne paie plus son loyer est entré légalement dans le logement via un bail valide. Les procédures d\'expulsion diffèrent : celle du squatteur peut se faire de manière administrative en 72 heures, alors que celle du locataire impayé requiert une procédure judiciaire plus longue."
+  },
+  {
+    question: "La trêve hivernale s\'applique-t-elle aux squatteurs en 2026 ?",
+    answer: "Non. La loi anti-squat de 2026 exclut définitivement les personnes s\'étant introduites par voie de fait dans le domicile d\'autrui du bénéfice de la trêve hivernale. L\'expulsion forcée par la police peut donc être ordonnée et exécutée même pendant l\'hiver (entre le 1er novembre et le 31 mars)."
+  },
+  {
+    question: "Quel est le délai réel pour expulser un squatteur avec la nouvelle loi ?",
+    answer: "Une fois le squat constaté officiellement par les forces de l\'ordre, le Préfet dispose de 48 heures maximales pour valider ou rejeter la demande d\'expulsion administrative formulée par le propriétaire. En cas d\'accord, une mise en demeure de 24h est notifiée aux occupants. L\'expulsion forcée par la force publique peut donc légalement s\'opérer sous 72 heures au total."
+  },
+  {
+    question: "Comment un propriétaire peut-il prouver que son logement est squatté ?",
+    answer: "Le propriétaire doit déposer plainte et demander l\'intervention immédiate d\'un officier de police judiciaire (OPJ) pour effectuer un constat de flagrant délit de violation de domicile. Ce document officiel de police, combiné à un titre de propriété (acte notarié, avis de taxe foncière), sert de preuve incontestable pour lancer la saisine du Préfet."
+  },
+  {
+    question: "Quelles sont les sanctions pénales encourues par les squatteurs en 2026 ?",
+    answer: "La nouvelle loi de 2026 triple les sanctions pénales : l\'introduction ou le maintien illégal dans le domicile d\'autrui est puni de 3 ans d\'emprisonnement et de 45 000 € d\'amende (contre 1 an et 15 000 € auparavant). De plus, ces peines s\'appliquent désormais de la même manière pour les résidences secondaires et les logements vacants non meublés."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

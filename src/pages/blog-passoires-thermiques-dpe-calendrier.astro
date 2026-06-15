@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "À partir de quand les logements classés G ne peuvent-ils plus être loués ?",
+    answer: "Depuis le 1er janvier 2025, les logements classés G au DPE (consommation énergétique supérieure à 450 kWh/m²/an) ne peuvent plus être mis en location pour de nouveaux contrats en France métropolitaine."
+  },
+  {
+    question: "Quand les logements classés F seront-ils interdits à la location ?",
+    answer: "Les logements classés F au DPE seront interdits à la location à partir du 1er janvier 2028. Les propriétaires concernés doivent anticiper et financer les travaux de rénovation énergétique avant cette date."
+  },
+  {
+    question: "Les logements DPE F ou G déjà loués sont-ils concernés par les interdictions ?",
+    answer: "Les contrats en cours ne sont pas immédiatement résiliés, mais les propriétaires ne peuvent plus augmenter le loyer de ces logements. Pour les DPE G, aucun nouveau bail ne peut être signé depuis janvier 2025. À terme, les logements F seront également concernés en 2028."
+  },
+  {
+    question: "Quelles aides existent pour rénover une passoire thermique avant l\'interdiction de location ?",
+    answer: "Plusieurs aides sont disponibles : MaPrimeRénov\' (principale aide de l\'État), l\'Eco-PTZ (prêt à taux zéro pour la rénovation), les aides des fournisseurs d\'énergie (CEE), et les subventions locales. Le cumul de ces aides peut couvrir jusqu\'à 70% du coût des travaux pour les ménages aux revenus modestes."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Que faire si la police refuse de prendre ma plainte ?",
+    answer: "Les forces de l\'ordre ont l\'obligation légale de recevoir les plaintes (article 15-3 du Code de procédure pénale). Si un agent refuse de prendre votre plainte sous prétexte qu\'il s\'agit d\'un \"problème civil\", demandez à parler à un supérieur ou adressez directement votre plainte par courrier recommandé au Procureur de la République près le Tribunal Judiciaire compétent."
+  },
+  {
+    question: "Un locataire dont le bail est résilié est-il considéré comme un squatteur ?",
+    answer: "Non. Un locataire entré légalement avec un bail, même s\'il ne paie plus son loyer et que son bail a été résilié par le tribunal, n\'est pas un squatteur au sens pénal car il n\'y a pas eu d\'effraction ou d\'intrusion illégale initiale. La procédure d\'expulsion administrative accélérée ne s\'applique pas à lui ; vous devez suivre la voie judiciaire classique en délivrant d\'abord un commandement de payer."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

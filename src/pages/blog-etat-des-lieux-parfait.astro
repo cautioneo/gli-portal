@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Combien de temps le propriétaire a-t-il pour restituer le dépôt de garantie ?",
+    answer: "Le propriétaire dispose d\'un délai maximum d\'un mois pour restituer le dépôt de garantie si l\'état des lieux de sortie est conforme à celui d\'entrée. Ce délai est porté à deux mois si des dégradations ont été constatées. Au-delà, le montant dû produit des intérêts de retard à un taux légal majoré."
+  },
+  {
+    question: "Que faire si le locataire refuse de signer l\'état des lieux de sortie ?",
+    answer: "Si le locataire refuse de signer l\'état des lieux de sortie, vous pouvez faire appel à un huissier de justice pour réaliser l\'état des lieux contradictoire. Les frais sont partagés par moitié entre le bailleur et le locataire. L\'acte d\'huissier a une valeur probante très forte en cas de litige judiciaire ultérieur."
+  },
+  {
+    question: "Peut-on retenir sur le dépôt de garantie les frais de ménage ?",
+    answer: "Oui, si le logement n\'est pas rendu dans un état de propreté satisfaisant, vous pouvez retenir les frais de ménage sur le dépôt de garantie, à condition de fournir une facture de prestataire (pas une estimation au doigt mouillé). Il est recommandé de toujours joindre une facture ou un devis de professionnel pour justifier toute retenue."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Gestion Locative</span>

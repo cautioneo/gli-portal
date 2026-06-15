@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Qui paie les frais du commandement de payer ?",
+    answer: "Légalement, les frais d\'huissier pour la délivrance du commandement de payer sont à la charge du locataire débiteur. Cependant, le propriétaire bailleur doit en faire l\'avance à l\'huissier lors de sa saisine. Ces frais seront ensuite ajoutés à la dette du locataire et recouvrés par le commissaire de justice."
+  },
+  {
+    question: "Que se passe-t-il si le locataire paie une partie seulement de sa dette ?",
+    answer: "Un paiement partiel ne suspend pas le délai de 2 mois du commandement de payer. Pour stopper la procédure d\'activation de la clause résolutoire, le locataire doit régler l\'intégralité des sommes réclamées dans l\'acte (loyers, charges et frais de procédure), ou obtenir un accord amiable écrit pour un plan d\'apurement de la dette validé par le bailleur."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

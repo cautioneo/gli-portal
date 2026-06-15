@@ -11,9 +11,28 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Quelle est la différence fiscale principale entre le LMNP et la location nue ?",
+    answer: "En LMNP (Location Meublée Non Professionnelle), vous pouvez amortir la valeur du bien et des meubles, ce qui réduit significativement votre base imposable. En location nue, vous déduisez seulement vos charges réelles. Le LMNP permet souvent d\'atteindre un résultat fiscal nul ou quasi-nul pendant plusieurs années."
+  },
+  {
+    question: "Quel régime fiscal choisir entre le micro-BIC (LMNP) et le régime réel ?",
+    answer: "Le micro-BIC offre un abattement forfaitaire de 50% sur les revenus locatifs et est idéal si vos charges réelles sont inférieures à 50% des loyers. Le régime réel est préférable si vos charges (intérêts d\'emprunt, travaux, amortissements) dépassent ce seuil. Le régime réel est plus complexe mais généralement plus avantageux pour les investisseurs avec emprunt."
+  },
+  {
+    question: "Le statut LMNP va-t-il être supprimé en 2026 ?",
+    answer: "Le statut LMNP a fait l\'objet de discussions et de modifications législatives ces dernières années, notamment concernant la réintégration des amortissements dans la plus-value de cession. En 2026, le statut existe toujours mais des réformes progressives limitent certains avantages. Il est conseillé de consulter un expert-comptable pour une situation personnalisée."
+  },
+  {
+    question: "Peut-on passer du statut de loueur nu au LMNP facilement ?",
+    answer: "Oui, mais cela implique de transformer le logement en meublé (respecter la liste obligatoire des équipements définis par décret), de résilier le bail nu avec un préavis de 6 mois, et de changer de régime fiscal en effectuant les démarches administratives correspondantes. Le changement de statut peut également avoir des implications sur les droits des locataires en place."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

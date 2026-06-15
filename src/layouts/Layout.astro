@@ -5,9 +5,10 @@ interface Props {
   canonical: string;
   noindex?: boolean;
   breadcrumbs?: Array<{ name: string; item?: string }>;
+  faqItems?: Array<{ question: string; answer: string }>;
 }
 
-const { title, description, canonical, noindex = false, breadcrumbs } = Astro.props;
+const { title, description, canonical, noindex = false, breadcrumbs, faqItems } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site).href;
 const isBlogPost = Astro.url.pathname.includes('/blog-');
 ---
@@ -50,6 +51,21 @@ const isBlogPost = Astro.url.pathname.includes('/blog-');
           "position": index + 1,
           "name": bc.name,
           ...(bc.item ? { "item": bc.item } : {})
+        }))
+      })} />
+    )}
+
+    {faqItems && faqItems.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
         }))
       })} />
     )}

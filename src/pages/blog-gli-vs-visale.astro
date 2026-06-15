@@ -11,9 +11,20 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on basculer d\'une garantie Visale vers une GLI en cours de bail ?",
+    answer: "Non, il n\'est pas possible de changer de garantie en cours de bail, sauf si vous signez un avenant au contrat avec l\'accord explicite du locataire, ce qui est complexe. Le choix de la garantie doit se faire avant la signature du bail de location."
+  },
+  {
+    question: "Visale couvre-t-elle les dégradations dans le logement ?",
+    answer: "Oui, Visale couvre les dégradations locatives dans la limite de 2 mois de loyers hors charges pour les logements du parc privé, ce qui est souvent inférieur aux couvertures des GLI privées ou de Cautioneo qui proposent des plafonds plus élevés."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

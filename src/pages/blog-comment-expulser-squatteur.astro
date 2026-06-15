@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "La trêve hivernale s\'applique-t-elle aux squatteurs en 2026 ?",
+    answer: "Non. La loi anti-squat exclut définitivement les personnes s\'étant introduites sans droit ni titre par effraction dans un logement du bénéfice de la trêve hivernale. Les forces de l\'ordre peuvent donc procéder à l\'expulsion forcée à tout moment de l\'année, y compris entre le 1er novembre et le 31 mars."
+  },
+  {
+    question: "Quelle amende risque un squatteur selon la loi de 2026 ?",
+    answer: "Les sanctions pénales ont été triplées pour être hautement dissuasives. Un squatteur s\'introduisant ou se maintenant dans le logement d\'autrui encourt désormais une peine maximale de 3 ans d\'emprisonnement et 45 000 € d\'amende."
+  },
+  {
+    question: "Puis-je changer les serrures si le squatteur est absent ?",
+    answer: "Non, c\'est formellement interdit et passible de poursuites pour expulsion illégale. Même si le squatteur s\'est absenté temporairement pour faire des courses, le logement reste considéré comme son domicile de fait. Seule la force publique, munie de l\'autorisation préfectorale ou d\'un titre exécutoire de justice, est habilitée à pénétrer de force et à changer les serrures."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

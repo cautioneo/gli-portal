@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Dépôt de Garantie Location : Restitution & Délais Légaux (2026)";
-const pageDescription = "Découvrez les règles d'encadrement du dépôt de garantie (caution) en 2026. Délai légal de restitution, retenues autorisées sur justificatifs et sanctions en cas de retard.";
+const pageTitle = "Dépôt de Garantie Location : Montant, Restitution & Délais (2026)";
+const pageDescription = "Quelles sont les règles du dépôt de garantie (caution) en 2026 ? Retenues autorisées sur justificatifs, délais légaux de restitution et recours en cas de retard.";
 const pageCanonical = "https://cautioneo-gli.com/blog-depot-garantie-regles";
 const pageNoindex = false;
 
@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Peut-on demander 2 mois de dépôt de garantie pour un meublé ?",
+    answer: "Oui. Pour une location meublée (résidence principale), la loi ALUR autorise un dépôt de garantie de 2 mois de loyer hors charges, contre 1 mois pour les locations vides. Pour les locations saisonnières, il n\'y a pas de limite légale."
+  },
+  {
+    question: "Le propriétaire peut-il retenir le dépôt de garantie pour des travaux de peinture ?",
+    answer: "Seulement si la dégradation dépasse l\'usure normale. Si la peinture était récente à l\'entrée du locataire et que celui-ci a créé des trous, des taches importantes ou des graffitis, la retenue est justifiée. En revanche, une simple peinture vieillie après 5-7 ans d\'occupation relève de la vétusté normale et ne peut pas être retenue."
+  },
+  {
+    question: "Que faire si le propriétaire ne restitue pas le dépôt de garantie dans les délais ?",
+    answer: "Au-delà du délai légal (1 ou 2 mois), le dépôt non restitué produit des intérêts de retard au taux légal majoré de 10% par mois de retard. L\'ex-locataire peut envoyer une mise en demeure par LRAR, puis saisir la Commission Départementale de Conciliation gratuitement, et enfin le tribunal judiciaire."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Gestion Locative</span>

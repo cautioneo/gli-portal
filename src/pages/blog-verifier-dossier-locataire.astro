@@ -11,9 +11,24 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Puis-je demander un relevé de compte bancaire à mon candidat locataire ?",
+    answer: "Non. Le relevé de compte bancaire est explicitement interdit par le décret n°2015-1437 du 5 novembre 2015. Demander ce document constitue une violation de la loi ALUR et expose le propriétaire à une amende pouvant aller jusqu\'à 3 000 €. Vous pouvez en revanche demander les 3 derniers bulletins de paie et l\'avis d\'imposition, qui donnent suffisamment d\'informations sur la solvabilité du candidat."
+  },
+  {
+    question: "Comment vérifier l\'authenticité d\'un avis d\'imposition gratuitement ?",
+    answer: "Depuis 2019, le service DVÉRIT (disponible sur impots.gouv.fr) permet à tout bailleur de vérifier gratuitement l\'authenticité d\'un avis d\'imposition. Il suffit d\'entrer le numéro fiscal et le numéro d\'avis. Le système confirme instantanément si les informations correspondent aux données déclarées aux impôts. Ce service est légal et ne nécessite pas l\'accord du locataire, car il ne révèle pas le montant des revenus, uniquement la concordance des informations."
+  },
+  {
+    question: "Un locataire peut-il refuser de fournir certains documents ?",
+    answer: "Oui, un locataire peut refuser de fournir des documents qui ne figurent pas dans la liste légale (décret 2015-1437). En revanche, si le candidat refuse de fournir des documents légalement exigibles (pièce d\'identité, bulletins de paie, avis d\'imposition, contrat de travail), cela constitue un motif légitime de refus de la candidature. Dans ce cas, vous devez simplement informer le candidat par écrit que son dossier est incomplet et ne peut être traité."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 
