@@ -851,25 +851,35 @@ details[open] .faq-question::after {
 /* 1. Article Hero */
 .article-hero {
     position: relative;
-    padding: 80px 0 50px;
-    background: var(--color-bg-alt);
-    border-bottom: 1px solid var(--color-border);
+    padding: 100px 0 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
 .article-hero-overlay {
-    display: none; /* No dark image overlay */
+    display: block; /* Enable the dark overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 24, 39, 0.75); /* Dark overlay for text readability */
+    z-index: 1;
 }
 
 .article-hero-content {
+    position: relative;
+    z-index: 2; /* Put content above the overlay */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .article-badge {
     display: inline-block;
-    background: rgba(108, 92, 231, 0.1);
-    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -877,22 +887,25 @@ details[open] .faq-question::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    backdrop-filter: blur(4px);
 }
 
 .article-hero h1 {
-    color: var(--color-text-title);
+    color: #ffffff !important;
     font-size: 2.75rem;
     line-height: 1.25;
     margin-bottom: 20px;
     font-family: var(--font-heading);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .article-intro {
     font-size: 1.15rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.9) !important;
     margin: 0 auto 24px;
     max-width: 750px;
     line-height: 1.6;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .article-meta {
@@ -901,7 +914,7 @@ details[open] .faq-question::after {
     gap: 16px;
     flex-wrap: wrap;
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* 2. Article Layout & Columns */
