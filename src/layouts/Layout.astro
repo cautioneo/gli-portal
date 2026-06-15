@@ -75,7 +75,7 @@ const isBlogPost = Astro.url.pathname.includes('/blog-');
     <nav class="navbar">
         <div class="container nav-container">
             <a class="logo-wrapper" href="/">
-                <img alt="Cautioneo" class="header-logo" src="/logo.png"/>
+                <img alt="Cautioneo" class="header-logo" src="/logo.png" loading="eager" />
                 <span class="logo-text">Bailleurs</span>
             </a>
             <button aria-label="Ouvrir le menu" class="nav-toggle">
