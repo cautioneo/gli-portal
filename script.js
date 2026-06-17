@@ -423,4 +423,138 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // === Exit-Intent Popup Logic ===
+    const exitModalHtml = `
+    <div class="exit-modal-overlay" id="exit-modal">
+        <div class="exit-modal">
+            <button class="exit-modal-close" aria-label="Fermer">&times;</button>
+            <div class="exit-modal-icon"><i class="fas fa-shield-alt"></i></div>
+            <h2>Sécurisez vos loyers</h2>
+            <p>Ne prenez pas le risque d'un impayé locatif. Obtenez votre accord de Garantie Loyers Impayés (GLI) Cautioneo 100% en ligne et sécurisez vos revenus fonciers.</p>
+            <div class="exit-modal-stats">
+                <div class="exit-stat"><strong>0 €</strong><span>Franchise</span></div>
+                <div class="exit-stat"><strong>96 000 €</strong><span>Plafond</span></div>
+                <div class="exit-stat"><strong>4.6/5</strong><span>Avis Vérifiés</span></div>
+            </div>
+            <a href="https://caut.io/Ffr6hkV" target="_blank" class="btn btn-accent btn-large" style="display: block; text-decoration: none; margin-bottom: 15px; text-align: center;" rel="noopener">Simuler ma prime en 2 min</a>
+            <button class="exit-modal-cancel">Continuer ma lecture</button>
+        </div>
+    </div>
+    `;
+
+    // Inject exit intent modal into body if it doesn't exist
+    if (!document.getElementById('exit-modal')) {
+        const div = document.createElement('div');
+        div.innerHTML = exitModalHtml;
+        document.body.appendChild(div.firstElementChild);
+    }
+
+    const exitModal = document.getElementById('exit-modal');
+    if (exitModal) {
+        const closeBtn = exitModal.querySelector('.exit-modal-close');
+        const cancelBtn = exitModal.querySelector('.exit-modal-cancel');
+        const actionBtn = exitModal.querySelector('.btn-large');
+
+        const storageKey = 'exit_popup_dismissed_30d';
+        const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+
+        const trackCro = (eventName) => {
+            let stats = { impressions: 0, dismissals: 0, conversions: 0 };
+            try {
+                const stored = localStorage.getItem('cro_stats');
+                if (stored) stats = JSON.parse(stored);
+            } catch (e) {}
+            if (eventName === 'exit_intent_popup_impression' || eventName === 'impression') stats.impressions++;
+            if (eventName === 'exit_intent_popup_dismiss' || eventName === 'dismiss') stats.dismissals++;
+            if (eventName === 'exit_intent_popup_conversion' || eventName === 'conversion') stats.conversions++;
+            localStorage.setItem('cro_stats', JSON.stringify(stats));
+            console.log(`[CRO Tracking] Event: ${eventName}`, stats);
+        };
+
+        window.getCroStats = () => {
+            try {
+                return JSON.parse(localStorage.getItem('cro_stats')) || { impressions: 0, dismissals: 0, conversions: 0 };
+            } catch (e) {
+                return { impressions: 0, dismissals: 0, conversions: 0 };
+            }
+        };
+
+        const hasBeenShownRecently = () => {
+            const dismissedTime = localStorage.getItem(storageKey);
+            if (!dismissedTime) return false;
+            return (Date.now() - parseInt(dismissedTime, 10)) < thirtyDaysMs;
+        };
+
+        const showModal = () => {
+            if (hasBeenShownRecently()) return;
+            exitModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            trackCro('exit_intent_popup_impression');
+        };
+
+        const hideModal = () => {
+            exitModal.classList.remove('active');
+            document.body.style.overflow = '';
+            localStorage.setItem(storageKey, Date.now().toString());
+        };
+
+        closeBtn.addEventListener('click', () => {
+            trackCro('exit_intent_popup_dismiss');
+            hideModal();
+        });
+        cancelBtn.addEventListener('click', () => {
+            trackCro('exit_intent_popup_dismiss');
+            hideModal();
+        });
+        actionBtn.addEventListener('click', () => {
+            trackCro('exit_intent_popup_conversion');
+            hideModal();
+        });
+
+        // Close on clicking backdrop
+        exitModal.addEventListener('click', (e) => {
+            if (e.target === exitModal) {
+                trackCro('exit_intent_popup_dismiss');
+                hideModal();
+            }
+        });
+
+        // Trigger desktop: mouse leaving viewport from top
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 20) {
+                showModal();
+            }
+        });
+
+        // Trigger mobile: 15s timer AND (scroll depth 75% or scroll up quickly)
+        let mobileTriggered = false;
+        let mobileTimerElapsed = false;
+
+        setTimeout(() => {
+            mobileTimerElapsed = true;
+            checkMobileTrigger();
+        }, 15000);
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+            const isScrollUp = window.scrollY < lastScrollY - 20;
+            lastScrollY = window.scrollY;
+
+            if (scrollPercent >= 0.75 || (isScrollUp && window.scrollY > 300)) {
+                checkMobileTrigger();
+            }
+        });
+
+        const checkMobileTrigger = () => {
+            if (mobileTriggered || !mobileTimerElapsed) return;
+            const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth <= 768);
+            if (isMobile) {
+                mobileTriggered = true;
+                showModal();
+            }
+        };
+    }
+
 });
