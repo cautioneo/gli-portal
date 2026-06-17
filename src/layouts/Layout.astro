@@ -394,6 +394,42 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         }
       }
 
+      /* Custom premium range slider */
+      .custom-sim-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 99px;
+        background: #e2e8f0;
+        outline: none;
+        border: none;
+        transition: background 0.3s;
+      }
+      .custom-sim-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary, #b45309);
+        border: 2px solid white;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(180, 83, 9, 0.25);
+        transition: transform 0.15s, background-color 0.15s;
+      }
+      .custom-sim-slider::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+        background: var(--primary-dark, #92400e);
+      }
+      .renta-result-box {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .renta-result-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        border-color: rgba(180, 83, 9, 0.15) !important;
+      }
+
       /* Trustpilot Footer Badge Styles */
       .trustpilot-badge-footer {
         display: inline-flex;

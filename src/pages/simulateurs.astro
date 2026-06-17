@@ -27,33 +27,56 @@ const breadcrumbs = [
 <div class="card p-32 border" data-reveal="fade-up">
 <h2 class="mb-16">Calculateur de Rentabilité</h2>
 <p class="text-muted mb-32">Évaluez la performance réelle de votre investissement locatif (Brute vs Nette).</p>
-<form id="renta-form">
-<div class="form-group mb-16">
-<label class="mb-8 block text-sm font-medium">Prix d'achat TTC (€)</label>
-<input class="form-control" id="prix-achat" placeholder="Ex: 220000" required="" type="number"/>
+<div id="renta-form" style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Prix Achat -->
+    <div class="form-group">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label class="block text-sm font-medium" style="margin: 0; font-weight: 600;">Prix d'achat FAI (€)</label>
+            <span id="val-display-prix" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--primary, #b45309);">220 000 €</span>
+        </div>
+        <input type="range" min="50000" max="1000000" step="5000" value="220000" class="custom-sim-slider" id="prix-achat"/>
+        <div style="display: flex; justify-content: space-between; color: #94a3b8; font-size: 0.75rem; margin-top: 4px; font-weight: 500;">
+            <span>50 000 €</span>
+            <span>1 000 000 €</span>
+        </div>
+    </div>
+    <!-- Loyer Mensuel -->
+    <div class="form-group">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label class="block text-sm font-medium" style="margin: 0; font-weight: 600;">Loyer mensuel HC (€)</label>
+            <span id="val-display-loyer" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--primary, #b45309);">950 €</span>
+        </div>
+        <input type="range" min="300" max="4000" step="50" value="950" class="custom-sim-slider" id="loyer-mensuel"/>
+        <div style="display: flex; justify-content: space-between; color: #94a3b8; font-size: 0.75rem; margin-top: 4px; font-weight: 500;">
+            <span>300 €</span>
+            <span>4 000 €</span>
+        </div>
+    </div>
+    <!-- Charges Annuelles -->
+    <div class="form-group">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label class="block text-sm font-medium" style="margin: 0; font-weight: 600;">Charges & Taxe foncière (€/an)</label>
+            <span id="val-display-charges" style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--primary, #b45309);">1 800 €</span>
+        </div>
+        <input type="range" min="500" max="8000" step="100" value="1800" class="custom-sim-slider" id="charges-annuelles"/>
+        <div style="display: flex; justify-content: space-between; color: #94a3b8; font-size: 0.75rem; margin-top: 4px; font-weight: 500;">
+            <span>500 €</span>
+            <span>8 000 €</span>
+        </div>
+    </div>
 </div>
-<div class="form-group mb-16">
-<label class="mb-8 block text-sm font-medium">Loyer mensuel HC (€)</label>
-<input class="form-control" id="loyer-mensuel" placeholder="Ex: 950" required="" type="number"/>
-</div>
-<div class="form-group mb-16">
-<label class="mb-8 block text-sm font-medium">Charges &amp; Taxe foncière annuelle (€)</label>
-<input class="form-control" id="charges-annuelles" placeholder="Ex: 1800" type="number"/>
-</div>
-<button class="btn btn-primary w-full mt-16" type="submit">Calculer ma rentabilité</button>
-</form>
-<div class="hidden mt-32 pt-32 border-top" id="result-renta">
-<div class="flex-center gap-24">
-<div class="text-center">
-<span class="text-muted text-xs uppercase font-bold">Rendement Brut</span>
-<div class="text-2xl font-bold text-primary" id="val-renta-brute">--</div>
-</div>
-<div class="vr"></div>
-<div class="text-center">
-<span class="text-muted text-xs uppercase font-bold">Rendement Net</span>
-<div class="text-2xl font-bold text-success" id="val-renta-nette">--</div>
-</div>
-</div>
+
+<div class="mt-32 pt-32 border-top" id="result-renta" style="display: block;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: center;">
+        <div style="background: var(--bg-light, #f8fafc); border: 1px solid var(--border-light, #e2e8f0); padding: 16px; border-radius: 12px; transition: all 0.3s;" class="renta-result-box">
+            <span class="text-muted text-xs uppercase font-bold" style="font-size: 0.75rem; color: #64748b; letter-spacing: 0.5px;">Rendement Brut</span>
+            <div class="text-3xl font-bold text-primary" id="val-renta-brute" style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-top: 4px; color: var(--primary, #b45309);">5.18%</div>
+        </div>
+        <div style="background: var(--bg-light, #f8fafc); border: 1px solid var(--border-light, #e2e8f0); padding: 16px; border-radius: 12px; transition: all 0.3s;" class="renta-result-box">
+            <span class="text-muted text-xs uppercase font-bold" style="font-size: 0.75rem; color: #64748b; letter-spacing: 0.5px;">Rendement Net</span>
+            <div class="text-3xl font-bold text-success" id="val-renta-nette" style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; margin-top: 4px; color: #10b981;">4.36%</div>
+        </div>
+    </div>
 </div>
 </div>
 <!-- Estimateur Prime GLI -->

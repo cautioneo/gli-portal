@@ -78,23 +78,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Logic for "Calculateur de Rentabilité"
     // Gestion du Simulateur de Rentabilité
-    if (document.getElementById('renta-form')) {
-        document.getElementById('renta-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const prix = parseFloat(document.getElementById('prix-achat').value);
-            const loyer = parseFloat(document.getElementById('loyer-mensuel').value);
-            const charges = parseFloat(document.getElementById('charges-annuelles').value);
+    const slPrix = document.getElementById('prix-achat');
+    const slLoyer = document.getElementById('loyer-mensuel');
+    const slCharges = document.getElementById('charges-annuelles');
+    const dispPrix = document.getElementById('val-display-prix');
+    const dispLoyer = document.getElementById('val-display-loyer');
+    const dispCharges = document.getElementById('val-display-charges');
+    const valBrut = document.getElementById('val-renta-brute');
+    const valNet = document.getElementById('val-renta-nette');
 
-            if (prix > 0 && loyer > 0) {
+    if (slPrix && slLoyer && slCharges && dispPrix && dispLoyer && dispCharges && valBrut && valNet) {
+        const updateRenta = () => {
+            const prix = parseFloat(slPrix.value);
+            const loyer = parseFloat(slLoyer.value);
+            const charges = parseFloat(slCharges.value);
+
+            // Update display values with formatting
+            dispPrix.textContent = prix.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' €';
+            dispLoyer.textContent = loyer.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' €';
+            dispCharges.textContent = charges.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' €';
+
+            if (prix > 0) {
                 const rentaBrute = ((loyer * 12) / prix) * 100;
                 const rentaNette = (((loyer * 12) - charges) / prix) * 100;
 
-                document.getElementById('val-renta-brute').textContent = rentaBrute.toFixed(2) + '%';
-                document.getElementById('val-renta-nette').textContent = rentaNette.toFixed(2) + '%';
-                const resultRenta = document.getElementById('result-renta');
-                if (resultRenta) resultRenta.classList.remove('hidden');
+                valBrut.textContent = rentaBrute.toFixed(2) + '%';
+                valNet.textContent = rentaNette.toFixed(2) + '%';
             }
-        });
+        };
+
+        // Listen for input events on all sliders
+        slPrix.addEventListener('input', updateRenta);
+        slLoyer.addEventListener('input', updateRenta);
+        slCharges.addEventListener('input', updateRenta);
+
+        // Run initially
+        updateRenta();
     }
 
     // Gestion de l'Estimateur GLI
