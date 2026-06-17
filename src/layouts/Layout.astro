@@ -180,15 +180,15 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
                         <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
                     </div>
                     <p style="color: var(--primary-light); max-width: 400px; font-size: 1.05rem;">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
-                    <div class="trustpilot-badge-footer">
-                        <span style="color: #00b67a; display: flex; gap: 2px;">
+                    <div class="avis-verifies-badge-footer">
+                        <span style="color: #ffb020; display: flex; gap: 2px;">
                             <i class="fas fa-star" style="font-size: 0.8rem;"></i>
                             <i class="fas fa-star" style="font-size: 0.8rem;"></i>
                             <i class="fas fa-star" style="font-size: 0.8rem;"></i>
                             <i class="fas fa-star" style="font-size: 0.8rem;"></i>
                             <i class="fas fa-star" style="font-size: 0.8rem;"></i>
                         </span>
-                        <span><strong>Excellent 4.8/5</strong> sur Trustpilot <span style="opacity: 0.6;">(3 800+ avis)</span></span>
+                        <span><strong>Excellent 4.6/5</strong> sur Avis Vérifiés</span>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -289,12 +289,12 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
           });
         }
 
-        // Inject Trustpilot mini badge into article meta
+        // Inject Avis Vérifiés mini badge into article meta
         var articleMeta = document.querySelector('.article-meta');
         if (articleMeta) {
-          var tpSpan = document.createElement('span');
-          tpSpan.innerHTML = ' • <span style="color:#00b67a; font-weight:600; display:inline-flex; align-items:center; gap:4px;"><span style="display:flex; gap:1px;"><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i></span> 4.8/5 sur Trustpilot</span>';
-          articleMeta.appendChild(tpSpan);
+          var avSpan = document.createElement('span');
+          avSpan.innerHTML = ' • <span style="color:#ffb020; font-weight:600; display:inline-flex; align-items:center; gap:4px;"><span style="display:flex; gap:1px;"><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i></span> 4.6/5 sur Avis Vérifiés</span>';
+          articleMeta.appendChild(avSpan);
         }
       });
     </script>
@@ -430,8 +430,8 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         border-color: rgba(180, 83, 9, 0.15) !important;
       }
 
-      /* Trustpilot Footer Badge Styles */
-      .trustpilot-badge-footer {
+      /* Avis Vérifiés Footer Badge Styles */
+      .avis-verifies-badge-footer {
         display: inline-flex;
         align-items: center;
         gap: 8px;
