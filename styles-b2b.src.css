@@ -2678,3 +2678,30 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 }
 
 .nav-dropdown-content a:hover { background: var(--bg-subtle); color: var(--primary) !important; }
+/* --- GEO IA Summary Box B2B --- */
+.geo-ia-summary {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.03) 0%, rgba(16, 185, 129, 0.03) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: center;
+    text-align: left;
+}
+.geo-ia-summary-right {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+@media (max-width: 768px) {
+    .geo-ia-summary {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+}
