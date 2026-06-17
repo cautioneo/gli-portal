@@ -8,9 +8,10 @@ interface Props {
   publishDate?: string;
   modifiedDate?: string;
   faqItems?: Array<{ question: string; answer: string }>;
+  keywords?: string;
 }
 
-const { title, description, canonical, noindex = false, breadcrumbs, publishDate, modifiedDate, faqItems } = Astro.props;
+const { title, description, canonical, noindex = false, breadcrumbs, publishDate, modifiedDate, faqItems, keywords } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site).href;
 const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.includes('/guide-') || Astro.url.pathname.includes('/procedures') || Astro.url.pathname.includes('/fiscalite') || Astro.url.pathname.includes('/simulateur') || Astro.url.pathname.includes('/boite-a-outils') || Astro.url.pathname.includes('/checklist') || Astro.url.pathname.includes('/modeles') || Astro.url.pathname.includes('/mega-');
 ---
@@ -22,6 +23,7 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>{title}</title>
     <meta name="description" content={description}/>
+    {keywords && <meta name="keywords" content={keywords}/>}
     <link rel="canonical" href={canonicalUrl}/>
     {noindex && <meta name="robots" content="noindex, follow"/>}
     
