@@ -19,17 +19,19 @@ const breadcrumbs = [
 <div class="dash-subnav">
 <div class="container">
 <ul class="dash-tabs">
-<li><a class="active" href="#"><i class="fas fa-home"></i> Vue d'ensemble</a></li>
+<li><a class="active" href="#" id="tab-overview"><i class="fas fa-home"></i> Vue d'ensemble</a></li>
+<li><a href="#" id="tab-cro"><i class="fas fa-chart-line"></i> Analyse CRO (Local)</a></li>
 <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-building"></i> Mes Biens</a></li>
 <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-users"></i> Candidatures</a></li>
 <li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-file-invoice-dollar"></i> Sinistres</a></li>
-<li><a href="#" onclick="openDemoModal(event)"><i class="fas fa-cog"></i> Paramètres</a></li>
 </ul>
 </div>
 </div>
 <!-- Dashboard Content -->
 <main class="dash-main pb-80">
 <div class="container mt-48">
+
+<div id="overview-content">
 <div class="dash-header flex-between mb-32" data-reveal="fade-up">
 <div>
 <h1 class="dash-title">Bonjour, Jean 👋</h1>
@@ -178,6 +180,108 @@ const breadcrumbs = [
 </div>
 </div>
 </div>
+
+<div id="cro-analytics-content" style="display: none;">
+<div class="dash-header flex-between mb-32">
+<div>
+<h1 class="dash-title">Statistiques de Conversion CRO</h1>
+<p class="text-muted">Analyse en temps réel des performances de la popup d'intention de sortie (Exit-Intent).</p>
+</div>
+</div>
+<!-- KPI Cards -->
+<div class="grid-4-cols gap-24 mb-48">
+<div class="kpi-card">
+<div class="kpi-icon" style="background: rgba(108, 92, 231, 0.08); color: var(--primary);"><i class="fas fa-eye"></i></div>
+<div class="kpi-content">
+<span class="kpi-label">Affichages (Impressions)</span>
+<div class="kpi-value" id="cro-val-impressions">0</div>
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-icon" style="background: rgba(255, 118, 117, 0.08); color: #ff7675;"><i class="fas fa-times-circle"></i></div>
+<div class="kpi-content">
+<span class="kpi-label">Fermetures (Dismissals)</span>
+<div class="kpi-value" id="cro-val-dismissals">0</div>
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-icon" style="background: rgba(16, 185, 129, 0.08); color: var(--color-success);"><i class="fas fa-check-double"></i></div>
+<div class="kpi-content">
+<span class="kpi-label">Conversions (Clics CTA)</span>
+<div class="kpi-value text-green" style="color: var(--color-success) !important;" id="cro-val-conversions">0</div>
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-icon" style="background: rgba(255, 184, 108, 0.08); color: var(--color-accent);"><i class="fas fa-percentage"></i></div>
+<div class="kpi-content">
+<span class="kpi-label">Taux de Conversion</span>
+<div class="kpi-value" style="color: var(--color-accent) !important;" id="cro-val-cr">0.0 %</div>
+</div>
+</div>
+</div>
+<!-- Main Grid -->
+<div class="dash-grid">
+<!-- Left panel: Visual Funnel -->
+<div class="dash-panel">
+<h2 class="panel-title mb-24">Entonnoir de Conversion (Funnel)</h2>
+<div style="margin-bottom: 24px;">
+<div class="flex-between mb-8">
+<span class="font-600">1. Impressions (Affichages popup)</span>
+<span id="funnel-val-impressions" class="font-700">0</span>
+</div>
+<div style="background: var(--color-border); height: 12px; border-radius: 6px; overflow: hidden;">
+<div id="funnel-bar-impressions" style="background: var(--color-primary); height: 100%; width: 0%; transition: width 0.4s ease;"></div>
+</div>
+</div>
+<div style="margin-bottom: 24px;">
+<div class="flex-between mb-8">
+<span class="font-600">2. Clics de Fermeture (Dismissals)</span>
+<span class="font-700"><span id="funnel-val-dismissals">0</span> (<span id="funnel-pct-dismissals">0%</span>)</span>
+</div>
+<div style="background: var(--color-border); height: 12px; border-radius: 6px; overflow: hidden;">
+<div id="funnel-bar-dismissals" style="background: #ff7675; height: 100%; width: 0%; transition: width 0.4s ease;"></div>
+</div>
+</div>
+<div style="margin-bottom: 24px;">
+<div class="flex-between mb-8">
+<span class="font-600">3. Conversions (Clics CTA)</span>
+<span class="font-700"><span id="funnel-val-conversions">0</span> (<span id="funnel-pct-conversions">0%</span>)</span>
+</div>
+<div style="background: var(--color-border); height: 12px; border-radius: 6px; overflow: hidden;">
+<div id="funnel-bar-conversions" style="background: var(--color-success); height: 100%; width: 0%; transition: width 0.4s ease;"></div>
+</div>
+</div>
+</div>
+<!-- Right panel: Controls and info -->
+<div class="dash-sidebar">
+<div class="dash-panel mb-24">
+<h2 class="panel-title mb-16">Console de Simulation</h2>
+<p class="text-sm text-muted mb-24">Utilisez ces boutons pour simuler des actions sur la popup d'intention de sortie (Exit-Intent) et voir le tableau de bord réagir en temps réel.</p>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<button class="btn btn-outline text-left" id="btn-sim-impression" style="display: flex; align-items: center; gap: 10px; text-align: left; padding: 12px 16px;">
+<i class="fas fa-eye text-blue" style="color: var(--color-primary); width: 20px;"></i> Simuler une Impression
+</button>
+<button class="btn btn-outline text-left" id="btn-sim-dismiss" style="display: flex; align-items: center; gap: 10px; text-align: left; padding: 12px 16px;">
+<i class="fas fa-times-circle" style="color: #ff7675; width: 20px;"></i> Simuler une Fermeture
+</button>
+<button class="btn btn-accent text-left" id="btn-sim-conversion" style="display: flex; align-items: center; gap: 10px; text-align: left; padding: 12px 16px;">
+<i class="fas fa-check-double text-white" style="width: 20px;"></i> Simuler une Conversion
+</button>
+<button class="btn btn-outline text-left" id="btn-reset-stats" style="margin-top: 12px; display: flex; align-items: center; gap: 10px; border-color: #ff7675; color: #ff7675; text-align: left; padding: 12px 16px;">
+<i class="fas fa-trash-alt" style="width: 20px;"></i> Réinitialiser les données
+</button>
+</div>
+</div>
+<div class="dash-panel" style="background: var(--color-bg-alt); border: 1px solid var(--color-border); color: var(--color-text-main);">
+<h3 class="mb-12 font-600">Fonctionnement du Tracking</h3>
+<p class="text-sm opacity-90">Les événements de tracking sont stockés localement dans le <code>localStorage</code> du navigateur sous la clé <code>cro_stats</code>.</p>
+<p class="text-sm opacity-90 mt-12">Vous pouvez également lire ces données directement en console en appelant la fonction globale : <br><code style="background: white; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 4px;">window.getCroStats()</code></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 </main>
 <!-- Modal d'Interception (Fake action -> Conversion) -->
 <div class="modal-overlay" id="demo-modal">
@@ -198,7 +302,7 @@ const breadcrumbs = [
 <span class="logo-text" style="color: white; font-size: 1.6rem;">Bailleurs</span>
 </div>
 
-<script>
+<script is:inline>
         // Logique spécifique à la modale de démo
         function openDemoModal(e) {
             e.preventDefault();
@@ -209,5 +313,93 @@ const breadcrumbs = [
             document.getElementById('demo-modal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabOverview = document.getElementById('tab-overview');
+            const tabCro = document.getElementById('tab-cro');
+            const overviewContent = document.getElementById('overview-content');
+            const croContent = document.getElementById('cro-analytics-content');
+
+            if (tabOverview && tabCro && overviewContent && croContent) {
+                // Tab switching
+                tabOverview.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tabOverview.classList.add('active');
+                    tabCro.classList.remove('active');
+                    overviewContent.style.display = 'block';
+                    croContent.style.display = 'none';
+                });
+
+                tabCro.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tabCro.classList.add('active');
+                    tabOverview.classList.remove('active');
+                    overviewContent.style.display = 'none';
+                    croContent.style.display = 'block';
+                    updateCroDashboard();
+                });
+
+                // CRO stats update function
+                function updateCroDashboard() {
+                    const stats = window.getCroStats ? window.getCroStats() : { impressions: 0, dismissals: 0, conversions: 0 };
+                    
+                    // Update KPI values
+                    document.getElementById('cro-val-impressions').textContent = stats.impressions;
+                    document.getElementById('cro-val-dismissals').textContent = stats.dismissals;
+                    document.getElementById('cro-val-conversions').textContent = stats.conversions;
+                    
+                    const cr = stats.impressions > 0 ? ((stats.conversions / stats.impressions) * 100).toFixed(1) : "0.0";
+                    document.getElementById('cro-val-cr').textContent = cr + " %";
+
+                    // Update Funnel values
+                    document.getElementById('funnel-val-impressions').textContent = stats.impressions;
+                    document.getElementById('funnel-val-dismissals').textContent = stats.dismissals + " (" + (stats.impressions > 0 ? ((stats.dismissals / stats.impressions) * 100).toFixed(0) : "0") + "%)";
+                    document.getElementById('funnel-val-conversions').textContent = stats.conversions + " (" + (stats.impressions > 0 ? ((stats.conversions / stats.impressions) * 100).toFixed(0) : "0") + "%)";
+
+                    // Update Funnel Bars
+                    document.getElementById('funnel-bar-impressions').style.width = stats.impressions > 0 ? "100%" : "0%";
+                    document.getElementById('funnel-bar-dismissals').style.width = stats.impressions > 0 ? ((stats.dismissals / stats.impressions) * 100) + "%" : "0%";
+                    document.getElementById('funnel-bar-conversions').style.width = stats.impressions > 0 ? ((stats.conversions / stats.impressions) * 100) + "%" : "0%";
+                }
+
+                // Helper function to save stats and update
+                function saveStatsAndUpdate(stats) {
+                    localStorage.setItem('cro_stats', JSON.stringify(stats));
+                    updateCroDashboard();
+                }
+
+                // Simulators event listeners
+                document.getElementById('btn-sim-impression').addEventListener('click', () => {
+                    const stats = window.getCroStats ? window.getCroStats() : { impressions: 0, dismissals: 0, conversions: 0 };
+                    stats.impressions++;
+                    saveStatsAndUpdate(stats);
+                });
+
+                document.getElementById('btn-sim-dismiss').addEventListener('click', () => {
+                    const stats = window.getCroStats ? window.getCroStats() : { impressions: 0, dismissals: 0, conversions: 0 };
+                    if (stats.dismissals >= stats.impressions) {
+                        stats.impressions++;
+                    }
+                    stats.dismissals++;
+                    saveStatsAndUpdate(stats);
+                });
+
+                document.getElementById('btn-sim-conversion').addEventListener('click', () => {
+                    const stats = window.getCroStats ? window.getCroStats() : { impressions: 0, dismissals: 0, conversions: 0 };
+                    if (stats.conversions >= stats.impressions) {
+                        stats.impressions++;
+                    }
+                    stats.conversions++;
+                    saveStatsAndUpdate(stats);
+                });
+
+                document.getElementById('btn-reset-stats').addEventListener('click', () => {
+                    if (confirm("Voulez-vous vraiment réinitialiser toutes les données de tracking CRO ?")) {
+                        const emptyStats = { impressions: 0, dismissals: 0, conversions: 0 };
+                        saveStatsAndUpdate(emptyStats);
+                    }
+                });
+            }
+        });
     </script>`} />
 </Layout>
