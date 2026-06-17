@@ -368,7 +368,7 @@ a:hover {
     margin-bottom: 16px;
 }
 .footer-links a, .footer-col a {
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 1.05rem;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -381,13 +381,13 @@ a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     justify-content: space-between;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 0.95rem;
     flex-wrap: wrap;
     gap: 16px;
 }
 .footer-bottom a {
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.75);
 }
 .footer-bottom a:hover {
     color: white;
@@ -395,7 +395,7 @@ a:hover {
 .footer-disclaimer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 16px;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* Blog Header */
@@ -1003,6 +1003,37 @@ details[open] .faq-question::after {
     color: var(--color-primary);
     margin-bottom: 12px;
     font-family: var(--font-heading);
+}
+
+/* bg-primary utility and cta-box overrides */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.cta-box.bg-primary {
+    background: var(--color-primary) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-box.bg-primary h2,
+.cta-box.bg-primary h3 {
+    color: white !important;
+}
+
+.cta-box.bg-primary p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.cta-box.bg-primary a:not(.btn) {
+    color: white !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+}
+
+.cta-box.bg-primary a:not(.btn):hover {
+    color: var(--color-accent) !important;
 }
 
 .internal-links-box {
