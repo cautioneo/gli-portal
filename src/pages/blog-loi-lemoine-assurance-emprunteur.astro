@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Loi Lemoine : Changer d'Assurance de Prêt à Tout Moment (2026)";
-const pageDescription = "Profitez de la Loi Lemoine pour changer d'assurance emprunteur sans frais à tout moment en 2026. Économisez jusqu'à 15 000 € sur votre crédit immobilier !";
+const pageTitle = "Loi Lemoine 2026 : Économisez sur votre Assurance Emprunteur Locatif";
+const pageDescription = "Bailleurs : comment changer d'assurance de prêt immobilier à tout moment et sans frais en 2026 grâce à la Loi Lemoine. Calculez vos économies !";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-lemoine-assurance-emprunteur";
 const pageNoindex = false;
 
@@ -11,47 +11,27 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+const faqItems = [
+  {
+    question: "Qu'est-ce que la loi Lemoine pour l'assurance emprunteur ?",
+    answer: "La loi Lemoine est une législation française qui permet aux emprunteurs immobiliers de résilier et de changer leur assurance de prêt à tout moment, sans frais ni pénalités. Elle supprime également le questionnaire de santé sous certaines conditions (prêt de moins de 200 000 € se terminant avant les 60 ans de l'assuré)."
+  },
+  {
+    question: "La loi Lemoine s'applique-t-elle aux investissements locatifs ?",
+    answer: "Oui, la loi Lemoine s'applique à tous les prêts immobiliers octroyés à des personnes physiques, qu'il s'agisse de l'acquisition d'une résidence principale, secondaire ou d'un investissement locatif."
+  },
+  {
+    question: "La banque peut-elle augmenter mon taux d'intérêt si je change d'assurance ?",
+    answer: "Non, c'est strictement interdit par la loi. La banque ne peut modifier aucune condition de votre offre de prêt initiale (comme le taux d'intérêt, les frais de dossier, etc.) sous prétexte que vous décidez de déléguer l'assurance."
+  },
+  {
+    question: "Quelles sont les conditions pour bénéficier de la suppression du questionnaire médical avec la Loi Lemoine ?",
+    answer: "Pour éviter le questionnaire de santé, la part assurée par personne doit être inférieure ou égale à 200 000 € (cumul de 400 000 € pour un couple co-emprunteur) et le remboursement complet du prêt doit intervenir avant le 60ème anniversaire de l'assuré."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce que la loi Lemoine pour l'assurance emprunteur ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La loi Lemoine est une législation française qui permet aux emprunteurs immobiliers de résilier et de changer leur assurance de prêt à tout moment, sans frais ni pénalités. Elle supprime également le questionnaire de santé sous certaines conditions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "La loi Lemoine s'applique-t-elle aux investissements locatifs ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, la loi Lemoine s'applique à tous les prêts immobiliers octroyés à des personnes physiques, qu'il s'agisse de l'acquisition d'une résidence principale, secondaire ou d'un investissement locatif."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "La banque peut-elle augmenter mon taux d'intérêt si je change d'assurance ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Non, c'est strictement interdit par la loi. La banque ne peut modifier aucune condition de votre offre de prêt initiale (comme le taux d'intérêt, les frais de dossier, etc.) sous prétexte que vous décidez de déléguer l'assurance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quelles sont les conditions pour bénéficier de la suppression du questionnaire médical avec la Loi Lemoine ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pour éviter le questionnaire de santé, la part assurée par personne doit être inférieure ou égale à 200 000 € (cumul de 400 000 € pour un couple co-emprunteur) et le remboursement complet du prêt doit intervenir avant le 60ème anniversaire de l'assuré."
-        }
-      }
-    ]
-  })} />
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">
@@ -100,7 +80,7 @@ const breadcrumbs = [
       <p>Pour un propriétaire bailleur (LMNP, SCI, location nue), la rentabilité nette est la métrique reine. L'assurance emprunteur prélevée par la banque (le contrat de groupe) est généralement calculée sur le capital initial, ce qui signifie que son coût reste élevé tout au long de la durée du prêt, même lorsque le capital restant dû diminue.</p>
       <p>En ayant recours à la <strong>délégation d'assurance externe</strong> (proposée par des compagnies spécialisées indépendantes de la banque prêteuse), l'assurance est calculée sur le capital restant dû ou propose des taux fixes individuels beaucoup plus bas. Cela permet des économies colossales :</p>
 
-      <table class="comparison-table">
+      <div class="table-responsive"><table class="comparison-table">
         <thead>
           <tr>
             <th>Profil de l'emprunteur</th>
@@ -129,7 +109,7 @@ const breadcrumbs = [
             <td><strong>Jusqu'à 18 000 €</strong></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="etapes-resiliation">3. Comment procéder à la résiliation : Étape par étape</h2>
       <p>Le processus pour changer d'assurance emprunteur sous la Loi Lemoine est simple mais nécessite de respecter l'obligation d'<strong>équivalence des garanties</strong>. La banque ne peut refuser le nouveau contrat que si celui-ci offre un niveau de couverture inférieur à son contrat actuel.</p>

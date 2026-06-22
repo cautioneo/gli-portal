@@ -5,6 +5,11 @@ const pageTitle = "Louer sans garant et sans CDI en 2026 : Les Solutions | Cauti
 const pageDescription = "Découvrez les solutions légales et sécurisées pour louer un appartement sans garant physique et sans CDI (freelance, CDD, intérim) en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/guide-location-sans-garant";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Louer sans garant et sans CDI</h1>

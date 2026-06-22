@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "La GLI est-elle déductible des revenus fonciers ? Guide fiscal 2026";
+const pageTitle = "GLI déductible des revenus fonciers ? Guide 2026";
 const pageDescription = "La prime d'assurance Garantie Loyers Impayés (GLI) est-elle déductible de vos impôts ? Découvrez comment déduire vos cotisations au régime réel foncier en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-fiscalite";
 const pageNoindex = false;
@@ -11,9 +11,23 @@ const breadcrumbs = [
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+const faqItems = [
+  {
+    question: "La GLI est-elle toujours déductible des revenus fonciers ?",
+    answer: "Oui, la prime d'assurance GLI est intégralement déductible des revenus fonciers au régime réel, sans plafond spécifique. Elle figure parmi les charges déductibles prévues par l'article 31 du CGI, au titre des 'primes d'assurance'."
+  },
+  {
+    question: "Comment déclarer la GLI sur le formulaire 2044 ?",
+    answer: "La prime GLI se déclare à la ligne 227 du formulaire 2044, dans la rubrique 'Primes d'assurance'. Il faut indiquer le montant total annuel des cotisations payées dans l'année. Conservez l'attestation de paiement délivrée par votre assureur."
+  },
+  {
+    question: "Peut-on déduire la GLI en micro-foncier ?",
+    answer: "Non. En régime micro-foncier, l'abattement forfaitaire de 30 % est censé couvrir toutes les charges, y compris la GLI. Il est impossible de déduire des charges supplémentaires. Pour bénéficier de la déductibilité réelle de la GLI, vous devez opter pour le régime réel."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">
@@ -73,7 +87,7 @@ const breadcrumbs = [
       <h3>Condition 4 : Le bien doit être mis en location</h3>
       <p>La prime n'est déductible que si le bien est effectivement loué ou en cours de mise en location. Si le logement est vacant sans recherche active de locataire, la déductibilité peut être remise en cause par l'administration fiscale.</p>
 
-      <table class="comparison-table">
+      <div class="table-responsive"><table class="comparison-table">
         <thead>
           <tr>
             <th>Critère</th>
@@ -108,7 +122,7 @@ const breadcrumbs = [
             <td>Nécessite justificatifs</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <!-- Section 3 -->
       <h2>3. Comment déclarer la GLI aux impôts (formulaire 2044)</h2>
@@ -176,7 +190,7 @@ const breadcrumbs = [
         <li>Taux global d'imposition : 47,2 %</li>
       </ul>
 
-      <table class="comparison-table">
+      <div class="table-responsive"><table class="comparison-table">
         <thead>
           <tr>
             <th>Scénario</th>
@@ -206,12 +220,12 @@ const breadcrumbs = [
             <td>4 970 €</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <p>Dans cet exemple simplifié, le micro-foncier est plus avantageux si le bailleur n'a que la GLI comme charge. Mais dès que d'autres charges s'ajoutent (taxe foncière, travaux, intérêts), le régime réel devient rapidement plus intéressant.</p>
 
       <h3>Simulation avec un profil plus complet</h3>
-      <table class="comparison-table">
+      <div class="table-responsive"><table class="comparison-table">
         <thead>
           <tr>
             <th>Charge</th>
@@ -244,7 +258,7 @@ const breadcrumbs = [
             <td><strong>2 346 € (21,7 % des loyers)</strong></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <p>Dans ce cas, le régime réel donne un résultat similaire au micro-foncier. Mais si des travaux importants surviennent ou si vous avez un emprunt en cours, le réel devient systématiquement gagnant et peut même générer un <a href="/blog-deficit-foncier" title="Lire notre article : Deficit Foncier">déficit foncier</a> imputable sur votre revenu global.</p>
 

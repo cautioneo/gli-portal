@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Lille : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Lille (59) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Lille : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Lille : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-lille";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment signaler un loyer impayé à Lille ?",
+    answer: "À Lille, le commandement de payer est délivré par un huissier de justice habilité dans le Nord (59). L'audience devant le Tribunal Judiciaire de Lille (13 avenue du Peuple Belge, 59000) est généralement obtenue en 3 à 5 mois. Cautioneo indemnise sans attendre et gère l'intégralité de la procédure."
+  },
+  {
+    question: "Quels sont les loyers encadrés à Lille en 2026 ?",
+    answer: "Lille applique l'encadrement des loyers depuis 2020. Les loyers de référence varient de 11 €/m² (périphérie, Faches-Thumesnil) à 18 €/m² (Vieux-Lille, centre). Attention : l'encadrement s'applique uniquement sur les communes de Lille, Hellemmes et Lomme, pas dans l'ensemble de la MEL."
+  },
+  {
+    question: "La GLI est-elle adaptée aux studios étudiants à Lille ?",
+    answer: "Oui. Les studios étudiants représentent 40% du parc locatif lillois. La GLI Cautioneo est parfaitement adaptée à ce segment : elle couvre les locations étudiantes, y compris avec garant parental. La certification Open Banking vérifie la solvabilité réelle du ménage garant."
+  },
+  {
+    question: "Quels sont les risques spécifiques du marché locatif lillois ?",
+    answer: "Lille présente un taux de sinistralité de 2,5%, légèrement supérieur à la moyenne. Le quartier Wazemmes et certaines zones de Fives sont statistiquement plus exposés aux impayés. La GLI Cautioneo offre la même couverture sans exclusion géographique dans l'agglomération lilloise."
+  },
+  {
+    question: "Le tribunal de Lille est-il compétent pour Roubaix et Tourcoing ?",
+    answer: "Non. Pour les biens situés à Roubaix, c'est le Tribunal Judiciaire de Roubaix qui est compétent. Pour Tourcoing, c'est le TJ de Roubaix également (fusion judiciaire). Le TJ de Lille est compétent pour Lille, Villeneuve-d'Ascq, Seclin et la majorité de la MEL."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Lille, assurance proprietaire Lille, cautioneo Lille, GLI Lille">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Lille, assurance proprietaire Lille, cautioneo Lille, GLI Lille"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Lille</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment signaler un loyer impayé à Lille ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Lille, le commandement de payer est délivré par un huissier de justice habilité dans le Nord (59). L'audience devant le Tribunal Judiciaire de Lille (13 avenue du Peuple Belge, 59000) est généralement obtenue en 3 à 5 mois. Cautioneo indemnise sans attendre et gère l'intégralité de la procédure."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les loyers encadrés à Lille en 2026 ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lille applique l'encadrement des loyers depuis 2020. Les loyers de référence varient de 11 €/m² (périphérie, Faches-Thumesnil) à 18 €/m² (Vieux-Lille, centre). Attention : l'encadrement s'applique uniquement sur les communes de Lille, Hellemmes et Lomme, pas dans l'ensemble de la MEL."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI est-elle adaptée aux studios étudiants à Lille ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Les studios étudiants représentent 40% du parc locatif lillois. La GLI Cautioneo est parfaitement adaptée à ce segment : elle couvre les locations étudiantes, y compris avec garant parental. La certification Open Banking vérifie la solvabilité réelle du ménage garant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les risques spécifiques du marché locatif lillois ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lille présente un taux de sinistralité de 2,5%, légèrement supérieur à la moyenne. Le quartier Wazemmes et certaines zones de Fives sont statistiquement plus exposés aux impayés. La GLI Cautioneo offre la même couverture sans exclusion géographique dans l'agglomération lilloise."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Le tribunal de Lille est-il compétent pour Roubaix et Tourcoing ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Pour les biens situés à Roubaix, c'est le Tribunal Judiciaire de Roubaix qui est compétent. Pour Tourcoing, c'est le TJ de Roubaix également (fusion judiciaire). Le TJ de Lille est compétent pour Lille, Villeneuve-d'Ascq, Seclin et la majorité de la MEL."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Lille
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Lille en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Lille :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Lille</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">236 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Lille</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">10 à 16 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Lille</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~510 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">6 120 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~780 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">9 360 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 080 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">12 960 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Lille</h2>
     <p>La réglementation locative à Lille (59 — Hauts-de-France) présente les spécificités suivantes :</p>
@@ -238,4 +217,14 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-amiens" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Amiens</a>
+    <a href="/blog-assurance-loyer-impaye-reims" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Reims</a>
+    <a href="/blog-assurance-loyer-impaye-paris" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Paris</a>
+  </div>
+</section>
 </Layout>

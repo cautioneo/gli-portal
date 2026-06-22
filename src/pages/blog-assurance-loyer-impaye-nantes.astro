@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Nantes : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Nantes (44) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Nantes : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Nantes : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-nantes";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment déclarer un loyer impayé à Nantes ?",
+    answer: "À Nantes, contactez d'abord votre locataire par lettre recommandée. Sans régularisation, votre huissier délivre un commandement de payer. Le Tribunal Judiciaire de Nantes (17 rue du Maréchal Joffre, 44042) tranche généralement dans un délai de 4 à 6 mois. Avec Cautioneo, vous êtes indemnisé avant même le jugement."
+  },
+  {
+    question: "Quels sont les loyers encadrés à Nantes en 2026 ?",
+    answer: "Depuis juillet 2023, Nantes applique l'encadrement des loyers. Les loyers de référence varient de 12 €/m² (quartiers périphériques) à 19 €/m² (Île de Nantes, Hauts-Pavés). Le loyer de référence majoré permet un dépassement de +20% pour des prestations exceptionnelles."
+  },
+  {
+    question: "Pourquoi la GLI est-elle utile à Nantes malgré un faible taux d'impayés ?",
+    answer: "Même avec un taux de sinistralité de 1,9% (parmi les plus bas de France), les procédures judiciaires à Nantes durent 10 à 14 mois. Sans GLI, le propriétaire supporte la totalité de ces loyers perdus. Cautioneo vous indemnise dès le premier mois d'impayé."
+  },
+  {
+    question: "La GLI Cautioneo est-elle compatible avec l'APL à Nantes ?",
+    answer: "Oui. La GLI Cautioneo est totalement compatible avec l'APL (Aide Personnalisée au Logement). À Nantes, de nombreux locataires étudiants ou modestes perçoivent l'APL. Cautioneo intègre l'APL dans le calcul du loyer net à couvrir."
+  },
+  {
+    question: "Existe-t-il un tribunal spécialisé pour les litiges locatifs à Nantes ?",
+    answer: "Le Tribunal Judiciaire de Nantes dispose d'une chambre civile dédiée aux baux d'habitation. Les affaires simples (commandement de payer) sont traitées en référé en 4 à 8 semaines. Les procédures d'expulsion complètes prennent 10 à 14 mois en moyenne à Nantes."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nantes, assurance proprietaire Nantes, cautioneo Nantes, GLI Nantes">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nantes, assurance proprietaire Nantes, cautioneo Nantes, GLI Nantes"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Nantes</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment déclarer un loyer impayé à Nantes ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Nantes, contactez d'abord votre locataire par lettre recommandée. Sans régularisation, votre huissier délivre un commandement de payer. Le Tribunal Judiciaire de Nantes (17 rue du Maréchal Joffre, 44042) tranche généralement dans un délai de 4 à 6 mois. Avec Cautioneo, vous êtes indemnisé avant même le jugement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les loyers encadrés à Nantes en 2026 ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Depuis juillet 2023, Nantes applique l'encadrement des loyers. Les loyers de référence varient de 12 €/m² (quartiers périphériques) à 19 €/m² (Île de Nantes, Hauts-Pavés). Le loyer de référence majoré permet un dépassement de +20% pour des prestations exceptionnelles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi la GLI est-elle utile à Nantes malgré un faible taux d'impayés ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Même avec un taux de sinistralité de 1,9% (parmi les plus bas de France), les procédures judiciaires à Nantes durent 10 à 14 mois. Sans GLI, le propriétaire supporte la totalité de ces loyers perdus. Cautioneo vous indemnise dès le premier mois d'impayé."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo est-elle compatible avec l'APL à Nantes ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. La GLI Cautioneo est totalement compatible avec l'APL (Aide Personnalisée au Logement). À Nantes, de nombreux locataires étudiants ou modestes perçoivent l'APL. Cautioneo intègre l'APL dans le calcul du loyer net à couvrir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Existe-t-il un tribunal spécialisé pour les litiges locatifs à Nantes ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le Tribunal Judiciaire de Nantes dispose d'une chambre civile dédiée aux baux d'habitation. Les affaires simples (commandement de payer) sont traitées en référé en 4 à 8 semaines. Les procédures d'expulsion complètes prennent 10 à 14 mois en moyenne à Nantes."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Nantes
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Nantes en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Nantes :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Nantes</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">323 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Nantes</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">10 à 14 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Nantes</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~560 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">6 720 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~850 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">10 200 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 180 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">14 160 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Nantes</h2>
     <p>La réglementation locative à Nantes (44 — Pays de la Loire) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-rennes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Rennes</a>
+    <a href="/blog-assurance-loyer-impaye-angers" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Angers</a>
+    <a href="/blog-assurance-loyer-impaye-tours" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Tours</a>
+    <a href="/blog-assurance-loyer-impaye-bordeaux" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Bordeaux</a>
+  </div>
+</section>
 </Layout>

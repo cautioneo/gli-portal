@@ -5,14 +5,30 @@ const pageTitle = "Assurance Loyer Impayé : Comment choisir la meilleure en 202
 const pageDescription = "Comparatif complet pour choisir votre assurance loyer impayé (GLI). Décryptage des pièges, délais de carence, franchises et critères d'éligibilité locataire.";
 const pageCanonical = "https://cautioneo-gli.com/guide-choisir-assurance-loyer-impaye";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Guide : Choisir Assurance Loyer Impaye" }
 ];
+const faqItems = [
+  {
+    question: "Qu'est-ce que le délai de carence d'une GLI ?",
+    answer: "C'est la période suivant la souscription durant laquelle la garantie ne joue pas. Une excellente garantie proposera une prise en charge sans délai de carence ni franchise."
+  },
+  {
+    question: "Les primes de GLI sont-elles déductibles des impôts ?",
+    answer: "Oui, si vous déclarez vos revenus fonciers au régime réel, les cotisations d'assurance loyer impayé sont 100% déductibles."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Guide Ultime : Comment choisir la meilleure Assurance Loyer Impayé (GLI) ?</h1>

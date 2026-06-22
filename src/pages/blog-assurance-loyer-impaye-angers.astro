@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Angers : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Angers (49) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Angers : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Angers : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-angers";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment gérer un impayé de loyer à Angers ?",
+    answer: "À Angers, la procédure démarre par un commandement de payer (Maine-et-Loire). Le Tribunal Judiciaire d'Angers (6 rue des Lices, 49000) est réputé pour la rapidité de ses décisions en matière locative. La GLI Cautioneo prend en charge la procédure dès le premier signalement."
+  },
+  {
+    question: "Pourquoi investir dans la location à Angers ?",
+    answer: "Angers offre un rendement locatif brut moyen de 5 à 6,5% — parmi les meilleurs des villes de 100 000 à 200 000 habitants. La qualité de vie, le dynamisme économique et les prix d'achat encore modérés en font une place de choix pour l'investissement locatif."
+  },
+  {
+    question: "Les loyers sont-ils encadrés à Angers ?",
+    answer: "Non. Angers n'a pas adopté l'encadrement des loyers en 2026. Les propriétaires fixent librement les loyers selon le marché. Angers est classée en zone B2 Pinel, ce qui oriente les loyers des investissements défiscalisés."
+  },
+  {
+    question: "La GLI Cautioneo est-elle utile pour les petits investisseurs à Angers ?",
+    answer: "Absolument. Même avec un seul bien, la GLI Cautioneo est indispensable. À Angers, un impayé sur un T2 à 730 €/mois représente une perte de 8 760 €/an. La GLI vous protège intégralement, sans prime pour le propriétaire (financée par le locataire)."
+  },
+  {
+    question: "La GLI couvre-t-elle les étudiants en pharmacie à Angers ?",
+    answer: "Oui. La Faculté de Pharmacie d'Angers est l'une des plus réputées de France. Les étudiants en médecine/pharmacie sont éligibles à la GLI Cautioneo, avec ou sans garant parental. Notre processus de certification Open Banking est rapide et simple pour les étudiants."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Angers, assurance proprietaire Angers, cautioneo Angers, GLI Angers">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Angers, assurance proprietaire Angers, cautioneo Angers, GLI Angers"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Angers</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment gérer un impayé de loyer à Angers ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Angers, la procédure démarre par un commandement de payer (Maine-et-Loire). Le Tribunal Judiciaire d'Angers (6 rue des Lices, 49000) est réputé pour la rapidité de ses décisions en matière locative. La GLI Cautioneo prend en charge la procédure dès le premier signalement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi investir dans la location à Angers ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Angers offre un rendement locatif brut moyen de 5 à 6,5% — parmi les meilleurs des villes de 100 000 à 200 000 habitants. La qualité de vie, le dynamisme économique et les prix d'achat encore modérés en font une place de choix pour l'investissement locatif."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les loyers sont-ils encadrés à Angers ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Angers n'a pas adopté l'encadrement des loyers en 2026. Les propriétaires fixent librement les loyers selon le marché. Angers est classée en zone B2 Pinel, ce qui oriente les loyers des investissements défiscalisés."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo est-elle utile pour les petits investisseurs à Angers ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolument. Même avec un seul bien, la GLI Cautioneo est indispensable. À Angers, un impayé sur un T2 à 730 €/mois représente une perte de 8 760 €/an. La GLI vous protège intégralement, sans prime pour le propriétaire (financée par le locataire)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI couvre-t-elle les étudiants en pharmacie à Angers ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. La Faculté de Pharmacie d'Angers est l'une des plus réputées de France. Les étudiants en médecine/pharmacie sont éligibles à la GLI Cautioneo, avec ou sans garant parental. Notre processus de certification Open Banking est rapide et simple pour les étudiants."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Angers
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Angers en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Angers :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Angers</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">157 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire d'Angers</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">9 à 13 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Angers</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~480 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">5 760 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~730 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">8 760 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 010 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">12 120 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Angers</h2>
     <p>La réglementation locative à Angers (49 — Pays de la Loire) présente les spécificités suivantes :</p>
@@ -238,4 +217,14 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-nantes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Nantes</a>
+    <a href="/blog-assurance-loyer-impaye-tours" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Tours</a>
+    <a href="/blog-assurance-loyer-impaye-rennes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Rennes</a>
+  </div>
+</section>
 </Layout>

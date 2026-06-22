@@ -5,6 +5,11 @@ const pageTitle = "Garantie Loyers Impayés (GLI) : Fonctionnement & Tarifs 2026
 const pageDescription = "Qu'est-ce que la Garantie des Loyers Impayés ? Découvrez le fonctionnement de la GLI, les critères d'éligibilité du locataire et le coût de l'assurance.";
 const pageCanonical = "https://cautioneo-gli.com/blog-gli-definition";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -15,7 +20,7 @@ const breadcrumbs = [
 const faqItems = [
   {
     question: "Peut-on cumuler une GLI avec un garant physique classique ?",
-    answer: "Non, la loi l\'interdit formellement (loi Boutin). Un bailleur ne peut pas cumuler une assurance loyers impayés (GLI) avec la caution solidaire d\'un garant physique, sauf si le locataire est étudiant ou apprenti. En dehors de cette exception, le cumul rend le bail nul et expose le propriétaire à des sanctions."
+    answer: "Non, la loi l\'interdit formellement (loi Boutin). Un bailleur ne peut pas cumuler une assurance loyers impayés (GLI) avec la caution solidaire (consultez notre comparatif <a href='/blog-gli-vs-garant'>GLI ou garant physique</a>) d\'un garant physique, sauf si le locataire est étudiant ou apprenti. En dehors de cette exception, le cumul rend le bail nul et expose le propriétaire à des sanctions."
   },
   {
     question: "La cotisation de ma GLI est-elle déductible de mes impôts ?",
@@ -24,7 +29,8 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
     
 
@@ -34,7 +40,7 @@ const faqItems = [
             <span class="blog-category" style="margin-bottom: 20px;">Assurance & GLI</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Qu'est-ce que la GLI (Garantie Loyers Impayés) ? Guide Complet pour les Bailleurs</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Publié le 26 Mai 2026</span>
@@ -63,7 +69,7 @@ const faqItems = [
             
             <p>Le contrat de GLI couvre généralement plusieurs risques majeurs :</p>
             <ul>
-                <li><strong>Les loyers impayés</strong> : Remboursement intégral des sommes dues par le locataire défaillant, souvent sans limitation de durée ou jusqu'à un plafond élevé (ex: 90 000 €).</li>
+                <li><strong>Les loyers impayés</strong> : Remboursement intégral des sommes dues par le locataire défaillant (ou en cas de <a href="/blog-garant-insolvable">garant insolvable</a>), souvent sans limitation de durée ou jusqu'à un plafond élevé (ex: 90 000 €).</li>
                 <li><strong>Les dégradations immobilières</strong> : Prise en charge des frais de remise en état du logement si le locataire l'a endommagé durant son occupation.</li>
                 <li><strong>La protection juridique</strong> : Prise en charge des frais d'avocat, d'huissier et de justice nécessaires pour mener à bien la procédure d'expulsion.</li>
             </ul>
@@ -127,7 +133,7 @@ const faqItems = [
             <details class="faq-item">
                 <summary class="faq-question">Peut-on cumuler une GLI avec un <a href="/blog-gli-vs-garant-physique" title="Lire notre article : Gli Vs Garant Physique">garant physique</a> classique ?</summary>
                 <div class="faq-answer">
-                    <p>Non, la loi l'interdit formellement (loi Boutin). Un bailleur ne peut pas cumuler une assurance loyers impayés (GLI) avec la caution solidaire d'un <a href="/blog-gli-vs-garant-physique" title="Lire notre article : Gli Vs Garant Physique">garant physique</a>, sauf si le locataire est étudiant ou apprenti. En dehors de cette exception, le cumul rend le bail nul et expose le propriétaire à des sanctions.</p>
+                    <p>Non, la loi l'interdit formellement (loi Boutin). Un bailleur ne peut pas cumuler une assurance loyers impayés (GLI) avec la caution solidaire (consultez notre comparatif <a href="/blog-gli-vs-garant">GLI ou garant physique</a>) d'un <a href="/blog-gli-vs-garant-physique" title="Lire notre article : Gli Vs Garant Physique">garant physique</a>, sauf si le locataire est étudiant ou apprenti. En dehors de cette exception, le cumul rend le bail nul et expose le propriétaire à des sanctions.</p>
                 </div>
             </details>
             <details class="faq-item">

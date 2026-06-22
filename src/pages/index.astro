@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Assurance Loyer Impayé (GLI) 2026 : Zéro Franchise & Carence | Cautioneo";
+const pageTitle = "Assurance Loyer Impayé (GLI) 2026 : Zéro Franchise | Cautioneo";
 const pageDescription = "Protégez votre investissement locatif avec la meilleure Assurance Loyer Impayé (GLI). Indemnisation dès le 1er jour sans carence. Simulation gratuite en 2 min.";
 const pageCanonical = "https://cautioneo-gli.com";
 const pageNoindex = false;
@@ -43,10 +43,32 @@ const faqItems = [
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.6",
-      "reviewCount": "715",
+      "reviewCount": "848",
       "bestRating": "5",
       "worstRating": "1"
     }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cautioneo GLI",
+    "description": "Assurance loyer impayé (GLI) nouvelle génération pour propriétaires bailleurs.",
+    "url": "https://cautioneo-gli.com/",
+    "logo": "https://cautioneo-gli.com/logo.png",
+    "telephone": "+33 9 72 50 40 51",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lille",
+      "postalCode": "59000",
+      "streetAddress": "165 Avenue de Bretagne",
+      "addressCountry": "FR"
+    },
+    "sameAs": [
+      "https://share.google/1GIqfuIovN1OjliaE",
+      "https://www.facebook.com/cautioneo",
+      "https://www.linkedin.com/company/cautioneo"
+    ]
   })} />
   <Fragment set:html={`<!-- Navigation -->
     
@@ -110,9 +132,11 @@ const faqItems = [
                 <span style="color: var(--color-accent); font-size: 1.2rem;">🛡️</span> Couverture par Odealim & SADA Assurance
             </div>
             <div class="trust-item">
-                <span style="color: var(--color-accent); font-size: 1.2rem;">⏱️</span> Indemnisation dès le premier
-                impayé
+                <span style="color: var(--color-accent); font-size: 1.2rem;">⏱️</span> Indemnisation dès le premier impayé
             </div>
+            <a class="trust-item" href="https://share.google/1GIqfuIovN1OjliaE" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+                <span style="color: var(--color-accent); font-size: 1.2rem;"><i class="fab fa-google" style="color: #FBBC05;"></i></span> Note 4.6/5 sur Google (848 avis)
+            </a>
             <div class="trust-item">
                 <span style="color: var(--color-accent); font-size: 1.2rem;">⚖️</span> Frais d'expulsion pris en charge
             </div>

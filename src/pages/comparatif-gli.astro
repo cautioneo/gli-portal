@@ -1,10 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Comparatif GLI (Cautioneo vs Visale) | Cautioneo Bailleurs";
+const pageTitle = "Comparatif GLI 2026 : Cautioneo vs Visale";
 const pageDescription = "Le comparatif ultime des Garanties Loyers Impayés (GLI) : Visale, Mila vs Cautioneo. Trouvez la meilleure protection.";
 const pageCanonical = "https://cautioneo-gli.com/comparatif-gli";
 const pageNoindex = false;
+const faqItems = [
+  {
+    question: "Quelle est la meilleure GLI du marché ?",
+    answer: "La meilleure GLI dépend de vos besoins spécifiques. Cautioneo se distingue par son absence de franchise et de délai de carence, son taux d'effort accepté jusqu'à 33% (ou plus via caution solidaire), et sa gestion 100% digitale qui délivre un agrément en 24h."
+  },
+  {
+    question: "Quel est le coût moyen d'une assurance loyer impayé ?",
+    answer: "Le coût d'une GLI varie généralement entre 2% et 3.5% du montant du loyer charges comprises. Par exemple, l'offre Premium de Cautioneo est proposée à 2,75% du loyer, incluant la prise en charge complète des frais juridiques et jusqu'à 96 000€ d'impayés."
+  },
+  {
+    question: "Est-il possible de souscrire une GLI en cours de bail ?",
+    answer: "Oui, la plupart des assureurs permettent de souscrire une GLI en cours de bail, à condition que le locataire soit en place depuis au moins 6 à 12 mois sans aucun incident de paiement (loyers payés régulièrement et à date). Un justificatif d'historique de paiement sera alors demandé."
+  }
+];
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -39,7 +54,7 @@ const breadcrumbs = [
 <section class="section">
 <div class="container">
 <div class="table-wrapper" data-reveal="fade-up">
-<table class="comparison-table">
+<div class="table-responsive"><table class="comparison-table">
 <thead>
 <tr>
 <th>Critères</th>
@@ -93,7 +108,7 @@ const breadcrumbs = [
 <td class="price-cell">15 000€</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
 <!-- Maillage SEO Nouveaux Comparatifs -->
 <div class="mt-80" data-reveal="fade-up">

@@ -5,6 +5,11 @@ const pageTitle = "Garant Insolvable 2026 : Recours Légaux et Alternatives pour
 const pageDescription = "Votre garant ne peut pas payer ? Découvrez vos recours légaux, les délais de procédure et pourquoi une GLI est préférable à un garant physique.";
 const pageCanonical = "https://cautioneo-gli.com/blog-garant-insolvable";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -32,7 +37,8 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->
@@ -41,7 +47,7 @@ const faqItems = [
 <span class="blog-category" style="margin-bottom: 20px;">Gestion des Risques</span>
 <h1 style="max-width: 900px; margin: 0 auto 20px;">Garant Insolvable : Quels Recours pour le Bailleur en 2026 ?</h1>
 <div class="article-meta">
-<img alt="Expert Cautioneo" class="article-author-img" src="/images/photo-1573496359142-b8d87734a5a2.webp" loading="lazy" />
+<img alt="Expert Cautioneo" class="article-author-img" src="/images/photo-1573496359142-b8d87734a5a2.webp" loading="lazy" / decoding="async" width="40" height="40">
 <span>Par <strong>L'Équipe Cautioneo</strong></span>
 <span>•</span>
 <span>Publié le 27 Mai 2026</span>
@@ -129,7 +135,7 @@ const faqItems = [
 <p>En pratique, une procédure de recouvrement contre un garant insolvable dure <strong>de 12 à 36 mois</strong> et coûte plusieurs milliers d'euros en frais d'huissier et d'avocat. À l'issue, si le garant est véritablement sans ressources, vous ne récupérerez rien. C'est pourquoi la GLI est structurellement supérieure au garant physique.</p>
 </div>
 <h2>4. Comparatif : garant physique vs GLI Cautioneo</h2>
-<table style="width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem;">
+<div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem;">
 <thead>
 <tr>
 <th style="background: var(--color-primary); color: white; padding: 12px 16px; text-align: left;">Critère</th>
@@ -169,7 +175,7 @@ const faqItems = [
 <td style="padding: 12px 16px; text-align: center;">✅ Gratuit (payé par le locataire)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-primary);">
 <h3>Remplacez votre garant physique par une vraie garantie</h3>
 <p>Un garant physique peut devenir insolvable du jour au lendemain. La GLI Cautioneo, elle, est portée par un assureur professionnel : la solvabilité est garantie, les délais d'indemnisation sont définis contractuellement, et les frais de procédure sont inclus. Et c'est le locataire qui paye.</p>

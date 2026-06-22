@@ -5,15 +5,35 @@ const pageTitle = "Lettre de mise en demeure loyer impayé (modèle gratuit 2026
 const pageDescription = "Modèle de lettre de mise en demeure pour loyer impayé à télécharger. Découvrez comment rédiger une mise en demeure efficace et respectant la loi en 2026.";
 const pageCanonical = "https://cautioneo-gli.com/blog-lettre-mise-en-demeure";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+const faqItems = [
+  {
+    question: "La mise en demeure doit-elle obligatoirement être envoyée en LRAR ?",
+    answer: "Pour les baux d'habitation, la loi n'impose pas formellement la LRAR pour la mise en demeure simple. Toutefois, pour déclencher la clause résolutoire du bail, la loi exige un acte d'huissier (commandement de payer). La LRAR est vivement recommandée pour la mise en demeure car elle constitue une preuve opposable."
+  },
+  {
+    question: "Quel délai accorder au locataire dans la mise en demeure ?",
+    answer: "Il n'existe pas de délai légal imposé pour la mise en demeure simple. La pratique est d'accorder 8 à 15 jours. Ce délai doit être raisonnable et permet au locataire de régulariser sa situation avant toute action judiciaire."
+  },
+  {
+    question: "La mise en demeure est-elle obligatoire avant le commandement de payer ?",
+    answer: "Non, la mise en demeure par LRAR n'est pas une étape légalement obligatoire avant le commandement de payer par huissier. Cependant, elle est fortement conseillée car elle prouve la bonne foi du bailleur et peut suffire à régler la situation amiablement."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1568602471122-7832951cc4c5.webp');">
@@ -53,7 +73,7 @@ const breadcrumbs = [
       <h2>2. Quand envoyer la mise en demeure ?</h2>
       <p>La mise en demeure doit être envoyée dès que le loyer est en retard de manière significative. Voici le calendrier recommandé :</p>
 
-      <table class="comparison-table">
+      <div class="table-responsive"><table class="comparison-table">
         <thead>
           <tr>
             <th>Délai depuis l'impayé</th>
@@ -78,7 +98,7 @@ const breadcrumbs = [
             <td>Assignation en justice</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="info-box">
         <h4>&#128161; Conseil pratique</h4>

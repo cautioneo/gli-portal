@@ -1,18 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Garantie Visale ou Cautioneo : Quel garant locatif choisir en 2026 ?";
-const pageDescription = "Découvrez notre comparatif complet entre la Garantie Visale de l'État et Cautioneo. Plafonds, types de contrats, limites et avantages pour bien sécuriser vos loyers.";
+const pageTitle = "Comparatif Visale vs Cautioneo GLI | Garantie Loyer Impayé";
+const pageDescription = "Propriétaires : comparez la garantie publique gratuite Visale et l'Assurance GLI privée Cautioneo. Quelle couverture choisir ?";
 const pageCanonical = "https://cautioneo-gli.com/comparatif-visale";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Comparatif Visale" }
 ];
+
+const faqItems = [
+  {
+    question: "Puis-je cumuler Visale et une Garantie Loyer Impayé (GLI) classique ?",
+    answer: "Non. La loi française interdit de cumuler la garantie Visale avec une assurance classique ou un autre type de garant (comme Cautioneo ou d'autres garants en ligne). Lors de la rédaction du bail, vous devez impérativement faire un choix : s'en remettre au service de l'État ou choisir une solution technologique privée sécurisée."
+  },
+  {
+    question: "Que se passe-t-il si mon locataire à plus de 30 ans avec Visale ?",
+    answer: "La garantie Visale s'applique généralement aux moins de 30 ans. Passé cet âge, le locataire doit prouver un changement de situation précis (mutation, nouveau CDD, etc.). Avec Cautioneo, un locataire locataire de 40 ans en CDI, Indépendant, ou sans CDI validé est éligible sans justification complexe de \"mutation\"."
+  },
+  {
+    question: "La procédure d'indemnisation est-elle la même ?",
+    answer: "Avec Visale, les démarches administratives de déclaration de sinistre incombent au bailleur via une plateforme institutionnelle. Avec Cautioneo, en cas d'impayé, vous effectuez une déclaration simple depuis votre Dashboard Zéro Paperasse et l'équipe d'experts juridiques prend immédiatement le relais, souvent avec un versement des loyers dès le premier jour prévu."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Visale vs Cautioneo : Le Duel</h1>
@@ -77,7 +98,7 @@ const breadcrumbs = [
 <h2 class="text-2xl mb-32 text-center">Questions fréquentes sur la Garantie Visale</h2>
 <div class="faq-item mt-16 p-24 px-32 bg-white radius-lg border mb-16">
 <h3 class="font-600 text-lg mb-8">Puis-je cumuler Visale et une Garantie Loyer Impayé (GLI) classique ?</h3>
-<p class="text-muted"><strong>Non.</strong> La loi française interdit de cumuler la garantie Visale avec une assurance classique ou un autre type de garant (comme Cautioneo). Lors de la rédaction du bail, vous devez impérativement faire un choix : s'en remettre au service de l'État ou choisir une solution technologique privée sécurisée.</p>
+<p class="text-muted"><strong>Non.</strong> La loi française interdit de cumuler la garantie Visale avec une assurance classique ou un autre type de garant (comme Cautioneo ou d'autres <a href="/comparatif-garantme">garants en ligne</a>). Lors de la rédaction du bail, vous devez impérativement faire un choix : s'en remettre au service de l'État ou choisir une solution technologique privée sécurisée.</p>
 </div>
 <div class="faq-item p-24 px-32 bg-white radius-lg border mb-16">
 <h3 class="font-600 text-lg mb-8">Que se passe-t-il si mon locataire à plus de 30 ans avec Visale ?</h3>

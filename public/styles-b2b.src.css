@@ -917,6 +917,18 @@ details[open] .faq-question::after {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
+/* --- B2B Blog Header Meta Color Override --- */
+.blog-header .article-meta,
+.blog-header .article-meta span,
+.blog-header .article-meta strong {
+  color: var(--color-text-muted) !important;
+  opacity: 1 !important;
+}
+.blog-header .article-meta a {
+  color: var(--primary) !important;
+}
+
+
 /* 2. Article Layout & Columns */
 .article-layout {
     display: grid;
@@ -1402,15 +1414,18 @@ details[open] .faq-question::after {
     display: flex; justify-content: space-between; align-items: center; height: 80px; 
     max-width: 100% !important; /* Force le header à prendre toute la largeur de l'écran */
     padding: 0 40px; /* Conserve juste une marge de respiration sur les bords de l'écran */
+    flex-wrap: wrap;
+    gap: 0;
 }
 
 .logo-wrapper {
     display: flex; align-items: center; gap: 8px; flex: 1; text-decoration: none;
+    min-width: 0;
 }
 
-.header-logo { height: 32px; width: auto; object-fit: contain; }
+.header-logo { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
 
-.logo-text { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; font-family: var(--font-heading); }
+.logo-text { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; font-family: var(--font-heading); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Unified Hero */
 .page-hero {
@@ -2818,4 +2833,99 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
 }
 .exit-modal-cancel:hover {
     color: var(--primary);
+}
+
+/* ====================================================
+   NAVBAR RESPONSIVE FIX — structure réelle du Layout.astro
+   (.nav-container / .logo-wrapper / .nav-links / .nav-actions)
+   ==================================================== */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 24px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        height: auto;
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 0;
+        position: relative;
+    }
+    /* Logo + hamburger sur la même ligne */
+    .logo-wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+    .nav-toggle {
+        display: flex !important;
+        flex-shrink: 0;
+        order: 2;
+    }
+    /* Masquer les boutons CTA et les liens sur mobile */
+    .nav-actions {
+        display: none !important;
+    }
+    /* Menu déroulant mobile — occupe toute la largeur */
+    .nav-links {
+        display: none;
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 0;
+        border-top: 1px solid var(--color-border, #e8e6f5);
+        margin-top: 8px;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        padding: 10px 4px;
+        border-bottom: 1px solid var(--color-border, #e8e6f5);
+        font-size: 1rem;
+    }
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+    /* Sous-menu dropdown mobile */
+    .nav-dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 16px;
+        border-radius: 0;
+        display: block;
+        background: transparent;
+    }
+    .nav-dropdown-content a {
+        font-size: 0.9rem !important;
+        padding: 8px 4px !important;
+        color: var(--color-text-muted, #787399) !important;
+    }
+    /* Bouton CTA mobile visible après le menu */
+    .nav-links::after {
+        content: '';
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 10px 16px;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    .header-logo {
+        height: 26px;
+    }
 }

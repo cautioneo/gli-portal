@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Dijon : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Dijon (21) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Dijon : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Dijon : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-dijon";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment déclarer un impayé à Dijon ?",
+    answer: "À Dijon, le commandement de payer est délivré par huissier agréé en Côte-d'Or. Sans régularisation, l'affaire est portée devant le Tribunal Judiciaire de Dijon (23 rue du Palais, 21000). Les délais dijonnais sont parmi les plus courts de France : 9 à 13 mois pour une procédure complète."
+  },
+  {
+    question: "Les loyers sont-ils encadrés à Dijon ?",
+    answer: "Non. Dijon n'est pas soumise à l'encadrement des loyers. Les propriétaires fixent librement les loyers de marché. Dijon est une zone tendue (B2 Pinel), ce qui limite les hausses abusives lors des relocations."
+  },
+  {
+    question: "Est-il risqué d'investir dans le locatif à Dijon ?",
+    answer: "Le risque est modéré à Dijon. Le taux de sinistralité est faible (2%), mais le taux de vacance locative (3,1%) est plus élevé que dans les grandes métropoles. La GLI Cautioneo vous protège des impayés, et son algorithme de sélection locataire réduit aussi la rotation des locataires."
+  },
+  {
+    question: "Quels quartiers dijonnais sont les plus rentables pour la location ?",
+    answer: "Le secteur hypercentre (Presqu'île, place du Marché) offre la meilleure liquidité locative. Les Grésilles et La Fontaine d'Ouche présentent des rendements bruts supérieurs (6 à 7%) mais une sinistralité légèrement plus élevée. La GLI Cautioneo vous protège dans tous les quartiers."
+  },
+  {
+    question: "La GLI Cautioneo couvre-t-elle les maisons de ville à Dijon ?",
+    answer: "Oui. Les maisons de ville (avec cour ou jardin) représentent une part importante du parc locatif dijonnais. La GLI Cautioneo couvre tous types de biens résidentiels — appartements, maisons de ville, duplex — sans restriction sur le type de construction."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Dijon, assurance proprietaire Dijon, cautioneo Dijon, GLI Dijon">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Dijon, assurance proprietaire Dijon, cautioneo Dijon, GLI Dijon"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Dijon</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment déclarer un impayé à Dijon ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Dijon, le commandement de payer est délivré par huissier agréé en Côte-d'Or. Sans régularisation, l'affaire est portée devant le Tribunal Judiciaire de Dijon (23 rue du Palais, 21000). Les délais dijonnais sont parmi les plus courts de France : 9 à 13 mois pour une procédure complète."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les loyers sont-ils encadrés à Dijon ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Dijon n'est pas soumise à l'encadrement des loyers. Les propriétaires fixent librement les loyers de marché. Dijon est une zone tendue (B2 Pinel), ce qui limite les hausses abusives lors des relocations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Est-il risqué d'investir dans le locatif à Dijon ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le risque est modéré à Dijon. Le taux de sinistralité est faible (2%), mais le taux de vacance locative (3,1%) est plus élevé que dans les grandes métropoles. La GLI Cautioneo vous protège des impayés, et son algorithme de sélection locataire réduit aussi la rotation des locataires."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels quartiers dijonnais sont les plus rentables pour la location ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le secteur hypercentre (Presqu'île, place du Marché) offre la meilleure liquidité locative. Les Grésilles et La Fontaine d'Ouche présentent des rendements bruts supérieurs (6 à 7%) mais une sinistralité légèrement plus élevée. La GLI Cautioneo vous protège dans tous les quartiers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo couvre-t-elle les maisons de ville à Dijon ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Les maisons de ville (avec cour ou jardin) représentent une part importante du parc locatif dijonnais. La GLI Cautioneo couvre tous types de biens résidentiels — appartements, maisons de ville, duplex — sans restriction sur le type de construction."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Dijon
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Dijon en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Dijon :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Dijon</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">157 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Dijon</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">9 à 13 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Dijon</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~470 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">5 640 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~720 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">8 640 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~990 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">11 880 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Dijon</h2>
     <p>La réglementation locative à Dijon (21 — Bourgogne-Franche-Comté) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-lyon" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Lyon</a>
+    <a href="/blog-assurance-loyer-impaye-strasbourg" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Strasbourg</a>
+    <a href="/blog-assurance-loyer-impaye-reims" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Reims</a>
+    <a href="/blog-assurance-loyer-impaye-metz" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Metz</a>
+  </div>
+</section>
 </Layout>

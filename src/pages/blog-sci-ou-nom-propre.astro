@@ -26,6 +26,7 @@ const faqItems = [
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
+        <p>Pour en savoir plus sur les choix fiscaux en SCI, découvrez notre guide complet : <a href="/blog-sci-ir-vs-sci-is-gli">SCI IR vs SCI IS : quel régime choisir pour la GLI ?</a></p>
     
 
     <!-- Post Header -->
@@ -34,7 +35,7 @@ const faqItems = [
             <span class="blog-category" style="margin-bottom: 20px;">Fiscalité & Rendement</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Investir en SCI ou en Nom Propre : Comparatif Complet pour Bailleurs 2026</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Publié le 26 Mai 2026</span>
@@ -73,12 +74,12 @@ const faqItems = [
             <p><strong>Les avantages majeurs de la SCI :</strong></p>
             <ul>
                 <li><strong>Facilitation de la transmission familiale</strong> : La SCI permet de transmettre des parts sociales à vos enfants de manière progressive (en profitant des abattements fiscaux de 100 000 € tous les 15 ans) sans risquer de bloquer le bien en situation d'indivision conflictuelle.</li>
-                <li><strong>Le choix de l'impôt sur les sociétés (IS)</strong> : Contrairement au nom propre (taxé d'office à l'Impôt sur le Revenu + prélèvements sociaux de 17,2%), la SCI à l'IS permet de capitaliser les loyers au sein de la société à un taux réduit (15% jusqu'à 42 500 € de bénéfices) et de déduire l'amortissement du bien de vos impôts.</li>
+                <li><strong>Le choix de l'impôt sur les sociétés (IS)</strong> : Contrairement au nom propre (taxé d'office à l'Impôt sur le Revenu + prélèvements sociaux de 17,2%), la <a href="/blog-sci-ir-vs-sci-is-gli">SCI à l'IS</a> permet de capitaliser les loyers au sein de la société à un taux réduit (15% jusqu'à 42 500 € de bénéfices) et de déduire l'amortissement du bien de vos impôts.</li>
             </ul>
 
             <h2>3. Tableau comparatif : SCI vs Nom Propre</h2>
 
-            <table class="data-table">
+            <div class="table-responsive"><table class="data-table">
                 <thead>
                     <tr>
                         <th>Critère</th>
@@ -113,7 +114,7 @@ const faqItems = [
                         <td>Non (sauf cas très particuliers de SCI à l'IR)</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <h2>4. Quel impact sur votre assurance GLI ?</h2>
             <p>Que vous choisissiez la SCI ou le nom propre, la sécurisation de vos loyers reste la même. Les assureurs GLI et les garants institutionnels comme <strong>Cautioneo</strong> couvrent parfaitement les baux signés par des SCI familiales.</p>

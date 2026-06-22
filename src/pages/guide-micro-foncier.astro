@@ -5,6 +5,11 @@ const pageTitle = "Le Régime Micro-Foncier | Cautioneo Bailleurs";
 const pageDescription = "Tout savoir sur le régime micro-foncier : plafonds, abattements de 30% et déclarations 2044.";
 const pageCanonical = "https://cautioneo-gli.com/guide-micro-foncier";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Le Régime Micro-Foncier</h1>

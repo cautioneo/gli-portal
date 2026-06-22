@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Bordeaux : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Bordeaux (33) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Bordeaux : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Bordeaux : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-bordeaux";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment signaler un loyer impayé à Bordeaux ?",
+    answer: "À Bordeaux, adressez d'abord une mise en demeure recommandée au locataire. Si l'impayé n'est pas régularisé dans les 2 mois, votre huissier délivre un commandement de payer. Le Tribunal Judiciaire de Bordeaux (30 rue des Frères Bonie, 33000) statue en audience de référé pour les cas urgents. Cautioneo centralise toutes ces démarches."
+  },
+  {
+    question: "Quels sont les loyers de référence à Bordeaux en 2026 ?",
+    answer: "Les loyers de référence à Bordeaux varient de 13 €/m² (périphérie, Bègles, Mérignac) à 21 €/m² (centre historique, Chartrons). Le loyer de référence majoré autorise un dépassement de +20% pour les logements présentant des caractéristiques exceptionnelles."
+  },
+  {
+    question: "Bordeaux est-elle une ville à risque pour les propriétaires bailleurs ?",
+    answer: "Le taux de sinistralité à Bordeaux (2,2%) est inférieur à la moyenne nationale. Toutefois, la forte spéculation immobilière rend les locataires plus exposés au surendettement. La GLI reste le meilleur outil de protection pour votre rentabilité."
+  },
+  {
+    question: "Peut-on louer à des étudiants à Bordeaux avec la GLI ?",
+    answer: "Oui. Bordeaux compte 100 000 étudiants (Université de Bordeaux, Sciences Po). La GLI Cautioneo couvre les locations étudiantes, y compris quand un garant physique (parent) est présent en complément — exception légale pour les étudiants et apprentis."
+  },
+  {
+    question: "La trêve hivernale s'applique-t-elle à Bordeaux ?",
+    answer: "Oui. Comme partout en France, la trêve hivernale (du 1er novembre au 31 mars) suspend toute expulsion à Bordeaux. Pendant cette période, la GLI Cautioneo continue de vous indemniser des loyers impayés, sans interruption."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Bordeaux, assurance proprietaire Bordeaux, cautioneo Bordeaux, GLI Bordeaux">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Bordeaux, assurance proprietaire Bordeaux, cautioneo Bordeaux, GLI Bordeaux"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Bordeaux</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment signaler un loyer impayé à Bordeaux ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Bordeaux, adressez d'abord une mise en demeure recommandée au locataire. Si l'impayé n'est pas régularisé dans les 2 mois, votre huissier délivre un commandement de payer. Le Tribunal Judiciaire de Bordeaux (30 rue des Frères Bonie, 33000) statue en audience de référé pour les cas urgents. Cautioneo centralise toutes ces démarches."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les loyers de référence à Bordeaux en 2026 ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les loyers de référence à Bordeaux varient de 13 €/m² (périphérie, Bègles, Mérignac) à 21 €/m² (centre historique, Chartrons). Le loyer de référence majoré autorise un dépassement de +20% pour les logements présentant des caractéristiques exceptionnelles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Bordeaux est-elle une ville à risque pour les propriétaires bailleurs ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le taux de sinistralité à Bordeaux (2,2%) est inférieur à la moyenne nationale. Toutefois, la forte spéculation immobilière rend les locataires plus exposés au surendettement. La GLI reste le meilleur outil de protection pour votre rentabilité."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on louer à des étudiants à Bordeaux avec la GLI ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Bordeaux compte 100 000 étudiants (Université de Bordeaux, Sciences Po). La GLI Cautioneo couvre les locations étudiantes, y compris quand un garant physique (parent) est présent en complément — exception légale pour les étudiants et apprentis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La trêve hivernale s'applique-t-elle à Bordeaux ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Comme partout en France, la trêve hivernale (du 1er novembre au 31 mars) suspend toute expulsion à Bordeaux. Pendant cette période, la GLI Cautioneo continue de vous indemniser des loyers impayés, sans interruption."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Bordeaux
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Bordeaux en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Bordeaux :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Bordeaux</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">263 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Bordeaux</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">11 à 16 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Bordeaux</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~640 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">7 680 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~980 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">11 760 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 380 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">16 560 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Bordeaux</h2>
     <p>La réglementation locative à Bordeaux (33 — Nouvelle-Aquitaine) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-toulouse" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Toulouse</a>
+    <a href="/blog-assurance-loyer-impaye-pau" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Pau</a>
+    <a href="/blog-assurance-loyer-impaye-nantes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Nantes</a>
+    <a href="/blog-assurance-loyer-impaye-limoges" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Limoges</a>
+  </div>
+</section>
 </Layout>

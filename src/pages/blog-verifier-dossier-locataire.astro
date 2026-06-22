@@ -5,6 +5,11 @@ const pageTitle = "Comment vérifier un dossier de location : les 8 points clés
 const pageDescription = "Comment vérifier un dossier de location en 2026 ? Les 8 points de contrôle essentiels pour éviter les faux dossiers et les mauvais payeurs. Guide complet pour propriétaires.";
 const pageCanonical = "https://cautioneo-gli.com/blog-verifier-dossier-locataire";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -28,7 +33,8 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
     
 
@@ -38,7 +44,7 @@ const faqItems = [
             <span class="blog-category" style="margin-bottom: 20px;">Sélection du Locataire</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Comment Vérifier un Dossier de Location : les 8 Points Clés en 2026</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – analyste de risques" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – analyste de risques" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Publié le 26 Mai 2026</span>
@@ -64,7 +70,7 @@ const faqItems = [
             <h2>1. Les Documents Légalement Demandables (et les interdits)</h2>
             <p>Depuis la loi ALUR de 2014, un décret (n°2015-1437) liste <strong>précisément les documents qu'un propriétaire peut exiger</strong> d'un candidat à la location. Demander des documents hors de cette liste expose à une amende pouvant atteindre 3 000 €.</p>
 
-            <table class="check-table">
+            <div class="table-responsive"><table class="check-table">
                 <thead>
                     <tr>
                         <th>Documents autorisés</th>
@@ -97,7 +103,7 @@ const faqItems = [
                         <td>Photo du candidat</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <h2>2. Les 8 Points de Contrôle Essentiels</h2>
 
@@ -136,7 +142,7 @@ const faqItems = [
             <div class="point-block red-flag">
                 <span class="point-badge">5</span>
                 <div class="point-block-content">
-                    <h3>Détection des faux documents ⚠</h3>
+                    <h3>Détection des <a href="/blog-detecter-faux-dossier-location">faux documents</a> ⚠</h3>
                     <p>Vérifiez la numérotation séquentielle des bulletins de paie. Les polices d'écriture doivent être cohérentes sur l'ensemble du document. Méfiez-vous des chiffres arrondis parfaits (ex: exactement 2 000 € net chaque mois). Pour les indépendants, le service <strong>api.impots.gouv.fr</strong> (dvérit) permet de vérifier l'authenticité d'un avis d'imposition en ligne.</p>
                 </div>
             </div>
@@ -145,7 +151,7 @@ const faqItems = [
                 <span class="point-badge">6</span>
                 <div class="point-block-content">
                     <h3>Vérification des références locatives</h3>
-                    <p>Si le candidat a des quittances de loyer, appelez l'ancien propriétaire pour confirmer la qualité du locataire. Vérifiez que le montant des loyers sur les quittances est cohérent avec le niveau de vie apparent du candidat. Attention aux quittances auto-rédigées sans signature et sans coordonnées du bailleur.</p>
+                    <p>Si le candidat a des quittances de loyer, appelez l'ancien propriétaire pour confirmer la qualité du locataire (cela fait partie des techniques pour <a href="/blog-rassurer-proprietaire">rassurer un propriétaire</a>). Vérifiez que le montant des loyers sur les quittances est cohérent avec le niveau de vie apparent du candidat. Attention aux quittances auto-rédigées sans signature et sans coordonnées du bailleur.</p>
                 </div>
             </div>
 

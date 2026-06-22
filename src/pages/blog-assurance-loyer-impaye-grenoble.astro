@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Grenoble : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Grenoble (38) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Grenoble : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Grenoble : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-grenoble";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment gérer un impayé de loyer à Grenoble ?",
+    answer: "À Grenoble, la procédure d'impayé est gérée par le Tribunal Judiciaire de Grenoble (11 rue Diodore Rahoult, 38000). La ville a un programme de médiation locative géré par la Mairie qui peut accélérer la résolution amiable. Cautioneo indemnise sans attendre et propose systématiquement la médiation en premier recours."
+  },
+  {
+    question: "L'encadrement des loyers s'applique-t-il à Grenoble ?",
+    answer: "Oui, partiellement. Grenoble expérimente l'encadrement des loyers depuis 2023 sur une partie du territoire. Les loyers de référence varient de 10 €/m² (périphérie) à 17 €/m² (Presqu'île, Europole). La situation juridique est en évolution : consultez l'Agence Départementale de l'Isère pour les dernières mises à jour."
+  },
+  {
+    question: "Grenoble est-elle attractive pour l'investissement locatif ?",
+    answer: "Grenoble offre un bon rendement locatif brut (5 à 6,5%) grâce à des prix d'achat modérés et une demande locative soutenue. Le pôle technologique attire des ingénieurs et chercheurs solvables. Le principal risque est la vacance dans les quartiers Villeneuve et Mistral."
+  },
+  {
+    question: "La GLI couvre-t-elle les locataires chercheurs/expatriés à Grenoble ?",
+    answer: "Oui. La GLI Cautioneo est adaptée aux profils internationaux présents à Grenoble (chercheurs du CEA, ingénieurs STMicro). Notre certification Open Banking fonctionne pour les comptes bancaires français ouverts en France, ce qui couvre la grande majorité des expatriés en poste à Grenoble."
+  },
+  {
+    question: "Quels sont les délais d'expulsion à Grenoble ?",
+    answer: "À Grenoble, la procédure complète d'expulsion dure en moyenne 10 à 15 mois. La forte proportion de logements sociaux en mixité avec le parc privé peut parfois complexifier les situations. La GLI Cautioneo finance 100% des loyers impayés pendant toute la durée de la procédure."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Grenoble, assurance proprietaire Grenoble, cautioneo Grenoble, GLI Grenoble">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Grenoble, assurance proprietaire Grenoble, cautioneo Grenoble, GLI Grenoble"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Grenoble</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment gérer un impayé de loyer à Grenoble ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Grenoble, la procédure d'impayé est gérée par le Tribunal Judiciaire de Grenoble (11 rue Diodore Rahoult, 38000). La ville a un programme de médiation locative géré par la Mairie qui peut accélérer la résolution amiable. Cautioneo indemnise sans attendre et propose systématiquement la médiation en premier recours."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'encadrement des loyers s'applique-t-il à Grenoble ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, partiellement. Grenoble expérimente l'encadrement des loyers depuis 2023 sur une partie du territoire. Les loyers de référence varient de 10 €/m² (périphérie) à 17 €/m² (Presqu'île, Europole). La situation juridique est en évolution : consultez l'Agence Départementale de l'Isère pour les dernières mises à jour."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Grenoble est-elle attractive pour l'investissement locatif ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Grenoble offre un bon rendement locatif brut (5 à 6,5%) grâce à des prix d'achat modérés et une demande locative soutenue. Le pôle technologique attire des ingénieurs et chercheurs solvables. Le principal risque est la vacance dans les quartiers Villeneuve et Mistral."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI couvre-t-elle les locataires chercheurs/expatriés à Grenoble ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. La GLI Cautioneo est adaptée aux profils internationaux présents à Grenoble (chercheurs du CEA, ingénieurs STMicro). Notre certification Open Banking fonctionne pour les comptes bancaires français ouverts en France, ce qui couvre la grande majorité des expatriés en poste à Grenoble."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les délais d'expulsion à Grenoble ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Grenoble, la procédure complète d'expulsion dure en moyenne 10 à 15 mois. La forte proportion de logements sociaux en mixité avec le parc privé peut parfois complexifier les situations. La GLI Cautioneo finance 100% des loyers impayés pendant toute la durée de la procédure."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Grenoble
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Grenoble en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Grenoble :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Grenoble</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">160 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Grenoble</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">10 à 15 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Grenoble</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~490 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">5 880 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~740 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">8 880 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 020 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">12 240 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Grenoble</h2>
     <p>La réglementation locative à Grenoble (38 — Auvergne-Rhône-Alpes) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-lyon" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Lyon</a>
+    <a href="/blog-assurance-loyer-impaye-nice" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Nice</a>
+    <a href="/blog-assurance-loyer-impaye-marseille" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Marseille</a>
+    <a href="/blog-assurance-loyer-impaye-montpellier" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Montpellier</a>
+  </div>
+</section>
 </Layout>

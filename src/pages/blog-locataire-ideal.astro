@@ -5,6 +5,11 @@ const pageTitle = "Obligations du Locataire & Profil Idéal pour la GLI en 2026"
 const pageDescription = "Quelles sont les obligations du locataire et le profil idéal pour être accepté par les assureurs GLI en 2026 ? Évitez le refus d'assurance.";
 const pageCanonical = "https://cautioneo-gli.com/blog-locataire-ideal";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -28,13 +33,14 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Sélection du Locataire</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Quel Profil de Locataire Rassure les Assureurs GLI en 2026 ?</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – analyste de risques" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – analyste de risques" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Publié le 26 Mai 2026</span>
@@ -125,7 +131,7 @@ const faqItems = [
             <h2>3. Le Profil Idéal : Un Archétype Chiffré</h2>
             <p>Pour illustrer ce que recherchent réellement les assureurs, voici deux exemples de candidats pour un loyer de 900 €/mois :</p>
 
-            <table style="width:100%; border-collapse:collapse; margin:30px 0;">
+            <div class="table-responsive"><table style="width:100%; border-collapse:collapse; margin:30px 0;">
                 <thead>
                     <tr style="background:#1a2744; color:white;">
                         <th style="padding:14px; text-align:left;">Critère</th>
@@ -160,7 +166,7 @@ const faqItems = [
                         <td style="padding:12px 14px; text-align:center; color:#dc2626; font-weight:700;">Refusé ✕</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <h2>4. Que Faire Quand le Profil Idéal n'est Pas Disponible ?</h2>
             <p>Dans les grandes villes comme <a href="/blog-assurance-loyer-impaye-paris" title="Découvrir nos conseils sur l'assurance loyer impayé à Paris">Paris</a>, <a href="/blog-assurance-loyer-impaye-lyon" title="Découvrir nos conseils sur l'assurance loyer impayé à Lyon">Lyon</a> ou <a href="/blog-assurance-loyer-impaye-bordeaux" title="Découvrir nos conseils sur l'assurance loyer impayé à Bordeaux">Bordeaux</a>, les propriétaires sont souvent confrontés à une réalité : les candidats au profil parfait sont rares, et les meilleurs appartements partent en quelques heures. Attendre le candidat idéal peut vous coûter plusieurs semaines de vacance locative.</p>
@@ -169,7 +175,7 @@ const faqItems = [
 
             <p>Pour savoir comment refuser légalement un candidat qui ne vous convient pas, consultez notre guide sur <a href="/blog-refuser-locataire-legalement" title="Lire notre article : Refuser Locataire Legalement">comment refuser un locataire légalement</a>.</p>
 
-            <p>Et pour vérifier rigoureusement les dossiers des candidats que vous recevez, retrouvez nos conseils dans notre article sur <a href="/blog-verifier-dossier-locataire" title="Lire notre article : Verifier Dossier Locataire">comment vérifier un dossier de location</a>.</p>
+            <p>Et pour vérifier rigoureusement les dossiers des candidats que vous recevez, retrouvez nos conseils dans notre article sur <a href="/blog-verifier-dossier-locataire" title="Lire notre article : Verifier Dossier Locataire">comment vérifier un dossier de location</a> (et comment repérer les <a href="/blog-detecter-faux-dossier-location">faux dossiers</a>).</p>
 
             <div class="article-cta">
                 <h3>Trouvez votre locataire idéal avec Cautioneo</h3>

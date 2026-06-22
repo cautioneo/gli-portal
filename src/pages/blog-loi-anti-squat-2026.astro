@@ -5,6 +5,11 @@ const pageTitle = "Loi Anti-Squat & Expulsion Locataire 2026 : Droits du Bailleu
 const pageDescription = "Comment expulser un locataire ou squatteur en 2026 ? Décryptage de la nouvelle loi anti-squat, procédures accélérées en 48h et sanctions pénales.";
 const pageCanonical = "https://cautioneo-gli.com/blog-loi-anti-squat-2026";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -22,12 +27,12 @@ const faqItems = [
     answer: "Non. La loi anti-squat de 2026 exclut définitivement les personnes s\'étant introduites par voie de fait dans le domicile d\'autrui du bénéfice de la trêve hivernale. L\'expulsion forcée par la police peut donc être ordonnée et exécutée même pendant l\'hiver (entre le 1er novembre et le 31 mars)."
   },
   {
-    question: "Quel est le délai réel pour expulser un squatteur avec la nouvelle loi ?",
+    question: "Quel est le délai réel pour <a href='/blog-squatteur-48h'>expulser un squatteur</a> avec la nouvelle loi ?",
     answer: "Une fois le squat constaté officiellement par les forces de l\'ordre, le Préfet dispose de 48 heures maximales pour valider ou rejeter la demande d\'expulsion administrative formulée par le propriétaire. En cas d\'accord, une mise en demeure de 24h est notifiée aux occupants. L\'expulsion forcée par la force publique peut donc légalement s\'opérer sous 72 heures au total."
   },
   {
     question: "Comment un propriétaire peut-il prouver que son logement est squatté ?",
-    answer: "Le propriétaire doit déposer plainte et demander l\'intervention immédiate d\'un officier de police judiciaire (OPJ) pour effectuer un constat de flagrant délit de violation de domicile. Ce document officiel de police, combiné à un titre de propriété (acte notarié, avis de taxe foncière), sert de preuve incontestable pour lancer la saisine du Préfet."
+    answer: "Le propriétaire doit <a href='/blog-depot-plainte-squat'>déposer plainte</a> et demander l\'intervention immédiate d\'un officier de police judiciaire (OPJ) pour effectuer un constat de flagrant délit de violation de domicile. Ce document officiel de police, combiné à un titre de propriété (acte notarié, avis de taxe foncière), sert de preuve incontestable pour lancer la saisine du Préfet."
   },
   {
     question: "Quelles sont les sanctions pénales encourues par les squatteurs en 2026 ?",
@@ -36,7 +41,8 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->
@@ -45,7 +51,7 @@ const faqItems = [
 <span class="blog-category" style="margin-bottom: 20px;">Législation &amp; Droits</span>
 <h1 style="max-width: 900px; margin: 0 auto 20px;">Nouvelle loi anti-squat 2026 : Ce qui change réellement pour les propriétaires bailleurs</h1>
 <div class="article-meta">
-<img alt="Expert Cautioneo – conseillère juridique" class="article-author-img" src="/images/photo-1573496359142-b8d87734a5a2.webp" loading="lazy" />
+<img alt="Expert Cautioneo – conseillère juridique" class="article-author-img" src="/images/photo-1573496359142-b8d87734a5a2.webp" loading="lazy" / decoding="async" width="40" height="40">
 <span>Par <strong>L'Équipe Cautioneo</strong></span>
 <span>•</span>
 <span>Publié le 26 Mai 2026</span>
@@ -59,6 +65,10 @@ const faqItems = [
 <article class="article-content">
 
         <!-- Callout Silo B2B -->
+        <!-- Note de mise à jour -->
+        <div style="margin: 20px 0; padding: 15px; background-color: #fffbeb; border: 1px solid #fef3c7; border-radius: 4px; font-size: 0.95rem; line-height: 1.6;">
+            💡 Cet article détaille la loi de 2026. Vous pouvez également consulter notre premier décryptage historique de la <a href="/blog-loi-anti-squat" style="color: #b45309; font-weight: 600; text-decoration: underline;">loi anti-squat</a>.
+        </div>
         <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
             <strong>💡 Guide Pratique :</strong> Comment choisir la meilleure assurance loyer impayé ? Retrouvez notre <a href="/guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Consulter notre guide : Choisir Assurance Loyer Impaye">Guide Ultime de l'Assurance Loyer Impayé (GLI)</a>.
         </div>
@@ -149,7 +159,7 @@ const faqItems = [
 </div>
 </details>
 <details class="faq-item">
-<summary class="faq-question">Quel est le délai réel pour expulser un squatteur avec la nouvelle loi ?</summary>
+<summary class="faq-question">Quel est le délai réel pour <a href="/blog-squatteur-48h">expulser un squatteur</a> avec la nouvelle loi ?</summary>
 <div class="faq-answer">
 <p>Une fois le squat constaté officiellement par les forces de l'ordre, le Préfet dispose de 48 heures maximales pour valider ou rejeter la demande d'expulsion administrative formulée par le propriétaire. En cas d'accord, une <a href="/blog-lettre-mise-en-demeure" title="Lire notre article : Lettre Mise en Demeure">mise en demeure</a> de 24h est notifiée aux occupants. L'expulsion forcée par la force publique peut donc légalement s'opérer sous 72 heures au total.</p>
 </div>
@@ -157,7 +167,7 @@ const faqItems = [
 <details class="faq-item">
 <summary class="faq-question">Comment un propriétaire peut-il prouver que son logement est squatté ?</summary>
 <div class="faq-answer">
-<p>Le propriétaire doit déposer plainte et demander l'intervention immédiate d'un officier de police judiciaire (OPJ) pour effectuer un constat de flagrant délit de violation de domicile. Ce document officiel de police, combiné à un titre de propriété (acte notarié, avis de taxe foncière), sert de preuve incontestable pour lancer la saisine du Préfet.</p>
+<p>Le propriétaire doit <a href="/blog-depot-plainte-squat">déposer plainte</a> et demander l'intervention immédiate d'un officier de police judiciaire (OPJ) pour effectuer un constat de flagrant délit de violation de domicile. Ce document officiel de police, combiné à un titre de propriété (acte notarié, avis de taxe foncière), sert de preuve incontestable pour lancer la saisine du Préfet.</p>
 </div>
 </details>
 <details class="faq-item">

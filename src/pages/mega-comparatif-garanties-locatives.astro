@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Le comparatif définitif des garanties locatives (Physique, Visale, GLI) | Cautioneo";
+const pageTitle = "Comparatif Garanties Locatives (Visale, GLI, Physique)";
 const pageDescription = "Analysez et comparez toutes les options de sécurisation locative en 2026 : Garant physique, Garantie Visale publique, Assurance GLI bancaire et Garant Institutionnel.";
 const pageCanonical = "https://cautioneo-gli.com/mega-comparatif-garanties-locatives";
 const pageNoindex = false;
@@ -10,9 +10,23 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Comparatif des Garanties" }
 ];
+const faqItems = [
+  {
+    question: "Quelle est la différence entre une GLI et un garant institutionnel ?",
+    answer: "La GLI (Garantie Loyers Impayés) est une assurance souscrite et payée par le propriétaire. Le garant institutionnel (comme Cautioneo) est souscrit et payé par le locataire pour solidifier son dossier. Dans les deux cas, le propriétaire est protégé contre les impayés, mais le garant institutionnel accepte souvent des profils plus flexibles (CDD, indépendants)."
+  },
+  {
+    question: "La Garantie Visale est-elle totalement gratuite ?",
+    answer: "Oui, la Garantie Visale proposée par Action Logement est entièrement gratuite pour le propriétaire et le locataire. Cependant, ses critères d'éligibilité sont restrictifs (plafond de loyer à 1300€ ou 1500€ en Île-de-France, limite d'âge ou de statut) et le délai d'indemnisation est généralement plus long qu'une GLI privée."
+  },
+  {
+    question: "Peut-on cumuler une caution solidaire (garant physique) et une GLI ?",
+    answer: "Non, la loi Boutin interdit de cumuler une assurance loyers impayés (GLI) et un garant physique (caution solidaire), sauf si le locataire est étudiant ou apprenti. En cas de cumul non autorisé, le contrat d'assurance GLI ou l'acte de cautionnement peut être frappé de nullité."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
@@ -43,7 +57,7 @@ const breadcrumbs = [
 <p class="text-lg text-muted mb-32">Propriétaires bailleurs, face à l'augmentation des risques d'impayés, la question n'est plus "faut-il se garantir ?" mais "comment bien le faire ?". Ce comparatif exhaustif passe au crible les 4 grandes catégories de sécurisation locative disponibles sur le marché.</p>
 <h2 class="text-3xl text-primary mt-48 mb-24">Tableau Comparatif Global</h2>
 <div class="table-wrapper mb-48">
-<table class="comparison-table">
+<div class="table-responsive"><table class="comparison-table">
 <thead>
 <tr>
 <th>Critères</th>
@@ -90,7 +104,7 @@ const breadcrumbs = [
 <td class="table-accent">Dématérialisée (Dashboard)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
 <h2 class="text-3xl text-primary mt-48 mb-24">Analyse détaillée : Avantages et Inconvénients (Pros &amp; Cons)</h2>
 <h3 class="text-2xl mt-32 mb-16">1. Le Garant Physique (La caution solidaire classique)</h3>
@@ -150,7 +164,7 @@ const breadcrumbs = [
 </div>
 </div>
 <h3 class="text-2xl mt-32 mb-16">4. Le Garant Institutionnel Digital (ex: Cautioneo)</h3>
-<p>La solution hybride qui combine le meilleur des deux mondes.</p>
+<p>La solution hybride qui combine le meilleur des deux mondes (découvrez aussi notre <a href="/comparatif-garantme">comparatif face à Garantme</a>).</p>
 <div class="grid-2-cols gap-32 mb-32">
 <div class="bg-light p-24 border-radius-lg border" style="border-top: 4px solid #10b981;">
 <h4 class="text-xl mb-12"><i class="fas fa-plus-circle text-success"></i> Avantages</h4>
@@ -174,6 +188,39 @@ const breadcrumbs = [
 <div class="text-center mt-48 mb-32">
 <a class="btn btn-primary btn-large" href="https://caut.io/Ffr6hkV" target="_blank" title="Souscrire à l'assurance loyer impayé Cautioneo">Découvrir la plateforme Bailleurs Cautioneo</a>
 </div>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="margin: 40px 0;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 24px; color: var(--color-primary);">Questions Fréquentes sur les Garanties Locatives</h2>
+                <div class="faq-item" style="margin-bottom:16px;border:1px solid var(--color-border);border-radius:8px;overflow:hidden;">
+            <button class="faq-question" onclick="var a=this.parentNode.querySelector('.faq-answer');a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=a.style.display==='block'?'rotate(180deg)':'rotate(0deg)';" style="width:100%;text-align:left;padding:16px 20px;background:transparent;border:none;cursor:pointer;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;align-items:center;color:var(--color-text);">
+                Quelle est la différence entre une GLI et un garant institutionnel ?
+                <span class="faq-arrow" style="transition:transform 0.3s;font-size:1.2rem;color:var(--color-primary);">&#9660;</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:16px 20px;background:rgba(180,83,9,0.02);border-top:1px solid var(--color-border);color:var(--color-text-muted);line-height:1.7;">
+                La GLI (Garantie Loyers Impayés) est une assurance souscrite et payée par le propriétaire. Le garant institutionnel (comme Cautioneo) est souscrit et payé par le locataire pour solidifier son dossier. Dans les deux cas, le propriétaire est protégé contre les impayés, mais le garant institutionnel accepte souvent des profils plus flexibles (CDD, indépendants).
+            </div>
+        </div>
+        <div class="faq-item" style="margin-bottom:16px;border:1px solid var(--color-border);border-radius:8px;overflow:hidden;">
+            <button class="faq-question" onclick="var a=this.parentNode.querySelector('.faq-answer');a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=a.style.display==='block'?'rotate(180deg)':'rotate(0deg)';" style="width:100%;text-align:left;padding:16px 20px;background:transparent;border:none;cursor:pointer;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;align-items:center;color:var(--color-text);">
+                La Garantie Visale est-elle totalement gratuite ?
+                <span class="faq-arrow" style="transition:transform 0.3s;font-size:1.2rem;color:var(--color-primary);">&#9660;</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:16px 20px;background:rgba(180,83,9,0.02);border-top:1px solid var(--color-border);color:var(--color-text-muted);line-height:1.7;">
+                Oui, la Garantie Visale proposée par Action Logement est entièrement gratuite pour le propriétaire et le locataire. Cependant, ses critères d'éligibilité sont restrictifs (plafond de loyer à 1300€ ou 1500€ en Île-de-France, limite d'âge ou de statut) et le délai d'indemnisation est généralement plus long qu'une GLI privée.
+            </div>
+        </div>
+        <div class="faq-item" style="margin-bottom:16px;border:1px solid var(--color-border);border-radius:8px;overflow:hidden;">
+            <button class="faq-question" onclick="var a=this.parentNode.querySelector('.faq-answer');a.style.display=a.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=a.style.display==='block'?'rotate(180deg)':'rotate(0deg)';" style="width:100%;text-align:left;padding:16px 20px;background:transparent;border:none;cursor:pointer;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;align-items:center;color:var(--color-text);">
+                Peut-on cumuler une caution solidaire (garant physique) et une GLI ?
+                <span class="faq-arrow" style="transition:transform 0.3s;font-size:1.2rem;color:var(--color-primary);">&#9660;</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:16px 20px;background:rgba(180,83,9,0.02);border-top:1px solid var(--color-border);color:var(--color-text-muted);line-height:1.7;">
+                Non, la loi Boutin interdit de cumuler une assurance loyers impayés (GLI) et un garant physique (caution solidaire), sauf si le locataire est étudiant ou apprenti. En cas de cumul non autorisé, le contrat d'assurance GLI ou l'acte de cautionnement peut être frappé de nullité.
+            </div>
+        </div>
+
+      </section>
 </article>
 </div>
 </section>

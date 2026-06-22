@@ -5,6 +5,11 @@ const pageTitle = "Simulateur d'Éligibilité GLI Locataire | Cautioneo Bailleur
 const pageDescription = "Votre candidat locataire est-il éligible à la Garantie Loyers Impayés (GLI) ? Calculez son taux d'effort et découvrez si son dossier est assurable instantanément.";
 const pageCanonical = "https://cautioneo-gli.com/simulateur-eligibilite-gli";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">
 <h1>Testeur d'Éligibilité GLI Locataire</h1>

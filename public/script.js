@@ -2,14 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Menu Toggle ---
     const navToggle = document.querySelector('.nav-toggle');
+    const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelector('.nav-links');
-    if (navToggle && navLinks) {
+    if (navToggle && navbar) {
         navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navbar.classList.toggle('nav-open');
+            if (navLinks) navLinks.classList.toggle('open');
             const icon = navToggle.querySelector('i');
-            if(icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
+            if (icon) {
+                if (navbar.classList.contains('nav-open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     }

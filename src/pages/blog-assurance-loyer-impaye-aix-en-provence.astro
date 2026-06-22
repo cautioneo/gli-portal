@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Aix-en-Provence : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Aix-en-Provence (13) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Aix-en-Provence : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Aix-en-Provence : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-aix-en-provence";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment gérer un impayé à Aix-en-Provence ?",
+    answer: "À Aix-en-Provence, le Tribunal Judiciaire d'Aix-en-Provence (place de Verdun, 13100) est compétent. Les délais sont un peu plus longs que la moyenne (12 à 18 mois) en raison de la surcharge judiciaire en PACA. La GLI Cautioneo vous indemnise sans attendre le jugement."
+  },
+  {
+    question: "Les loyers sont-ils encadrés à Aix-en-Provence ?",
+    answer: "Non. Aix-en-Provence n'a pas adopté l'encadrement des loyers. Les loyers sont libres et très élevés (20,8 €/m² en moyenne), comparables à Lyon ou Bordeaux dans les quartiers les plus cotés comme Mazarin."
+  },
+  {
+    question: "Pourquoi la GLI est-elle particulièrement utile à Aix-en-Provence ?",
+    answer: "Avec des loyers élevés (720 à 1 550 € selon la surface), le montant mensuel à risque est important. Un impayé non couvert à Aix représente une perte de 8 640 à 18 600 € par an. La GLI Cautioneo vous protège intégralement, sans prime pour le propriétaire."
+  },
+  {
+    question: "La GLI Cautioneo couvre-t-elle les étudiants de Sciences Po à Aix ?",
+    answer: "Oui. Les étudiants de Sciences Po Aix et de l'Université Aix-Marseille sont éligibles à la GLI Cautioneo. Notre certification Open Banking vérifie la solidité financière du ménage garant (parents) ou les revenus propres en master 2 / thèse."
+  },
+  {
+    question: "Quels quartiers aixois sont les plus sûrs pour louer ?",
+    answer: "Le quartier Mazarin et le Pays d'Aix (centre historique) présentent les meilleurs profils de locataires et la plus forte liquidité locative. Jas de Bouffan et Luynes offrent des rendements légèrement supérieurs avec un risque modéré. La GLI Cautioneo couvre tous les secteurs."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Aix-en-Provence, assurance proprietaire Aix-en-Provence, cautioneo Aix-en-Provence, GLI Aix-en-Provence">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Aix-en-Provence, assurance proprietaire Aix-en-Provence, cautioneo Aix-en-Provence, GLI Aix-en-Provence"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Aix-en-Provence</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment gérer un impayé à Aix-en-Provence ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Aix-en-Provence, le Tribunal Judiciaire d'Aix-en-Provence (place de Verdun, 13100) est compétent. Les délais sont un peu plus longs que la moyenne (12 à 18 mois) en raison de la surcharge judiciaire en PACA. La GLI Cautioneo vous indemnise sans attendre le jugement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les loyers sont-ils encadrés à Aix-en-Provence ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Aix-en-Provence n'a pas adopté l'encadrement des loyers. Les loyers sont libres et très élevés (20,8 €/m² en moyenne), comparables à Lyon ou Bordeaux dans les quartiers les plus cotés comme Mazarin."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi la GLI est-elle particulièrement utile à Aix-en-Provence ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Avec des loyers élevés (720 à 1 550 € selon la surface), le montant mensuel à risque est important. Un impayé non couvert à Aix représente une perte de 8 640 à 18 600 € par an. La GLI Cautioneo vous protège intégralement, sans prime pour le propriétaire."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo couvre-t-elle les étudiants de Sciences Po à Aix ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Les étudiants de Sciences Po Aix et de l'Université Aix-Marseille sont éligibles à la GLI Cautioneo. Notre certification Open Banking vérifie la solidité financière du ménage garant (parents) ou les revenus propres en master 2 / thèse."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels quartiers aixois sont les plus sûrs pour louer ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le quartier Mazarin et le Pays d'Aix (centre historique) présentent les meilleurs profils de locataires et la plus forte liquidité locative. Jas de Bouffan et Luynes offrent des rendements légèrement supérieurs avec un risque modéré. La GLI Cautioneo couvre tous les secteurs."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Aix-en-Provence
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Aix-en-Provence en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Aix-en-Provence :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Aix-en-Provence</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">147 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire d'Aix-en-Provence</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">12 à 18 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Aix-en-Provence</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~720 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">8 640 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 100 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">13 200 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~1 550 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">18 600 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Aix-en-Provence</h2>
     <p>La réglementation locative à Aix-en-Provence (13 — Provence-Alpes-Côte d'Azur) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-marseille" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Marseille</a>
+    <a href="/blog-assurance-loyer-impaye-toulon" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Toulon</a>
+    <a href="/blog-assurance-loyer-impaye-montpellier" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Montpellier</a>
+    <a href="/blog-assurance-loyer-impaye-nice" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Nice</a>
+  </div>
+</section>
 </Layout>

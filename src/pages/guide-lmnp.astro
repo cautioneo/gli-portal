@@ -5,6 +5,11 @@ const pageTitle = "Loueur en Meublé Non Professionnel (LMNP) | Cautioneo Baille
 const pageDescription = "Statut LMNP : comment déclarer vos revenus de location meublée et profiter d'un abattement de 50%.";
 const pageCanonical = "https://cautioneo-gli.com/guide-lmnp";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Loueur en Meublé Non Professionnel (<a href="/blog-lmnp-vs-location-nue" title="Lire notre article : Lmnp Vs Location Nue">LMNP</a>)</h1>

@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Caen : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Caen (14) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Caen : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Caen : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-caen";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment déclarer un impayé à Caen ?",
+    answer: "À Caen, le Tribunal Judiciaire de Caen (9 rue Danièle Casanova, 14000) est compétent pour les litiges locatifs du Calvados. Les délais sont corrects (9 à 14 mois pour une expulsion). La GLI Cautioneo automatise et finance l'ensemble de la procédure pour vous."
+  },
+  {
+    question: "Caen est-elle un bon marché locatif ?",
+    answer: "Oui. Caen offre un rapport qualité/prix excellent pour l'investissement locatif. Les rendements bruts atteignent 6 à 8%, portés par la demande étudiante (38 000 étudiants) et la population normande stable. Le risque d'impayé (2%) est dans la moyenne nationale."
+  },
+  {
+    question: "Les loyers sont-ils encadrés à Caen ?",
+    answer: "Non. Caen n'est pas soumise à l'encadrement des loyers. Les propriétaires fixent librement les loyers selon le marché local. Caen est classée en zone B2 pour le dispositif Pinel."
+  },
+  {
+    question: "La GLI Cautioneo couvre-t-elle les étudiants en droit à Caen ?",
+    answer: "Oui. La faculté de droit de l'Université de Caen est l'une des plus réputées de France. Les étudiants en droit sont éligibles à la GLI Cautioneo, avec certification Open Banking des revenus du ménage garant. Ces profils sont généralement très fiables."
+  },
+  {
+    question: "La trêve hivernale s'applique-t-elle à Caen ?",
+    answer: "Oui. Comme dans toute la France métropolitaine, la trêve hivernale (1er novembre - 31 mars) interdit toute expulsion physique à Caen. La GLI Cautioneo continue d'indemniser les loyers impayés pendant cette période, sans aucune interruption."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Caen, assurance proprietaire Caen, cautioneo Caen, GLI Caen">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Caen, assurance proprietaire Caen, cautioneo Caen, GLI Caen"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Caen</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment déclarer un impayé à Caen ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Caen, le Tribunal Judiciaire de Caen (9 rue Danièle Casanova, 14000) est compétent pour les litiges locatifs du Calvados. Les délais sont corrects (9 à 14 mois pour une expulsion). La GLI Cautioneo automatise et finance l'ensemble de la procédure pour vous."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Caen est-elle un bon marché locatif ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Caen offre un rapport qualité/prix excellent pour l'investissement locatif. Les rendements bruts atteignent 6 à 8%, portés par la demande étudiante (38 000 étudiants) et la population normande stable. Le risque d'impayé (2%) est dans la moyenne nationale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les loyers sont-ils encadrés à Caen ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Caen n'est pas soumise à l'encadrement des loyers. Les propriétaires fixent librement les loyers selon le marché local. Caen est classée en zone B2 pour le dispositif Pinel."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo couvre-t-elle les étudiants en droit à Caen ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. La faculté de droit de l'Université de Caen est l'une des plus réputées de France. Les étudiants en droit sont éligibles à la GLI Cautioneo, avec certification Open Banking des revenus du ménage garant. Ces profils sont généralement très fiables."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La trêve hivernale s'applique-t-elle à Caen ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Comme dans toute la France métropolitaine, la trêve hivernale (1er novembre - 31 mars) interdit toute expulsion physique à Caen. La GLI Cautioneo continue d'indemniser les loyers impayés pendant cette période, sans aucune interruption."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Caen
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Caen en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Caen :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Caen</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">106 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Caen</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">9 à 14 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Caen</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~450 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">5 400 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~680 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">8 160 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~940 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">11 280 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Caen</h2>
     <p>La réglementation locative à Caen (14 — Normandie) présente les spécificités suivantes :</p>
@@ -238,4 +217,15 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-rouen" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Rouen</a>
+    <a href="/blog-assurance-loyer-impaye-rennes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Rennes</a>
+    <a href="/blog-assurance-loyer-impaye-amiens" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Amiens</a>
+    <a href="/blog-assurance-loyer-impaye-paris" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Paris</a>
+  </div>
+</section>
 </Layout>

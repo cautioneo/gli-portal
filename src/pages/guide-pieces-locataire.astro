@@ -5,6 +5,11 @@ const pageTitle = "Liste Légale des Pièces Justificatives | Cautioneo Bailleur
 const pageDescription = "La liste légale et exhaustive des pièces justificatives autorisées pour un dossier de location.";
 const pageCanonical = "https://cautioneo-gli.com/guide-pieces-locataire";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Liste Légale des Pièces Justificatives</h1>

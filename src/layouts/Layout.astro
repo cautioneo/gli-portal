@@ -9,9 +9,14 @@ interface Props {
   modifiedDate?: string;
   faqItems?: Array<{ question: string; answer: string }>;
   keywords?: string;
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+    bestRating?: number;
+  };
 }
 
-const { title, description, canonical, noindex = false, breadcrumbs, publishDate, modifiedDate, faqItems, keywords } = Astro.props;
+const { title, description, canonical, noindex = false, breadcrumbs, publishDate, modifiedDate, faqItems, keywords, aggregateRating } = Astro.props;
 const canonicalUrl = new URL(canonical, Astro.site).href;
 const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.includes('/guide-') || Astro.url.pathname.includes('/procedures') || Astro.url.pathname.includes('/fiscalite') || Astro.url.pathname.includes('/simulateur') || Astro.url.pathname.includes('/boite-a-outils') || Astro.url.pathname.includes('/checklist') || Astro.url.pathname.includes('/modeles') || Astro.url.pathname.includes('/mega-');
 ---
@@ -41,13 +46,9 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
     <meta content={description} name="twitter:description"/>
     <meta content="https://cautioneo-gli.com/logo.png" property="twitter:image"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" />
-    </noscript>
+    <link rel="preload" href="/fonts/inter-v18-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/outfit-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts.css" />
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'" />
     <noscript>
@@ -118,6 +119,27 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
       })} />
     )}
 
+    {aggregateRating && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": title,
+        "description": description,
+        "url": canonicalUrl,
+        "brand": {
+          "@type": "Brand",
+          "name": "Cautioneo GLI"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": aggregateRating.ratingValue,
+          "reviewCount": aggregateRating.reviewCount,
+          "bestRating": aggregateRating.bestRating || 5,
+          "worstRating": 1
+        }
+      })} />
+    )}
+
     <!-- Google Tag Manager -->
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -129,7 +151,7 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
     <!-- End Google Tag Manager -->
 
     <link rel="icon" type="image/png" href="/favicon.png"/>
-    <link rel="stylesheet" href="/styles-b2b.css?v=1.4" />
+    <link rel="stylesheet" href="/styles-b2b.css?v=1.5" />
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -139,7 +161,7 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
     <nav class="navbar">
         <div class="container nav-container">
             <a class="logo-wrapper" href="/">
-                <img alt="Cautioneo" class="header-logo" src="/logo.png" loading="eager" />
+                <img alt="Cautioneo" class="header-logo" src="/logo.png" loading="eager" / decoding="async" width="800" height="450">
                 <span class="logo-text">Bailleurs</span>
             </a>
             <button aria-label="Ouvrir le menu" class="nav-toggle">
@@ -176,19 +198,31 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
             <div class="footer-grid">
                 <div class="footer-col" style="grid-column: span 2;">
                     <div class="logo-wrapper mb-16" style="flex: none; gap: 8px; display: flex; align-items: center;">
-                        <img alt="Cautioneo" class="header-logo" loading="eager" src="/logo.png" style="filter: brightness(0) invert(1); height: 32px; width: auto;"/>
+                        <img alt="Cautioneo" class="header-logo" loading="eager" src="/logo.png" style="filter: brightness(0) invert(1); height: 32px; width: auto;"/ decoding="async">
                         <span class="logo-text" style="color: white; font-size: 1.6rem; font-weight: 700;">Bailleurs</span>
                     </div>
                     <p style="color: var(--primary-light); max-width: 400px; font-size: 1.05rem;">La plateforme de référence pour sécuriser, optimiser et simplifier la gestion de vos investissements locatifs. Protégez vos loyers en toute sérénité.</p>
-                    <div class="avis-verifies-badge-footer">
-                        <span style="color: #ffb020; display: flex; gap: 2px;">
-                            <i class="fas fa-star" style="font-size: 0.8rem;"></i>
-                            <i class="fas fa-star" style="font-size: 0.8rem;"></i>
-                            <i class="fas fa-star" style="font-size: 0.8rem;"></i>
-                            <i class="fas fa-star" style="font-size: 0.8rem;"></i>
-                            <i class="fas fa-star" style="font-size: 0.8rem;"></i>
-                        </span>
-                        <span><strong>Excellent 4.6/5</strong> sur Avis Vérifiés</span>
+                    <div class="trust-badges-footer">
+                        <a class="trust-badge-pill" href="https://www.avis-verifies.com/avis-clients/cautioneo.com" target="_blank" rel="noopener" title="Voir les avis de Cautioneo sur Avis Vérifiés">
+                            <span style="color: #ffb020; display: flex; gap: 1px;">
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                            </span>
+                            <span><strong>4.6/5</strong> Avis Vérifiés</span>
+                        </a>
+                        <a class="trust-badge-pill" href="https://share.google/1GIqfuIovN1OjliaE" target="_blank" rel="noopener" title="Voir les avis de Cautioneo sur Google Maps/GMB">
+                            <span style="color: #FBBC05; display: flex; gap: 1px;">
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                                <i class="fas fa-star" style="font-size: 0.75rem;"></i>
+                            </span>
+                            <span><strong>4.6/5</strong> sur Google (848 avis)</span>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -205,6 +239,7 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
                         <li><a href="/simulateurs">Simulateur Rentabilité</a></li>
                         <li><a href="/simulateurs">Estimateur GLI</a></li>
                         <li><a href="/simulateur-eligibilite-gli">Testeur de Solvabilité</a></li>
+                        <li><a href="/checklist-bailleur">Checklist Mise en Location</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -289,11 +324,11 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
           });
         }
 
-        // Inject Avis Vérifiés mini badge into article meta
+        // Inject reviews mini badge into article meta
         var articleMeta = document.querySelector('.article-meta');
         if (articleMeta) {
           var avSpan = document.createElement('span');
-          avSpan.innerHTML = ' • <span style="color:#ffb020; font-weight:600; display:inline-flex; align-items:center; gap:4px;"><span style="display:flex; gap:1px;"><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i></span> 4.6/5 sur Avis Vérifiés</span>';
+          avSpan.innerHTML = ' • <a href="https://share.google/1GIqfuIovN1OjliaE" target="_blank" rel="noopener" style="color:#ffb020; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"><span style="display:flex; gap:1px;"><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i><i class="fas fa-star" style="font-size:0.75rem;"></i></span> 4.6/5 sur Google & Avis Vérifiés</a>';
           articleMeta.appendChild(avSpan);
         }
       });
@@ -331,6 +366,13 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         display: flex;
         flex-direction: column;
         text-align: left;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, opacity 0.6s ease 0.15s;
+      }
+      .sticky-cta.visible .sticky-cta-text {
+        opacity: 1;
+        transform: translateY(0);
       }
       .sticky-cta-title {
         font-family: 'Outfit', sans-serif;
@@ -357,12 +399,18 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         text-decoration: none;
         background-color: #ffffff !important;
         color: #b45309 !important;
-        transition: background-color 0.2s, transform 0.2s;
+        opacity: 0;
+        transform: scale(0.92);
+        transition: background-color 0.2s, transform 0.2s, opacity 0.6s ease 0.3s;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
-      .sticky-cta-btn:hover {
+      .sticky-cta.visible .sticky-cta-btn {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .sticky-cta.visible .sticky-cta-btn:hover {
         background-color: #fffbeb !important;
-        transform: scale(1.03);
+        transform: scale(1.05);
       }
       body.has-sticky-cta {
         padding-bottom: 80px;
@@ -430,8 +478,15 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         border-color: rgba(180, 83, 9, 0.15) !important;
       }
 
-      /* Avis Vérifiés Footer Badge Styles */
-      .avis-verifies-badge-footer {
+      /* Footer Reviews Trust Badges Styles */
+      .trust-badges-footer {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+      .trust-badge-pill {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -441,8 +496,99 @@ const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.i
         border-radius: 50px;
         font-size: 0.85rem;
         color: #ffffff;
-        margin-top: 15px;
+        text-decoration: none;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .trust-badge-pill:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.25);
       }
     </style>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (document.querySelector('.toc-container') || document.querySelector('.sidebar-sticky')) return;
+        
+        const articleBody = document.querySelector('.article-body, .article-content, .content-body');
+        if (!articleBody) return;
+        
+        const headings = Array.from(articleBody.querySelectorAll('h2'));
+        if (headings.length < 2) return;
+        
+        const tocContainer = document.createElement('div');
+        tocContainer.className = 'toc-container';
+        
+        const tocHeader = document.createElement('div');
+        tocHeader.className = 'toc-header';
+        
+        const tocTitle = document.createElement('span');
+        tocTitle.className = 'toc-title';
+        tocTitle.innerHTML = '<i class="fas fa-list-ul"></i> Sommaire';
+        
+        const tocToggle = document.createElement('button');
+        tocToggle.className = 'toc-toggle';
+        tocToggle.setAttribute('aria-label', 'Afficher ou masquer le sommaire');
+        tocToggle.innerHTML = '<i class="fas fa-chevron-down"></i>';
+        
+        tocHeader.appendChild(tocTitle);
+        tocHeader.appendChild(tocToggle);
+        tocContainer.appendChild(tocHeader);
+        
+        const tocList = document.createElement('ul');
+        tocList.className = 'toc-list';
+        
+        headings.forEach((heading, index) => {
+          if (!heading.id) {
+            const text = heading.textContent || '';
+            const slug = text
+              .toLowerCase()
+              .replace(/[^a-z0-9\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-')
+              .trim();
+            heading.id = slug || `section-${index}`;
+          }
+          
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `#${heading.id}`;
+          a.className = 'toc-link';
+          a.textContent = heading.textContent;
+          
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.getElementById(heading.id);
+            if (target) {
+              const offset = 100;
+              const bodyRect = document.body.getBoundingClientRect().top;
+              const elementRect = target.getBoundingClientRect().top;
+              const elementPosition = elementRect - bodyRect;
+              const offsetPosition = elementPosition - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+              history.pushState(null, '', `#${heading.id}`);
+            }
+          });
+          
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+        
+        tocContainer.appendChild(tocList);
+        
+        tocHeader.addEventListener('click', () => {
+          tocContainer.classList.toggle('collapsed');
+        });
+        
+        const siloCallout = articleBody.querySelector('.silo-callout');
+        if (siloCallout && siloCallout.nextSibling) {
+          articleBody.insertBefore(tocContainer, siloCallout.nextSibling);
+        } else {
+          articleBody.insertBefore(tocContainer, articleBody.firstChild);
+        }
+      });
+    </script>
 </body>
 </html>

@@ -5,6 +5,11 @@ const pageTitle = "Comprendre le Déficit Foncier | Cautioneo Bailleurs";
 const pageDescription = "Réduisez votre impôt global grâce au déficit foncier. Guide complet sur les travaux déductibles.";
 const pageCanonical = "https://cautioneo-gli.com/guide-deficit-foncier";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Comprendre le <a href="/blog-deficit-foncier-travaux" title="Lire notre article : Deficit Foncier Travaux">Déficit Foncier</a></h1>

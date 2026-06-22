@@ -5,6 +5,11 @@ const pageTitle = "Fixation et Révision du Loyer | Cautioneo Bailleurs";
 const pageDescription = "Règles de fixation du loyer, encadrement et révision annuelle : le guide juridique.";
 const pageCanonical = "https://cautioneo-gli.com/guide-fixation-loyer";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Fixation et Révision du Loyer</h1>

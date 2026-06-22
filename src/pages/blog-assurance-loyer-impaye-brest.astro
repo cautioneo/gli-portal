@@ -1,26 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "GLI à Brest : Garantie Loyer Impayé & Assurance Propriétaires (2026) | Cautioneo";
-const pageDescription = "Propriétaires bailleurs à Brest (29) : protégez vos loyers avec la GLI Cautioneo. Indemnisation dès le 1er impayé, 96 000 € de couverture, zéro franchise, prise en charge juridique totale.";
+const pageTitle = "Assurance Loyer Impayé à Brest : Tarifs & Devis GLI";
+const pageDescription = "Bailleurs à Brest : protégez vos loyers contre les impayés et dégradations avec l'assurance GLI Cautioneo (couverture 96K€).";
 const pageCanonical = "https://cautioneo-gli.com/blog-assurance-loyer-impaye-brest";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Blog", item: "https://cautioneo-gli.com/blog" },
   { name: pageTitle }
 ];
+
+const faqItems = [
+  {
+    question: "Comment gérer un impayé à Brest ?",
+    answer: "À Brest, le Tribunal Judiciaire de Brest (6 rue Voltaire, 29200) traite les litiges locatifs. Les délais sont raisonnables (9 à 13 mois pour une expulsion complète). La GLI Cautioneo prend en charge l'ensemble des démarches dès le premier impayé signalé."
+  },
+  {
+    question: "Brest est-elle un bon marché pour l'investissement locatif ?",
+    answer: "Brest offre des rendements bruts de 6 à 8% grâce à des prix d'achat modérés. Le marché est moins dynamique que Rennes ou Nantes, mais stable. La demande locative est soutenue par 26 000 étudiants et les 10 000 militaires et civils de la Marine Nationale."
+  },
+  {
+    question: "Les loyers sont-ils encadrés à Brest ?",
+    answer: "Non. Brest n'applique pas l'encadrement des loyers. La ville est classée en zone B2 Pinel. Les loyers sont libres et restent accessibles (12,5 €/m² en moyenne)."
+  },
+  {
+    question: "La GLI Cautioneo est-elle adaptée aux petits logements brestois ?",
+    answer: "Oui. Brest dispose d'un parc locatif composé majoritairement de petites surfaces (T1, T2). La GLI Cautioneo couvre toutes les tailles de bien, sans loyer minimum. Pour un T1 à 430 €/mois, la protection est complète et le coût zéro pour le propriétaire."
+  },
+  {
+    question: "Comment sécuriser un investissement locatif à Brest avec la GLI ?",
+    answer: "La combinaison GLI Cautioneo + Open Banking est particulièrement efficace à Brest : elle garantit la sélection du meilleur locataire parmi les candidats (militaires, étudiants, chercheurs), élimine le risque de fraude documentaire et assure une indemnisation immédiate en cas d'impayé."
+  },
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Brest, assurance proprietaire Brest, cautioneo Brest, GLI Brest">
+<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Brest, assurance proprietaire Brest, cautioneo Brest, GLI Brest"
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Solutions Locatives Régionales</span>
             <h1 style="max-width: 900px; margin: 0 auto 20px;">Assurance Loyer Impayé (GLI) à Brest</h1>
             <div class="article-meta">
-                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo – gestionnaire locatif" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
                 <span>Par <strong>L'Équipe Cautioneo</strong></span>
                 <span>•</span>
                 <span>Mis à jour le 15 Juin 2026</span>
@@ -33,56 +62,6 @@ const breadcrumbs = [
     <!-- Post Content -->
     <main class="article-container">
         <article class="article-content">
-
-        <!-- FAQ JSON-LD -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Comment gérer un impayé à Brest ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "À Brest, le Tribunal Judiciaire de Brest (6 rue Voltaire, 29200) traite les litiges locatifs. Les délais sont raisonnables (9 à 13 mois pour une expulsion complète). La GLI Cautioneo prend en charge l'ensemble des démarches dès le premier impayé signalé."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Brest est-elle un bon marché pour l'investissement locatif ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Brest offre des rendements bruts de 6 à 8% grâce à des prix d'achat modérés. Le marché est moins dynamique que Rennes ou Nantes, mais stable. La demande locative est soutenue par 26 000 étudiants et les 10 000 militaires et civils de la Marine Nationale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les loyers sont-ils encadrés à Brest ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Brest n'applique pas l'encadrement des loyers. La ville est classée en zone B2 Pinel. Les loyers sont libres et restent accessibles (12,5 €/m² en moyenne)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "La GLI Cautioneo est-elle adaptée aux petits logements brestois ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Brest dispose d'un parc locatif composé majoritairement de petites surfaces (T1, T2). La GLI Cautioneo couvre toutes les tailles de bien, sans loyer minimum. Pour un T1 à 430 €/mois, la protection est complète et le coût zéro pour le propriétaire."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment sécuriser un investissement locatif à Brest avec la GLI ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La combinaison GLI Cautioneo + Open Banking est particulièrement efficace à Brest : elle garantit la sélection du meilleur locataire parmi les candidats (militaires, étudiants, chercheurs), élimine le risque de fraude documentaire et assure une indemnisation immédiate en cas d'impayé."
-          }
-        }
-      ]
-    }
-    </script>
 
         
                     <!-- IA Summary & Local Stats Box -->
@@ -105,15 +84,15 @@ const breadcrumbs = [
                                 📊 Chiffres Clés - Brest
                             </h5>
                             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem;">
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Tension Locative :</span>
                                     <strong style="color: #ef4444;">8/10</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 6px;">
+                                <div class="stats-row">
                                     <span style="color: var(--color-text-muted);">Délai d'indemnisation :</span>
                                     <strong style="color: var(--color-text-main);">Dès le 1er impayé</strong>
                                 </div>
-                                <div style="display: flex; justify-content: space-between;">
+                                <div class="stats-row" style="border-bottom: none;">
                                     <span style="color: var(--color-text-muted);">Plafond de garantie :</span>
                                     <strong style="color: var(--color-success);">96 000 €</strong>
                                 </div>
@@ -132,7 +111,7 @@ const breadcrumbs = [
     <h2 class="text-3xl text-primary mt-48 mb-24">1. Le marché locatif à Brest en 2026 : Chiffres Clés</h2>
     <p>Voici les indicateurs indispensables pour optimiser votre gestion locative et anticiper les risques à Brest :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Indicateur Marché</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Valeur / Statut à Brest</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Population (2024)</td><td style="padding: 12px; border: 1px solid var(--color-border);">144 000 habitants</td></tr>
@@ -144,19 +123,19 @@ const breadcrumbs = [
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Tribunal compétent</td><td style="padding: 12px; border: 1px solid var(--color-border);">Tribunal Judiciaire de Brest</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Délai moyen d'expulsion</td><td style="padding: 12px; border: 1px solid var(--color-border);">9 à 13 mois</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">2. Loyers de Référence par Type de Bien à Brest</h2>
     <p>Estimez rapidement le montant de votre loyer de marché et le plafond à couvrir avec la GLI Cautioneo :</p>
 
-    <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
+    <div class="table-responsive"><table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid var(--color-border);">
         <thead><tr style="background-color: var(--color-primary); color: white;"><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Type de bien</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Loyer médian mensuel</th><th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Risque annuel non couvert</th></tr></thead>
         <tbody>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">Studio / T1</td><td style="padding: 12px; border: 1px solid var(--color-border);">~430 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">5 160 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T2 (2 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~650 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">7 800 €/an</td></tr>
             <tr><td style="padding: 12px; border: 1px solid var(--color-border); font-weight: bold;">T3 (3 pièces)</td><td style="padding: 12px; border: 1px solid var(--color-border);">~900 €/mois</td><td style="padding: 12px; border: 1px solid var(--color-border); color: #e53e3e; font-weight: bold;">10 800 €/an</td></tr>
         </tbody>
-    </table>
+    </table></div>
 
     <h2 class="text-3xl text-primary mt-48 mb-24">3. Réglementation et Procédures Judiciaires à Brest</h2>
     <p>La réglementation locative à Brest (29 — Bretagne) présente les spécificités suivantes :</p>
@@ -238,4 +217,13 @@ const breadcrumbs = [
 
         </article>
     </main>`} />
+
+<section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
+  <h2 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--text-main, #2b254d);">Assurance Loyer Impayé dans les villes proches</h2>
+  <p style="color: var(--text-muted, #787399); margin-bottom: 20px; font-size: 0.95rem;">Découvrez nos guides GLI pour les autres grandes villes de la région :</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="/blog-assurance-loyer-impaye-rennes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Rennes</a>
+    <a href="/blog-assurance-loyer-impaye-nantes" style="display:inline-block; padding: 8px 16px; background: white; border: 1px solid var(--primary-light, #c4b8ff); border-radius: 8px; color: var(--primary, #6c5ce7); font-weight: 600; font-size: 0.9rem; text-decoration: none;">Nantes</a>
+  </div>
+</section>
 </Layout>

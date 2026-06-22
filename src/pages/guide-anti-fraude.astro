@@ -5,6 +5,11 @@ const pageTitle = "Tutoriel Anti-Fraude Locataire | Cautioneo Bailleurs";
 const pageDescription = "Propriétaires : comment détecter les faux dossiers locataires et les documents falsifiés.";
 const pageCanonical = "https://cautioneo-gli.com/guide-anti-fraude";
 const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.6,
+  reviewCount: 715
+};
+
 
 const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
@@ -12,7 +17,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+  aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero">
 <div class="container">
 <h1>Tutoriel Anti-Fraude Locataire</h1>
