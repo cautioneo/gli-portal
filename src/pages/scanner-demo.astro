@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "Scanner d'Authenticité | Cautioneo Bailleurs";
-const pageDescription = "Testez notre technologie de détection de faux documents. Ne vous laissez plus tromper par des dossiers falsifiés.";
+const pageDescription = "Découvrez notre technologie de détection de faux documents en temps réel. Simulez l'analyse d'un dossier locataire.";
 const pageCanonical = "https://cautioneo-gli.com/scanner-demo";
 const pageNoindex = true;
 
@@ -13,23 +13,1524 @@ const breadcrumbs = [
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
-  <Fragment set:html={`<main class="page-content">
-<header class="hero-mini">
-<div class="container">
-<h1 class="text-huge mb-16">Scanner d'Authenticité</h1>
-<p class="text-xl opacity-90 max-w-700 mx-auto">Découvrez comment notre technologie détecte les dossiers falsifiés en quelques secondes.</p>
-</div>
-</header>
-<section class="section">
-<div class="container">
-<div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center" data-reveal="fade-up">
-<div class="badge badge-accent mb-16">Délégation Garantie</div>
-<h2 class="text-3xl mb-16">Ne prenez plus ce risque seul</h2>
-<p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">Notre technologie certifie automatiquement l'authenticité des dossiers locataires. Protégez-vous des documents falsifiés en 1 seul clic.</p>
-<a class="btn btn-primary" href="https://caut.io/Ffr6hkV" target="_blank" title="Souscrire à l'assurance loyer impayé Cautioneo">Je délègue la certification du dossier locataire à Cautioneo</a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer Partagé Riche -->`} />
+  <main class="page-content bg-subtle pb-80">
+    <header class="hero-mini">
+      <div class="container">
+        <div class="badge badge-accent mb-16">Intelligence Artificielle AIO</div>
+        <h1 class="text-huge mb-16">Scanner d'Authenticité</h1>
+        <p class="text-xl opacity-90 max-w-700 mx-auto">
+          Testez notre technologie de détection de falsifications. Notre algorithme analyse en temps réel les justificatifs pour écarter les fraudeurs.
+        </p>
+      </div>
+    </header>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="scanner-layout">
+          <!-- Left: The Scanner Console -->
+          <div class="scanner-main-panel">
+            <div class="panel-header-custom">
+              <h2 class="text-lg font-bold text-main mb-0 flex-between">
+                <span><i class="fas fa-microchip text-primary mr-8"></i> Simulateur d'Authentification</span>
+                <span class="status-indicator-idle" id="scanner-status-label">Prêt à analyser</span>
+              </h2>
+            </div>
+            
+            <div class="scanner-box-wrapper">
+              <div class="scanner-box" id="scanner-viewport">
+                <!-- Idle state: Upload prompt -->
+                <div class="upload-prompt" id="prompt-idle">
+                  <div class="prompt-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <h3 class="text-md font-bold mb-8">Glissez-déposez un justificatif de loyer</h3>
+                  <p class="text-sm text-muted mb-20">Formats acceptés : PDF, PNG, JPG (Max 5Mo)</p>
+                  <span class="btn btn-outline text-sm py-8 px-16">Parcourir les fichiers</span>
+                  <input type="file" id="file-uploader" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;" accept="image/*,application/pdf" />
+                </div>
+
+                <!-- Scanning animation overlay -->
+                <div class="scan-laser" id="laser-line"></div>
+
+                <!-- Document mock-up preview container -->
+                <div class="document-mockup" id="document-mockup-view" style="display: none;">
+                  <!-- Payroll Mockup -->
+                  <div class="payroll-sheet" id="sheet-payroll">
+                    <div class="payroll-header">
+                      <div class="company-logo-mock"></div>
+                      <div class="company-info-mock">
+                        <strong>SOCIETE DUMONT SAS</strong><br/>
+                        12 Avenue de Paris, 75001 Paris
+                      </div>
+                      <div class="payroll-title">BULLETIN DE PAIE</div>
+                    </div>
+                    <div class="payroll-meta-grid">
+                      <div><strong>Période :</strong> Mars 2026</div>
+                      <div><strong>N° SS :</strong> 1 85 03 75 120 456</div>
+                      <div><strong>Locataire :</strong> <span id="mock-tenant-name">Luc BELMONT</span></div>
+                      <div><strong>Emploi :</strong> Cadre Commercial</div>
+                    </div>
+                    <table class="payroll-table">
+                      <thead>
+                        <tr>
+                          <th>Rubrique</th>
+                          <th>Désignation</th>
+                          <th>Base</th>
+                          <th>Taux</th>
+                          <th>Montant</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>100</td>
+                          <td>Salaire de base</td>
+                          <td>151.67 h</td>
+                          <td>22.50 €</td>
+                          <td class="text-right">3 412.58 €</td>
+                        </tr>
+                        <tr>
+                          <td>250</td>
+                          <td>Heures supplémentaires</td>
+                          <td>10.00 h</td>
+                          <td>28.13 €</td>
+                          <td class="text-right">281.30 €</td>
+                        </tr>
+                        <tr class="highlighted-row">
+                          <td><strong>900</strong></td>
+                          <td><strong>NET A PAYER AVANT IMPOT</strong></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-right font-bold text-main" id="mock-net-salary">4 200.00 €</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="payroll-footer">
+                      <div class="footer-sign">DUMONT SAS (Signature numérique DGFIP)</div>
+                      <div class="footer-stamp">Sceau Certifié AIO</div>
+                    </div>
+                  </div>
+
+                  <!-- Tax Notice Mockup -->
+                  <div class="tax-sheet" id="sheet-tax" style="display: none;">
+                    <div class="tax-header">
+                      <div>RÉPUBLIQUE FRANÇAISE</div>
+                      <div class="tax-title">AVIS D'IMPÔT 2025 SUR LES REVENUS 2024</div>
+                    </div>
+                    <div class="tax-body">
+                      <div class="tax-ref-grid">
+                        <div><strong>Foyer Fiscal :</strong> <span id="mock-tax-name">Jean PETIT</span></div>
+                        <div><strong>N° Fiscal :</strong> 14 78 520 145 963</div>
+                        <div><strong>Adresse :</strong> 4 Rue des Lys, 69002 Lyon</div>
+                      </div>
+                      <div class="tax-income-box mt-16">
+                        <div class="flex-between py-8 border-bottom">
+                          <span>Nombre de parts :</span>
+                          <strong>1 part</strong>
+                        </div>
+                        <div class="flex-between py-8 border-bottom">
+                          <span>Revenu brut global :</span>
+                          <strong>35 410 €</strong>
+                        </div>
+                        <div class="flex-between py-8 highlighted-row">
+                          <span class="font-bold">REVENU FISCAL DE RÉFÉRENCE :</span>
+                          <strong class="text-lg text-primary" id="mock-tax-rfr">35 410 €</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Hotspots for Fraud details (Red warning dots) -->
+                  <div class="analysis-dot dot-salary" id="hotspot-salary">
+                    <span class="pulse-ring"></span>
+                    <i class="fas fa-exclamation"></i>
+                    <div class="analysis-tooltip">
+                      <strong>Anomalie Détectée :</strong><br/>
+                      La police de caractères du montant net "4 200.00 €" est incohérente avec le reste du document. Les métadonnées indiquent une retouche graphique récente (Logiciel : Adobe Photoshop).
+                    </div>
+                  </div>
+                  <div class="analysis-dot dot-logo" id="hotspot-logo">
+                    <span class="pulse-ring"></span>
+                    <i class="fas fa-exclamation"></i>
+                    <div class="analysis-tooltip">
+                      <strong>Falsification Logo :</strong><br/>
+                      Le logo de l'entreprise "DUMONT SAS" a été extrait d'un site web public et inséré par-dessus le fond tramé du PDF.
+                    </div>
+                  </div>
+                  <div class="analysis-dot dot-stamp" id="hotspot-stamp">
+                    <span class="pulse-ring"></span>
+                    <i class="fas fa-exclamation"></i>
+                    <div class="analysis-tooltip">
+                      <strong>Incohérence API :</strong><br/>
+                      Le code d'authentification et le numéro d'agrément ne correspondent à aucune déclaration légale enregistrée auprès de l'URSSAF.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demo Selector Buttons -->
+            <div class="demo-selector-bar mt-24">
+              <h4 class="text-sm font-bold text-muted uppercase mb-12">Sélectionnez un cas de démonstration :</h4>
+              <div class="demo-buttons-grid">
+                <button class="btn-demo-selector case-fraud" id="btn-case-fraud">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <div>
+                    <strong>Faux Dossier (Luc B.)</strong>
+                    <span>Bulletin de paie falsifié</span>
+                  </div>
+                </button>
+                <button class="btn-demo-selector case-success" id="btn-case-success-marie">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <strong>Dossier Conforme (Marie D.)</strong>
+                    <span>Bulletin certifié conforme</span>
+                  </div>
+                </button>
+                <button class="btn-demo-selector case-success" id="btn-case-success-jean">
+                  <i class="fas fa-check-circle"></i>
+                  <div>
+                    <strong>Avis d'impôt (Jean P.)</strong>
+                    <span>Avis fiscal vérifié DGFIP</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: The Scan Report & Console Logs -->
+          <div class="scanner-sidebar-panel">
+            <!-- Terminal Console Logs (Active while scanning) -->
+            <div class="console-box" id="scan-console">
+              <div class="console-header">
+                <span class="console-dot red"></span>
+                <span class="console-dot yellow"></span>
+                <span class="console-dot green"></span>
+                <span class="console-title">Cautioneo Secure Engine v3.1</span>
+              </div>
+              <div class="console-body" id="console-logs-container">
+                <div class="log-line system-msg">> Console prête. Sélectionnez un scénario pour démarrer l'audit.</div>
+              </div>
+            </div>
+
+            <!-- Report Results Card (Fills when scan completes) -->
+            <div class="report-panel" id="report-result-card">
+              <!-- Empty state -->
+              <div class="report-empty-state" id="report-empty">
+                <i class="fas fa-file-signature text-muted"></i>
+                <h3 class="text-md font-bold text-main mt-16">Aucun diagnostic disponible</h3>
+                <p class="text-sm text-muted">Lancez une analyse interactive à gauche pour éditer le rapport de sécurité.</p>
+              </div>
+
+              <!-- Diagnostic Result -->
+              <div class="report-content" id="report-data" style="display: none;">
+                <div class="verdict-banner mb-24" id="report-verdict-banner">
+                  <div class="verdict-score-circular" id="report-score-circle">12%</div>
+                  <div class="verdict-meta">
+                    <h3 class="text-lg font-bold mb-4" id="report-verdict-title">Falsification Détectée !</h3>
+                    <span class="verdict-badge" id="report-verdict-badge">Niveau de risque maximal</span>
+                  </div>
+                </div>
+
+                <div class="report-summary-box mb-24">
+                  <h4 class="text-sm font-bold uppercase text-muted mb-12">Informations Générales</h4>
+                  <div class="summary-details">
+                    <div><span>Candidat :</span> <strong id="rep-info-candidate">Luc Belmont</strong></div>
+                    <div><span>Document :</span> <strong id="rep-info-doc">Bulletin de paie - Mars 2026</strong></div>
+                    <div><span>Vérification :</span> <strong id="rep-info-status">Analysé par AIO Scanner</strong></div>
+                  </div>
+                </div>
+
+                <div class="report-checks-list mb-24">
+                  <h4 class="text-sm font-bold uppercase text-muted mb-12">Points de Contrôle Algorithmiques</h4>
+                  <ul class="checks-ul" id="report-checks-list-ul">
+                    <!-- Checks injected via JS -->
+                  </ul>
+                </div>
+
+                <div class="report-instructions-box" id="report-instructions">
+                  <i class="fas fa-info-circle text-primary"></i>
+                  <p class="text-xs">
+                    <strong>Note de l'analyste :</strong> Passez votre curseur sur les pastilles de signalement rouges sur le document pour inspecter les preuves de manipulation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner CTA Bailleurs -->
+        <div class="mt-48 p-40 bg-dark text-white border-radius-20 text-center relative-overflow" data-reveal="fade-up">
+          <div class="badge badge-accent mb-16">Garantie Loyers Impayés</div>
+          <h2 class="text-3xl mb-16 text-white">Sécurisez votre investissement locatif avec Cautioneo</h2>
+          <p class="text-lg opacity-80 mb-32 max-w-700 mx-auto">
+            Ne risquez plus de louer avec de faux justificatifs. Notre technologie certifie automatiquement vos locataires, et nous couvrons vos loyers jusqu'à 96 000 € sans franchise.
+          </p>
+          <div class="cta-button-group">
+            <a class="btn btn-white mr-16" href="https://caut.io/Ffr6hkV" target="_blank" title="S'inscrire sur Cautioneo">Créer mon Espace Bailleur</a>
+            <a class="btn btn-white-outline" href="/comparatif-gli" title="En savoir plus sur nos garanties">Voir les garanties</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  /* Base Layout structures */
+  .scanner-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  @media (max-width: 1024px) {
+    .scanner-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scanner-main-panel, .scanner-sidebar-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-header-custom {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: none;
+    padding: 24px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 20px -2px rgba(108, 92, 231, 0.03);
+  }
+
+  .status-indicator-idle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+  
+  .status-indicator-scanning {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    animation: flashIndicator 1.5s infinite;
+  }
+
+  @keyframes flashIndicator {
+    0% { opacity: 0.7; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.7; transform: scale(0.98); }
+  }
+
+  /* Viewport and Box */
+  .scanner-box-wrapper {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 0 0 20px 20px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(108, 92, 231, 0.04), 0 10px 10px -5px rgba(108, 92, 231, 0.02);
+  }
+
+  .scanner-box {
+    width: 100%;
+    height: 560px;
+    background: radial-gradient(circle at center, #111827 0%, #030712 100%);
+    background-image: radial-gradient(circle at center, rgba(108, 92, 231, 0.08) 0%, rgba(3, 7, 18, 0) 80%),
+                      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8), 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scanner-box.scanning {
+    border-color: rgba(108, 92, 231, 0.35);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(108, 92, 231, 0.2);
+  }
+
+  /* Viewfinder corner brackets for high tech styling */
+  .scanner-box::before {
+    content: '';
+    position: absolute;
+    top: 16px; left: 16px; right: 16px; bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    border-radius: 12px;
+  }
+
+  /* Corner tech decos */
+  .scanner-box::after {
+    content: '';
+    position: absolute;
+    top: 24px; left: 24px; width: 16px; height: 16px;
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+  }
+  
+  .scanner-box-wrapper {
+    position: relative;
+  }
+
+  .scanner-box-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 40px; right: 40px; width: 16px; height: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Scan Laser Line */
+  .scan-laser {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent 5%, #00f2fe 20%, #6c5ce7 50%, #00f2fe 80%, transparent 95%);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8), 0 0 30px rgba(108, 92, 231, 0.6);
+    z-index: 5;
+    animation: laserScan 3s infinite ease-in-out;
+  }
+
+  @keyframes laserScan {
+    0% { top: 4%; }
+    50% { top: 94%; }
+    100% { top: 4%; }
+  }
+
+  /* Idle Uploader Prompt */
+  .upload-prompt {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 420px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .upload-prompt:hover {
+    border-color: rgba(108, 92, 231, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
+  }
+
+  .prompt-icon {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #00f2fe 0%, #6c5ce7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    opacity: 0.95;
+    animation: pulseIcon 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pulseIcon {
+    0% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 0px rgba(108,92,231,0)); }
+    50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 8px rgba(108,92,231,0.3)); }
+    100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 0px rgba(108,92,231,0)); }
+  }
+
+  /* Document Mockups */
+  .document-mockup {
+    width: 86%;
+    height: 86%;
+    background: #ffffff;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow-y: auto;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 0.75rem;
+    color: #1e293b;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fadeInDoc 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Custom scrollbar for mockup document */
+  .document-mockup::-webkit-scrollbar {
+    width: 6px;
+  }
+  .document-mockup::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .document-mockup::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  @keyframes fadeInDoc {
+    from { opacity: 0; transform: scale(0.96) translateY(12px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* Payroll sheet specifics */
+  .payroll-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  .company-logo-mock {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a8a5e6 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.2);
+  }
+  .company-logo-mock::after {
+    content: 'D';
+  }
+
+  .company-info-mock {
+    font-size: 0.68rem;
+    flex-grow: 1;
+    margin-left: 14px;
+    line-height: 1.4;
+    color: #475569;
+  }
+
+  .payroll-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #0f172a;
+  }
+
+  .payroll-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+  }
+
+  .payroll-meta-grid div {
+    color: #475569;
+    font-size: 0.72rem;
+  }
+
+  .payroll-meta-grid div strong {
+    color: #0f172a;
+  }
+
+  .payroll-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .payroll-table th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .payroll-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.7rem;
+    color: #334155;
+  }
+
+  .payroll-table tr.highlighted-row {
+    background: rgba(108, 92, 231, 0.04);
+    border-top: 1px solid rgba(108, 92, 231, 0.12);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.12);
+  }
+
+  .payroll-table tr.highlighted-row td {
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .payroll-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+
+  .footer-sign {
+    font-weight: 500;
+  }
+
+  .footer-stamp {
+    background: rgba(16, 185, 129, 0.08);
+    color: #10b981;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+  }
+
+  /* Tax sheet specifics */
+  .tax-sheet {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tax-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    color: #0f172a;
+  }
+
+  .tax-header div:first-child {
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    border: 1px solid #0f172a;
+    padding: 4px 8px;
+  }
+
+  .tax-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: right;
+    max-width: 250px;
+    line-height: 1.3;
+  }
+
+  .tax-ref-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    font-size: 0.72rem;
+  }
+
+  .tax-ref-grid div {
+    color: #475569;
+  }
+
+  .tax-ref-grid div strong {
+    color: #0f172a;
+  }
+
+  .tax-income-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 16px;
+  }
+
+  .tax-income-box .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tax-income-box .py-8 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tax-income-box .border-bottom {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .tax-income-box span {
+    color: #475569;
+    font-size: 0.72rem;
+  }
+
+  .tax-income-box strong {
+    color: #0f172a;
+    font-size: 0.75rem;
+  }
+
+  .tax-income-box .highlighted-row {
+    background: rgba(108, 92, 231, 0.04);
+    border: 1px solid rgba(108, 92, 231, 0.12);
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+  }
+
+  .tax-income-box .highlighted-row span {
+    font-weight: 700;
+    color: #6c5ce7;
+  }
+
+  .tax-income-box .highlighted-row strong {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #6c5ce7;
+  }
+
+  /* Hotspots / Analysis Dots overlay */
+  .analysis-dot {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4), 0 0 0 8px rgba(239, 68, 68, 0.15);
+    animation: hotspotPulse 2s infinite;
+  }
+
+  @keyframes hotspotPulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6), 0 0 0 6px rgba(239, 68, 68, 0.2);
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(239, 68, 68, 0), 0 0 0 16px rgba(239, 68, 68, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+  }
+
+  .analysis-dot:hover {
+    transform: scale(1.2) rotate(90deg);
+    background: #dc2626;
+  }
+
+  .dot-salary {
+    top: 59%;
+    right: 8%;
+  }
+
+  .dot-logo {
+    top: 6%;
+    left: 6%;
+  }
+
+  .dot-stamp {
+    bottom: 4%;
+    right: 8%;
+  }
+
+  /* Tooltips */
+  .analysis-tooltip {
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 280px;
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.45;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 100;
+  }
+
+  .analysis-tooltip strong {
+    color: #f87171;
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .analysis-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(15, 23, 42, 0.96) transparent transparent transparent;
+  }
+
+  .analysis-dot:hover .analysis-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Demo selectors */
+  .demo-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  @media (max-width: 640px) {
+    .demo-buttons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .btn-demo-selector {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 16px;
+    padding: 16px 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+  }
+
+  .btn-demo-selector i {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-demo-selector.case-fraud i { color: #f87171; }
+  .btn-demo-selector.case-success i { color: #10b981; }
+
+  .btn-demo-selector:hover {
+    border-color: rgba(108, 92, 231, 0.25);
+    background: #fbfbfe;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px -8px rgba(108, 92, 231, 0.08);
+  }
+
+  .btn-demo-selector:hover i {
+    transform: scale(1.15);
+  }
+
+  .btn-demo-selector.active {
+    border-color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.03);
+    box-shadow: 0 0 0 2px #6c5ce7, 0 8px 24px rgba(108, 92, 231, 0.1);
+  }
+
+  .btn-demo-selector.active strong {
+    color: #6c5ce7;
+  }
+
+  .btn-demo-selector strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .btn-demo-selector span {
+    font-size: 0.72rem;
+    color: #64748b;
+    margin-top: 2px;
+    display: block;
+  }
+
+  /* Console logs panel */
+  .console-box {
+    background: #090d16;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15);
+    margin-bottom: 24px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.76rem;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .console-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .console-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+
+  .console-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .console-dot.red { background: #f87171; }
+  .console-dot.yellow { background: #fbbf24; }
+  .console-dot.green { background: #34d399; }
+
+  .console-title {
+    color: rgba(255, 255, 255, 0.35);
+    margin-left: 8px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .console-body {
+    max-height: 140px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .console-body::-webkit-scrollbar {
+    width: 4px;
+  }
+  .console-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .log-line {
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+  .log-line.system-msg { color: #64748b; }
+  .log-line.running-msg { color: #38bdf8; }
+  .log-line.success-msg { color: #34d399; text-shadow: 0 0 4px rgba(52,211,153,0.2); }
+  .log-line.alert-msg { color: #f87171; font-weight: 500; text-shadow: 0 0 4px rgba(248,113,113,0.2); }
+
+  /* Report Panel */
+  .report-panel {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 25px -5px rgba(108, 92, 231, 0.03), 0 10px 10px -5px rgba(108, 92, 231, 0.01);
+    flex-grow: 1;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .report-empty-state {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .report-empty-state i {
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .report-content {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Verdict Banner */
+  .verdict-banner {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 14px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .verdict-banner.fake {
+    background: #fef2f2;
+    border-color: #fca5a5;
+  }
+  
+  .verdict-banner.success {
+    background: #f0fdf4;
+    border-color: #86efac;
+  }
+
+  .verdict-score-circular {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .verdict-banner.fake .verdict-score-circular {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  }
+  
+  .verdict-banner.success .verdict-score-circular {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  }
+
+  .verdict-meta {
+    flex-grow: 1;
+  }
+
+  .verdict-meta h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+  }
+
+  .verdict-banner.fake h3 { color: #991b1b; }
+  .verdict-banner.success h3 { color: #166534; }
+
+  .verdict-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  
+  .verdict-banner.fake .verdict-badge { color: #ef4444; }
+  .verdict-banner.success .verdict-badge { color: #10b981; }
+
+  /* Summary Box */
+  .report-summary-box {
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .report-summary-box h4, .report-checks-list h4 {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #64748b;
+  }
+
+  .summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.82rem;
+    margin-top: 10px;
+  }
+
+  .summary-details div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .summary-details span {
+    color: #64748b;
+  }
+
+  .summary-details strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* Checks checklist */
+  .checks-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .checks-ul li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.82rem;
+    align-items: flex-start;
+    line-height: 1.45;
+    transition: transform 0.2s ease;
+  }
+  
+  .checks-ul li:hover {
+    transform: translateX(2px);
+  }
+
+  .checks-ul li i {
+    font-size: 1.1rem;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  .checks-ul li.check-success i { color: #10b981; }
+  .checks-ul li.check-fail i { color: #ef4444; }
+  .checks-ul li strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+  .checks-ul li span {
+    color: #475569;
+  }
+
+  .report-instructions-box {
+    background: rgba(108, 92, 231, 0.04);
+    border-left: 4px solid #6c5ce7;
+    padding: 16px;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border-top: 1px solid rgba(108, 92, 231, 0.05);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.05);
+    border-right: 1px solid rgba(108, 92, 231, 0.05);
+  }
+
+  .report-instructions-box i {
+    color: #6c5ce7;
+    font-size: 1.15rem;
+    margin-top: 1px;
+  }
+
+  .report-instructions-box p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  .relative-overflow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-button-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Selectors
+    const btnCaseFraud = document.getElementById('btn-case-fraud');
+    const btnCaseSuccessMarie = document.getElementById('btn-case-success-marie');
+    const btnCaseSuccessJean = document.getElementById('btn-case-success-jean');
+    const uploaderInput = document.getElementById('file-uploader');
+
+    const viewPort = document.getElementById('scanner-viewport');
+    const promptIdle = document.getElementById('prompt-idle');
+    const docMockup = document.getElementById('document-mockup-view');
+    const sheetPayroll = document.getElementById('sheet-payroll');
+    const sheetTax = document.getElementById('sheet-tax');
+    const laserLine = document.getElementById('laser-line');
+    
+    // Status text label
+    const statusLabel = document.getElementById('scanner-status-label');
+
+    // Hotspots
+    const hotspotSalary = document.getElementById('hotspot-salary');
+    const hotspotLogo = document.getElementById('hotspot-logo');
+    const hotspotStamp = document.getElementById('hotspot-stamp');
+    const hotspots = [hotspotSalary, hotspotLogo, hotspotStamp];
+
+    // Report
+    const reportEmpty = document.getElementById('report-empty');
+    const reportData = document.getElementById('report-data');
+    const reportScoreCircle = document.getElementById('report-score-circle');
+    const reportVerdictBanner = document.getElementById('report-verdict-banner');
+    const reportVerdictTitle = document.getElementById('report-verdict-title');
+    const reportVerdictBadge = document.getElementById('report-verdict-badge');
+    const repInfoCandidate = document.getElementById('rep-info-candidate');
+    const repInfoDoc = document.getElementById('rep-info-doc');
+    const repChecksList = document.getElementById('report-checks-list-ul');
+    const reportInstructions = document.getElementById('report-instructions');
+
+    // Logs Console
+    const consoleContainer = document.getElementById('console-logs-container');
+
+    // Sound alert support or log helpers
+    function clearLogs() {
+      consoleContainer.innerHTML = '';
+    }
+
+    function addLog(text, type = 'system-msg') {
+      const line = document.createElement('div');
+      line.className = `log-line ${type}`;
+      line.textContent = `[${new Date().toLocaleTimeString()}] ${text}`;
+      consoleContainer.appendChild(line);
+      consoleContainer.scrollTop = consoleContainer.scrollHeight;
+    }
+
+    // Interactive Scenario Runner
+    function runDiagnostic(scenario) {
+      // Set active selectors styling
+      btnCaseFraud.classList.remove('active');
+      btnCaseSuccessMarie.classList.remove('active');
+      btnCaseSuccessJean.classList.remove('active');
+
+      if (scenario === 'fraud') btnCaseFraud.classList.add('active');
+      if (scenario === 'marie') btnCaseSuccessMarie.classList.add('active');
+      if (scenario === 'jean') btnCaseSuccessJean.classList.add('active');
+
+      // Clear report state and show loading
+      reportData.style.display = 'none';
+      reportEmpty.style.display = 'block';
+      reportEmpty.innerHTML = `
+        <div class="text-center py-40">
+          <i class="fas fa-spinner fa-spin text-primary" style="font-size: 2.5rem;"></i>
+          <h3 class="text-md font-bold mt-16 text-main">Analyse AIO en cours...</h3>
+          <p class="text-xs text-muted mt-8">Exécution des modèles prédictifs et vérification des bases gouvernementales.</p>
+        </div>
+      `;
+
+      // Set scanning classes
+      viewPort.classList.add('scanning');
+      statusLabel.className = 'status-indicator-scanning';
+      statusLabel.textContent = 'Analyse en cours...';
+      promptIdle.style.display = 'none';
+      docMockup.style.display = 'none';
+      
+      // Hide hotspots
+      hotspots.forEach(dot => dot.style.display = 'none');
+
+      clearLogs();
+      addLog('Initialisation du moteur de détection de faux documents...', 'system-msg');
+
+      setTimeout(() => {
+        // Step 1
+        addLog('Fichier chargé avec succès dans le viewport sécurisé.', 'running-msg');
+        // Render document type mockups
+        docMockup.style.display = 'block';
+        if (scenario === 'fraud' || scenario === 'marie') {
+          sheetPayroll.style.display = 'block';
+          sheetTax.style.display = 'none';
+          document.getElementById('mock-tenant-name').textContent = scenario === 'fraud' ? 'Luc BELMONT' : 'Marie DUPONT';
+          document.getElementById('mock-net-salary').textContent = scenario === 'fraud' ? '4 200.00 €' : '3 100.00 €';
+        } else {
+          sheetPayroll.style.display = 'none';
+          sheetTax.style.display = 'block';
+        }
+      }, 600);
+
+      setTimeout(() => {
+        // Step 2
+        addLog('Extraction OCR et analyse textuelle des caractères...', 'running-msg');
+      }, 1200);
+
+      setTimeout(() => {
+        // Step 3
+        if (scenario === 'fraud') {
+          addLog('Alerte : Différence de police détectée sur la ligne "NET A PAYER".', 'alert-msg');
+          addLog('Alerte : Anomalie métadonnées - Édition Adobe Photoshop détectée.', 'alert-msg');
+        } else {
+          addLog('Analyse structurelle et alignement des polices : 100% Cohérent.', 'success-msg');
+        }
+      }, 1800);
+
+      setTimeout(() => {
+        // Step 4
+        addLog('Appel API DGFIP pour rapprochement fiscal...', 'running-msg');
+      }, 2400);
+
+      setTimeout(() => {
+        // Step 5
+        if (scenario === 'fraud') {
+          addLog('Alerte : Numéro fiscal non concordant ou inexistant.', 'alert-msg');
+          addLog('Audit terminé. Score de sécurité critique détecté.', 'alert-msg');
+        } else {
+          addLog('Rapprochement fiscal : Conforme aux déclarations nationales.', 'success-msg');
+          addLog('Audit terminé avec succès. Aucune altération détectée.', 'success-msg');
+        }
+
+        // Finish scan
+        viewPort.classList.remove('scanning');
+        statusLabel.className = 'status-indicator-idle';
+        statusLabel.textContent = 'Diagnostic achevé';
+
+        // Render report
+        renderReportResult(scenario);
+      }, 3200);
+    }
+
+    function renderReportResult(scenario) {
+      reportEmpty.style.display = 'none';
+      reportData.style.display = 'block';
+
+      if (scenario === 'fraud') {
+        // Verdict styling
+        reportVerdictBanner.className = 'verdict-banner fake mb-24';
+        reportScoreCircle.textContent = '12%';
+        reportVerdictTitle.textContent = 'Falsification Détectée !';
+        reportVerdictBadge.textContent = 'Risque de fraude maximal';
+
+        // Info details
+        repInfoCandidate.textContent = 'Luc Belmont';
+        repInfoDoc.textContent = 'Bulletin de paie - Mars 2026';
+        repInfoStatus.textContent = 'Rejeté par l\'algorithme';
+
+        // Show hotspots on preview
+        hotspots.forEach(dot => dot.style.display = 'flex');
+
+        // Checks list
+        repChecksList.innerHTML = `
+          <li class="check-fail">
+            <i class="fas fa-times-circle"></i>
+            <span><strong>Intégrité PDF :</strong> Retouche graphique détectée par ELA (Error Level Analysis) sur le salaire net.</span>
+          </li>
+          <li class="check-fail">
+            <i class="fas fa-times-circle"></i>
+            <span><strong>Vérification Employeur :</strong> L'entreprise DUMONT SAS a été signalée fermée depuis 2024.</span>
+          </li>
+          <li class="check-fail">
+            <i class="fas fa-times-circle"></i>
+            <span><strong>Rapprochement DGFIP :</strong> Les revenus mensuels réels déclarés sont inférieurs à 1 500 € (vs 4 200 € déclarés).</span>
+          </li>
+        `;
+        reportInstructions.style.display = 'flex';
+
+      } else if (scenario === 'marie') {
+        // Verdict styling
+        reportVerdictBanner.className = 'verdict-banner success mb-24';
+        reportScoreCircle.textContent = '100%';
+        reportVerdictTitle.textContent = 'Document Conforme';
+        reportVerdictBadge.textContent = 'Certifié sans altération';
+
+        // Info details
+        repInfoCandidate.textContent = 'Marie Dupont';
+        repInfoDoc.textContent = 'Bulletin de paie - Mars 2026';
+        repInfoStatus.textContent = 'Certifié Conforme';
+
+        // Checks list
+        repChecksList.innerHTML = `
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Intégrité PDF :</strong> Aucun outil d'édition graphique détecté dans les métadonnées de création.</span>
+          </li>
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Vérification Employeur :</strong> Société active. Siret et effectifs vérifiés sur base INSEE.</span>
+          </li>
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Rapprochement DGFIP :</strong> Rapprochement bancaire et fiscal valide pour 3 100 € nets.</span>
+          </li>
+        `;
+        reportInstructions.style.display = 'none';
+
+      } else if (scenario === 'jean') {
+        // Verdict styling
+        reportVerdictBanner.className = 'verdict-banner success mb-24';
+        reportScoreCircle.textContent = '99%';
+        reportVerdictTitle.textContent = 'Avis Fiscal Validé';
+        reportVerdictBadge.textContent = 'Authentifié via DGFIP API';
+
+        // Info details
+        repInfoCandidate.textContent = 'Jean Petit';
+        repInfoDoc.textContent = 'Avis d\'impôt sur le revenu - 2025';
+        repInfoStatus.textContent = 'Authenticité confirmée';
+
+        // Checks list
+        repChecksList.innerHTML = `
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Validation Numéro Fiscal :</strong> Foyer fiscal trouvé pour Jean Petit, marié, 1 part.</span>
+          </li>
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Montant Déclaré :</strong> Le montant de 35 410 € du Revenu Fiscal de Référence est certifié conforme par la DGFIP.</span>
+          </li>
+          <li class="check-success">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Code 2D-Doc / QR-Code :</strong> Signature cryptographique 2D-Doc validée officiellement.</span>
+          </li>
+        `;
+        reportInstructions.style.display = 'none';
+      }
+    }
+
+    // Trigger demo cases
+    btnCaseFraud.addEventListener('click', () => runDiagnostic('fraud'));
+    btnCaseSuccessMarie.addEventListener('click', () => runDiagnostic('marie'));
+    btnCaseSuccessJean.addEventListener('click', () => runDiagnostic('jean'));
+
+    // Custom File Uploader Mocking
+    uploaderInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        // Trigger simulated scan for their custom file
+        btnCaseFraud.classList.remove('active');
+        btnCaseSuccessMarie.classList.remove('active');
+        btnCaseSuccessJean.classList.remove('active');
+
+        reportData.style.display = 'none';
+        reportEmpty.style.display = 'block';
+        reportEmpty.innerHTML = `
+          <div class="text-center py-40">
+            <i class="fas fa-spinner fa-spin text-primary" style="font-size: 2.5rem;"></i>
+            <h3 class="text-md font-bold mt-16 text-main">Analyse de votre fichier...</h3>
+            <p class="text-xs text-muted mt-8">Exécution des modèles prédictifs et vérification des bases gouvernementales.</p>
+          </div>
+        `;
+
+        viewPort.classList.add('scanning');
+        statusLabel.className = 'status-indicator-scanning';
+        statusLabel.textContent = 'Analyse en cours...';
+        promptIdle.style.display = 'none';
+        docMockup.style.display = 'none';
+        hotspots.forEach(dot => dot.style.display = 'none');
+
+        clearLogs();
+        addLog(`Importation du fichier : ${file.name} (${(file.size / 1024).toFixed(1)} Ko)...`, 'system-msg');
+        
+        setTimeout(() => {
+          addLog('Calcul de l\'empreinte SHA-256 du fichier...', 'running-msg');
+        }, 800);
+
+        setTimeout(() => {
+          addLog('Analyse OCR : Extraction des textes et identification des blocs...', 'running-msg');
+        }, 1600);
+
+        setTimeout(() => {
+          addLog('Détection des métadonnées de modification graphique...', 'running-msg');
+        }, 2400);
+
+        setTimeout(() => {
+          // Finish Custom Scan
+          viewPort.classList.remove('scanning');
+          statusLabel.className = 'status-indicator-idle';
+          statusLabel.textContent = 'Vérification achevée';
+
+          reportEmpty.style.display = 'none';
+          reportData.style.display = 'block';
+
+          // Verdict Conforme Standard
+          reportVerdictBanner.className = 'verdict-banner success mb-24';
+          reportScoreCircle.textContent = '98%';
+          reportVerdictTitle.textContent = 'Fichier Conforme';
+          reportVerdictBadge.textContent = 'Aucune retouche visible';
+
+          repInfoCandidate.textContent = 'Candidat';
+          repInfoDoc.textContent = file.name;
+          repInfoStatus.textContent = 'Fichier analysé';
+
+          repChecksList.innerHTML = `
+            <li class="check-success">
+              <i class="fas fa-check-circle"></i>
+              <span><strong>Métadonnées :</strong> Fichier intègre. Aucune trace d'édition graphique majeure détectée.</span>
+            </li>
+            <li class="check-success">
+              <i class="fas fa-check-circle"></i>
+              <span><strong>Structure :</strong> La mise en page et les polices correspondent aux standards de l'émetteur.</span>
+            </li>
+            <li class="check-success">
+              <i class="fas fa-info-circle text-primary"></i>
+              <span><strong>Validation Cautioneo :</strong> Pour activer la garantie contre les impayés, les originaux seront certifiés officiellement lors du dépôt final du dossier.</span>
+            </li>
+          `;
+          reportInstructions.style.display = 'none';
+
+          addLog('Fichier valide en première lecture. En attente de certification définitive.', 'success-msg');
+        }, 3200);
+      }
+    });
+
+    // Auto-run first scenario on load to show it in action!
+    setTimeout(() => {
+      runDiagnostic('fraud');
+    }, 500);
+  });
+</script>
