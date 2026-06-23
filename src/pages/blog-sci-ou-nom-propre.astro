@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Si vous recherchez une optimisation fiscale immédiate et à court terme, l\'achat en nom propre au statut LMNP (régime réel) est souvent le plus puissant grâce au mécanisme de l\'amortissement comptable du mobilier et des murs. Pour un projet patrimonial à long terme destiné à être transmis à vos enfants, la SCI à l\'IS est imbattable. Pour approfondir, lisez notre analyse du LMNP régime réel."
   }
 ];
+const pageKeywords = "investir, gestion locative, sci ou nom propre, comparatif, propre";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
         <p>Pour en savoir plus sur les choix fiscaux en SCI, découvrez notre guide complet : <a href="/blog-sci-ir-vs-sci-is-gli">SCI IR vs SCI IS : quel régime choisir pour la GLI ?</a></p>
     

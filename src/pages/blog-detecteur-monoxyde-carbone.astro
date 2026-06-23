@@ -30,9 +30,10 @@ const faqItems = [
     answer: "C'est au locataire d'assurer l'entretien courant du détecteur (dépoussiérage, remplacement régulier des piles) et de vérifier son bon fonctionnement en appuyant sur le bouton de test au moins une fois par mois."
   }
 ];
+const pageKeywords = "detecteur monoxyde carbone, gestion locative, détecteur, monoxyde, carbone";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Sécurité & Diagnostics</span>

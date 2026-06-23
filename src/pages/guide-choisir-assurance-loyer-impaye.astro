@@ -25,9 +25,10 @@ const faqItems = [
     answer: "Oui, si vous déclarez vos revenus fonciers au régime réel, les cotisations d'assurance loyer impayé sont 100% déductibles."
   }
 ];
+const pageKeywords = "regle 33 loyer, assurance, tarif assurance gli, loyer salaire, garantie loyers impayes, capacite locative";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">

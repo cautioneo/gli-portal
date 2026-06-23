@@ -29,9 +29,10 @@ const faqItems = [
     answer: "Pour éviter le questionnaire de santé, la part assurée par personne doit être inférieure ou égale à 200 000 € (cumul de 400 000 € pour un couple co-emprunteur) et le remboursement complet du prêt doit intervenir avant le 60ème anniversaire de l'assuré."
   }
 ];
+const pageKeywords = "loi lemoine assurance emprunteur, assurance, tarif assurance gli, lemoine, garantie loyers impayes, économisez";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">

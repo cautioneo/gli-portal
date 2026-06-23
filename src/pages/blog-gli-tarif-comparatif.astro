@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Oui, les primes d'assurance loyers impayés (GLI) sont entièrement déductibles de vos revenus fonciers au régime réel (ligne 227 de la déclaration 2044). Cela permet de réduire significativement le coût net réel de votre assurance."
   }
 ];
+const pageKeywords = "assurance, tarif, tarif assurance gli, gli tarif comparatif, garantie loyers impayes, assurance loyer impaye";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<main>
   <!-- Hero -->

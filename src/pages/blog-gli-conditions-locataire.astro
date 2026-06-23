@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Si l\'assureur découvre lors de la déclaration de sinistre que le locataire a fourni de faux documents (bulletins de paie ou avis d\'imposition falsifiés) et que le propriétaire n\'a pas pris le soin de vérifier leur authenticité auprès des impôts ou de l\'employeur, l\'indemnisation sera refusée. C\'est pourquoi déléguer la certification du dossier à Cautioneo élimine ce risque grâce aux technologies anti-fraude."
   }
 ];
+const pageKeywords = "tarif assurance gli, gli conditions locataire, garantie loyers impayes, remplir, conditions, assurance loyer impaye";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

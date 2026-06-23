@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Non, c\'est formellement interdit et passible de poursuites pour expulsion illégale. Même si le squatteur s\'est absenté temporairement pour faire des courses, le logement reste considéré comme son domicile de fait. Seule la force publique, munie de l\'autorisation préfectorale ou d\'un titre exécutoire de justice, est habilitée à pénétrer de force et à changer les serrures."
   }
 ];
+const pageKeywords = "gestion locative, comment expulser squatteur, légalement, squatteur, expulser";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

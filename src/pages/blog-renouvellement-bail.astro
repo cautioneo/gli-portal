@@ -35,9 +35,10 @@ const faqItems = [
     answer: "La révision du loyer à l\'IRL n\'est pas automatique. Elle doit être expressément réclamée par le bailleur, par écrit, à la date anniversaire du bail. Si le bailleur oublie de la réclamer, il perd définitivement le bénéfice de la révision pour l\'année écoulée. De plus, certaines interprétations jurisprudentielles limitent le rattrapage à 1 an en arrière. Ne laissez pas s\'accumuler des révisions non réclamées."
   }
 ];
+const pageKeywords = "augmentation, gestion locative, renouvellement bail, renouvellement, conditions";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
 

@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Avec Visale, les démarches administratives de déclaration de sinistre incombent au bailleur via une plateforme institutionnelle. Avec Cautioneo, en cas d'impayé, vous effectuez une déclaration simple depuis votre Dashboard Zéro Paperasse et l'équipe d'experts juridiques prend immédiatement le relais, souvent avec un versement des loyers dès le premier jour prévu."
   },
 ];
+const pageKeywords = "visale, eligibilite visale, visale vs cautioneo, cautioneo, comparatif, garantie visale";
 ---
 
-<Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
+<Layout faqItems={faqItems} keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container">

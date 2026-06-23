@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Attention : Une SCI à l\'IR ne peut pas faire de location meublée habituelle sous peine d\'être requalifiée d\'office à l\'impôt sur les sociétés (IS). Si votre SCI fait de la location meublée, elle est obligatoirement soumise à l\'IS. La prime de GLI y sera alors déduite en tant que charge d\'exploitation dans vos frais généraux."
   }
 ];
+const pageKeywords = "sci ir vs sci is gli, déduction, impact, cautioneo, tarif assurance gli, garantie loyers impayes";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

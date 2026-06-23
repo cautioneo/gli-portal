@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Oui, la quasi-totalité des contrats d\'Assurance Loyer Impayé intègrent une garantie « Protection Juridique / Recouvrement » qui prend en charge 100% des frais de commissaire de justice (huissier), d\'avocat et de procédure judiciaire d\'expulsion, sous réserve de validation préalable par l\'assureur."
   }
 ];
+const pageKeywords = "gli sinistre declaration, tarif assurance gli, déclarer, garantie loyers impayes, sinistre, assurance loyer impaye";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

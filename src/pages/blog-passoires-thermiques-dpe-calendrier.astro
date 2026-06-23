@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Plusieurs aides sont disponibles : MaPrimeRénov\' (principale aide de l\'État), l\'Eco-PTZ (prêt à taux zéro pour la rénovation), les aides des fournisseurs d\'énergie (CEE), et les subventions locales. Le cumul de ces aides peut couvrir jusqu\'à 70% du coût des travaux pour les ménages aux revenus modestes."
   }
 ];
+const pageKeywords = "passoires thermiques dpe calendrier, calendrier, location, gestion locative, interdictions";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

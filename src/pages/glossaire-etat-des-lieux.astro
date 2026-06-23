@@ -10,9 +10,10 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Glossaire : Etat Des Lieux" }
 ];
+const pageKeywords = "glossaire, gestion locative, etat des lieux, lieux, définition";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<header class="page-hero" data-reveal="fade-up">
 <div class="container text-center">
 <div class="badge mb-16">Glossaire Jurisprudentiel</div>

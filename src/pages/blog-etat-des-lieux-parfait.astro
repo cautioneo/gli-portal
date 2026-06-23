@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Oui, si le logement n\'est pas rendu dans un état de propreté satisfaisant, vous pouvez retenir les frais de ménage sur le dépôt de garantie, à condition de fournir une facture de prestataire (pas une estimation au doigt mouillé). Il est recommandé de toujours joindre une facture ou un devis de professionnel pour justifier toute retenue."
   }
 ];
+const pageKeywords = "parfait, gestion locative, lieux, sortie, etat des lieux parfait";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Gestion Locative</span>

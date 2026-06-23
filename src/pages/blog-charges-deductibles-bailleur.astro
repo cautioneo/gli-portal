@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Chaque année en amont de votre déclaration d\'impôts, Cautioneo vous transmet une attestation de cotisations acquittées récapitulant toutes les sommes payées. Conservez ce document pour le présenter en cas de demande de l\'administration fiscale."
   }
 ];
+const pageKeywords = "gestion locative, charges, déductibles, toutes, charges deductibles bailleur";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

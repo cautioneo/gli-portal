@@ -25,9 +25,10 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Comparatif GLI" }
 ];
+const pageKeywords = "visale, cautioneo, tarif assurance gli, comparatif gli, garantie loyers impayes, comparatif";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",

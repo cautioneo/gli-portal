@@ -31,9 +31,10 @@ const faqItems = [
     answer: "Oui, un locataire peut refuser de fournir des documents qui ne figurent pas dans la liste légale (décret 2015-1437). En revanche, si le candidat refuse de fournir des documents légalement exigibles (pièce d\'identité, bulletins de paie, avis d\'imposition, contrat de travail), cela constitue un motif légitime de refus de la candidature. Dans ce cas, vous devez simplement informer le candidat par écrit que son dossier est incomplet et ne peut être traité."
   }
 ];
+const pageKeywords = "dossier location parfait, location, authentification dossier, verifier dossier locataire, dossier, vérifier";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
     

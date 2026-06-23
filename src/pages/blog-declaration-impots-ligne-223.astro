@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Non. Le régime micro-foncier applique un abattement forfaitaire représentatif de charges de 30 % sur vos loyers bruts. Vous ne pouvez donc déduire aucune charge pour sa valeur réelle. Pour pouvoir déduire vos primes d\'assurances sur la ligne 223, vous devez obligatoirement opter pour le régime réel d\'imposition (option globale et irrévocable pendant 3 ans)."
   }
 ];
+const pageKeywords = "declaration impots ligne 223, impôts, gestion locative, déclarer, ligne";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

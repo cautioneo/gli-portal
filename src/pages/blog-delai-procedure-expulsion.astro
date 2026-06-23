@@ -25,9 +25,10 @@ const faqItems = [
     answer: "Oui, la GLI couvre les loyers impayés pendant toute la durée de la procédure d'expulsion, sous réserve du délai de carence initial (en général 3 mois). La couverture s'étend jusqu'à la libération effective du logement."
   }
 ];
+const pageKeywords = "delai expulsion squatteur, locataire, procedure expulsion locataire, delai procedure expulsion, expulsion, loi anti squat 2026";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1589391886645-d51941baf7fb.webp');">

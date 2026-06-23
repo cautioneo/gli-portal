@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Cela dépend des conditions du contrat de GLI. Chez Cautioneo, les baux étudiants de 9 mois sont éligibles à la garantie. L\'indemnisation intervient dès le premier loyer impayé, avec une prise en charge des frais de procédure et des dégradations locatives. Demandez un devis pour connaître les modalités exactes pour votre situation."
   }
 ];
+const pageKeywords = "meublé, gestion locative, propriétaire, savoir, bail meuble 2026";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Oui, vous pouvez opter pour le régime réel à tout moment en envoyant un courrier d\'option au Service des Impôts des Entreprises (SIE) avant la date limite de dépôt de la liasse fiscale de l\'année précédente (généralement fin mai). L\'option est valable pour une durée de deux ans renouvelable tacitement."
   }
 ];
+const pageKeywords = "régime, fiscalite lmnp, fiscal, lmnp regime reel, declaration revenus fonciers, deficit foncier";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

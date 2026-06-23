@@ -31,9 +31,10 @@ const faqItems = [
     answer: "Généralement non, selon les critères stricts des GLI classiques qui se basent principalement sur les revenus mensuels réguliers. En revanche, avec Cautioneo, l\'analyse est plus fine : une épargne importante (équivalent à 2+ ans de loyers) peut compenser des revenus insuffisants et permettre la certification du dossier. C\'est l\'un des avantages clés de notre approche par rapport aux assureurs GLI traditionnels."
   }
 ];
+const pageKeywords = "obligations, gestion locative, locataire ideal, profil, locataire";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">

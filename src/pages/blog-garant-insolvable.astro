@@ -35,9 +35,10 @@ const faqItems = [
     answer: "Non. La loi Boutin du 25 mars 2009 interdit formellement de cumuler une assurance loyer impayé (GLI) avec une caution physique, sauf si le locataire est étudiant ou apprenti. En revanche, le garant institutionnel Cautioneo n\'est pas une GLI classique : c\'est un cautionnement professionnel qui peut se substituer avantageusement au garant physique, sans cette restriction légale."
   }
 ];
+const pageKeywords = "garant location, garant en ligne, se porter garant, recours, caution solidaire, insolvable";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<!-- Navigation -->
 

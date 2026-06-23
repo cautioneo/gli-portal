@@ -30,9 +30,10 @@ const faqItems = [
     answer: "L\'Open-Banking est une technologie qui permet, avec l\'accord du locataire, d\'accéder directement à ses relevés bancaires sécurisés pour vérifier que les salaires annoncés sont réellement versés. C\'est la méthode la plus fiable car elle ne repose pas sur des documents qui peuvent être falsifiés."
   }
 ];
+const pageKeywords = "dossier location parfait, location, authentification dossier, détecter, detecter faux dossier location, dossier";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

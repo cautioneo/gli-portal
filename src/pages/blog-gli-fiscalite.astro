@@ -25,9 +25,10 @@ const faqItems = [
     answer: "Non. En régime micro-foncier, l'abattement forfaitaire de 30 % est censé couvrir toutes les charges, y compris la GLI. Il est impossible de déduire des charges supplémentaires. Pour bénéficier de la déductibilité réelle de la GLI, vous devez opter pour le régime réel."
   }
 ];
+const pageKeywords = "fonciers, revenus, tarif assurance gli, fiscalite lmnp, garantie loyers impayes, lmnp regime reel";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">

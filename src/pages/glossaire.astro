@@ -10,9 +10,10 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Glossaire" }
 ];
+const pageKeywords = "glossaire, gestion locative, assurance bailleur, l'immobilier, juridique";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Navigation Partagée -->
 
 <header class="page-hero" data-reveal="fade-up">

@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Non. Refuser un locataire en raison de la nature de ses ressources (APL, allocations chômage, AAH) constitue une discrimination prohibée par la loi depuis 2014. Les revenus de substitution doivent être traités au même titre que les revenus salariaux pour évaluer la solvabilité."
   }
 ];
+const pageKeywords = "gestion locative, refuser, légalement, refuser locataire legalement, locataire";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Juridique Bailleur</span>

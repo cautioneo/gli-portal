@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Oui, mais cela implique de transformer le logement en meublé (respecter la liste obligatoire des équipements définis par décret), de résilier le bail nu avec un préavis de 6 mois, et de changer de régime fiscal en effectuant les démarches administratives correspondantes. Le changement de statut peut également avoir des implications sur les droits des locataires en place."
   }
 ];
+const pageKeywords = "régime, location, fiscalite lmnp, lmnp vs location nue fiscalite, fiscal, lmnp regime reel";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

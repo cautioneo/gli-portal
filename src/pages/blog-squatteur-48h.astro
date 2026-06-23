@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Non, la loi anti-squat de 2026 a définitivement exclu les squatteurs du bénéfice de la trêve hivernale. Ils peuvent être expulsés par les forces de l\'ordre tout au long de l\'année, y compris entre le 1er novembre et le 31 mars. Pour en savoir plus, consultez notre article sur comment expulser un squatteur."
   }
 ];
+const pageKeywords = "gestion locative, heures, squatteur 48h, règle, expulser";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

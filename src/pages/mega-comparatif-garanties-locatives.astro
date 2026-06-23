@@ -24,9 +24,10 @@ const faqItems = [
     answer: "Non, la loi Boutin interdit de cumuler une assurance loyers impayés (GLI) et un garant physique (caution solidaire), sauf si le locataire est étudiant ou apprenti. En cas de cumul non autorisé, le contrat d'assurance GLI ou l'acte de cautionnement peut être frappé de nullité."
   }
 ];
+const pageKeywords = "gestion locative, mega comparatif garanties locatives, locatives, comparatif, garanties";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",

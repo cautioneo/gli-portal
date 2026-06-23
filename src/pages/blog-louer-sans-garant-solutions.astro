@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Oui, la prime d\'assurance GLI est entièrement déductible des revenus fonciers du propriétaire, que ce soit sous le régime réel ou micro-foncier (dans certaines limites). C\'est un avantage fiscal majeur par rapport à d\'autres formes de garantie."
   }
 ];
+const pageKeywords = "garant location, garant en ligne, se porter garant, solutions, caution solidaire, louer sans garant solutions";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->

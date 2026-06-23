@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Oui, absolument. Si le cumul de vos charges déductibles (taxe foncière, intérêts d\'emprunt, travaux) est supérieur au montant de vos loyers perçus, vous générez un déficit foncier. Ce déficit peut être déduit de votre revenu global dans la limite de 10 700 € par an, réduisant ainsi drastiquement votre impôt sur le revenu global. Pour en savoir plus, consultez notre guide sur le déficit foncier."
   }
 ];
+const pageKeywords = "foncière, taxe fonciere deductible, gestion locative, revenus, déductible";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

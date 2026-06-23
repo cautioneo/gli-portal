@@ -41,7 +41,9 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
     <meta name="description" content={description}/>
     {keywords && <meta name="keywords" content={keywords}/>}
     <link rel="canonical" href={canonicalUrl}/>
-    {noindex && <meta name="robots" content="noindex, follow"/>}
+    <meta content={noindex ? "noindex, follow" : "index, follow"} name="robots"/>
+    <meta content="Cautioneo" name="author"/>
+    <meta content="Cautioneo" name="publisher"/>
     
     <!-- Open Graph / Facebook -->
     <meta content={isBlogPost ? "article" : "website"} property="og:type"/>

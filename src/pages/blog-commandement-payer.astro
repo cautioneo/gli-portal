@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Un paiement partiel ne suspend pas le délai de 2 mois du commandement de payer. Pour stopper la procédure d\'activation de la clause résolutoire, le locataire doit régler l\'intégralité des sommes réclamées dans l\'acte (loyers, charges et frais de procédure), ou obtenir un accord amiable écrit pour un plan d\'apurement de la dette validé par le bailleur."
   }
 ];
+const pageKeywords = "gestion locative, commandement, payer, commandement payer, loyer";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

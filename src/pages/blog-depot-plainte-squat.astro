@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Non. Un locataire entré légalement avec un bail, même s\'il ne paie plus son loyer et que son bail a été résilié par le tribunal, n\'est pas un squatteur au sens pénal car il n\'y a pas eu d\'effraction ou d\'intrusion illégale initiale. La procédure d\'expulsion administrative accélérée ne s\'applique pas à lui ; vous devez suivre la voie judiciaire classique en délivrant d\'abord un commandement de payer."
   }
 ];
+const pageKeywords = "contre, plainte, delai expulsion squatteur, procedure expulsion locataire, déposer, depot plainte squat";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

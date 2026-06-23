@@ -26,9 +26,10 @@ const faqItems = [
     answer: "Au-delà du délai légal (1 ou 2 mois), le dépôt non restitué produit des intérêts de retard au taux légal majoré de 10% par mois de retard. L\'ex-locataire peut envoyer une mise en demeure par LRAR, puis saisir la Commission Départementale de Conciliation gratuitement, et enfin le tribunal judiciaire."
   }
 ];
+const pageKeywords = "location, gestion locative, depot garantie regles, dépôt, garantie";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<header class="blog-header">
         <div class="container">
             <span class="blog-category" style="margin-bottom: 20px;">Gestion Locative</span>

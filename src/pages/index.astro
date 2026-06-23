@@ -28,9 +28,10 @@ const faqItems = [
     answer: "La souscription est 100 % en ligne en moins de 5 minutes. Il vous suffit de renseigner le montant du loyer, de télécharger les justificatifs du locataire (avis d\'imposition, fiches de paie), et Cautioneo vous communique un accord en temps réel ainsi que votre prime définitive."
   }
 ];
+const pageKeywords = "assurance, gestion locative, assurance bailleur, impayé, loyer";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} faqItems={faqItems}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",

@@ -10,9 +10,10 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Démo Dashboard" }
 ];
+const pageKeywords = "espace, gestion locative, propriétaire, (démo), dashboard demo";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
   <Fragment set:html={`<!-- Header inséré dynamiquement via fix_header.js -->
 
 <!-- Sub-navigation App-like -->

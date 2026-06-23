@@ -22,9 +22,10 @@ const faqItems = [
     answer: "Oui, Visale couvre les dégradations locatives dans la limite de 2 mois de loyers hors charges pour les logements du parc privé, ce qui est souvent inférieur aux couvertures des GLI privées ou de Cautioneo qui proposent des plafonds plus élevés."
   }
 ];
+const pageKeywords = "quelle, visale, eligibilite visale, visale vs cautioneo, tarif assurance gli, garantie loyers impayes";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
     
 

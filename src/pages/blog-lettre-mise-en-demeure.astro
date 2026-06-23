@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Non, la mise en demeure par LRAR n'est pas une étape légalement obligatoire avant le commandement de payer par huissier. Cependant, elle est fortement conseillée car elle prouve la bonne foi du bailleur et peut suffire à régler la situation amiablement."
   }
 ];
+const pageKeywords = "gestion locative, lettre, demeure, lettre mise en demeure, loyer";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
   <Fragment set:html={`<main>
   <!-- Hero -->

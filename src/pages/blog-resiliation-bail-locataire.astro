@@ -30,9 +30,10 @@ const faqItems = [
     answer: "Si le locataire remet les clés en cours de mois, le loyer est calculé au prorata du nombre de jours d\'occupation. Par exemple, pour un loyer de 900 € et une remise de clés le 15 du mois, le locataire doit (900 / 30) × 15 = 450 €. Ce calcul s\'applique au dernier mois de location, quelle que soit la durée habituelle du bail."
   }
 ];
+const pageKeywords = "gestion locative, préavis, locataire, résiliation, resiliation bail locataire";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
   <Fragment set:html={`<!-- Navigation -->
 
 <!-- Post Header -->
