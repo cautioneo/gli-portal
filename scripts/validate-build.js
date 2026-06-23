@@ -88,11 +88,40 @@ function checkHtmlFile(filePath) {
     }
   }
 
-  // Rule 6: JSON-LD structured data presence
-  const hasJsonLd = /<script\s+[^>]*type=["']application\/ld\+json["']/i.test(content);
-  if (!is404 && !hasJsonLd) {
+  // Rule 6: JSON-LD structured data presence and syntax validation
+  const jsonLdBlocks = content.match(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi) || [];
+  if (!is404 && jsonLdBlocks.length === 0) {
     warnings.push(`No JSON-LD structured data script found on this page.`);
   }
+  for (const block of jsonLdBlocks) {
+    const jsonMatch = block.match(/<script[^>]*>([\s\S]*?)<\/script>/i);
+    if (jsonMatch) {
+      const jsonText = jsonMatch[1].trim();
+      try {
+        const parsed = JSON.parse(jsonText);
+        if (Array.isArray(parsed)) {
+          for (const item of parsed) {
+            if (!item['@context']) {
+              warnings.push(`JSON-LD item missing '@context' attribute.`);
+            }
+            if (!item['@type']) {
+              warnings.push(`JSON-LD item missing '@type' attribute.`);
+            }
+          }
+        } else {
+          if (!parsed['@context']) {
+            warnings.push(`JSON-LD structured data missing '@context' attribute.`);
+          }
+          if (!parsed['@type']) {
+            warnings.push(`JSON-LD structured data missing '@type' attribute.`);
+          }
+        }
+      } catch (err) {
+        errors.push(`Invalid JSON-LD syntax: ${err.message}`);
+      }
+    }
+  }
+
 
   // Rule 7: Specific B2B contrast regression check on `.article-meta` on white background
   // If we find style elements or styles setting the text-muted/meta color to white without a dark wrapper
