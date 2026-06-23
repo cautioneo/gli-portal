@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Tours est régulièrement classée parmi les villes françaises avec la meilleure qualité de vie. Ce facteur favorise la stabilité des locataires (faible rotation). Associé à la GLI Cautioneo, vous bénéficiez d'une sérénité totale dans la gestion de votre patrimoine locatif."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Tours - Assurance Loyer Impayé",
+  description: "Bailleurs à Tours : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Tours",
+  region: "Centre-Val de Loire",
+  postalCode: "37000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Tours, assurance proprietaire Tours, cautioneo Tours, GLI Tours"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Le Mans, la procédure complète d'expulsion dure de 11 à 16 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Le Mans - Assurance Loyer Impayé",
+  description: "Bailleurs à Le Mans : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Le Mans",
+  region: "Pays de la Loire",
+  postalCode: "72000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Le Mans, assurance proprietaire Le Mans, cautioneo Le Mans, GLI Le Mans"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

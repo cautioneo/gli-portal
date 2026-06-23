@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. Comme partout en France, la trêve hivernale (du 1er novembre au 31 mars) suspend toute expulsion à Bordeaux. Pendant cette période, la GLI Cautioneo continue de vous indemniser des loyers impayés, sans interruption."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Bordeaux - Assurance Loyer Impayé",
+  description: "Bailleurs à Bordeaux : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Bordeaux",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "33000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Bordeaux, assurance proprietaire Bordeaux, cautioneo Bordeaux, GLI Bordeaux"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

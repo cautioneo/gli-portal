@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. Comme dans toute la France métropolitaine, la trêve hivernale (1er novembre - 31 mars) interdit toute expulsion physique à Caen. La GLI Cautioneo continue d'indemniser les loyers impayés pendant cette période, sans aucune interruption."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Caen - Assurance Loyer Impayé",
+  description: "Bailleurs à Caen : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Caen",
+  region: "Normandie",
+  postalCode: "14000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Caen, assurance proprietaire Caen, cautioneo Caen, GLI Caen"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

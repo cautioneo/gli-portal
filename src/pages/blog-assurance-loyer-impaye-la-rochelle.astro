@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À La Rochelle, la procédure complète d'expulsion dure de 10 à 15 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo La Rochelle - Assurance Loyer Impayé",
+  description: "Bailleurs à La Rochelle : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "La Rochelle",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "17000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye La Rochelle, assurance proprietaire La Rochelle, cautioneo La Rochelle, GLI La Rochelle"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "À Nice, le principal risque est la conversion non déclarée en meublé tourisme par le locataire (sous-location Airbnb). La GLI Cautioneo protège le propriétaire contre les impayés liés à ces situations et la procédure de résiliation de bail pour manquement aux obligations locatives."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Nice - Assurance Loyer Impayé",
+  description: "Bailleurs à Nice : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Nice",
+  region: "Provence-Alpes-Côte d'Azur",
+  postalCode: "06000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nice, assurance proprietaire Nice, cautioneo Nice, GLI Nice"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. Les maisons de ville (avec cour ou jardin) représentent une part importante du parc locatif dijonnais. La GLI Cautioneo couvre tous types de biens résidentiels — appartements, maisons de ville, duplex — sans restriction sur le type de construction."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Dijon - Assurance Loyer Impayé",
+  description: "Bailleurs à Dijon : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Dijon",
+  region: "Bourgogne-Franche-Comté",
+  postalCode: "21000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Dijon, assurance proprietaire Dijon, cautioneo Dijon, GLI Dijon"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

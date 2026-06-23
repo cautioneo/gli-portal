@@ -39,10 +39,19 @@ const faqItems = [
     answer: "La GLI couvre les loyers impayés, quel qu'en soit le motif. En cas de départ imprévu d'un militaire, la procédure de résiliation anticipée (préavis légal de 1 mois en zone tendue) s'applique. Si le locataire part sans préavis et laisse des dettes, la GLI Cautioneo couvre l'intégralité des loyers dus."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Toulon - Assurance Loyer Impayé",
+  description: "Bailleurs à Toulon : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Toulon",
+  region: "Provence-Alpes-Côte d'Azur",
+  postalCode: "83000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Toulon, assurance proprietaire Toulon, cautioneo Toulon, GLI Toulon"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

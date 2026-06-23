@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. Même à 520 €/mois (loyer T2 moyen stéphanois), un impayé non couvert peut effacer 2 à 3 ans de rendement net. La GLI Cautioneo n'a aucune prime pour le propriétaire, elle est intégralement financée par le locataire. C'est 100% de protection pour zéro coût."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Saint-Étienne - Assurance Loyer Impayé",
+  description: "Bailleurs à Saint-Étienne : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Saint-Étienne",
+  region: "Auvergne-Rhône-Alpes",
+  postalCode: "42000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Saint-Étienne, assurance proprietaire Saint-Étienne, cautioneo Saint-Étienne, GLI Saint-Étienne"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. La colocation est très répandue à Lyon (185 000 étudiants). La GLI Cautioneo peut couvrir les baux de colocation avec clause de solidarité. Chaque colocataire est certifié individuellement par Open Banking, ce qui élimine tout risque de fraude documentaire."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Lyon - Assurance Loyer Impayé",
+  description: "Bailleurs à Lyon : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Lyon",
+  region: "Auvergne-Rhône-Alpes",
+  postalCode: "69000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Lyon, assurance proprietaire Lyon, cautioneo Lyon, GLI Lyon"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "La loi impose 1 mois (état des lieux conforme) ou 2 mois (avec réserves) pour restituer le dépôt de garantie. À Montpellier, les litiges sur le dépôt représentent 30% des affaires locatives au TJ. La GLI Cautioneo inclut une garantie dégradations pour vous protéger au-delà du dépôt."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Montpellier - Assurance Loyer Impayé",
+  description: "Bailleurs à Montpellier : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Montpellier",
+  region: "Occitanie",
+  postalCode: "34000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Montpellier, assurance proprietaire Montpellier, cautioneo Montpellier, GLI Montpellier"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

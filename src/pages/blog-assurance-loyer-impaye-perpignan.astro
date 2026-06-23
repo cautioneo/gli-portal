@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Perpignan, la procedure d'expulsion peut durer 12 a 18 mois. La GLI Cautioneo vous protege des le 1er impaye et prend en charge tous les frais de procedure."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Perpignan - Assurance Loyer Impayé",
+  description: "Bailleurs à Perpignan : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Perpignan",
+  region: "Occitanie",
+  postalCode: "66000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Perpignan, assurance proprietaire Perpignan, cautioneo Perpignan, GLI Perpignan"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

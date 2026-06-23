@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Besançon, la procédure complète d'expulsion dure de 11 à 16 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Besançon - Assurance Loyer Impayé",
+  description: "Bailleurs à Besançon : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Besançon",
+  region: "Bourgogne-Franche-Comté",
+  postalCode: "25000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Besançon, assurance proprietaire Besançon, cautioneo Besançon, GLI Besançon"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

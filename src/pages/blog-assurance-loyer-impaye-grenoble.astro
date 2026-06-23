@@ -39,10 +39,19 @@ const faqItems = [
     answer: "À Grenoble, la procédure complète d'expulsion dure en moyenne 10 à 15 mois. La forte proportion de logements sociaux en mixité avec le parc privé peut parfois complexifier les situations. La GLI Cautioneo finance 100% des loyers impayés pendant toute la durée de la procédure."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Grenoble - Assurance Loyer Impayé",
+  description: "Bailleurs à Grenoble : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Grenoble",
+  region: "Auvergne-Rhône-Alpes",
+  postalCode: "38000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Grenoble, assurance proprietaire Grenoble, cautioneo Grenoble, GLI Grenoble"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

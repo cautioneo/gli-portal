@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. Il n'y a pas de loyer minimum pour souscrire la GLI Cautioneo. Même pour un T2 à 610 €/mois au Havre, la garantie est complète : indemnisation dès le premier impayé, prise en charge juridique et couverture jusqu'à 96 000 €."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Le Havre - Assurance Loyer Impayé",
+  description: "Bailleurs à Le Havre : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Le Havre",
+  region: "Normandie",
+  postalCode: "76600",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Le Havre, assurance proprietaire Le Havre, cautioneo Le Havre, GLI Le Havre"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

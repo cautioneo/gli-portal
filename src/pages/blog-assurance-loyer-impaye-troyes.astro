@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Troyes, la procédure complète d'expulsion dure de 12 à 17 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Troyes - Assurance Loyer Impayé",
+  description: "Bailleurs à Troyes : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Troyes",
+  region: "Grand Est",
+  postalCode: "10000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Troyes, assurance proprietaire Troyes, cautioneo Troyes, GLI Troyes"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

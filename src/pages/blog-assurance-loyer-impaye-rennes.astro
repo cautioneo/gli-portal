@@ -39,10 +39,19 @@ const faqItems = [
     answer: "À Rennes, la grande majorité des états des lieux sont établis sans réserve. Le dépôt de garantie doit être restitué dans le mois suivant le rendu des clés si l'état des lieux de sortie est conforme. En cas de litige, le TJ de Rennes statue rapidement (2 à 3 mois en référé)."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Rennes - Assurance Loyer Impayé",
+  description: "Bailleurs à Rennes : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Rennes",
+  region: "Bretagne",
+  postalCode: "35000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Rennes, assurance proprietaire Rennes, cautioneo Rennes, GLI Rennes"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

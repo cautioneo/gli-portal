@@ -39,10 +39,19 @@ const faqItems = [
     answer: "La GLI Cautioneo s'applique aux baux de résidence principale (loi 1989). Pour les locations meublées (LMNP) à titre de résidence principale, la GLI est applicable. Pour les locations meublées saisonnières ou de courte durée, un autre type de garantie est nécessaire."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Nancy - Assurance Loyer Impayé",
+  description: "Bailleurs à Nancy : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Nancy",
+  region: "Grand Est",
+  postalCode: "54000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nancy, assurance proprietaire Nancy, cautioneo Nancy, GLI Nancy"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

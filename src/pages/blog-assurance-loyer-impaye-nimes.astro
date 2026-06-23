@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Nimes, la procedure d'expulsion peut s'etendre de 12 a 18 mois. La GLI Cautioneo vous protege des le 1er impaye."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Nîmes - Assurance Loyer Impayé",
+  description: "Bailleurs à Nîmes : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Nîmes",
+  region: "Occitanie",
+  postalCode: "30000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nimes, assurance proprietaire Nimes, cautioneo Nimes, GLI Nimes"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

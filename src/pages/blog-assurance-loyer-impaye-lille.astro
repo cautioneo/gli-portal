@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Non. Pour les biens situés à Roubaix, c'est le Tribunal Judiciaire de Roubaix qui est compétent. Pour Tourcoing, c'est le TJ de Roubaix également (fusion judiciaire). Le TJ de Lille est compétent pour Lille, Villeneuve-d'Ascq, Seclin et la majorité de la MEL."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Lille - Assurance Loyer Impayé",
+  description: "Bailleurs à Lille : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Lille",
+  region: "Hauts-de-France",
+  postalCode: "59000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Lille, assurance proprietaire Lille, cautioneo Lille, GLI Lille"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

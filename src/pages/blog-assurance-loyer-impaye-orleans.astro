@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Orleans, la procedure d'expulsion dure entre 10 et 15 mois. La GLI Cautioneo prend en charge les loyers et les frais juridiques."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Orléans - Assurance Loyer Impayé",
+  description: "Bailleurs à Orléans : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Orléans",
+  region: "Centre-Val de Loire",
+  postalCode: "45000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Orleans, assurance proprietaire Orleans, cautioneo Orleans, GLI Orleans"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

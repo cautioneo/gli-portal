@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Le quartier Mazarin et le Pays d'Aix (centre historique) présentent les meilleurs profils de locataires et la plus forte liquidité locative. Jas de Bouffan et Luynes offrent des rendements légèrement supérieurs avec un risque modéré. La GLI Cautioneo couvre tous les secteurs."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Aix-en-Provence - Assurance Loyer Impayé",
+  description: "Bailleurs à Aix-en-Provence : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Aix-en-Provence",
+  region: "Provence-Alpes-Côte d'Azur",
+  postalCode: "13100",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Aix-en-Provence, assurance proprietaire Aix-en-Provence, cautioneo Aix-en-Provence, GLI Aix-en-Provence"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

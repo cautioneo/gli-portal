@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Poitiers, la procédure complète d'expulsion dure de 10 à 15 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Poitiers - Assurance Loyer Impayé",
+  description: "Bailleurs à Poitiers : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Poitiers",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "86000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Poitiers, assurance proprietaire Poitiers, cautioneo Poitiers, GLI Poitiers"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

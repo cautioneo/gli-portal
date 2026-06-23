@@ -39,10 +39,19 @@ const faqItems = [
     answer: "À Rouen, la procédure complète d'expulsion dure de 10 à 15 mois en moyenne. Le TJ de Rouen est relativement réactif, mais les délais s'allongent pendant la trêve hivernale. La GLI Cautioneo vous indemnise sans interruption pendant toute la procédure."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Rouen - Assurance Loyer Impayé",
+  description: "Bailleurs à Rouen : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Rouen",
+  region: "Normandie",
+  postalCode: "76000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Rouen, assurance proprietaire Rouen, cautioneo Rouen, GLI Rouen"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

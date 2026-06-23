@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Depuis 2023, Strasbourg applique l'encadrement des loyers. Les loyers de référence varient de 11 €/m² (périphérie) à 20 €/m² (Petite France, Neustadt). Le complément de loyer (jusqu'à +20%) est possible pour les logements présentant des caractéristiques exceptionnelles."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Strasbourg - Assurance Loyer Impayé",
+  description: "Bailleurs à Strasbourg : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Strasbourg",
+  region: "Grand Est",
+  postalCode: "67000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Strasbourg, assurance proprietaire Strasbourg, cautioneo Strasbourg, GLI Strasbourg"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

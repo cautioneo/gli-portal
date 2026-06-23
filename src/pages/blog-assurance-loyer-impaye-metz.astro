@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Le droit local alsacien-mosellan s'applique en Moselle pour certaines procédures (notamment la saisie immobilière). Pour les baux d'habitation classiques, la loi nationale du 6 juillet 1989 prévaut. La GLI Cautioneo est totalement compatible avec le cadre juridique messin."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Metz - Assurance Loyer Impayé",
+  description: "Bailleurs à Metz : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Metz",
+  region: "Grand Est",
+  postalCode: "57000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Metz, assurance proprietaire Metz, cautioneo Metz, GLI Metz"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

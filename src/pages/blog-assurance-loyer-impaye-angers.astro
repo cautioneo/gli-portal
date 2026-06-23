@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. La Faculté de Pharmacie d'Angers est l'une des plus réputées de France. Les étudiants en médecine/pharmacie sont éligibles à la GLI Cautioneo, avec ou sans garant parental. Notre processus de certification Open Banking est rapide et simple pour les étudiants."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Angers - Assurance Loyer Impayé",
+  description: "Bailleurs à Angers : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Angers",
+  region: "Pays de la Loire",
+  postalCode: "49000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Angers, assurance proprietaire Angers, cautioneo Angers, GLI Angers"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Oui. La GLI Cautioneo couvre aussi bien les locations nues que meublées à Paris. Le plafond de garantie est de 96 000 € par bail, avec une prise en charge des frais de procédure (huissier, avocat) incluse dans l'offre, sans surcoût."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Paris - Assurance Loyer Impayé",
+  description: "Bailleurs à Paris : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Paris",
+  region: "Île-de-France",
+  postalCode: "75000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Paris, assurance proprietaire Paris, cautioneo Paris, GLI Paris"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

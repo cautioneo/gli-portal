@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Limoges, la procedure d'expulsion dure en moyenne 11 a 16 mois. La GLI Cautioneo prend en charge l'integralite des loyers impayes et des frais juridiques."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Limoges - Assurance Loyer Impayé",
+  description: "Bailleurs à Limoges : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Limoges",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "87000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Limoges, assurance proprietaire Limoges, cautioneo Limoges, GLI Limoges"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

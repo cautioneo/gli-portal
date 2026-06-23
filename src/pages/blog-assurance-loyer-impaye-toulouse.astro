@@ -39,10 +39,19 @@ const faqItems = [
     answer: "La GLI Cautioneo comprend une garantie dégradations locatives (frais de remise en état au-delà du dépôt de garantie). À Toulouse, le délai moyen d'expertise contradictoire est de 3 à 6 semaines. Notre garantie couvre jusqu'à 10 000 € de frais de remise en état."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Toulouse - Assurance Loyer Impayé",
+  description: "Bailleurs à Toulouse : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Toulouse",
+  region: "Occitanie",
+  postalCode: "31000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Toulouse, assurance proprietaire Toulouse, cautioneo Toulouse, GLI Toulouse"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

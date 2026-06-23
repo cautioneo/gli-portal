@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Bayonne, la procédure complète d'expulsion dure de 11 à 16 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Bayonne - Assurance Loyer Impayé",
+  description: "Bailleurs à Bayonne : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Bayonne",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "64100",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Bayonne, assurance proprietaire Bayonne, cautioneo Bayonne, GLI Bayonne"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

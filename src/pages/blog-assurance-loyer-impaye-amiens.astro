@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Amiens, la procedure complete d'expulsion dure de 10 a 15 mois. La GLI Cautioneo indemnise sans interruption."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Amiens - Assurance Loyer Impayé",
+  description: "Bailleurs à Amiens : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Amiens",
+  region: "Hauts-de-France",
+  postalCode: "80000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Amiens, assurance proprietaire Amiens, cautioneo Amiens, GLI Amiens"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "La combinaison GLI Cautioneo + Open Banking est particulièrement efficace à Brest : elle garantit la sélection du meilleur locataire parmi les candidats (militaires, étudiants, chercheurs), élimine le risque de fraude documentaire et assure une indemnisation immédiate en cas d'impayé."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Brest - Assurance Loyer Impayé",
+  description: "Bailleurs à Brest : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Brest",
+  region: "Bretagne",
+  postalCode: "29200",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Brest, assurance proprietaire Brest, cautioneo Brest, GLI Brest"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Quimper, la procédure complète d'expulsion dure de 11 à 16 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Quimper - Assurance Loyer Impayé",
+  description: "Bailleurs à Quimper : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Quimper",
+  region: "Bretagne",
+  postalCode: "29000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Quimper, assurance proprietaire Quimper, cautioneo Quimper, GLI Quimper"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -34,10 +34,19 @@ const faqItems = [
     answer: "À Laval, la procédure complète d'expulsion dure de 12 à 17 mois. La GLI Cautioneo indemnise 100% des loyers impayés pendant toute cette période."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Laval - Assurance Loyer Impayé",
+  description: "Bailleurs à Laval : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Laval",
+  region: "Pays de la Loire",
+  postalCode: "53000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Laval, assurance proprietaire Laval, cautioneo Laval, GLI Laval"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Le secteur Croix-Rouge présente un taux d'impayés légèrement supérieur à la moyenne rémoise. Le centre historique (Cathédrale, Clairmarais) est au contraire le secteur le plus sûr et le plus liquide du marché. Quelle que soit la zone, la GLI Cautioneo offre la même protection complète."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Reims - Assurance Loyer Impayé",
+  description: "Bailleurs à Reims : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Reims",
+  region: "Grand Est",
+  postalCode: "51100",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Reims, assurance proprietaire Reims, cautioneo Reims, GLI Reims"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

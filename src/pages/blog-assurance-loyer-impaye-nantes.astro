@@ -39,10 +39,19 @@ const faqItems = [
     answer: "Le Tribunal Judiciaire de Nantes dispose d'une chambre civile dédiée aux baux d'habitation. Les affaires simples (commandement de payer) sont traitées en référé en 4 à 8 semaines. Les procédures d'expulsion complètes prennent 10 à 14 mois en moyenne à Nantes."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Nantes - Assurance Loyer Impayé",
+  description: "Bailleurs à Nantes : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Nantes",
+  region: "Pays de la Loire",
+  postalCode: "44000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Nantes, assurance proprietaire Nantes, cautioneo Nantes, GLI Nantes"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">

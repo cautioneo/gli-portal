@@ -34,10 +34,19 @@ const faqItems = [
     answer: "A Pau, la procedure d'expulsion dure 10 a 14 mois. La GLI Cautioneo vous indemnise sans delai des le 1er mois d'impaye."
   },
 ];
+
+const localBusiness = {
+  name: "Cautioneo Pau - Assurance Loyer Impayé",
+  description: "Bailleurs à Pau : sécurisez vos revenus locatifs avec l'assurance GLI Cautioneo.",
+  city: "Pau",
+  region: "Nouvelle-Aquitaine",
+  postalCode: "64000",
+  telephone: "+33 9 72 10 40 40"
+};
 ---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Pau, assurance proprietaire Pau, cautioneo Pau, GLI Pau"
-  aggregateRating={aggregateRating}>
+  aggregateRating={aggregateRating} localBusiness={localBusiness}>
   <Fragment set:html={`<!-- Post Header -->
     <header class="blog-header">
         <div class="container">
