@@ -2929,3 +2929,40 @@ table tbody tr:hover { background-color: var(--bg-subtle); }
         height: 26px;
     }
 }
+
+/* ====================================================
+   ACCESSIBILITY & CONTRAST OVERRIDES FOR DARK CARDS
+   (e.g., Defexposure Risk Simulator)
+   ==================================================== */
+.bg-dark h4, .bg-dark h5 {
+    color: #ffffff !important;
+}
+.bg-dark p, .card.bg-dark p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+.bg-dark .text-muted, .card.bg-dark .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.bg-dark a:not(.btn) {
+    color: #ffb86c !important; /* Premium brand amber/gold with high contrast on violet */
+    text-decoration: underline !important;
+}
+.bg-dark a:not(.btn):hover {
+    color: #ffffff !important;
+}
+.bg-dark .text-danger a {
+    color: #fda4af !important; /* Very light pink/red for danger meaning and readable contrast */
+}
+.bg-dark .text-danger a:hover {
+    color: #ffffff !important;
+}
+
+/* ====================================================
+   ACCESSIBILITY & SCROLL TARGET ALIGNMENT
+   ==================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px; /* Offset for sticky navbar height (80px) + margin */
+}
+
+
