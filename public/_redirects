@@ -1,3 +1,0 @@
-# Netlify Redirects for Pretty URLs
-/*.html  /:splat  301
-/*       /:splat  200

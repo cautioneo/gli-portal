@@ -1,4 +1,3 @@
 # Netlify Redirects for Pretty URLs
-/blog/:slug  /blog-:slug  301
 /*.html  /:splat  301
 /*       /:splat  200
