@@ -50,12 +50,23 @@ function checkHtmlFile(filePath) {
   }
 
   // Rule 3: Meta description presence and length
-  const descMatch = content.match(/<meta\s+[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i) ||
-                    content.match(/<meta\s+[^>]*content=["']([^"']*)["'][^>]*name=["']description["']/i);
-  if (!descMatch) {
+  const metaTags = content.match(/<meta\s+[^>]*>/gi) || [];
+  let descText = null;
+  for (const tag of metaTags) {
+    const nameMatch = tag.match(/name=["']description["']/i);
+    if (nameMatch) {
+      const contentAttrMatch = tag.match(/content=(?:"([^"]*)"|'([^']*)')/i);
+      if (contentAttrMatch) {
+        descText = contentAttrMatch[1] || contentAttrMatch[2] || "";
+        break;
+      }
+    }
+  }
+
+  if (descText === null) {
     errors.push(`Missing <meta name="description"> tag.`);
   } else {
-    const descText = descMatch[1].trim();
+    descText = descText.trim();
     if (descText.length < 40 || descText.length > 170) {
       warnings.push(`Description length is sub-optimal (${descText.length} chars). Recommend 50-160 chars.`);
     }
