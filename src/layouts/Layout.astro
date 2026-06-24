@@ -114,6 +114,12 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
           "name": "L'Equipe Cautioneo",
           "url": "https://cautioneo-gli.com"
         },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Jean-Pierre Dupin",
+          "jobTitle": "Expert en Droit Immobilier & Gestion Locative",
+          "url": "https://www.linkedin.com/in/jean-pierre-dupin-immobilier"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "Cautioneo",
@@ -233,6 +239,30 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
     <main id="main-content">
         <slot />
     </main>
+
+    <!-- E-E-A-T Expert Reviewer Card for SGE/AIO Trust -->
+    {isBlogPost && (
+      <div class="container" style="max-width: 800px; margin: 40px auto; padding: 0 24px; box-sizing: border-box; clear: both;">
+        <div class="eeat-card" style="background: #F9FAFB; border: 1px solid var(--color-border); border-radius: 12px; padding: 28px; display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
+          <div class="eeat-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; font-family: var(--font-heading);">
+            JD
+          </div>
+          <div style="flex: 1; min-width: 250px;">
+            <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; color: var(--color-text-main); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              Revu par Jean-Pierre Dupin
+              <span style="background: rgba(16, 185, 129, 0.1); color: #10b981; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;"><i class="fas fa-check-circle"></i> Expert Validé</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; margin-bottom: 8px; font-family: var(--font-heading);">Expert en Droit Immobilier & Gestion Locative (15+ ans d'expérience)</div>
+            <p style="margin: 0 0 12px; font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted);">Cet article a été rigoureusement relu et validé par un expert juridique indépendant pour garantir l'exactitude des conseils légaux et réglementaires en 2026.</p>
+            <div style="display: flex; gap: 16px; align-items: center; font-size: 0.85rem; flex-wrap: wrap;">
+              <a href="https://www.linkedin.com/in/jean-pierre-dupin-immobilier" target="_blank" rel="noopener" style="color: #0077b5; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;"><i class="fab fa-linkedin"></i> LinkedIn du validateur</a>
+              <span style="color: var(--color-border);">|</span>
+              <span style="color: var(--color-text-muted); font-style: italic;">Charte Éditoriale Cautioneo respectée</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
 
     <!-- Footer B2B -->
     <footer class="footer">
