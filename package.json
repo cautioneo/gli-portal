@@ -10,7 +10,8 @@
     "build": "astro build && node scripts/generate-llms-all.js",
     "postbuild": "node scripts/validate-build.js",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pagespeed": "node scripts/check-pagespeed.js"
   },
   "dependencies": {
     "astro": "^6.4.6"
