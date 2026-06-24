@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Passer du Régime Réel au Micro-Foncier en 2026 : Guide | Cautioneo";
+const pageDescription = "Comment changer de régime fiscal foncier ? Découvrez les conditions, délais de renonciation et le calcul pour repasser au micro-foncier en 2026.";
+const pageCanonical = "https://cautioneo-gli.com/fiscalite-passer-regime-reel-micro-foncier";
+const pageNoindex = false;
+const pageKeywords = "passer du régime réel au micro-foncier, passer du réel au micro foncier, micro foncier 2026, option réel foncier";
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
+
+const faqItems = [
+  {
+    question: "Quelle est la durée minimale d'engagement au régime réel foncier ?",
+    answer: "Lorsque vous optez pour le régime réel d'imposition (formulaire n° 2044) alors que vos revenus fonciers sont inférieurs à 15 000 €, cette option est irrévocable pour une durée obligatoire de 3 ans. Passé ce délai de 3 ans, l'option se renouvelle tacitement chaque année pour un an, et vous pouvez y renoncer pour repasser au micro-foncier."
+  },
+  {
+    question: "Quelle est la date limite pour renoncer au régime réel foncier ?",
+    answer: "Pour renoncer au régime réel foncier et revenir au micro-foncier, vous devez simplement déclarer vos revenus fonciers directement sur la ligne 4BE de la déclaration n° 2042 (sans remplir la déclaration 2044) lors de votre déclaration de revenus annuelle au printemps (mai-juin) de l'année concernée."
+  },
+  {
+    question: "La prime d'assurance loyer impayé (GLI) est-elle déductible en micro-foncier ?",
+    answer: "Non. Le régime micro-foncier applique un abattement forfaitaire représentatif de charges de 30%. Cet abattement est censé couvrir toutes vos charges, y compris votre assurance GLI, taxe foncière et travaux. Si le cumul de vos charges réelles dépasse 30% de vos loyers bruts, vous avez intérêt à opter pour le régime réel où vos primes de GLI sont déductibles à 100%."
+  }
+];
+---
+
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+  <Fragment set:html={`<!-- Post Header -->
+    <header class="blog-header">
+        <div class="container">
+            <span class="blog-category" style="margin-bottom: 20px;">Fiscalité &amp; Rendement</span>
+            <h1 style="max-width: 900px; margin: 0 auto 20px;">Comment Passer du Régime Réel au Micro-Foncier en 2026 ?</h1>
+            <div class="article-meta">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Fiscaliste Cautioneo" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
+                <span>Par <strong>L'Équipe Cautioneo</strong></span>
+                <span>•</span>
+                <span>Publié le 24 Juin 2026</span>
+                <span>•</span>
+                <span>Lecture : 6 min</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <main class="article-container">
+        <article class="article-content">
+
+            <!-- Callout Silo B2B -->
+            <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+                <strong>💡 Guide Pratique :</strong> Comment choisir la meilleure assurance loyer impayé ? Retrouvez notre <a href="/guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Consulter notre guide : Choisir Assurance Loyer Impaye">Guide Ultime de l'Assurance Loyer Impayé (GLI)</a>.
+            </div>
+
+            <p>Pour tout propriétaire bailleur de locations nues (vides), le choix du régime d'imposition des revenus fonciers est le levier fiscal le plus puissant pour optimiser le rendement net de son patrimoine immobilier. Deux régimes s'affrontent : le <strong>régime micro-foncier</strong> (avec son abattement forfaitaire de 30 %) et le <strong>régime réel</strong> (avec déduction de l'intégralité des charges supportées).</p>
+            
+            <p>Si beaucoup de bailleurs débutent sous le régime réel pour amortir de lourds travaux ou déduire de gros intérêts d'emprunt, la question du retour au régime simplifié se pose inévitablement lorsque les charges diminuent. <strong>Comment passer du régime réel au micro-foncier en 2026 ?</strong> Quelles sont les conditions de ressources, les délais légaux de renonciation et la méthode de calcul pour maximiser vos gains ? Découvrez notre guide d'expert.</p>
+
+            <h2>1. Comprendre les deux régimes fiscaux fonciers</h2>
+            <p>Avant d'opérer la transition, il est essentiel de rappeler le fonctionnement de ces deux régimes d'imposition :</p>
+            <ul>
+              <li class="mb-16"><strong>Le régime Micro-Foncier</strong> : C'est le régime par défaut si vos loyers bruts annuels sont inférieurs à <strong>15 000 €</strong>. L'administration fiscale applique automatiquement un abattement forfaitaire de <strong>30 %</strong> sur vos loyers déclarés. Vous n'êtes ainsi imposé que sur 70 % de vos revenus fonciers. En contrepartie, vous ne pouvez déduire aucune charge réelle (taxe foncière, assurances, travaux).</li>
+              <li class="mb-16"><strong>Le régime Réel</strong> : Il s'applique obligatoirement si vos revenus fonciers dépassent 15 000 € par an, ou sur option volontaire si vos revenus sont inférieurs à ce seuil. Il vous permet de déduire l'intégralité de vos frais d'exploitation réels (intérêts de crédit, taxe foncière hors TEOM, travaux de rénovation, et primes d'assurance <strong>Garantie Loyer Impayé (GLI)</strong>) pour déterminer votre bénéfice net imposable.</li>
+            </ul>
+
+            <h2>2. La Règle d'Engagement des 3 Ans : Un Piège Fiscal Courant</h2>
+            <p>Le point le plus important à surveiller lors de la transition est le <strong>délai d'irrévocabilité</strong>. Si vous avez choisi d'opter pour le régime réel de manière volontaire (alors que vos loyers étaient inférieurs à 15 000 €), cette option vous engage <strong>obligatoirement pour une durée irrévocable de 3 ans</strong>.</p>
+            <p>Pendant cette période triennale, il est impossible de revenir au micro-foncier. Si vous tentez de le faire, l'administration fiscale procédera à un redressement. Ce n'est qu'à l'issue de cette période de 3 ans que l'option devient annuelle et révocable. Vous pouvez alors renoncer au régime réel chaque année pour l'année précédente.</p>
+
+            <h2>3. Comment déclarer le changement et repasser au Micro-Foncier ?</h2>
+            <p>Sur le plan administratif, la renonciation au régime réel est extrêmement simple et ne nécessite aucun courrier préalable à votre centre des impôts. La démarche s'effectue directement lors de votre déclaration d'impôt sur le revenu annuelle :</p>
+            <ol>
+              <li class="mb-12">Ne remplissez pas la déclaration n° 2044 (réservée au régime réel).</li>
+              <li class="mb-12">Sur votre déclaration principale n° 2042, reportez simplement le montant brut de vos loyers perçus sur la ligne <strong>4BE</strong> (cadre "Revenus fonciers - Régime micro-foncier").</li>
+              <li class="mb-12">L'administration fiscale calculera d'elle-même l'abattement forfaitaire de 30 % et intègrera les 70 % restants à votre assiette fiscale globale.</li>
+            </ol>
+
+            <h2>4. Exemple Chiffré de Rentabilité : Réel vs Micro-Foncier</h2>
+            <p>Prenons un exemple concret pour illustrer l'arbitrage fiscal. Un propriétaire bailleur perçoit 10 000 € de loyers bruts annuels. Il n'a plus de crédit en cours et réalise peu de travaux.</p>
+            
+            <div style="overflow-x: auto; margin: 24px 0;">
+              <table style="width: 100%; border-collapse: collapse; min-width: 500px; border: 1px solid var(--color-border);">
+                <thead>
+                  <tr style="background: var(--color-primary); color: white;">
+                    <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Paramètres</th>
+                    <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Option Régime Réel (Charges = 2 200€)</th>
+                    <th style="padding: 12px; border: 1px solid var(--color-border); text-align: left;">Option Micro-Foncier (Abattement 30%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700;">Revenu brut foncier</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border);">10 000 €</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border);">10 000 €</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700;">Déduction applicable</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border);">- 2 200 € (charges réelles)</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border);">- 3 000 € (abattement forfaitaire)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700;">Revenu net taxable</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700;">7 800 €</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-success);">7 000 €</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); font-weight: 700;">Gain imposable</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border);">Base plus élevée de 800 €</td>
+                    <td style="padding: 12px; border: 1px solid var(--color-border); color: var(--color-success); font-weight: 700;">Base réduite de 800 € (Moins d'impôt)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p><strong>Verdict</strong> : Dans cet exemple, le micro-foncier est le choix optimal car les charges réelles (2 200 €) sont inférieures à l'abattement de 30 % (3 000 €). Le propriétaire réduit sa base imposable de 800 € en repassant au micro-foncier.</p>
+
+            <!-- CTA Simulator Lead Gen -->
+            <div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-primary); margin: 40px 0; padding: 30px; border-radius: 12px; text-align: center;">
+                <h3 style="color: var(--color-primary); margin-top:0;">Optimisez la rentabilité de votre bail</h3>
+                <p>Sous le régime réel, vos cotisations d'assurance loyer impayé sont déductibles à 100%. Utilisez notre simulateur interactif pour certifier votre dossier de location et sécuriser vos loyers.</p>
+                <a href="/simulateur-eligibilite-gli" class="btn btn-primary btn-large" style="display: inline-block; margin-top: 15px;" title="Tester l'éligibilité GLI locataire en ligne">Lancer la Simulation de Garant</a>
+            </div>
+        </article>
+    </main>
+  `} />
+</Layout>
