@@ -354,7 +354,7 @@ a:hover {
     gap: 48px;
     margin-bottom: 48px;
 }
-.footer-col h4, .footer-col h5 {
+.footer-col h4,.footer-col .footer-title, .footer-col h5 {
     color: white;
     margin-bottom: 24px;
     font-size: 1.25rem;
