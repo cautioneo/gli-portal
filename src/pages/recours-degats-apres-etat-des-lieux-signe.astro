@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Dégâts après État des Lieux Signé : Recours Propriétaire | Cautioneo";
+const pageDescription = "Que faire en cas de dégradations découvertes après la signature de l'état des lieux de sortie ? Découvrez vos recours, délais de réclamation et modèle de mise en demeure.";
+const pageCanonical = "https://cautioneo-gli.com/recours-degats-apres-etat-des-lieux-signe";
+const pageNoindex = false;
+
+const aggregateRating = {
+  ratingValue: 4.7,
+  reviewCount: 841
+};
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Procédures", item: "https://cautioneo-gli.com/procedures" },
+  { name: "Dégâts après État des Lieux Signé" }
+];
+
+const pageKeywords = "reclamation apres etat des lieux sortie, degats constates apres etat des lieux, retenue depot garantie, modele mise en demeure locataire";
+---
+
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} aggregateRating={aggregateRating}>
+  <Fragment set:html={`
+    <header class="page-hero" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: white; padding: 60px 0; text-align: center;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <span class="badge" style="background-color: #f59e0b; color: #0f172a; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; display: inline-block;">Litiges Locatifs</span>
+            <h1 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px;">Dégâts après État des Lieux Signé : Vos Recours</h1>
+            <p style="font-size: 1.15rem; color: #cbd5e1; max-width: 700px; margin: 0 auto; line-height: 1.6;">Que faire si vous découvrez des dégradations ou des vices cachés après le départ du locataire et la signature des documents ? Guide complet des recours légaux.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding: 60px 0; background-color: #f8fafc;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+            <div class="breadcrumb" style="margin-bottom: 30px;">
+                <a href="/procedures" style="color: #4f46e5; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-arrow-left"></i> ← Retour aux Procédures
+                </a>
+            </div>
+
+            <div class="guide-layout" style="display: grid; grid-template-columns: 280px 1fr; gap: 40px;">
+                <!-- Sidebar Sommaire -->
+                <aside class="sidebar-sticky" style="position: sticky; top: 120px; height: fit-content; background: white; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Sommaire</h3>
+                    <ul class="sidebar-nav" style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 12px;"><a class="text-main" href="#regle-juridique" style="color: #4f46e5; text-decoration: none; font-weight: 500; font-size: 0.95rem;">1. La Règle d'Or de l'EDL</a></li>
+                        <li style="margin-bottom: 12px;"><a class="text-main" href="#vices-caches" style="color: #334155; text-decoration: none; font-weight: 500; font-size: 0.95rem;">2. Exception pour Vices Cachés</a></li>
+                        <li style="margin-bottom: 12px;"><a class="text-main" href="#procedure-recouvrement" style="color: #334155; text-decoration: none; font-weight: 500; font-size: 0.95rem;">3. Procédure de Réclamation</a></li>
+                        <li style="margin-bottom: 12px;"><a class="text-main" href="#modele-lettre" style="color: #334155; text-decoration: none; font-weight: 500; font-size: 0.95rem;">4. Modèle de Mise en Demeure</a></li>
+                        <li style="margin-bottom: 12px;"><a class="text-main" href="#degradations-assurance" style="color: #334155; text-decoration: none; font-weight: 500; font-size: 0.95rem;">5. Garantie Dégradations</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="content-body" style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <!-- Section 1 -->
+                    <div id="regle-juridique" style="margin-bottom: 48px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">1. La Règle Juridique de l'État des Lieux Signé</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 16px;">En droit locatif français, la signature de l'état des lieux de sortie (EDL) scelle les obligations des parties. Selon l'article 3-2 de la loi du 6 juillet 1989 :</p>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <p style="font-size: 1rem; color: #0f172a; margin: 0; line-height: 1.6; font-style: italic;">« L'état des lieux de sortie est établi contradictoirement et amiablement par les parties ou par un tiers mandaté par elles. Dès lors qu'il est signé par le propriétaire et le locataire, il constitue la preuve définitive de l'état du logement à la remise des clés. »</p>
+                        </div>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 16px;"><strong>La conséquence immédiate :</strong> Si un dégât (rayure sur le parquet, vitre fêlée, chaudière en panne) n'est pas mentionné sur l'état des lieux de sortie signé, le propriétaire est présumé avoir récupéré le logement en bon état concernant ces éléments. Il ne peut légalement retenir aucune somme sur le dépôt de garantie pour ces réparations.</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div id="vices-caches" style="margin-bottom: 48px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">2. L'Exception Majeure : Les Vices Cachés et le Dol</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 16px;">Bien que l'EDL signé soit en principe définitif, la jurisprudence de la Cour de cassation admet des exceptions en cas de <strong>dissimulation volontaire (dol)</strong> ou de <strong>vices cachés</strong>. Un propriétaire peut se retourner contre son ancien locataire si :</p>
+                        <ul style="color: #475569; line-height: 1.6; padding-left: 20px; font-size: 1rem; margin-bottom: 20px;">
+                            <li style="margin-bottom: 8px;">Le locataire a délibérément caché un dégât important (par exemple, en disposant un tapis lourd pour dissimuler une brûlure profonde sur le sol, ou en collant du papier pour masquer un trou majeur dans une cloison).</li>
+                            <li style="margin-bottom: 8px;">Le dégât ne pouvait absolument pas être détecté par un examen normal et attentif des lieux lors de la visite.</li>
+                            <li style="margin-bottom: 8px;">Le locataire a rendu le logement insalubre de manière non apparente immédiatement (canalisations bouchées volontairement par du plâtre, par exemple).</li>
+                        </ul>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155;">La charge de la preuve incombe toutefois au propriétaire bailleur, qui doit prouver l'antériorité du dégât et l'intention de dissimulation.</p>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div id="procedure-recouvrement" style="margin-bottom: 48px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">3. La Procédure Étape par Étape pour Faire Réclamation</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 20px;">Si vous découvrez des dégradations non notées après le départ de votre locataire, vous devez réagir très vite :</p>
+                        <ol style="color: #334155; line-height: 1.7; padding-left: 20px; font-size: 1rem; margin-bottom: 24px;">
+                            <li style="margin-bottom: 12px;"><strong>Faire constater le dégât (Huissier) :</strong> Faites venir un commissaire de justice (huissier) sous 24 à 48 heures pour dresser un constat officiel de la dégradation et de sa nature (notamment s'il s'agit d'un vice caché).</li>
+                            <li style="margin-bottom: 12px;"><strong>Obtenir des devis de réparation :</strong> Faites chiffrer immédiatement les réparations nécessaires par des professionnels qualifiés.</li>
+                            <li style="margin-bottom: 12px;"><strong>Envoyer une mise en demeure :</strong> Envoyez une lettre recommandée avec accusé de réception (LRAR) à l'ancien locataire (et à sa caution si applicable) détaillant la réclamation, les devis et en exigeant le remboursement ou le consentement à la retenue.</li>
+                            <li style="margin-bottom: 12px;"><strong>Saisir la Commission Départementale de Conciliation (CDC) :</strong> Si le locataire refuse, vous devez obligatoirement saisir la CDC ou un conciliateur de justice avant toute action en justice pour les litiges inférieurs à 5 000 €.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div id="modele-lettre" style="margin-bottom: 48px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">4. Modèle Gratuit de Mise en Demeure pour Dégradations</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 16px;">Voici un modèle de courrier à personnaliser et à envoyer en recommandé (LRAR) pour réclamer le paiement de réparations après le départ du locataire :</p>
+                        
+                        <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 24px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #0f172a; line-height: 1.5; white-space: pre-wrap;">
+[Vos Coordonnées : Nom, Prénom, Adresse]
+[Coordonnées de l'ancien locataire]
+
+Objet : Mise en demeure - Réclamation pour dégradations et réparations locatives
+
+Madame, Monsieur,
+
+Suite à la signature de l'état des lieux de sortie du logement situé au [Adresse du logement] en date du [Date de sortie], et à la remise des clés, j'ai constaté après examen attentif plusieurs dégradations graves qui ont été délibérément dissimulées lors de notre visite contradictoire (notamment [Détailler précisément les dégradations cachées, ex: brûlure profonde masquée par le canapé]).
+
+Ces dégradations constituant un vice caché et un manquement à votre obligation d'entretien du logement (article 7 de la loi du 6 juillet 1989), je vous mets en demeure par la présente de régler la somme de [Montant total] €, correspondant aux réparations nécessaires.
+
+Vous trouverez ci-joint les pièces justificatives suivantes :
+- Le constat de commissaire de justice (huissier) du [Date du constat]
+- Les devis professionnels détaillés des entreprises de réparation
+
+À défaut de paiement ou d'accord amiable écrit de votre part sous un délai de 8 jours à compter de la réception de cette lettre, je me verrai contraint(e) de saisir la Commission Départementale de Conciliation, puis le Tribunal judiciaire pour faire valoir mes droits.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+Fait à [Ville], le [Date]
+
+[Votre Signature]
+                        </div>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div id="degradations-assurance" style="margin-bottom: 10px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">5. Évitez les Conflits de Sortie grâce à la Garantie Dégradations Cautioneo</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 24px;">Les litiges liés à la restitution du dépôt de garantie et aux réparations après le départ sont les premières sources de conflits entre propriétaires et locataires en France. Pour sécuriser pleinement votre investissement locatif, Cautioneo propose une garantie complète.</p>
+                        
+                        <div class="cta-banner" style="background: #4f46e5; color: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 20px rgba(79, 70, 229, 0.15);">
+                            <h3 style="color: white; font-size: 1.4rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Protégez votre patrimoine immobilier à 100%</h3>
+                            <p style="font-size: 1rem; color: #eedffc; margin-bottom: 20px; line-height: 1.5;">La Garantie Loyers Impayés (GLI) Cautioneo intègre une assurance dégradations haut de gamme pour les bailleurs :</p>
+                            <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; display: grid; grid-template-columns: 1fr; gap: 10px;">
+                                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: #ffffff;"><i class="fas fa-check-circle" style="color: #34d399;"></i> <strong>Jusqu'à 10 000 €</strong> de prise en charge pour les dégradations constatées.</li>
+                                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: #ffffff;"><i class="fas fa-check-circle" style="color: #34d399;"></i> <strong>Perte de loyers couverte</strong> : Compensation financière le temps d'effectuer les travaux.</li>
+                                <li style="display: flex; gap: 10px; align-items: center; font-size: 0.95rem; color: #ffffff;"><i class="fas fa-check-circle" style="color: #34d399;"></i> <strong>Protection Juridique</strong> : Nos experts gèrent le recouvrement et les procédures judiciaires pour vous.</li>
+                            </ul>
+                            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" style="display: inline-block; background: white; color: #4f46e5; font-weight: 700; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: transform 0.2s;" title="Souscrire à l'assurance Cautioneo">
+                                Souscrire à l'assurance bailleur Cautioneo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  `} />
+</Layout>
