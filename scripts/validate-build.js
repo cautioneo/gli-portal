@@ -19,6 +19,49 @@ function getFilesRecursively(dir, extension, filesList = []) {
   return filesList;
 }
 
+function checkLocalLink(currentFilePath, linkUrl) {
+  // 1. Clean query params and hash anchors
+  const urlWithoutHash = linkUrl.split('#')[0].split('?')[0].trim();
+  if (!urlWithoutHash) return true; // It was just an anchor like "#" or "#section"
+
+  // 2. Ignore external or non-http links
+  if (/^(https?:|mailto:|tel:|javascript:|sms:|data:)/i.test(urlWithoutHash)) {
+    return true;
+  }
+
+  // 3. Resolve absolute vs relative
+  let targetPath;
+  if (urlWithoutHash.startsWith('/')) {
+    // Relative to distDir
+    targetPath = path.join(distDir, urlWithoutHash.substring(1));
+  } else {
+    // Relative to the current HTML file's folder
+    const currentDir = path.dirname(currentFilePath);
+    targetPath = path.join(currentDir, urlWithoutHash);
+  }
+
+  // Normalize targetPath
+  targetPath = path.normalize(targetPath);
+
+  // 4. Check if the path exists in any of the common formats:
+  // a) The exact file path exists (e.g. for images, CSS, JS, or direct html files)
+  if (fs.existsSync(targetPath) && fs.statSync(targetPath).isFile()) {
+    return true;
+  }
+  // b) It's a directory containing index.html (clean URL /blog-post -> /blog-post/index.html)
+  const indexPath = path.join(targetPath, 'index.html');
+  if (fs.existsSync(indexPath) && fs.statSync(indexPath).isFile()) {
+    return true;
+  }
+  // c) The path + ".html" exists (another clean URL style, or direct file reference without extension)
+  const htmlPath = targetPath + '.html';
+  if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
+    return true;
+  }
+
+  return false;
+}
+
 function checkHtmlFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const relativePath = path.relative(distDir, filePath);
@@ -80,11 +123,23 @@ function checkHtmlFile(filePath) {
     errors.push(`Multiple <link rel="canonical"> tags found.`);
   }
 
-  // Rule 5: Images alt attributes
+  // Rule 5: Images alt attributes and Core Web Vitals checks
   const imgMatches = content.match(/<img\s+[^>]*>/gi) || [];
   for (const img of imgMatches) {
+    // 5a. Check Alt attribute
     if (!/alt=["']/i.test(img)) {
       warnings.push(`Image missing alt attribute: ${img.substring(0, 80)}...`);
+    }
+    // 5b. Check explicit dimensions (CLS prevention)
+    const hasWidth = /width=["']/i.test(img);
+    const hasHeight = /height=["']/i.test(img);
+    if (!hasWidth || !hasHeight) {
+      warnings.push(`Image missing explicit dimensions (width/height) to prevent CLS: ${img.substring(0, 80)}...`);
+    }
+    // 5c. Check loading="lazy" (LCP/Speed)
+    const hasLazy = /loading=["']lazy["']/i.test(img);
+    if (!hasLazy && !img.includes('logo') && !img.includes('hero') && !img.includes('favicon')) {
+      warnings.push(`Image missing loading="lazy" attribute for performance: ${img.substring(0, 80)}...`);
     }
   }
 
@@ -122,13 +177,49 @@ function checkHtmlFile(filePath) {
     }
   }
 
-
   // Rule 7: Specific B2B contrast regression check on `.article-meta` on white background
   // If we find style elements or styles setting the text-muted/meta color to white without a dark wrapper
   if (relativePath.startsWith('blog-') && !relativePath.includes('404.html')) {
     if (content.includes('.article-meta') && /color\s*:\s*rgba\(\s*255\s*,\s*255\s*,\s*255\s*,\s*0\.7\s*\)\s*!important/gi.test(content)) {
       // White contrast regression detected
       errors.push(`.article-meta style overrides text color to low-contrast white.`);
+    }
+  }
+
+  // Rule 8: Local Link & Asset Integrity Linter (Broken Link check)
+  // 8a. Check all anchor hrefs
+  const aMatches = content.matchAll(/<a\s+[^>]*href=["']([^"']*)["']/gi);
+  for (const match of aMatches) {
+    const href = match[1].trim();
+    if (href && !checkLocalLink(filePath, href)) {
+      errors.push(`Broken link found: href="${href}"`);
+    }
+  }
+
+  // 8b. Check all image src attributes
+  const imgMatchesAttr = content.matchAll(/<img\s+[^>]*src=["']([^"']*)["']/gi);
+  for (const match of imgMatchesAttr) {
+    const src = match[1].trim();
+    if (src && !checkLocalLink(filePath, src)) {
+      errors.push(`Broken image source found: src="${src}"`);
+    }
+  }
+
+  // 8c. Check all script src attributes
+  const scriptMatchesAttr = content.matchAll(/<script\s+[^>]*src=["']([^"']*)["']/gi);
+  for (const match of scriptMatchesAttr) {
+    const src = match[1].trim();
+    if (src && !checkLocalLink(filePath, src)) {
+      errors.push(`Broken script source found: src="${src}"`);
+    }
+  }
+
+  // 8d. Check all link href attributes
+  const linkMatchesAttr = content.matchAll(/<link\s+[^>]*href=["']([^"']*)["']/gi);
+  for (const match of linkMatchesAttr) {
+    const href = match[1].trim();
+    if (href && !href.startsWith('//') && !checkLocalLink(filePath, href)) {
+      errors.push(`Broken link asset found: href="${href}"`);
     }
   }
 
