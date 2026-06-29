@@ -222,6 +222,29 @@ const pageKeywords = "d'éligibilité, tarif assurance gli, simulateur, garantie
                     ctaBtn.className = "btn btn-outline w-full mt-16";
                     resultDiv.className = "card p-32 border accent-danger";
                 }
+
+                // Push results dataLayer event
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'calculator_result',
+                    eligible_gli: isClassicGli,
+                    eligible_garant: isCautioneoGarant,
+                    effort_rate: effortRate,
+                    loc_situation: situation,
+                    rent_value: loyer
+                });
+
+                // Set dynamic click tracking on the updated CTA button
+                ctaBtn.onclick = function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'calculator_cta_click',
+                        cta_text: ctaBtn.textContent,
+                        eligible_gli: isClassicGli,
+                        eligible_garant: isCautioneoGarant,
+                        rent_value: loyer
+                    });
+                };
             }, 500);
         });
     </script>`} />
