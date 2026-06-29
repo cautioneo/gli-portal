@@ -1,0 +1,29 @@
+Total Pages Analyzed: 164
+Found 27 code issues/warnings:
+  [WARNING] [blog-assurance-loyer-impaye-annecy.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-annecy'.
+  [WARNING] [blog-assurance-loyer-impaye-avignon.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-avignon'.
+  [WARNING] [blog-assurance-loyer-impaye-bayonne.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-bayonne' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-besancon.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-besancon' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-chambery.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-chambery' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-chartres.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-chartres' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-colmar.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-colmar' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-la-rochelle.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-la-rochelle' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-laval.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-laval' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-le-mans.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-le-mans'.
+  [WARNING] [blog-assurance-loyer-impaye-lorient.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-lorient'.
+  [WARNING] [blog-assurance-loyer-impaye-mulhouse.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-mulhouse'.
+  [WARNING] [blog-assurance-loyer-impaye-poitiers.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-poitiers'.
+  [WARNING] [blog-assurance-loyer-impaye-quimper.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-quimper'.
+  [WARNING] [blog-assurance-loyer-impaye-troyes.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-troyes' in pages directory.
+  [WARNING] [blog-assurance-loyer-impaye-valence.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-valence' in pages directory.
+  [WARNING] [blog-commission-conciliation-cdc.astro] Weak Link Density: Only 1 incoming link points to '/blog-commission-conciliation-cdc'.
+  [WARNING] [blog-post.astro] Orphan Page: No internal links point to '/blog-post' in pages directory.
+  [WARNING] [blog.astro] Weak Link Density: Only 1 incoming link points to '/blog'.
+  [WARNING] [boite-a-outils.astro] Weak Link Density: Only 1 incoming link points to '/boite-a-outils'.
+  [WARNING] [cgs.astro] Orphan Page: No internal links point to '/cgs' in pages directory.
+  [WARNING] [checklist-bailleur.astro] Weak Link Density: Only 1 incoming link points to '/checklist-bailleur'.
+  [WARNING] [conciergerie.astro] Orphan Page: No internal links point to '/conciergerie' in pages directory.
+  [WARNING] [dashboard-demo.astro] Weak Link Density: Only 1 incoming link points to '/dashboard-demo'.
+  [WARNING] [mega-comparatif-garanties-locatives.astro] Weak Link Density: Only 1 incoming link points to '/mega-comparatif-garanties-locatives'.
+  [WARNING] [reclamation.astro] Orphan Page: No internal links point to '/reclamation' in pages directory.
+  [WARNING] [scanner-demo.astro] Weak Link Density: Only 1 incoming link points to '/scanner-demo'.
