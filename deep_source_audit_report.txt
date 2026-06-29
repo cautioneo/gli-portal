@@ -1,5 +1,5 @@
-Total Pages Analyzed: 164
-Found 27 code issues/warnings:
+Total Pages Analyzed: 163
+Found 26 code issues/warnings:
   [WARNING] [blog-assurance-loyer-impaye-annecy.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-annecy'.
   [WARNING] [blog-assurance-loyer-impaye-avignon.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-avignon'.
   [WARNING] [blog-assurance-loyer-impaye-bayonne.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-bayonne' in pages directory.
@@ -16,7 +16,6 @@ Found 27 code issues/warnings:
   [WARNING] [blog-assurance-loyer-impaye-quimper.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-quimper'.
   [WARNING] [blog-assurance-loyer-impaye-troyes.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-troyes' in pages directory.
   [WARNING] [blog-assurance-loyer-impaye-valence.astro] Orphan Page: No internal links point to '/blog-assurance-loyer-impaye-valence' in pages directory.
-  [WARNING] [blog-commission-conciliation-cdc.astro] Weak Link Density: Only 1 incoming link points to '/blog-commission-conciliation-cdc'.
   [WARNING] [blog-post.astro] Orphan Page: No internal links point to '/blog-post' in pages directory.
   [WARNING] [blog.astro] Weak Link Density: Only 1 incoming link points to '/blog'.
   [WARNING] [boite-a-outils.astro] Weak Link Density: Only 1 incoming link points to '/boite-a-outils'.
