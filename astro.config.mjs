@@ -6,4 +6,8 @@ export default defineConfig({
   outDir: './dist',
   build: { format: 'file' },
   trailingSlash: 'never',
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  },
 });
