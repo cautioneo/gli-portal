@@ -1,0 +1,738 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Accueil', item: 'https://cautioneo-gli.com/' },
+  { name: 'Expert Juridique - Jean-Pierre Dupin', item: 'https://cautioneo-gli.com/expert-jean-pierre-dupin' }
+];
+
+// List of top articles reviewed by JPD in B2B to build powerful internal links
+const reviewedArticles = [
+  {
+    title: 'Procédure d\'Expulsion Squatteur & Loi Anti-Squat 2026',
+    desc: 'Cadre légal précis sur l\'occupation sans titre, la règle d\'expulsion administrative sous 48h et les démarches d\'huissier.',
+    url: '/guide-loi-anti-squat-2026-expulsion',
+    category: 'Réglementation'
+  },
+  {
+    title: 'Dégâts après État des Lieux Signé : Recours Légaux',
+    desc: 'Quels sont les recours du bailleur en cas de dégradations découvertes après la signature de l\'état des lieux de sortie ?',
+    url: '/recours-degats-apres-etat-des-lieux-signe',
+    category: 'Contentieux'
+  },
+  {
+    title: 'Guide de la Garantie Loyers Impayés (GLI)',
+    desc: 'Comment choisir sa GLI, comprendre la fiscalité des primes déductibles et sécuriser efficacement ses revenus locatifs.',
+    url: '/guide-choisir-assurance-loyer-impaye',
+    category: 'Assurance'
+  },
+  {
+    title: 'Comparatif : GLI vs Garant Physique ou Garant en Ligne',
+    desc: 'Analyse approfondie pour choisir le meilleur dispositif de sécurisation selon le profil de vos candidats locataires.',
+    url: '/blog-gli-vs-garant-physique',
+    category: 'Comparatif'
+  }
+];
+---
+
+<Layout
+  title="Jean-Pierre Dupin - Expert en Droit Immobilier & Gestion Locative"
+  description="Découvrez le profil de Jean-Pierre Dupin, expert juridique indépendant et validateur éditorial de Cautioneo Bailleurs. 15+ ans d'expérience."
+  canonical="/expert-jean-pierre-dupin"
+  breadcrumbs={breadcrumbs}
+>
+  <main id="main-content">
+    <!-- Hero Header Profile Section (B2B Styling) -->
+    <section class="profile-hero">
+      <div class="container hero-container">
+        <div class="profile-card">
+          <div class="avatar-container">
+            <div class="profile-avatar">JD</div>
+            <span class="verified-badge"><i class="fas fa-check-circle"></i> Expert Juridique Validé</span>
+          </div>
+          <div class="profile-info">
+            <span class="profile-tag">Comité Scientifique & Légal</span>
+            <h1>Jean-Pierre Dupin</h1>
+            <p class="profile-title">Expert en Droit Immobilier & Gestion Locative</p>
+            
+            <div class="credentials-row">
+              <span class="cred-pill"><i class="fas fa-gavel"></i> Juriste Conseil</span>
+              <span class="cred-pill"><i class="fas fa-university"></i> Master II Droit Privé Immobilier</span>
+              <span class="cred-pill"><i class="fas fa-file-signature"></i> Spécialiste Contentieux Locatif</span>
+            </div>
+            
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Ans d'Expertise</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">60+</span>
+                <span class="stat-label">Guides & Modèles Relus</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Réglementaire 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography & Credentials Section -->
+    <section class="profile-bio-section">
+      <div class="container bio-grid">
+        <div class="bio-main">
+          <h2>Parcours & Rôle dans le Portail Bailleurs</h2>
+          <p>
+            Spécialisé en <strong>droit de l'immobilier, de la construction et des baux d'habitation</strong>, Jean-Pierre Dupin intervient comme juriste conseil indépendant auprès des professionnels de l'immobilier, des syndics de copropriété et des bailleurs institutionnels.
+          </p>
+          <p>
+            Face à la complexité croissante des réglementations locatives en France (encadrement des loyers, décrets d'application de la Loi Anti-Squat, réforme du diagnostic de performance énergétique DPE), il accompagne l'écosystème Cautioneo pour garantir aux propriétaires bailleurs une information fiable, neutre et rigoureusement conforme à la jurisprudence.
+          </p>
+          
+          <h3>Une relecture stricte pour la sécurité des bailleurs</h3>
+          <p>
+            La gestion d'un investissement locatif comporte des risques juridiques et financiers. Le rôle de Jean-Pierre Dupin est de s'assurer que chaque guide, modèle de lettre de mise en demeure, ou simulateur de rentabilité respecte le droit positif :
+          </p>
+          <ul class="role-list">
+            <li><i class="fas fa-check"></i> <strong>Modèles de Documents :</strong> Validation juridique des formulaires, contrats de bail types et lettres de relance pour impayés.</li>
+            <li><i class="fas fa-check"></i> <strong>Procédures de Recouvrement :</strong> Clarification des étapes réglementaires du commandement de payer jusqu'à l'expulsion.</li>
+            <li><i class="fas fa-check"></i> <strong>Veille Législative :</strong> Actualisation des obligations de décence énergétique des logements (critères DPE 2025/2026).</li>
+          </ul>
+        </div>
+        
+        <div class="bio-sidebar">
+          <div class="sidebar-card">
+            <h4>Expertise Juridique</h4>
+            <ul class="details-list">
+              <li><strong>Nom :</strong> Jean-Pierre Dupin</li>
+              <li><strong>Statut :</strong> Juriste Conseil Indépendant</li>
+              <li><strong>Domaines :</strong> Droit des obligations, Baux commerciaux & d'habitation, GLI</li>
+              <li><strong>Région :</strong> France</li>
+              <li><strong>Réseaux :</strong> 
+                <a href="https://www.linkedin.com/in/jean-pierre-dupin-immobilier" target="_blank" rel="noopener" class="linkedin-link">
+                  <i class="fab fa-linkedin"></i> LinkedIn du validateur
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="sidebar-card cert-card">
+            <h4>Rigueur & Transparence</h4>
+            <p>Ce portail applique une charte éditoriale stricte. L'ensemble des articles techniques et juridiques fait l'objet d'une validation par un expert externe agréé pour exclure toute information erronée.</p>
+            <div class="cert-stamp">
+              <i class="fas fa-balance-scale"></i>
+              <span>Conformité Certifiée</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Reviewed Index Section -->
+    <section class="profile-articles-section">
+      <div class="container">
+        <h2>Publications & Guides Validés pour les Bailleurs</h2>
+        <p class="section-desc">Retrouvez les guides de référence rédigés et mis à jour sous la supervision de notre expert juridique.</p>
+        
+        <div class="articles-grid">
+          {reviewedArticles.map(art => (
+            <div class="article-item-card">
+              <span class="art-badge">{art.category}</span>
+              <h3>{art.title}</h3>
+              <p>{art.desc}</p>
+              <a href={art.url} class="art-link">Consulter le guide <i class="fas fa-arrow-right"></i></a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversion Box (B2B Styled) -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content">
+            <h2>Sécurisez vos revenus locatifs dès aujourd'hui</h2>
+            <p>Protégez-vous contre les impayés de loyer et les dégradations grâce à la Garantie Loyers Impayés (GLI) Cautioneo, validée conforme aux exigences du marché.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="/simulateur-eligibilite-gli" class="btn btn-secondary-outline">Tester un locataire</a>
+            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fwww.cautioneo.com%2Fproprietaire%2Fassurance-loyer%2F" target="_blank" rel="noopener" class="btn btn-primary-light">Souscrire ma GLI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Structured Data (JSON-LD) for E-E-A-T Person Profile -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://cautioneo-gli.com/expert-jean-pierre-dupin#person",
+    "name": "Jean-Pierre Dupin",
+    "jobTitle": "Expert en Droit Immobilier & Gestion Locative",
+    "description": "Jean-Pierre Dupin est un juriste conseil indépendant spécialisé en droit immobilier, baux d'habitation et gestion locative avec plus de 15 ans d'expérience.",
+    "url": "https://cautioneo-gli.com/expert-jean-pierre-dupin",
+    "image": "https://cautioneo-gli.com/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/jean-pierre-dupin-immobilier"
+    ],
+    "knowsAbout": [
+      "Droit Immobilier",
+      "Baux d'habitation",
+      "Gestion Locative",
+      "Sécurisation des loyers",
+      "Assurance Loyer Impayé (GLI)"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Cautioneo Bailleurs",
+      "url": "https://cautioneo-gli.com"
+    }
+  })} />
+</Layout>
+
+<style>
+  #main-content {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    padding-bottom: 60px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Section B2B (Amber/Brown theme) */
+  .profile-hero {
+    background: linear-gradient(135deg, #1f1305, #451a03);
+    color: white;
+    padding: 60px 0;
+    text-align: left;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+  
+  .profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b45309, #92400e);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    box-shadow: 0 10px 25px rgba(180, 83, 9, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .verified-badge {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  
+  .profile-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .profile-tag {
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  
+  .profile-info h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 8px;
+    color: white;
+  }
+  
+  .profile-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    color: #cbd5e1;
+    margin: 0 0 20px;
+  }
+  
+  .credentials-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  
+  .cred-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .stats-row {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+  
+  /* Bio Section */
+  .profile-bio-section {
+    padding: 60px 0;
+  }
+  
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .bio-main {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .bio-main h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .bio-main h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .bio-main p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 16px;
+  }
+  
+  .role-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  
+  .role-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .role-list li i {
+    color: #10b981;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  
+  /* Sidebar */
+  .bio-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .sidebar-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: left;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidebar-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+  }
+  
+  .details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .details-list li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: #475569;
+    line-height: 1.5;
+  }
+  
+  .details-list li strong {
+    color: #1e293b;
+    display: inline-block;
+    width: 90px;
+  }
+  
+  .linkedin-link {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  
+  .linkedin-link:hover {
+    color: #005582;
+  }
+  
+  .cert-card {
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border-color: #fde68a;
+  }
+  
+  .cert-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #92400e;
+    margin-bottom: 20px;
+  }
+  
+  .cert-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #fcd34d;
+    box-shadow: 0 4px 10px rgba(180, 83, 9, 0.05);
+  }
+  
+  .cert-stamp i {
+    color: #d97706;
+    font-size: 1.25rem;
+  }
+  
+  .cert-stamp span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #78350f;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  /* Articles Index Section */
+  .profile-articles-section {
+    padding: 60px 0;
+    background-color: white;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .profile-articles-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .section-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  .article-item-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .article-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+  }
+  
+  .art-badge {
+    align-self: flex-start;
+    background: rgba(180, 83, 9, 0.08);
+    color: #b45309;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+  
+  .article-item-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #1e293b;
+    line-height: 1.4;
+  }
+  
+  .article-item-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+  
+  .art-link {
+    color: #b45309;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+    margin-top: auto;
+  }
+  
+  .art-link:hover {
+    gap: 10px;
+    text-decoration: underline;
+  }
+  
+  /* CTA Section B2B (Brown theme) */
+  .cta-section {
+    padding: 60px 0 0;
+  }
+  
+  .cta-box {
+    background: linear-gradient(135deg, #b45309, #92400e);
+    color: white;
+    border-radius: 16px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(180, 83, 9, 0.2);
+  }
+  
+  .cta-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .cta-content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+  }
+  
+  .cta-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    white-space: nowrap;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.02);
+  }
+  
+  .btn-secondary-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+  
+  .btn-secondary-outline:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .btn-primary-light {
+    background-color: white;
+    color: #b45309;
+    border: 2px solid white;
+  }
+  
+  .btn-primary-light:hover {
+    background-color: #fffbeb;
+    border-color: #fffbeb;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 992px) {
+    .bio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-hero {
+      padding: 40px 0;
+    }
+    
+    .profile-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
+    }
+    
+    .profile-info h1 {
+      font-size: 2rem;
+    }
+    
+    .profile-title {
+      font-size: 1.15rem;
+    }
+    
+    .credentials-row {
+      justify-content: center;
+    }
+    
+    .stats-row {
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .bio-main {
+      padding: 24px;
+    }
+    
+    .cta-box {
+      padding: 32px;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    .cta-actions {
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .cta-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

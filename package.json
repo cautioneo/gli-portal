@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/generate-llms-all.js",
-    "postbuild": "node scripts/generate-sitemap.js && node scripts/validate-build.js",
+    "postbuild": "node scripts/generate-sitemap.js && node scripts/submit-indexnow.js && node scripts/validate-build.js",
     "preview": "astro preview",
     "astro": "astro",
     "pagespeed": "node scripts/check-pagespeed.js"

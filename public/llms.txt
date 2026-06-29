@@ -4,7 +4,7 @@
 
 - **Base URL**: https://cautioneo-gli.com
 - **Full Raw Content**: https://cautioneo-gli.com/llms-full.txt
-- **Last updated**: 2026-06-24
+- **Last updated**: 2026-06-29
 
 ## 📚 Glossaire et Concepts Clés (GEO)
 
