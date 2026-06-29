@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Saisir la Commission Départementale de Conciliation (CDC) | Cautioneo";
+const pageDescription = "Comment saisir la CDC en cas de litige de loyer, dépôt de garantie ou dégradations ? Découvrez le rôle, la procédure de conciliation et nos conseils de bailleurs.";
+const pageCanonical = "https://cautioneo-gli.com/blog-commission-conciliation-cdc";
+const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
+
+const faqItems = [
+  {
+    question: "La saisine de la CDC est-elle gratuite ?",
+    answer: "Oui, la procédure devant la Commission Départementale de Conciliation (CDC) est entièrement gratuite pour le bailleur comme pour le locataire. Aucun frais de dossier ou d\'audience n\'est appliqué."
+  },
+  {
+    question: "Combien de temps dure la procédure de conciliation ?",
+    answer: "La CDC dispose d\'un délai légal de 2 mois à compter de sa saisine pour rendre son avis ou dresser un constat d\'accord/désaccord. Ce délai court-circuite les procédures judiciaires qui durent souvent plusieurs mois."
+  },
+  {
+    question: "L'accord signé devant la CDC a-t-il une valeur juridique ?",
+    answer: "Oui, le document de conciliation signé par les deux parties sous l\'égide de la CDC vaut contrat. Si l\'une des parties ne respecte pas ses engagements (ex: rembourser une caution), l\'autre peut saisir le tribunal pour faire exécuter l\'accord de force."
+  }
+];
+const pageKeywords = "cdc, commission departementale de conciliation, litige locataire, depot de garantie, etat des lieux, conciliation";
+---
+
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+  <Fragment set:html={`<!-- Navigation -->
+
+  <!-- Post Header -->
+  <header class="blog-header" style="background-image: url('/images/photo-1589391886645-d51941baf7fb.webp'); background-size: cover; background-position: center; position: relative;">
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6);"></div>
+    <div class="container" style="position: relative; z-index: 2; padding: 60px 24px; text-align: center; color: white;">
+      <span class="blog-category" style="margin-bottom: 20px; display: inline-block; background-color: var(--color-primary); color: white; padding: 4px 12px; border-radius: 4px; font-weight: 600;">Procédures &amp; Litiges</span>
+      <h1 style="max-width: 900px; margin: 0 auto 20px; color: white;">La Commission Départementale de Conciliation (CDC) : Mode d'Emploi</h1>
+      <div class="article-meta" style="color: rgba(255,255,255,0.8);">
+        <span>Par <strong>L'Équipe Cautioneo</strong></span>
+        <span>•</span>
+        <span>Mis à jour le 29 Juin 2026</span>
+        <span>•</span>
+        <span>Lecture : 7 min</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article class="article-container" style="max-width: 800px; margin: 40px auto; padding: 0 24px; font-family: var(--font-body); line-height: 1.8; color: var(--color-text-main);">
+    <article class="article-content">
+
+      <!-- Callout Silo B2B -->
+      <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+        <strong>💡 Guide Pratique :</strong> Comment réagir si des dommages sont constatés lors du départ de votre locataire ? Lisez notre <a href="/recours-degats-apres-etat-des-lieux-signe" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Consulter notre guide : Recours Dégâts Après État des Lieux Signé">Guide Complet des Recours pour Dégâts Après État des Lieux Signé</a>.
+      </div>
+
+      <p>Dépôt de garantie non restitué, désaccord sur les réparations locatives ou réévaluation d'un loyer sous-évalué : les sources de litige entre un propriétaire bailleur et son locataire sont nombreuses. Avant d'entamer une action en justice longue et coûteuse devant le tribunal judiciaire, il existe une étape amiable et gratuite : <strong>la Commission Départementale de Conciliation (CDC)</strong>.</p>
+      <p>Qu'est-ce que la CDC ? Pour quels litiges sa saisine est-elle obligatoire ? Comment déposer un dossier et comment se déroule l'audience de conciliation ? Suivez notre mode d'emploi 2026.</p>
+
+      <h2>1. Qu'est-ce que la Commission Départementale de Conciliation ?</h2>
+      <p>La CDC est un organisme administratif composé à parts égales de représentants d'organisations de bailleurs et d'organisations de locataires. Son rôle est d'aider les parties à trouver une solution amiable à leur litige locatif, évitant ainsi le recours aux tribunaux.</p>
+      <p>Il existe une commission par département, généralement hébergée à la Direction Départementale de la Cohésion Sociale (DDCS) ou à la préfecture.</p>
+
+      <h2>2. Pour quels litiges saisir la CDC ?</h2>
+      <p>La compétence de la CDC dépend de la nature du litige et de la loi du 6 juillet 1989 :</p>
+      <ul>
+        <li><strong>Dépôt de garantie :</strong> Litiges concernant la retenue ou le retard de restitution du dépôt de garantie (la caution).</li>
+        <li><strong>État des lieux et réparations :</strong> Désaccords sur le contenu de l'état des lieux de sortie ou la répartition des réparations locatives entre propriétaire et locataire.</li>
+        <li><strong>Loyers :</strong> Contestation de la hausse du loyer lors du renouvellement de bail, ou encadrement des loyers.</li>
+        <li><strong>Décence du logement :</strong> Litiges relatifs à la conformité du logement aux critères de décence.</li>
+      </ul>
+      <p><em>À noter :</em> Pour certains litiges, la saisine de la CDC (ou d'un conciliateur de justice) est <strong>obligatoire</strong> avant de pouvoir saisir le juge de proximité.</p>
+
+      <h2>3. Comment saisir la CDC : procédure étape par étape</h2>
+      <p>La saisine se fait de manière simple et gratuite :</p>
+      <ol>
+        <li><strong>Rédaction du dossier :</strong> Préparez une lettre de saisine décrivant précisément le litige, vos demandes et les démarches amiables préalables effectuées (telle qu'une <a href="/blog-lettre-mise-en-demeure" title="Lire notre article : Lettre Mise en Demeure">mise en demeure</a> préalable).</li>
+        <li><strong>Pièces justificatives :</strong> Joignez les photocopies du bail, de l'état des lieux d'entrée et de sortie, des factures ou devis de réparation, et de vos courriers de relance.</li>
+        <li><strong>Envoi :</strong> Adressez le dossier complet par <strong>lettre recommandée avec accusé de réception (LRAR)</strong> au secrétariat de la CDC du département où se situe le logement.</li>
+      </ol>
+
+      <h2>4. Déroulement de l'audience et conséquences</h2>
+      <p>Le secrétariat de la CDC convoque le bailleur et le locataire à une séance de conciliation dans un délai moyen de 4 à 6 semaines :</p>
+      <ul>
+        <li><strong>Présence :</strong> Les deux parties doivent être présentes en personne, ou représentées par un mandataire muni d'un pouvoir écrit.</li>
+        <li><strong>Discussion :</strong> La commission écoute les arguments de chacun et propose des solutions équitables conformément à la loi.</li>
+        <li><strong>Résultat :</strong>
+          <ul>
+            <li><strong>Si un accord est trouvé :</strong> Un acte de conciliation est signé. Il a valeur de contrat et engage les parties.</li>
+            <li><strong>Si aucun accord n'est trouvé :</strong> La commission rend un avis de désaccord sous 2 mois, permettant à la partie la plus diligente de saisir le tribunal judiciaire.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="article-cta" style="background-color: rgba(217, 119, 6, 0.05); padding: 24px; border-radius: 8px; border: 1px solid var(--color-accent); margin: 30px 0;">
+        <h3 style="color: var(--color-accent); margin-top: 0;">Sécurisez votre gestion locative avec Cautioneo</h3>
+        <p>Le meilleur moyen d'éviter les commissions de conciliation et les tribunaux est de souscrire à une garantie solide. Cautioneo sécurise vos loyers et gère les recours en cas d'impayés ou de dégradations.</p>
+        <a class="btn btn-primary" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" title="Souscrire à Cautioneo" style="display: inline-block; background-color: var(--color-accent); color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px;">Découvrir la garantie</a>
+      </div>
+
+      <!-- FAQ Summary -->
+      <section class="faq-section" style="margin-top: 40px;">
+        <h2>Questions fréquentes sur la CDC</h2>
+        <div style="margin-bottom: 20px;">
+          <strong>La saisine de la CDC est-elle gratuite ?</strong>
+          <p>Oui, la procédure devant la Commission Départementale de Conciliation (CDC) est entièrement gratuite pour le bailleur comme pour le locataire.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <strong>Combien de temps dure la procédure de conciliation ?</strong>
+          <p>La CDC dispose d'un délai légal de 2 mois à compter de sa saisine pour rendre son avis.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <strong>L'accord signé devant la CDC a-t-il une valeur juridique ?</strong>
+          <p>Oui, le document de conciliation signé par les deux parties sous l'égide de la CDC vaut contrat et peut être exécuté par un commissaire de justice.</p>
+        </div>
+      </section>
+
+      <!-- Dynamic City Interlinking Widget -->
+      <div class="city-interlinking-wrapper" style="width: 100%; max-width: 800px; margin: 40px auto; padding: 0; box-sizing: border-box; clear: both;">
+        <div class="city-interlinking-box" style="padding: 24px; background-color: var(--color-bg-alt); border-radius: 8px; border: 1px solid var(--color-border);">
+          <h3 style="margin-top: 0; margin-bottom: 12px; color: var(--color-primary); font-size: 1.15rem; font-family: var(--font-heading);"><i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-right: 8px;"></i>Assurance Loyer Impayé par Ville</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; color: var(--color-text-muted);">Sécurisez vos investissements locatifs avec nos guides et analyses de la tension locative dans les grandes métropoles françaises :</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; font-size: 0.9rem;">
+            <a href="/blog-assurance-loyer-impaye-paris" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Paris">GLI à Paris</a>
+            <a href="/blog-assurance-loyer-impaye-lyon" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Lyon">GLI à Lyon</a>
+            <a href="/blog-assurance-loyer-impaye-marseille" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Marseille">GLI à Marseille</a>
+            <a href="/blog-assurance-loyer-impaye-bordeaux" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Bordeaux">GLI à Bordeaux</a>
+            <a href="/blog-assurance-loyer-impaye-toulouse" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Toulouse">GLI à Toulouse</a>
+            <a href="/blog-assurance-loyer-impaye-nantes" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Nantes">GLI à Nantes</a>
+            <a href="/blog-assurance-loyer-impaye-lille" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Lille">GLI à Lille</a>
+            <a href="/blog-assurance-loyer-impaye-strasbourg" style="color: var(--color-accent); font-weight: 600; text-decoration: none;" title="Découvrir nos conseils sur l'assurance loyer impayé à Strasbourg">GLI à Strasbourg</a>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </article>
+  `} />
+</Layout>
