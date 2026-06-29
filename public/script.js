@@ -119,6 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
         slLoyer.addEventListener('input', updateRenta);
         slCharges.addEventListener('input', updateRenta);
 
+        // Listen for change events on sliders to push dataLayer events
+        const handleSliderChange = () => {
+            if (typeof window !== 'undefined') {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'calculator_rentability_slider_change',
+                    prix_achat: parseFloat(slPrix.value),
+                    loyer_mensuel: parseFloat(slLoyer.value),
+                    charges_annuelles: parseFloat(slCharges.value)
+                });
+            }
+        };
+        slPrix.addEventListener('change', handleSliderChange);
+        slLoyer.addEventListener('change', handleSliderChange);
+        slCharges.addEventListener('change', handleSliderChange);
+
         // Run initially
         updateRenta();
     }
@@ -140,6 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 resGli.classList.remove('hidden');
                 document.getElementById('val-prime').textContent = Math.round(prime);
                 document.getElementById('desc-prime').textContent = `Basé sur un taux de ${(taux * 100).toFixed(2)}% du loyer charges comprises.`;
+            }
+
+            // GTM tracking
+            if (typeof window !== 'undefined') {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'calculator_gli_estimate_submit',
+                    loyer: loyer,
+                    statut: statut,
+                    prime_estimee: prime
+                });
             }
         });
     }
@@ -169,6 +196,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (document.getElementById('detail-total')) document.getElementById('detail-total').textContent = Math.round(total).toLocaleString('fr-FR') + ' €';
                 
                 resRisk.classList.remove('hidden');
+
+                // GTM tracking
+                if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'calculator_risk_impaye_submit',
+                        loyer: loyer,
+                        risk_total_estime: total
+                    });
+                }
             }
         });
     }
@@ -230,6 +267,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const success = await simulateFormSubmit(formData, btn);
             if (success) {
                 form.innerHTML = '<div class="text-success font-600">✓ Inscription validée ! Bienvenue.</div>';
+
+                // GTM tracking
+                if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'form_newsletter_submit',
+                        email: formData.get('email') || ''
+                    });
+                }
             }
         });
     });
@@ -247,6 +293,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert("Demande reçue ! Un expert Cautioneo vous contactera sous 24h.");
                 closeModal();
                 form.reset();
+
+                // GTM tracking
+                if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'form_lead_submit',
+                        nom: formData.get('nom') || '',
+                        email: formData.get('email') || ''
+                    });
+                }
             }
         });
     });
