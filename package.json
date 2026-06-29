@@ -11,7 +11,8 @@
     "postbuild": "node scripts/generate-sitemap.js && node scripts/submit-indexnow.js && node scripts/validate-build.js",
     "preview": "astro preview",
     "astro": "astro",
-    "pagespeed": "node scripts/check-pagespeed.js"
+    "pagespeed": "node scripts/check-pagespeed.js",
+    "deploy": "npm run build && node scripts/deploy.js"
   },
   "dependencies": {
     "astro": "^6.4.6"
