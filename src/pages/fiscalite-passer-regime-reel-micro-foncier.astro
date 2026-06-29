@@ -167,13 +167,20 @@ const faqItems = [
               </div>
 
               <!-- Recommendation Widget -->
-              <div id="tax-verdict-box" style="padding: 18px; border-radius: 8px; border: 1px solid #bbf7d0; background: #f0fdf4; transition: all 0.2s;">
+              <div id="tax-verdict-box" style="padding: 18px; border-radius: 8px; border: 1px solid #bbf7d0; background: #f0fdf4; transition: all 0.2s; margin-bottom: 16px;">
                 <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.05rem; margin-bottom: 8px; color: #16a34a;" id="tax-verdict-title">
                   <i class="fas fa-check-circle"></i> Option recommandée : Régime Micro-Foncier
                 </div>
                 <p id="tax-verdict-desc" style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: #1e293b;">
                   Vos charges réelles représentent 20.8% de vos revenus brut. L'abattement forfaitaire de 30% est donc plus avantageux et réduit votre revenu net imposable de 1 100 €.
                 </p>
+              </div>
+
+              <!-- Action buttons -->
+              <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <button onclick="window.print()" id="print-tax-btn" style="flex: 1; padding: 12px; font-weight: 700; border-radius: 8px; border: 1px solid #cbd5e1; background: #e2e8f0; color: #1e293b; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 6px;" title="Télécharger ou imprimer mon rapport d'arbitrage fiscal">
+                  <i class="fas fa-print" style="color: #4b5563;"></i> Imprimer ou Sauvegarder mon Bilan PDF
+                </button>
               </div>
             </div>
 
@@ -268,6 +275,33 @@ const faqItems = [
         runTaxCalculation();
       });
     </script>
+
+    <style>
+      @media print {
+        body {
+          background: white !important;
+          color: black !important;
+        }
+        header, footer, nav, .navbar, .silo-callout, .article-cta, .article-content > *:not(.tax-sim-container):not(h1):not(p:nth-of-type(1)), .eeat-card, #print-tax-btn, .nav-actions, .logo-wrapper {
+          display: none !important;
+        }
+        .tax-sim-container {
+          border: none !important;
+          background: transparent !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        input[type="number"] {
+          border: none !important;
+          border-bottom: 2px solid #000 !important;
+          border-radius: 0 !important;
+          background: transparent !important;
+          padding-left: 0 !important;
+        }
+      }
+    </style>
   `} />
 </Layout>
 
