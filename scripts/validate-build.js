@@ -144,8 +144,9 @@ function checkHtmlFile(filePath) {
   }
 
   // Rule 6: JSON-LD structured data presence and syntax validation
+  const isRedirect = content.includes('http-equiv="refresh"') || content.includes('window.location.href');
   const jsonLdBlocks = content.match(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi) || [];
-  if (!is404 && jsonLdBlocks.length === 0) {
+  if (!is404 && !isRedirect && jsonLdBlocks.length === 0) {
     warnings.push(`No JSON-LD structured data script found on this page.`);
   }
   for (const block of jsonLdBlocks) {
