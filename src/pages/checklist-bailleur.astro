@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Checklist Mise en Location - Cautioneo Bailleurs";
-const pageDescription = "Toutes les étapes pour une mise en location réussie : diagnostics, visite, dossier, bail et état des lieux.";
+const pageTitle = "Checklist Mise en Location Interactive - Cautioneo Bailleurs";
+const pageDescription = "Suivez pas à pas toutes les étapes obligatoires pour louer votre logement en 2026. Personnalisez votre checklist selon votre bail (meublé ou vide) et exportez-la.";
 const pageCanonical = "https://cautioneo-gli.com/checklist-bailleur";
 const pageNoindex = false;
 
@@ -10,90 +10,437 @@ const breadcrumbs = [
   { name: "Accueil", item: "https://cautioneo-gli.com/" },
   { name: "Checklist Bailleur" }
 ];
-const pageKeywords = "checklist bailleur, location, gestion locative, cautioneo, checklist";
+const pageKeywords = "checklist bailleur, checklist location, mise en location etapes, bailleur meuble, bailleur vide, cautioneo";
 ---
 
 <Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs}>
-  <Fragment set:html={`<header class="hero-mini">
-<div class="container">
-<h1 class="text-4xl font-bold mb-16">Checklist : Mise en Location</h1>
-<p class="text-xl opacity-90 max-w-700 mx-auto">Suivez chaque étape pour sécuriser votre investissement et trouver le locataire idéal.</p>
-<div class="mt-32 btn-no-print">
-<button class="btn btn-primary" onclick="window.print()">
-<i class="fas fa-print mr-8"></i> Imprimer la checklist
-                </button>
-</div>
-</div>
-</header>
-<main class="checklist-page">
-<div class="container max-w-900">
-<div class="checklist-card" data-reveal="fade-up">
-<section class="checklist-group">
-<h2>1. Préparation du logement</h2>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Réaliser les diagnostics obligatoires (<a href="/blog-passoires-thermiques-dpe" title="Lire notre article : Passoires Thermiques Dpe">DPE</a>, ERP, etc.)</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Vérifier la conformité et la décence du logement</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Prendre des photos de haute qualité (lumineuses)</span>
-</div>
-</section>
-<section class="checklist-group">
-<h3>2. Diffusion de l'annonce</h3>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Rédiger une annonce détaillée (surface, charges, équipements)</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Publier sur les plateformes majeures (SeLoger, Leboncoin, Immoweb)</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Indiquer l'éligibilité aux garanties (Cautioneo recommandé)</span>
-</div>
-</section>
-<section class="checklist-group">
-<h3>3. Sélection du locataire</h3>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Vérifier l'identité et les justificatifs de revenus</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Contrôler la cohérence du dossier (avis d'imposition vs fiches de paie)</span>
-</div>
-</section>
-<section class="checklist-group">
-<h3>4. Formalisation &amp; Entrée</h3>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Rédiger et signer le contrat de bail conforme ALUR</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Réaliser l'<a href="/blog-etat-des-lieux-parfait" title="Lire notre article : Etat Des Lieux Parfait">état des lieux</a> d'entrée contradictoire</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Vérifier l'attestation d'assurance habitation du locataire</span>
-</div>
-<div class="checklist-item">
-<div class="checklist-check"></div>
-<span>Remettre les clés contre paiement du <a href="/glossaire-depot-garantie" title="Accéder à la page : Glossaire Depot Garantie">dépôt de garantie</a></span>
-</div>
-</section>
-<div class="mt-40 p-32 bg-primary border-radius-20 text-center btn-no-print">
-<p class="font-600 mb-16 text-white text-lg">Déléguez la sécurisation de vos revenus locatifs à 100%.</p>
-<a class="btn btn-white text-primary mt-8 border-radius-pill font-600" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" title="Souscrire à l'assurance loyer impayé Cautioneo">Découvrir la Protection Cautioneo</a>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer Partagé Riche -->`} />
+  <main class="checklist-page">
+    <header class="hero-mini" style="background: linear-gradient(135deg, #090d16 0%, #111827 100%); color: white; padding: 60px 0; text-align: center; margin-bottom: 40px;">
+      <div class="container">
+        <span class="badge" style="background: var(--primary, #6c5ce7); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; display: inline-block;">Outils de Gestion Locative</span>
+        <h1 class="text-4xl font-bold mb-16" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 12px;">Checklist Interactive du Bailleur</h1>
+        <p class="text-xl opacity-90 max-w-700 mx-auto" style="color: #cbd5e1; font-size: 1.1rem; max-w: 600px; margin: 0 auto 24px;">Suivez, personnalisez et validez chaque étape réglementaire pour sécuriser vos revenus et louer sereinement.</p>
+        <div class="btn-no-print">
+          <button class="btn btn-outline" onclick="window.print()" style="background: transparent; border: 2px solid white; color: white; padding: 10px 24px; border-radius: 30px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fas fa-print"></i> Imprimer ma Checklist
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+      <div class="checklist-card" style="background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+        
+        <!-- Checklist Profile Tabs -->
+        <div class="checklist-tabs" style="display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
+          <button class="tab-btn active" id="btn-vide" onclick="setProfile('vide')" style="background: none; border: none; font-family: inherit; font-size: 1rem; font-weight: 700; color: #64748b; cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: all 0.2s;">
+            <i class="fas fa-home mr-4"></i> Location Vide (Standard)
+          </button>
+          <button class="tab-btn" id="btn-meuble" onclick="setProfile('meuble')" style="background: none; border: none; font-family: inherit; font-size: 1rem; font-weight: 700; color: #64748b; cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: all 0.2s;">
+            <i class="fas fa-couch mr-4"></i> Location Meublée
+          </button>
+        </div>
+
+        <!-- Progress Tracker Widget -->
+        <div class="progress-wrapper" style="background: #f8fafc; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; margin-bottom: 32px;">
+          <div class="progress-label" style="display: flex; justify-content: space-between; font-weight: 700; color: #334155; margin-bottom: 8px; font-size: 0.95rem;">
+            <span>Avancement de la mise en location</span>
+            <span id="progress-percentage">0%</span>
+          </div>
+          <div class="progress-bar-container" style="height: 10px; background: #cbd5e1; border-radius: 6px; overflow: hidden; position: relative;">
+            <div class="progress-bar-fill" id="progress-bar" style="height: 100%; background: #10b981; width: 0%; transition: width 0.3s ease;"></div>
+          </div>
+          <p class="progress-status" id="progress-status-text" style="margin: 8px 0 0; font-size: 0.85rem; color: #64748b;">Préparez vos diagnostics pour commencer.</p>
+        </div>
+
+        <!-- Checklist List Container -->
+        <div id="checklist-items-container">
+          <!-- Section 1 -->
+          <div class="checklist-group" id="group-prep" style="margin-bottom: 28px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 4px solid var(--primary, #6c5ce7); padding-left: 12px;">1. Préparation du logement</h3>
+            <!-- Items injected via JS -->
+          </div>
+
+          <!-- Section 2 -->
+          <div class="checklist-group" id="group-annonce" style="margin-bottom: 28px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 4px solid var(--primary, #6c5ce7); padding-left: 12px;">2. Diffusion de l'annonce</h3>
+            <!-- Items injected via JS -->
+          </div>
+
+          <!-- Section 3 -->
+          <div class="checklist-group" id="group-selection" style="margin-bottom: 28px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 4px solid var(--primary, #6c5ce7); padding-left: 12px;">3. Sélection du locataire</h3>
+            <!-- Items injected via JS -->
+          </div>
+
+          <!-- Section 4 -->
+          <div class="checklist-group" id="group-signature" style="margin-bottom: 28px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 4px solid var(--primary, #6c5ce7); padding-left: 12px;">4. Formalisation & Entrée dans les lieux</h3>
+            <!-- Items injected via JS -->
+          </div>
+
+          <!-- Section 5: Custom Tasks (Hidden if empty) -->
+          <div class="checklist-group" id="group-custom" style="margin-bottom: 28px; display: none;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 4px solid #f59e0b; padding-left: 12px;">5. Mes tâches personnalisées</h3>
+            <div id="custom-items-list"></div>
+          </div>
+        </div>
+
+        <!-- Custom Item Adder Box -->
+        <div class="add-custom-box btn-no-print" style="display: flex; gap: 12px; margin-top: 32px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px dashed #cbd5e1; align-items: center;">
+          <input type="text" id="custom-task-input" placeholder="Ex: Appeler le syndic pour l'accès badge..." style="flex: 1; padding: 10px 16px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 0.95rem;" onkeydown="if(event.key === 'Enter') addCustomTask()" />
+          <button onclick="addCustomTask()" style="background: var(--primary, #6c5ce7); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
+            <i class="fas fa-plus"></i> Ajouter
+          </button>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="cta-inline btn-no-print" style="margin-top: 40px; padding: 28px; background: rgba(108, 92, 231, 0.05); border: 2px dashed var(--primary, #6c5ce7); border-radius: 12px; text-align: center;">
+          <h3 style="margin-top: 0; color: #0f172a; font-weight: 800; font-size: 1.3rem;">Déléguez la sécurisation de vos revenus locatifs</h3>
+          <p style="color: #475569; line-height: 1.6; margin-bottom: 20px;">Ne prenez aucun risque d'impayé. Avec la garantie Cautioneo, votre dossier est certifié gratuitement et votre loyer est reversé à date fixe chaque mois, quoi qu'il arrive.</p>
+          <a class="btn btn-primary" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" rel="noopener" title="Obtenir ma garantie bailleur Cautioneo" style="display: inline-block; background: var(--primary, #6c5ce7); color: white; text-decoration: none; padding: 12px 28px; border-radius: 30px; font-weight: 700; transition: all 0.2s;">
+            Découvrir la Protection Cautioneo
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <style is:global>
+    /* Styling checklist cards and inputs */
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .checklist-item:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .checklist-item.checked {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    .checklist-item.checked span {
+      text-decoration: line-through;
+      color: #64748b;
+    }
+    .checklist-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 2px solid #cbd5e1;
+      cursor: pointer;
+      accent-color: #10b981;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tab-btn:hover {
+      color: #4f46e5 !important;
+      background: #f1f5f9;
+    }
+    .tab-btn.active {
+      background: #e0e7ff !important;
+      color: #4f46e5 !important;
+      border-bottom: 2px solid #4f46e5;
+    }
+    .delete-task-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      opacity: 0.5;
+      padding: 2px 6px;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+      margin-left: auto;
+    }
+    .delete-task-btn:hover {
+      opacity: 1;
+    }
+    @media print {
+      .btn-no-print, .add-custom-box, .checklist-tabs, .delete-task-btn {
+        display: none !important;
+      }
+      .checklist-card {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      .checklist-item {
+        border: 1px solid #e2e8f0 !important;
+        margin-bottom: 8px !important;
+        page-break-inside: avoid;
+      }
+      .progress-wrapper {
+        border: 1px solid #cbd5e1 !important;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    // Config items for checklist
+    const DEFAULT_ITEMS = [
+      // Section 1: Prep
+      { id: 'diag', section: 'prep', profile: 'both', label: 'Réaliser les diagnostics obligatoires (<a href="/blog-passoires-thermiques-dpe" title="Lire notre article : DPE passoire thermique">DPE</a>, diagnostic plomb, amiante, etc.) et les annexer au bail.' },
+      { id: 'decence', section: 'prep', profile: 'both', label: 'Vérifier la conformité de décence du logement (surface minimale de 9m², absence de nuisibles, garde-corps sécurisés).' },
+      { id: 'photos', section: 'prep', profile: 'both', label: 'Prendre des photographies de haute qualité pour sublimer l\'annonce.' },
+      { id: 'meubles_obligation', section: 'prep', profile: 'meuble', label: 'Équiper le logement avec la liste légale du mobilier obligatoire (lit, table, chaises, réfrigérateur, plaques de cuisson, vaisselle, ustensiles, etc.).' },
+      
+      // Section 2: Annonce
+      { id: 'redac', section: 'annonce', profile: 'both', label: 'Rédiger une annonce complète mentionnant la surface habitable, les charges, la commune de localisation et le classement énergétique.' },
+      { id: 'diffusion', section: 'annonce', profile: 'both', label: 'Diffuser l\'annonce sur les plateformes majeures (Leboncoin, SeLoger, Bien\'Ici).' },
+      { id: 'garantie_claim', section: 'annonce', profile: 'both', label: 'Spécifier que le dossier locataire sera sécurisé via un organisme de garantie certifié.' },
+
+      // Section 3: Selection
+      { id: 'justifs', section: 'selection', profile: 'both', label: 'Vérifier l\'identité et la validité des justificatifs de ressources réglementaires (fiches de paie, contrats de travail).' },
+      { id: 'impots', section: 'selection', profile: 'both', label: 'Contrôler la cohérence des avis d\'imposition directement sur le site de vérification de la DGFIP.' },
+      { id: 'validation_dossier', section: 'selection', profile: 'both', label: 'Faire certifier le dossier du candidat sélectionné via la plateforme de garantie.' },
+
+      // Section 4: Signature
+      { id: 'bail_sign', section: 'signature', profile: 'both', label: 'Rédiger et signer électroniquement le contrat de bail type conforme à la loi ALUR.' },
+      { id: 'etat_lieux', section: 'signature', profile: 'both', label: 'Réaliser l\'<a href="/blog-etat-des-lieux-parfait" title="Lire notre guide de l\'état des lieux">état des lieux d\'entrée</a> contradictoire et rigoureux pièce par pièce.' },
+      { id: 'assurance_chk', section: 'signature', profile: 'both', label: 'Vérifier l\'attestation d\'assurance habitation du locataire (obligatoire pour la remise des clés).' },
+      { id: 'depot_vide', section: 'signature', profile: 'vide', label: 'Exiger le versement du dépôt de garantie (limité légalement à <strong>1 mois</strong> de loyer hors charges).' },
+      { id: 'depot_meuble', section: 'signature', profile: 'meuble', label: 'Exiger le versement du dépôt de garantie (limité légalement à <strong>2 mois</strong> de loyer hors charges).' },
+      { id: 'inventaire_meuble', section: 'signature', profile: 'meuble', label: 'Établir l\'inventaire détaillé et chiffré du mobilier fourni, paraphé et annexé au bail.' },
+      { id: 'keys_deliv', section: 'signature', profile: 'both', label: 'Remettre les clés du logement après encaissement du premier loyer et du dépôt de garantie.' }
+    ];
+
+    let currentProfile = 'vide';
+    let checkedItems = {};
+    let customTasks = [];
+
+    // Load from localStorage
+    function loadState() {
+      const storedProfile = localStorage.getItem('checklist_profile');
+      if (storedProfile === 'vide' || storedProfile === 'meuble') {
+        currentProfile = storedProfile;
+      }
+      
+      const storedChecked = localStorage.getItem('checklist_checked');
+      if (storedChecked) {
+        try {
+          checkedItems = JSON.parse(storedChecked);
+        } catch(e) {
+          checkedItems = {};
+        }
+      }
+
+      const storedCustom = localStorage.getItem('checklist_custom');
+      if (storedCustom) {
+        try {
+          customTasks = JSON.parse(storedCustom);
+        } catch(e) {
+          customTasks = [];
+        }
+      }
+    }
+
+    // Save to localStorage
+    function saveState() {
+      localStorage.setItem('checklist_profile', currentProfile);
+      localStorage.setItem('checklist_checked', JSON.stringify(checkedItems));
+      localStorage.setItem('checklist_custom', JSON.stringify(customTasks));
+    }
+
+    // Toggle checklist item state
+    function toggleItem(id) {
+      checkedItems[id] = !checkedItems[id];
+      saveState();
+      renderChecklist();
+
+      // GTM dataLayer push
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'checklist_item_toggle',
+          item_id: id,
+          is_checked: checkedItems[id]
+        });
+      }
+    }
+
+    // Add a custom task
+    function addCustomTask() {
+      const input = document.getElementById('custom-task-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const id = 'custom_' + Date.now();
+      customTasks.push({ id, label: text });
+      checkedItems[id] = false;
+      
+      input.value = '';
+      saveState();
+      renderChecklist();
+
+      // GTM dataLayer push
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'checklist_custom_item_add',
+          task_text: text
+        });
+      }
+    }
+
+    // Delete a custom task
+    function deleteCustomTask(id, event) {
+      if (event) event.stopPropagation();
+      customTasks = customTasks.filter(task => task.id !== id);
+      delete checkedItems[id];
+      saveState();
+      renderChecklist();
+    }
+
+    // Set profile tab (vide vs meuble)
+    function setProfile(profile) {
+      currentProfile = profile;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + profile).classList.add('active');
+      saveState();
+      renderChecklist();
+
+      // GTM dataLayer push
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'checklist_profile_change',
+          profile_type: profile
+        });
+      }
+    }
+
+    // Calculate progress and update widgets
+    function updateProgress(activeItems) {
+      if (activeItems.length === 0) {
+        document.getElementById('progress-bar').style.width = '0%';
+        document.getElementById('progress-percentage').innerText = '0%';
+        document.getElementById('progress-status-text').innerText = 'Aucune tâche à accomplir.';
+        return;
+      }
+
+      let completedCount = 0;
+      activeItems.forEach(item => {
+        if (checkedItems[item.id]) completedCount++;
+      });
+
+      const percentage = Math.round((completedCount / activeItems.length) * 100);
+      document.getElementById('progress-bar').style.width = percentage + '%';
+      document.getElementById('progress-percentage').innerText = percentage + '%';
+
+      let statusMsg = 'Préparez vos diagnostics pour commencer.';
+      if (percentage > 0 && percentage < 40) {
+        statusMsg = 'Bon début ! La diffusion de l\'annonce est proche.';
+      } else if (percentage >= 40 && percentage < 80) {
+        statusMsg = 'Sélectionnez rigoureusement le locataire idéal.';
+      } else if (percentage >= 80 && percentage < 100) {
+        statusMsg = 'Presque fini ! Rédigez le bail et planifiez l\'état des lieux.';
+      } else if (percentage === 100) {
+        statusMsg = 'Félicitations ! Votre logement est mis en location en toute sécurité. 🎉';
+      }
+      document.getElementById('progress-status-text').innerText = statusMsg;
+    }
+
+    // Render HTML items
+    function renderChecklist() {
+      // Set active tab class just in case of initial load
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + currentProfile).classList.add('active');
+
+      const sections = {
+        prep: document.getElementById('group-prep'),
+        annonce: document.getElementById('group-annonce'),
+        selection: document.getElementById('group-selection'),
+        signature: document.getElementById('group-signature')
+      };
+
+      // Clear existing items in main sections
+      Object.keys(sections).forEach(key => {
+        const titleH3 = sections[key].querySelector('h3').outerHTML;
+        sections[key].innerHTML = titleH3;
+      });
+
+      const activeItems = [];
+
+      // Filter and append default items
+      DEFAULT_ITEMS.forEach(item => {
+        if (item.profile === 'both' || item.profile === currentProfile) {
+          activeItems.push(item);
+          
+          const isChecked = !!checkedItems[item.id];
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'checklist-item' + (isChecked ? ' checked' : '');
+          itemDiv.onclick = () => toggleItem(item.id);
+
+          itemDiv.innerHTML = `
+            <input type="checkbox" ${isChecked ? 'checked' : ''} onclick="event.stopPropagation(); toggleItem('${item.id}')" />
+            <span>${item.label}</span>
+          `;
+          
+          sections[item.section].appendChild(itemDiv);
+        }
+      });
+
+      // Render custom items
+      const customGroup = document.getElementById('group-custom');
+      const customList = document.getElementById('custom-items-list');
+      customList.innerHTML = '';
+
+      if (customTasks.length > 0) {
+        customGroup.style.display = 'block';
+        customTasks.forEach(task => {
+          activeItems.push(task);
+          
+          const isChecked = !!checkedItems[task.id];
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'checklist-item' + (isChecked ? ' checked' : '');
+          itemDiv.onclick = () => toggleItem(task.id);
+
+          itemDiv.innerHTML = `
+            <input type="checkbox" ${isChecked ? 'checked' : ''} onclick="event.stopPropagation(); toggleItem('${task.id}')" />
+            <span>${task.label}</span>
+            <button class="delete-task-btn" onclick="deleteCustomTask('${task.id}', event)">
+              <i class="fas fa-trash"></i>
+            </button>
+          `;
+          customList.appendChild(itemDiv);
+        });
+      } else {
+        customGroup.style.display = 'none';
+      }
+
+      // Calculate progress
+      updateProgress(activeItems);
+    }
+
+    // Attach print listener for tracking
+    window.addEventListener('beforeprint', () => {
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'checklist_print',
+          profile_type: currentProfile
+        });
+      }
+    });
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      loadState();
+      renderChecklist();
+    });
+  </script>
 </Layout>
