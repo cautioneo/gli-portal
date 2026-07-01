@@ -229,6 +229,31 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         </div>
     </nav>
 
+    <!-- Visual Breadcrumbs (Fil d'Ariane) -->
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <div class="breadcrumb-container">
+        <div class="container">
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-list">
+              {breadcrumbs.map((bc, idx) => {
+                const isLast = idx === breadcrumbs.length - 1;
+                return (
+                  <li class="breadcrumb-item">
+                    {idx > 0 && <i class="fas fa-chevron-right breadcrumb-separator" aria-hidden="true"></i>}
+                    {isLast ? (
+                      <span class="breadcrumb-current" aria-current="page">{bc.name}</span>
+                    ) : (
+                      <a href={bc.item || "/"} class="breadcrumb-link">{bc.name}</a>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </nav>
+        </div>
+      </div>
+    )}
+
     <!-- Slot for Page Content -->
     <main id="main-content">
         <slot />
