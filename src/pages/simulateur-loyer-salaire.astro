@@ -79,10 +79,16 @@ const pageKeywords = "regle 33 loyer, salaire, loyer salaire, simulateur, capaci
 <!-- Footer Partagé Riche -->
 
 
-<script>
+  <script is:inline>
+        let timer;
+        let activeTab = 'salaryToRent';
+
         function switchTab(tabId) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            activeTab = tabId;
             
             if(tabId === 'salaryToRent') {
                 document.getElementById('salaryToRent').style.display = 'block';
@@ -91,18 +97,41 @@ const pageKeywords = "regle 33 loyer, salaire, loyer salaire, simulateur, capaci
                 document.getElementById('salaryToRent').style.display = 'none';
                 document.getElementById('rentToSalary').style.display = 'block';
             }
+            triggerGTM();
         }
 
         function calculateRent() {
             const salary = parseFloat(document.getElementById('salaryInput').value) || 0;
             const rent = Math.floor(salary / 3);
             document.getElementById('rentResult').innerText = rent + ' €';
+            triggerGTM();
         }
 
         function calculateSalary() {
             const rent = parseFloat(document.getElementById('rentInput').value) || 0;
             const salary = rent * 3;
             document.getElementById('salaryResult').innerText = salary + ' €';
+            triggerGTM();
         }
-    </script>`} />
+
+        function triggerGTM() {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                if (typeof window !== 'undefined') {
+                    const salaryVal = parseFloat(document.getElementById('salaryInput').value) || 0;
+                    const rentVal = parseFloat(document.getElementById('rentInput').value) || 0;
+                    
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'calculator_loyer_salaire_estimate',
+                        active_tab: activeTab,
+                        salary_input: salaryVal,
+                        rent_input: rentVal,
+                        estimated_max_rent: Math.floor(salaryVal / 3),
+                        estimated_min_salary: rentVal * 3
+                    });
+                }
+            }, 1000);
+        }
+  </script>`} />
 </Layout>
