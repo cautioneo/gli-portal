@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /404.html
+Disallow: /dashboard-demo
+Disallow: /scanner-demo
+
+# LLM Crawlers Optimization (AIO)
+# llms-txt: https://cautioneo-gli.com/llms.txt
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /llms/
+
+User-agent: ClaudeBot
+Allow: /llms.txt
+Allow: /llms/
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /llms/
+
+Sitemap: https://cautioneo-gli.com/sitemap.xml
