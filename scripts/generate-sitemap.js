@@ -79,9 +79,20 @@ for (const file of htmlFiles) {
   const fullUrl = `${domain}/${urlPath}`.replace(/\/$/, ''); // strip trailing slash except for home page
   const finalUrl = fullUrl === domain ? `${domain}/` : fullUrl;
   
+  // Extract true modification date from HTML JSON-LD schema
+  const content = fs.readFileSync(file, 'utf-8');
+  let lastmod = today;
+  const dateModifiedMatch = content.match(/"dateModified"\s*:\s*"([^"]+)"/i);
+  const datePublishedMatch = content.match(/"datePublished"\s*:\s*"([^"]+)"/i);
+  if (dateModifiedMatch) {
+    lastmod = dateModifiedMatch[1].split('T')[0];
+  } else if (datePublishedMatch) {
+    lastmod = datePublishedMatch[1].split('T')[0];
+  }
+
   urls.push(`  <url>
     <loc>${finalUrl}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${freq}</changefreq>
     <priority>${priority}</priority>
   </url>`);
