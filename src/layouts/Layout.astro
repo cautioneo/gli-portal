@@ -190,8 +190,123 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Critical CSS Inlining for B2B Bailleurs -->
+    <style is:inline>
+      :root {
+        --primary: #6c5ce7;
+        --primary-dark: #5b4ddb;
+        --primary-light: #f1efff;
+        --primary-rgb: 108,92,231;
+        --bg-main: #ffffff;
+        --bg-subtle: #f9f8ff;
+        --bg-dark: #6c5ce7;
+        --text-main: #2b254d;
+        --text-muted: #787399;
+        --border: #e8e6f5;
+        --accent: #ffb86c;
+        --accent-light: #fff5e8;
+        --font-heading: 'Outfit','Inter',sans-serif;
+        --font-sans: 'Inter',system-ui,-apple-system,sans-serif;
+        --shadow-sm: 0 4px 15px rgba(108,92,231,0.05);
+        --shadow-md: 0 10px 30px rgba(108,92,231,0.08);
+        --shadow-lg: 0 20px 40px rgba(108,92,231,0.12);
+        --radius: 50px;
+        --radius-lg: 24px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--font-sans);
+        color: var(--text-main);
+        background-color: var(--bg-main);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4 {
+        font-family: var(--font-heading);
+        color: var(--text-main);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .navbar {
+        background: white;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        box-shadow: 0 4px 20px rgba(108,92,231,0.05);
+        height: 80px;
+      }
+    </style>
+
+    <!-- Client-Side Micro-Telemetry script for B2B Bailleurs -->
+    <script is:inline>
+      (function() {
+        window.dataLayer = window.dataLayer || [];
+        
+        // 1. Dwell Time Telemetry
+        const dwellIntervals = [30, 60, 120, 180];
+        dwellIntervals.forEach(seconds => {
+          setTimeout(() => {
+            window.dataLayer.push({
+              event: 'dwell_time',
+              seconds: seconds,
+              page_path: window.location.pathname
+            });
+          }, seconds * 1000);
+        });
+
+        // 2. Scroll Depth Telemetry
+        const scrollThresholds = [25, 50, 75, 100];
+        const triggeredThresholds = new Set();
+        
+        function checkScroll() {
+          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (scrollHeight <= 0) return;
+          
+          const scrollPercent = Math.round((window.scrollY / scrollHeight) * 100);
+          
+          scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !triggeredThresholds.has(threshold)) {
+              triggeredThresholds.add(threshold);
+              window.dataLayer.push({
+                event: 'scroll_depth',
+                percent: threshold,
+                page_path: window.location.pathname
+              });
+            }
+          });
+        }
+
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+          if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+              scrollTimeout = null;
+              checkScroll();
+            }, 200);
+          }
+        }, { passive: true });
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon.png"/>
-    <link rel="stylesheet" href="/styles-b2b.css?v=1.5" />
+    
+    <!-- Defer main B2B stylesheet to optimize LCP -->
+    <link rel="preload" as="style" href="/styles-b2b.css?v=1.5" />
+    <link rel="stylesheet" href="/styles-b2b.css?v=1.5" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="/styles-b2b.css?v=1.5" />
+    </noscript>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
