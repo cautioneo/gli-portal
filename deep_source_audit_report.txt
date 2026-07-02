@@ -1,12 +1,2 @@
 Total Pages Analyzed: 163
-Found 10 code issues/warnings:
-  [WARNING] [blog-assurance-loyer-impaye-bayonne.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-bayonne'.
-  [WARNING] [blog-assurance-loyer-impaye-besancon.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-besancon'.
-  [WARNING] [blog-assurance-loyer-impaye-chambery.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-chambery'.
-  [WARNING] [blog-assurance-loyer-impaye-chartres.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-chartres'.
-  [WARNING] [blog-assurance-loyer-impaye-colmar.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-colmar'.
-  [WARNING] [blog-assurance-loyer-impaye-la-rochelle.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-la-rochelle'.
-  [WARNING] [blog-assurance-loyer-impaye-laval.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-laval'.
-  [WARNING] [blog-assurance-loyer-impaye-troyes.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-troyes'.
-  [WARNING] [blog-assurance-loyer-impaye-valence.astro] Weak Link Density: Only 1 incoming link points to '/blog-assurance-loyer-impaye-valence'.
-  [WARNING] [conciergerie.astro] Weak Link Density: Only 1 incoming link points to '/conciergerie'.
+✅ No source code anomalies detected.
