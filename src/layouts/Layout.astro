@@ -134,6 +134,47 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
       })} />
     )}
 
+    {Astro.url.pathname === '/' || Astro.url.pathname === '/index.html' ? (
+      <>
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cautioneo GLI",
+          "url": "https://cautioneo-gli.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://cautioneo-gli.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })} />
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Cautioneo",
+          "url": "https://www.cautioneo.com",
+          "logo": "https://cautioneo-gli.com/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/cautioneo",
+            "https://www.linkedin.com/company/cautioneo"
+          ]
+        })} />
+      </>
+    ) : (
+      !isBlogPost && (
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": title,
+          "description": description,
+          "url": canonicalUrl,
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://cautioneo-gli.com"
+          }
+        })} />
+      )
+    )}
+
     {localBusiness && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
