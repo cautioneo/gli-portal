@@ -37,6 +37,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:; frame-src 'self' https:;">
     <title>{title}</title>
     <meta name="description" content={description}/>
     {keywords && <meta name="keywords" content={keywords}/>}

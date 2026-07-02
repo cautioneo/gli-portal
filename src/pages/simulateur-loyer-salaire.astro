@@ -33,35 +33,38 @@ const pageKeywords = "regle 33 loyer, salaire, loyer salaire, simulateur, capaci
 <button class="tab-btn active" onclick="switchTab('salaryToRent')">Je connais mon salaire</button>
 <button class="tab-btn" onclick="switchTab('rentToSalary')">Je connais le loyer</button>
 </div>
-<!-- Tab 1: Salaire vers Loyer -->
-<div id="salaryToRent">
-<div class="input-group">
-<label for="salaryInput">Salaire net mensuel avant impôt :</label>
-<div class="input-wrapper">
-<input id="salaryInput" oninput="calculateRent()" placeholder="Ex: 2500" type="number"/>
-<span class="input-suffix">€</span>
-</div>
-</div>
-<div class="result-box">
-<p class="text-muted">Le loyer maximum estimé est de :</p>
-<div class="result-amount" id="rentResult">0 €</div>
-<p class="text-sm opacity-70 mt-8">Basé sur la règle standard des 33% de taux d'endettement.</p>
-</div>
-</div>
-<!-- Tab 2: Loyer vers Salaire -->
-<div id="rentToSalary" style="display: none;">
-<div class="input-group">
-<label for="rentInput">Loyer mensuel charges comprises (CC) :</label>
-<div class="input-wrapper">
-<input id="rentInput" oninput="calculateSalary()" placeholder="Ex: 800" type="number"/>
-<span class="input-suffix">€</span>
-</div>
-</div>
-<div class="result-box">
-<p class="text-muted">Salaire net minimum exigé :</p>
-<div class="result-amount" id="salaryResult">0 €</div>
-<p class="text-sm opacity-70 mt-8">Revenu mensuel minimum pour qu'un dossier soit accepté par une assurance classique.</p>
-</div>
+<!-- Tabs Container with Min-Height to eliminate CLS -->
+<div style="min-height: 260px; position: relative; width: 100%;">
+  <!-- Tab 1: Salaire vers Loyer -->
+  <div id="salaryToRent">
+  <div class="input-group">
+  <label for="salaryInput">Salaire net mensuel avant impôt :</label>
+  <div class="input-wrapper">
+  <input id="salaryInput" oninput="calculateRent()" placeholder="Ex: 2500" type="number"/>
+  <span class="input-suffix">€</span>
+  </div>
+  </div>
+  <div class="result-box">
+  <p class="text-muted">Le loyer maximum estimé est de :</p>
+  <div class="result-amount" id="rentResult">0 €</div>
+  <p class="text-sm opacity-70 mt-8">Basé sur la règle standard des 33% de taux d'endettement.</p>
+  </div>
+  </div>
+  <!-- Tab 2: Loyer vers Salaire -->
+  <div id="rentToSalary" style="display: none;">
+  <div class="input-group">
+  <label for="rentInput">Loyer mensuel charges comprises (CC) :</label>
+  <div class="input-wrapper">
+  <input id="rentInput" oninput="calculateSalary()" placeholder="Ex: 800" type="number"/>
+  <span class="input-suffix">€</span>
+  </div>
+  </div>
+  <div class="result-box">
+  <p class="text-muted">Salaire net minimum exigé :</p>
+  <div class="result-amount" id="salaryResult">0 €</div>
+  <p class="text-sm opacity-70 mt-8">Revenu mensuel minimum pour qu'un dossier soit accepté par une assurance classique.</p>
+  </div>
+  </div>
 </div>
 <div class="text-center mt-32">
 <h2 class="mb-12">Votre profil est un peu juste ?</h2>
