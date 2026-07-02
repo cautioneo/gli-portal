@@ -4,6 +4,8 @@ import path from 'path';
 const llmsDir = path.join(process.cwd(), 'public', 'llms');
 const outputLlmsTxt = path.join(process.cwd(), 'public', 'llms.txt');
 const outputLlmsFullTxt = path.join(process.cwd(), 'public', 'llms-full.txt');
+const distLlmsTxt = path.join(process.cwd(), 'dist', 'llms.txt');
+const distLlmsFullTxt = path.join(process.cwd(), 'dist', 'llms-full.txt');
 
 // Config according to B2B
 const config = {
@@ -124,6 +126,12 @@ if (fs.existsSync(llmsDir)) {
   // Write files
   fs.writeFileSync(outputLlmsTxt, llmsTxt, 'utf-8');
   fs.writeFileSync(outputLlmsFullTxt, fullContent, 'utf-8');
+
+  const distDir = path.join(process.cwd(), 'dist');
+  if (fs.existsSync(distDir)) {
+    fs.writeFileSync(distLlmsTxt, llmsTxt, 'utf-8');
+    fs.writeFileSync(distLlmsFullTxt, fullContent, 'utf-8');
+  }
 
   console.log(`[LLM SYNC] Successfully updated llms.txt and llms-full.txt for B2B.`);
 } else {
