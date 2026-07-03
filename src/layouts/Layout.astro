@@ -208,9 +208,35 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         "name": title,
         "description": description,
         "url": canonicalUrl,
+        "image": "https://cautioneo-gli.com/logo.png",
+        "sku": "cautioneo-gli-portal",
+        "mpn": "cautioneo-gli-portal",
         "brand": {
           "@type": "Brand",
           "name": "Cautioneo GLI"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": canonicalUrl,
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": 0,
+              "currency": "EUR"
+            }
+          }
         },
         "aggregateRating": {
           "@type": "AggregateRating",
