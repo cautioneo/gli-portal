@@ -94,7 +94,7 @@ try {
     console.log('=== RUNNING TAX SIMULATOR TESTS ===');
     console.log('Test 1: Verifying default state (12,000€ rent, 2,500€ expenses)...');
     
-    if (microAbatementDisplay.innerHTML.replace(/\s/g, '') !== '3600€(30%forfait)') {
+    if (microAbatementDisplay.innerHTML.replace(/[\s,]/g, '') !== '3600€(30%forfait)') {
         throw new Error(`Abatement mismatch: '${microAbatementDisplay.innerHTML}'`);
     }
     if (realNetDisplay.innerHTML.replace(/\s/g, '') !== '9500€') {
