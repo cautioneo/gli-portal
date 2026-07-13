@@ -97,7 +97,7 @@ try {
     if (microAbatementDisplay.innerHTML.replace(/[\s,]/g, '') !== '3600€(30%forfait)') {
         throw new Error(`Abatement mismatch: '${microAbatementDisplay.innerHTML}'`);
     }
-    if (realNetDisplay.innerHTML.replace(/\s/g, '') !== '9500€') {
+    if (realNetDisplay.innerHTML.replace(/[\s,]/g, '') !== '9500€') {
         throw new Error(`Real net mismatch: ${realNetDisplay.innerHTML}`);
     }
     console.log('✅ Test 1 Passed.');
@@ -145,7 +145,7 @@ try {
 
     console.log('Test 3: Je connais mon salaire (3,000€ net)...');
     global.calculateRent();
-    if (rentResult.innerText.replace(/\s/g, '') !== '1000€') {
+    if (rentResult.innerText.replace(/[\s,]/g, '') !== '1000€') {
         throw new Error(`Max rent mismatch: should be 1000 €, got '${rentResult.innerText}'`);
     }
     console.log('✅ Test 3 Passed.');
@@ -153,7 +153,7 @@ try {
     console.log('Test 4: Je connais le loyer (1,200€ CC)...');
     rentInputEl.value = '1200';
     global.calculateSalary();
-    if (salaryResult.innerText.replace(/\s/g, '') !== '3600€') {
+    if (salaryResult.innerText.replace(/[\s,]/g, '') !== '3600€') {
         throw new Error(`Min salary mismatch: should be 3600 €, got '${salaryResult.innerText}'`);
     }
     console.log('✅ Test 4 Passed.');
