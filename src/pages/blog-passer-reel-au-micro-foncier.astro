@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Passer du Régime Réel au Micro-Foncier : Guide 2026 | Cautioneo";
+const pageDescription = "Propriétaire bailleur : découvrez comment et quand passer du régime réel d'imposition au micro-foncier simplifié. Conditions, avantages et calcul.";
+const pageCanonical = "https://cautioneo-gli.com/blog-passer-reel-au-micro-foncier";
+const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.7,
+  reviewCount: 715
+};
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: "Passer du Réel au Micro-Foncier" }
+];
+
+const faqItems = [
+  {
+    question: "Peut-on passer du régime réel au micro-foncier à tout moment ?",
+    answer: "Non. Si vous avez opté volontairement pour le régime réel (alors que vos revenus fonciers étaient inférieurs à 15 000 €), cette option vous engage irrévocablement pour une durée de 3 ans. Passé ce délai de 3 ans, vous pouvez revenir au micro-foncier."
+  },
+  {
+    question: "Quelle est la limite de revenus pour être éligible au micro-foncier ?",
+    answer: "Le régime micro-foncier simplifié est accessible si le montant brut de vos revenus fonciers annuels (hors charges) ne dépasse pas le seuil de 15 000 € pour l'ensemble de votre foyer fiscal."
+  },
+  {
+    question: "Comment formaliser le passage du réel au micro-foncier sur sa déclaration d'impôts ?",
+    answer: "Si vous respectez les conditions de seuil et d'engagement de 3 ans, il vous suffit de reporter le montant brut de vos revenus fonciers directement sur la déclaration d'impôt sur le revenu n° 2042 (case 4BE), sans remplir la déclaration annexe n° 2044."
+  }
+];
+const pageKeywords = "passer du regime reel au micro foncier, comment passer du regime reel au micro foncier, peut on passer du regime reel au micro foncier, micro foncier, regime reel";
+---
+
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems} aggregateRating={aggregateRating}>
+  <Fragment set:html={`
+    <header class="blog-header">
+        <div class="container">
+            <span class="blog-category" style="margin-bottom: 20px;">Fiscalité & Gestion</span>
+            <h1 style="max-width: 900px; margin: 0 auto 20px;">Comment Passer du Régime Réel au Micro-Foncier : Conditions & Procédure</h1>
+            <div class="article-meta">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Fiscalité" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
+                <span>Par <strong>L'Équipe Cautioneo</strong></span>
+                <span>•</span>
+                <span>Publié le 13 Juillet 2026</span>
+                <span>•</span>
+                <span>Lecture : 5 min</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="article-container">
+        <article class="article-content">
+
+            <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+                <strong>💡 Note de Gestion :</strong> Optimiser sa fiscalité est essentiel pour augmenter son rendement net. Pour sécuriser vos revenus fonciers contre le non-paiement, lisez notre <a href="/guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Consulter notre guide : Choisir Assurance Loyer Impaye">Guide de l'Assurance Loyer Impayé (GLI)</a>.
+            </div>
+
+            <p>En tant que propriétaire bailleur dans l'immobilier locatif nu (non meublé), vous êtes soumis à l'impôt sur le revenu dans la catégorie des revenus fonciers. Deux régimes s'offrent à vous : le régime simplifié dit « micro-foncier » et le régime réel. Si vos charges de copropriété ou vos travaux de rénovation diminuent, vous pouvez vous demander s'il est opportun et comment <strong>passer du régime réel au micro-foncier</strong>. Voici les règles, les pièges à éviter et la méthode pas à pas.</p>
+
+            <h2>1. Micro-Foncier vs Régime Réel : Les Différences</h2>
+            <p>Le choix du régime dépend principalement du montant de vos revenus bruts et du volume de vos charges déductibles (intérêts d'emprunt, travaux, taxe foncière, primes d'assurance GLI, frais de gestion) :</p>
+            <ul>
+                <li><strong>Le micro-foncier :</strong> Accessible en dessous de 15 000 € de revenus fonciers annuels. Il applique un abattement forfaitaire de <strong>34 %</strong> représentatif de vos charges. Vous êtes imposé sur 66 % de vos loyers encaissés.</li>
+                <li><strong>Le régime réel :</strong> Obligatoire au-dessus de 15 000 €, ou sur option. Il permet de déduire le montant exact de vos charges réelles de vos revenus bruts. C'est l'option idéale si vos charges réelles dépassent 34 % de vos revenus.</li>
+            </ul>
+
+            <h2>2. Peut-on passer du régime réel au micro-foncier ?</h2>
+            <p>La possibilité de <strong>passer du réel au micro-foncier</strong> dépend de la manière dont vous êtes entré dans le régime réel :</p>
+            <h3>Cas A : Vos revenus dépassaient 15 000 € puis sont redescendus</h3>
+            <p>Si vous étiez au régime réel de manière obligatoire car vos revenus bruts annuels dépassaient 15 000 €, et que vos revenus fonciers passent en dessous de ce seuil (par exemple, suite à un départ de locataire ou une baisse de loyer), le retour au micro-foncier est automatique et immédiat l'année suivante.</p>
+
+            <h3>Cas B : Vous avez choisi le réel sur option volontaire</h3>
+            <p>Si vos revenus étaient inférieurs à 15 000 € mais que vous avez opté volontairement pour le régime réel (pour déduire d'importants travaux par exemple), <strong>cette option vous engage pour une période irrévocable de 3 ans</strong>. Durant ces 3 exercices fiscaux, vous ne pouvez pas revenir en arrière. Une fois ce délai de 3 ans écoulé, vous êtes libre de repasser au micro-foncier.</p>
+
+            <h2>3. Comment calculer le régime le plus rentable ?</h2>
+            <p>Avant de demander le retour au micro-foncier, effectuez une simulation rapide :</p>
+            <p><em>Exemple :</em> Vos loyers annuels bruts s'élèvent à 10 000 €.</p>
+            <ul>
+                <li><strong>En micro-foncier :</strong> L'abattement forfaitaire est de 3 400 € (34 %). Votre base imposable est de 6 600 €.</li>
+                <li><strong>Au régime réel :</strong> Si la somme de vos charges réelles (intérêts de prêt, travaux, taxe foncière, assurance) s'élève à 2 000 €, votre base imposable au réel est de 8 000 € (10 000 € - 2 000 €).</li>
+            </ul>
+            <p>Dans ce cas, l'abattement de 34 % du micro-foncier est supérieur à vos charges réelles (3 400 € contre 2 000 €). Il est donc fiscalement très avantageux de repasser au micro-foncier.</p>
+
+            <h2>4. La procédure de déclaration pour changer de régime</h2>
+            <p>La formalisation du changement est extrêmement simple et se fait lors de votre déclaration de revenus annuelle :</p>
+            <ol>
+                <li>Ne remplissez plus la déclaration de revenus fonciers n° 2044 (qui sert au calcul du réel).</li>
+                <li>Portez directement le montant brut de vos loyers encaissés (charges non comprises) sur votre déclaration de revenus principale n° 2042, dans la case <strong>4BE</strong> (« Micro-foncier - Recettes brutes »).</li>
+                <li>L'administration fiscale calculera automatiquement l'abattement de 34 %.</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+            <p>Savoir comment et quand <strong>passer du régime réel au micro-foncier</strong> vous permet de simplifier vos démarches administratives et de réduire votre imposition dès lors que vos charges de travaux diminuent. Veillez simplement à respecter le délai d'engagement de 3 ans si vous aviez opté volontairement pour le réel.</p>
+
+            <div class="author-card" style="margin-top: 60px; padding: 24px; background: white; border: 1px solid var(--color-border); border-radius: 12px; display: flex; align-items: center; gap: 20px;">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-secondary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">
+                    C
+                </div>
+                <div>
+                    <div style="margin: 0 0 8px; font-size: 1.1rem; color: var(--color-text-main); font-weight: bold;">L'Équipe Cautioneo</div>
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Vos experts en gestion et sécurisation locative. Nous vous accompagnons pour protéger vos investissements fonciers.</p>
+                </div>
+            </div>
+
+        </article>
+    </article>
+  `} />
+</Layout>

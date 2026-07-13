@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Dégâts & Recours après État des Lieux de Sortie | Cautioneo";
+const pageDescription = "Propriétaire : découvrez vos recours et comment faire une réclamation après un état des lieux de sortie signé si des dégâts ou oublis sont constatés.";
+const pageCanonical = "https://cautioneo-gli.com/blog-recours-proprietaire-apres-etat-des-lieux";
+const pageNoindex = false;
+const aggregateRating = {
+  ratingValue: 4.8,
+  reviewCount: 715
+};
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: "Recours après État des Lieux" }
+];
+
+const faqItems = [
+  {
+    question: "Peut-on se retourner contre le locataire après signature de l'état des lieux de sortie ?",
+    answer: "En principe, l'état des lieux de sortie signé à l'amiable verrouille la situation. Cependant, si le locataire a dissimulé des vices ou dégâts non visibles lors de la visite (comme des canalisations obstruées ou un équipement sciemment maquillé), ou s'il s'agit de charges non récupérées, un recours reste possible sous conditions."
+  },
+  {
+    question: "Que faire si le locataire part sans vider le logement ?",
+    answer: "Si le locataire abandonne des meubles ou encombrants, le propriétaire doit le mettre en demeure par lettre recommandée de venir les récupérer sous un délai fixe. Les frais de débarras et de nettoyage peuvent alors être légalement déduits du dépôt de garantie sur présentation de factures."
+  },
+  {
+    question: "Quel est le délai pour restituer le dépôt de garantie en cas de dégradations ?",
+    answer: "Si l'état des lieux de sortie est conforme, le délai légal de restitution est de 1 mois. Si des dégradations sont constatées et mentionnées dans l'état des lieux, le propriétaire dispose de 2 mois pour restituer le solde du dépôt de garantie, après déduction des frais de remise en état justifiés par des devis ou des factures."
+  }
+];
+const pageKeywords = "reclamation proprietaire apres etat des lieux de sortie signe, degats constates apres etat des lieux de sortie, locataire part sans vider le logement, depot de garantie, etat des lieux";
+---
+
+<Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems} aggregateRating={aggregateRating}>
+  <Fragment set:html={`
+    <header class="blog-header">
+        <div class="container">
+            <span class="blog-category" style="margin-bottom: 20px;">Droit & Litiges Locatifs</span>
+            <h1 style="max-width: 900px; margin: 0 auto 20px;">Réclamation & Recours du Propriétaire après État des Lieux de Sortie Signé</h1>
+            <div class="article-meta">
+                <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Juridique" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
+                <span>Par <strong>L'Équipe Cautioneo</strong></span>
+                <span>•</span>
+                <span>Publié le 13 Juillet 2026</span>
+                <span>•</span>
+                <span>Lecture : 5 min</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="article-container">
+        <article class="article-content">
+
+            <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+                <strong>💡 Rappel :</strong> Pour vous prémunir contre les risques de dégradations locatives majeures et d'impayés de loyers, la souscription à une assurance performante est capitale. Retrouvez notre <a href="/guide-choisir-assurance-loyer-impaye" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Consulter notre guide : Choisir Assurance Loyer Impaye">Guide Pratique de la Garantie Loyers Impayés</a>.
+            </div>
+
+            <p>La fin d'un bail locatif se matérialise par la remise des clés et la rédaction de l'état des lieux de sortie. Si ce document est généralement signé d'un commun accord, de nombreux propriétaires font face à une situation complexe : la découverte de <strong>dégâts constatés après l'état des lieux de sortie signé</strong> ou le constat que le <strong>locataire est parti sans vider le logement</strong>. Quels sont vos droits et vos recours légaux ? Décryptage.</p>
+
+            <h2>1. Le Principe d'Immutabilité de l'État des Lieux Signé</h2>
+            <p>La règle juridique en France est stricte : l'état des lieux de sortie signé à l'amiable par le propriétaire (ou son mandataire) et le locataire est <strong>contradictoire et définitif</strong>. Une fois signé, il fait foi entre les parties.</p>
+            <p>Si vous constatez des rayures sur le parquet, un trou dans un mur ou une vitre brisée *après* avoir signé le document sans y avoir inscrit ces anomalies, vous ne pouvez théoriquement plus imputer ces réparations au locataire ni les déduire de son dépôt de garantie. La loi estime que ces dégâts auraient dû être signalés lors de la visite.</p>
+
+            <h2>2. Les Exceptions permettant une Réclamation après Signature</h2>
+            <p>Il existe toutefois des situations exceptionnelles où une <strong>réclamation du propriétaire après état des lieux de sortie signé</strong> est juridiquement recevable :</p>
+            <ul>
+                <li><strong>Les vices cachés ou dissimulés :</strong> Si le locataire a délibérément caché un défaut majeur (par exemple, en masquant une infiltration d'eau derrière un meuble lourd, ou en maquillant un équipement électroménager cassé), la mauvaise foi ou le dol peut être invoqué.</li>
+                <li><strong>Les défauts non visibles à l'œil nu :</strong> Des canalisations bouchées ou une chaudière endommagée dont le dysfonctionnement n'a pu être testé immédiatement peuvent faire l'objet d'une réclamation si un professionnel certifie l'antériorité du dégât par rapport au départ du locataire.</li>
+                <li><strong>La régularisation des charges :</strong> Le propriétaire conserve légalement le droit de conserver une provision (jusqu'à 20 % maximum du dépôt de garantie) pour la régularisation annuelle des charges, même si l'état des lieux est vierge de dégradations.</li>
+            </ul>
+
+            <h2>3. Que faire si le locataire part sans vider le logement ?</h2>
+            <p>C'est une situation fréquente et coûteuse : le locataire rend les clés mais laisse derrière lui des encombrants, des ordures ou des meubles. Dans ce cas précis :</p>
+            <ol>
+                <li>L'état des lieux doit explicitement mentionner la présence de ces meubles abandonnés et l'état de saleté du logement.</li>
+                <li>Envoyez immédiatement une mise en demeure par lettre recommandée avec accusé de réception (LRAR) au locataire lui enjoignant de débarrasser ses affaires sous un délai précis (par exemple, 8 ou 15 jours).</li>
+                <li>À l'expiration de ce délai, vous êtes en droit de faire appel à une société de nettoyage et de débarras. Vous pourrez alors déduire l'intégralité du montant de la facture de son dépôt de garantie.</li>
+            </ol>
+
+            <h2>4. Les démarches en cas de litige</h2>
+            <p>Si vous découvrez un vice caché ou des dégâts majeurs non signalés, la procédure amiable doit primer :</p>
+            <ul>
+                <li><strong>Courrier recommandé :</strong> Envoyez une LRAR au locataire détaillant le problème avec des photos et un devis de réparation professionnel, en demandant un accord amiable.</li>
+                <li><strong>La Commission Départementale de Conciliation (CDC) :</strong> En cas de refus ou de silence, vous pouvez saisir gratuitement la CDC pour tenter de trouver un accord avant d'engager des poursuites devant le tribunal judiciaire.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Bien qu'une <strong>réclamation après un état des lieux de sortie signé</strong> soit complexe à faire valider en raison de sa valeur contradictoire, la loi protège les propriétaires face aux dissimulations de mauvaise foi et aux logements abandonnés encombrés. Pour éviter ces situations, un examen minutieux pièce par pièce lors du départ est votre meilleure protection.</p>
+
+            <div class="author-card" style="margin-top: 60px; padding: 24px; background: white; border: 1px solid var(--color-border); border-radius: 12px; display: flex; align-items: center; gap: 20px;">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-secondary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0;">
+                    C
+                </div>
+                <div>
+                    <div style="margin: 0 0 8px; font-size: 1.1rem; color: var(--color-text-main); font-weight: bold;">L'Équipe Cautioneo</div>
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Vos experts en gestion et sécurisation locative. Nous vous accompagnons pour protéger vos investissements fonciers.</p>
+                </div>
+            </div>
+
+        </article>
+    </article>
+  `} />
+</Layout>
