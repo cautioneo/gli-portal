@@ -9,8 +9,12 @@ const pageNoindex = true;
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
   <Fragment set:html={`<script is:inline>
-  if (window.location.pathname.endsWith('.html')) {
-    var cleanPath = window.location.pathname.slice(0, -5);
+  var pathname = window.location.pathname;
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    var cleanPath = pathname.slice(0, -1);
+    window.location.replace(window.location.origin + cleanPath + window.location.search + window.location.hash);
+  } else if (pathname.endsWith('.html')) {
+    var cleanPath = pathname.slice(0, -5);
     if (cleanPath === '/index') {
       cleanPath = '/';
     }

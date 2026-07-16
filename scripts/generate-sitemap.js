@@ -81,6 +81,13 @@ for (const file of htmlFiles) {
   
   // Extract true modification date from HTML JSON-LD schema
   const content = fs.readFileSync(file, 'utf-8');
+  
+  // Skip if page has a noindex directive
+  if (/meta\s+[^>]*content=["'][^"']*noindex[^"']*["']/i.test(content) || /meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["']/i.test(content)) {
+    console.log(`[EXCLUDE] Skipping noindex page: ${relPath}`);
+    continue;
+  }
+  
   let lastmod = today;
   const dateModifiedMatch = content.match(/"dateModified"\s*:\s*"([^"]+)"/i);
   const datePublishedMatch = content.match(/"datePublished"\s*:\s*"([^"]+)"/i);
