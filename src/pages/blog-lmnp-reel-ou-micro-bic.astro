@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "LMNP Réel ou Micro-BIC : Comment choisir ? | Cautioneo GLI";
+const pageDescription = "Quel régime fiscal choisir en LMNP ? Découvrez notre comparatif complet entre le micro-BIC (abattement 50%) et le régime réel (amortissement).";
+const pageCanonical = "https://cautioneo-gli.com/blog-lmnp-reel-ou-micro-bic";
+const pageNoindex = false;
+const publishDate = "2026-07-20";
+const modifiedDate = "2026-07-20";
+
+const aggregateRating = {
+  ratingValue: 4.9,
+  reviewCount: 512
+};
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: "LMNP Réel ou Micro-BIC" }
+];
+
+const faqItems = [
+  {
+    question: "Quel est le plus avantageux en LMNP, le réel ou le micro-BIC ?",
+    answer: "Le régime réel est dans plus de 85% des cas plus avantageux car il permet d'amortir la valeur du logement et du mobilier, ce qui réduit souvent l'impôt sur vos revenus locatifs à 0 € pendant 10 à 15 ans."
+  },
+  {
+    question: "Comment passer du micro-BIC au régime réel en LMNP ?",
+    answer: "Vous devez envoyer un courrier d'option pour le régime réel à votre Service des Impôts des Entreprises (SIE) avant la date limite de déclaration des revenus de l'année précédente (généralement avant mai)."
+  },
+  {
+    question: "Peut-on amortir le terrain en LMNP régime réel ?",
+    answer: "Non, en comptabilité immobilière, la valeur du terrain n'est pas amortissable car elle ne subit pas d'usure liée au temps. Seule la valeur du bâti (généralement 85% de la valeur totale) et des travaux peut être amortie."
+  }
+];
+
+const pageKeywords = "lmnp reel ou micro bic, comparatif micro bic reel lmnp, amortissement lmnp regime reel, fiscalite location meublee, cautioneo lmnp";
+---
+
+<Layout faqItems={faqItems} keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} publishDate={publishDate} modifiedDate={modifiedDate} aggregateRating={aggregateRating}>
+  <Fragment set:html={`
+    <main>
+        <article>
+            <section class="blog-header">
+                <div class="container">
+                    <span class="blog-category" style="margin-bottom: 20px;">Fiscalité & Immobilier</span>
+                    <h1>LMNP Réel ou Micro-BIC : Comment arbitrer en 2026 ?</h1>
+                    <div class="article-meta">
+                        <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
+                        <span>Par <strong>L'Équipe Cautioneo</strong></span>
+                        <span>•</span>
+                        <span>Publié le 20 Juillet 2026</span>
+                        <span>•</span>
+                        <span>Lecture : 8 min</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog-content">
+                <div class="container">
+                    <div class="article-hero-image" style="margin-bottom: 30px;">
+                        <img src="/images/photo-1554224154-26032ffc0d07.webp" alt="Calcul fiscalité immobilière meublée" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                    <div class="article-body">
+
+                        <!-- Callout Silo B2B -->
+                        <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+                            <strong>💡 Guide associé :</strong> Pour comprendre la différence de rentabilité entre la location vide et la location meublée, consultez notre <a href="/blog-lmnp-vs-location-nue" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Lire notre article : Lmnp Vs Location Nue">comparatif fiscal LMNP vs Location Nue</a>.
+                        </div>
+
+                        <p>Le statut de **Loueur en Meublé Non Professionnel (LMNP)** est l'une des niches fiscales les plus attractives en France. Il permet de générer des revenus complémentaires peu ou pas fiscalisés. Cependant, une décision cruciale s'impose dès le début de votre activité : devez-vous opter pour le <strong>régime forfaitaire Micro-BIC</strong> ou pour le <strong>régime réel simplifié</strong> ?</p>
+                        
+                        <p>Beaucoup d'investisseurs choisissent le micro-BIC par simplicité administrative, passant ainsi à côté de milliers d'euros d'économies d'impôts. Analysons les mécanismes pour faire le meilleur choix fiscal.</p>
+
+                        <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0;">
+                            <h2>Comment choisir entre LMNP Réel et Micro-BIC ?</h2>
+                            <p style="margin-top: 10px; font-size: 1rem; line-height: 1.7;">Le choix dépend du montant réel de vos charges de copropriété, travaux, intérêts d'emprunt et de la valeur de votre bien. Le Micro-BIC applique un abattement forfaitaire de 50% sur vos loyers. Si vos charges réelles (y compris l'amortissement comptable de la valeur du logement et du mobilier) dépassent 50% de vos recettes locatives annuelles, vous devez impérativement opter pour le Régime Réel afin de réduire vos impôts à zéro.</p>
+                        </div>
+
+                        <h2>1. Le Régime Micro-BIC : La simplicité avant tout</h2>
+                        <p>Le régime Micro-BIC s'applique automatiquement si vos recettes locatives ne dépassent pas 77 700 € par an (seuil 2024-2026). Son fonctionnement est très simple :</p>
+                        <ul>
+                          <li>L'administration applique un **abattement forfaitaire de 50 %** représentatif de l'ensemble de vos charges.</li>
+                          <li>Vous êtes imposé sur seulement la moitié de vos revenus locatifs au barème de l'impôt sur le revenu + prélèvements sociaux (17,2 %).</li>
+                          <li>**Avantage :** Aucune comptabilité complexe à tenir. Il suffit de reporter le montant total des loyers perçus sur votre déclaration d'impôt 2042-C-PRO.</li>
+                          <li>**Inconvénient :** Si vos charges réelles dépassent 50%, vous êtes surimposé.</li>
+                        </ul>
+
+                        <h2>2. Le Régime Réel : L'arme absolue de l'amortissement</h2>
+                        <p>Le régime réel simplifié s'applique sur option ou de plein droit au-delà de 77 700 €. Contrairement au micro-BIC, il vous permet de déduire la **valeur exacte de vos dépenses** :</p>
+                        <ul>
+                          <li><strong>Déduction des charges réelles :</strong> Intérêts d'emprunt bancaire, frais de dossier, taxe foncière, assurance propriétaire non occupant (PNO), charges de copropriété, travaux de rénovation et d'entretien.</li>
+                          <li><strong>L'amortissement comptable :</strong> C'est la clé de voûte du régime réel. Vous déduisez chaque année une fraction de la valeur de votre bien immobilier (généralement 2 à 3 % par an sur 30 ans) et du mobilier (10 à 20 % par an sur 5 à 10 ans) pour simuler leur usure comptable.</li>
+                        </ul>
+                        <p>Grâce à l'amortissement, le montant total des charges déductibles dépasse presque toujours le montant des loyers perçus, créant un **déficit comptable** : vous payez 0 € d'impôts sur vos loyers pendant de nombreuses années.</p>
+
+                        <h2>3. Tableau comparatif : Micro-BIC vs Régime Réel</h2>
+                        <table style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; text-align: left;">
+                          <thead>
+                            <tr style="background-color: var(--color-primary); color: white;">
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Caractéristique</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Régime Micro-BIC</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Régime Réel Simplifié</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Abattement fiscal</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Forfaitaire de 50 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Zéro forfait (charges réelles)</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Amortissement du bien</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Impossible</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Oui (bâti et mobilier)</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Déduction des travaux</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Non (compris dans les 50%)</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Oui à 100 %</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Obligations comptables</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Aucune (simple déclaration)</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Bilan, compte de résultat (expert-comptable recommandé)</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Économie fiscale moyenne</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Faible ou moyenne</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">Très élevée (impôt souvent nul)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <h2>4. Comment déclarer et changer de régime ?</h2>
+                        <p>Si vous démarrez, vous déclarez votre choix sur le guichet unique de l'INPI lors de l'immatriculation de votre meublé. Si vous êtes déjà sous le régime micro-BIC et souhaitez passer au réel, vous devez formuler une **option pour le réel auprès du fisc** avant l'envoi de la déclaration de revenus annuelle. Pour calculer vos économies, utilisez notre simulateur gratuit dans notre guide sur la <a href="/fiscalite" title="Accéder à la page : Fiscalite">fiscalité foncière des bailleurs</a>.</p>
+
+                        <div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-accent); margin-top: 40px;">
+                            <h3>Bailleurs : Sécurisez votre rentabilité locative</h3>
+                            <p>Optimiser sa fiscalité est indispensable, mais sécuriser ses loyers l'est tout autant. Un seul loyer impayé peut ruiner le rendement de votre investissement. Cautioneo prend en charge gratuitement la garantie de vos paiements jusqu'à 96 000 €.</p>
+                            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary" style="margin-top:15px;" title="Activer ma garantie loyers impayés gratuite">Obtenir ma Garantie Gratuite</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+  `} />
+</Layout>
