@@ -942,6 +942,15 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
+      .lang-current {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+      }
+      .lang-current * {
+        white-space: nowrap !important;
+        display: inline !important;
+      }
       .lang-btn:hover {
         background: #f8fafc;
         border-color: #94a3b8;
