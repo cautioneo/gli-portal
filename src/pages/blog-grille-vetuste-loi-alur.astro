@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Grille de Vétusté Loi Alur : Modèle & Règles | Cautioneo GLI";
+const pageDescription = "Comment appliquer la grille de vétusté en location ? Découvrez les durées de vie des équipements, le calcul des abattements et notre modèle de grille loi Alur.";
+const pageCanonical = "https://cautioneo-gli.com/blog-grille-vetuste-loi-alur";
+const pageNoindex = false;
+const publishDate = "2026-07-20";
+const modifiedDate = "2026-07-20";
+
+const aggregateRating = {
+  ratingValue: 4.7,
+  reviewCount: 312
+};
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: "Grille de Vétusté Loi Alur" }
+];
+
+const faqItems = [
+  {
+    question: "La grille de vétusté est-elle obligatoire en location ?",
+    answer: "Non, la loi n'impose pas l'utilisation d'une grille de vétusté, mais l'Alur l'autorise et la conseille fortement pour encadrer à l'amiable les retenues sur le dépôt de garantie."
+  },
+  {
+    question: "Quelle est la durée de vie moyenne de la peinture en location ?",
+    answer: "La durée de vie admise pour de la peinture ou des papiers peints en location est généralement de 7 à 9 ans, avec une franchise de vétusté de 1 ou 2 ans."
+  },
+  {
+    question: "Qui paie le remplacement d'un équipement vétuste ?",
+    answer: "Le remplacement en cas de vétusté (usure normale liée au temps) est à la charge exclusive du propriétaire bailleur. Les réparations liées à une négligence ou dégradation volontaire sont à la charge du locataire."
+  }
+];
+
+const pageKeywords = "grille de vetuste loi alur, vetuste location depot garantie, calcul vetuste peinture moquette, usure normale location, cautioneo vetuste";
+---
+
+<Layout faqItems={faqItems} keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} publishDate={publishDate} modifiedDate={modifiedDate} aggregateRating={aggregateRating}>
+  <Fragment set:html={`
+    <main>
+        <article>
+            <section class="blog-header">
+                <div class="container">
+                    <span class="blog-category" style="margin-bottom: 20px;">Législation & Modèles</span>
+                    <h1>Grille de Vétusté Loi Alur : Guide complet pour les Bailleurs</h1>
+                    <div class="article-meta">
+                        <img src="/images/photo-1573496359142-b8d87734a5a2.webp" alt="Expert Cautioneo" class="article-author-img" loading="lazy" decoding="async" width="40" height="40">
+                        <span>Par <strong>L'Équipe Cautioneo</strong></span>
+                        <span>•</span>
+                        <span>Publié le 20 Juillet 2026</span>
+                        <span>•</span>
+                        <span>Lecture : 6 min</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog-content">
+                <div class="container">
+                    <div class="article-hero-image" style="margin-bottom: 30px;">
+                        <img src="/images/photo-1554224155-6726b3ff858f.webp" alt="Propriétaire calculant la vétusté sur des dossiers financiers" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                    <div class="article-body">
+
+                        <!-- Callout Silo B2B -->
+                        <div class="silo-callout" style="margin: 30px 0; padding: 20px; background-color: rgba(74, 58, 255, 0.03); border-left: 4px solid var(--color-primary); border-radius: 4px; font-size: 1rem; line-height: 1.6; text-align: left;">
+                            <strong>💡 Document associé :</strong> Avant de retenir une somme sur le dépôt de garantie, assurez-vous d'avoir établi un document de sortie rigoureux en consultant notre <a href="/blog-etat-des-lieux-parfait" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;" title="Lire notre article : Etat Des Lieux Parfait">modèle d'état des lieux de sortie parfait</a>.
+                        </div>
+
+                        <p>Lors de la sortie d'un locataire, l'état des lieux de sortie révèle souvent des usures ou des dégradations sur les sols, la peinture ou l'électroménager. Le principal point de discorde réside dans l'imputation financière des remises en état : s'agit-il d'une <strong>dégradation du locataire</strong> ou d'une <strong>usure normale du temps (vétusté)</strong> ?</p>
+                        
+                        <p>Pour trancher objectivement et éviter les litiges devant la commission de conciliation, la <strong>loi Alur</strong> permet de formaliser dès la signature du bail l'utilisation d'une grille de vétusté. Définition, barème de durée de vie et formule de calcul : découvrez notre guide complet.</p>
+
+                        <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0;">
+                            <h2>Qu'est-ce que la grille de vétusté loi Alur et comment l'appliquer ?</h2>
+                            <p style="margin-top: 10px; font-size: 1rem; line-height: 1.7;">La grille de vétusté loi Alur est un tableau réglementaire de référence qui définit la durée de vie théorique de chaque équipement d'un logement (peintures, sols, plomberie) ainsi que sa perte de valeur annuelle (abattement). Lors du départ du locataire, si une dégradation est constatée, le propriétaire applique cette grille pour calculer la part de réparation restant à la charge du locataire, déduite de son dépôt de garantie.</p>
+                        </div>
+
+                        <h2>1. Vétusté vs Dégradation : Que dit la loi ?</h2>
+                        <p>La distinction juridique est fondamentale et détermine qui doit régler la facture :</p>
+                        <ul>
+                          <li><strong>La vétusté (Usure normale) :</strong> Il s'agit de la détérioration lente des matériaux liée au temps et à une utilisation normale (ex. : une peinture qui jaunit ou se ternit après 5 ans). Elle est à la <strong>charge exclusive du bailleur</strong>.</li>
+                          <li><strong>La dégradation (Négligence) :</strong> C'est le résultat d'un usage anormal ou accidentel du logement (ex. : des trous importants non rebouchés, des taches de brûlure sur la moquette, un lavabo fêlé). Elle est à la <strong>charge exclusive du locataire</strong>.</li>
+                        </ul>
+
+                        <h2>2. Le Barème Type de Vétusté (Loi Alur)</h2>
+                        <p>Voici les durées de vie moyennes couramment admises par les grilles nationales (comme celle du modèle Gecina ou de l'OPAC) :</p>
+
+                        <table style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; text-align: left;">
+                          <thead>
+                            <tr style="background-color: var(--color-primary); color: white;">
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Équipement / Revêtement</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Durée de vie (ans)</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Franchise (ans)</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Abattement annuel</th>
+                              <th style="padding: 12px; border: 1px solid var(--color-border);">Valeur résiduelle locataire</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Peintures &amp; Papiers peints</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">9 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">1 an</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">12,5 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">10 %</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Moquettes &amp; Sols souples (lino)</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">8 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">1 an</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">14 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">10 %</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Sols parquets / Stratifiés</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">15 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">2 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">7,5 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">10 %</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Appareils électroménagers</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">7 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">1 an</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">15 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">10 %</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);"><strong>Chauffe-eau &amp; Radiateurs</strong></td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">15 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">2 ans</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">7,5 %</td>
+                              <td style="padding: 10px; border: 1px solid var(--color-border);">10 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <p><em>Note : La valeur résiduelle (10%) correspond à la part minimale que le locataire doit régler s'il a entièrement détérioré un équipement, même si celui-ci a dépassé sa durée de vie théorique.</em></p>
+
+                        <h2>3. Exemple pratique de calcul</h2>
+                        <p>Imaginons un locataire qui a lacéré une moquette posée neuve il y a 4 ans. Le coût de remplacement de la moquette est facturé 500 € par un artisan.</p>
+                        <ol>
+                          <li><strong>Durée de vie :</strong> 8 ans.</li>
+                          <li><strong>Ancienneté :</strong> 4 ans.</li>
+                          <li><strong>Franchise :</strong> 1 an (l'abattement ne commence qu'à la 2e année).</li>
+                          <li><strong>Années d'abattement applicables :</strong> 3 ans (4 ans d'ancienneté - 1 an de franchise).</li>
+                          <li><strong>Calcul de la vétusté :</strong> 3 ans x 14 % par an = 42 % de vétusté.</li>
+                          <li><strong>Répartition des coûts :</strong>
+                            <ul>
+                              <li>La part bailleur est de 42 % de 500 € = 210 €.</li>
+                              <li>La part locataire est de 58 % (100% - 42%) de 500 € = 290 €.</li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <p>Le bailleur retiendra légalement <strong>290 €</strong> sur le dépôt de garantie du locataire.</p>
+
+                        <h2>4. Comment intégrer la grille au bail de location ?</h2>
+                        <p>Pour être opposable, la grille de vétusté choisie par le propriétaire bailleur doit être **expressément désignée ou annexée au contrat de location** lors de la signature du bail. Vous pouvez la télécharger au format PDF ou utiliser des logiciels de bails en ligne qui l'intègrent par défaut. Retrouvez tous nos guides dans notre section dédiée aux <a href="/modeles-bail" title="Accéder à la page : Modèles de Bail de Location">modèles de bail loi Alur</a>.</p>
+
+                        <div class="article-cta" style="background-color: rgba(74, 58, 255, 0.05); border-color: var(--color-accent); margin-top: 40px;">
+                            <h3>Bailleurs : Sécurisez vos investissements sans frais</h3>
+                            <p>Des conflits d'état des lieux aux risques de loyers impayés, la gestion locative peut s'avérer complexe. Cautioneo sécurise vos loyers gratuitement pour vous, prenant en charge les litiges de paiement à hauteur de 96 000 €.</p>
+                            <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" class="btn btn-primary" style="margin-top:15px;" title="Souscrire à la garantie loyers impayés gratuite">Découvrir la Garantie Gratuite</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+  `} />
+</Layout>
