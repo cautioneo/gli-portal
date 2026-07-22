@@ -13,21 +13,21 @@ if (!fs.existsSync(distDir)) {
   process.exit(1);
 }
 
-function getFilesRecursively(dir, filesList = []) {
+function getRootHtmlFiles(dir) {
+  const filesList = [];
   const files = fs.readdirSync(dir);
   for (const file of files) {
     const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      getFilesRecursively(filePath, filesList);
-    } else if (file.endsWith('.html')) {
+    const stat = fs.statSync(filePath);
+    if (!stat.isDirectory() && file.endsWith('.html')) {
       filesList.push(filePath);
     }
   }
   return filesList;
 }
 
-const htmlFiles = getFilesRecursively(distDir);
-console.log(`Found ${htmlFiles.length} HTML files in dist/`);
+const htmlFiles = getRootHtmlFiles(distDir);
+console.log(`Found ${htmlFiles.length} root HTML files in dist/`);
 
 const urls = [];
 let count = 0;
@@ -39,6 +39,8 @@ const excludePages = [
   'BingSiteAuth.xml'
 ];
 
+const languages = ['fr', 'en', 'es', 'pt', 'it', 'de', 'ar', 'nl'];
+
 for (const file of htmlFiles) {
   const relPath = path.relative(distDir, file).replace(/\\/g, '/');
   const basename = path.basename(file);
@@ -46,7 +48,16 @@ for (const file of htmlFiles) {
   if (excludePages.includes(basename) || /^google[a-f0-9]{16}\.html$/i.test(basename) || basename.includes('demo')) {
     continue;
   }
+
+  // Extract true modification date from HTML JSON-LD schema
+  const content = fs.readFileSync(file, 'utf-8');
   
+  // Skip if page has a noindex directive
+  if (/meta\s+[^>]*content=["'][^"']*noindex[^"']*["']/i.test(content) || /meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["']/i.test(content)) {
+    console.log(`[EXCLUDE] Skipping noindex page: ${relPath}`);
+    continue;
+  }
+
   let urlPath = '';
   let priority = '0.7';
   let freq = 'monthly';
@@ -56,9 +67,9 @@ for (const file of htmlFiles) {
     priority = '1.0';
     freq = 'weekly';
   } else if (relPath.endsWith('/index.html')) {
-    urlPath = relPath.substring(0, relPath.length - 11); // strip /index.html
+    urlPath = relPath.substring(0, relPath.length - 11);
   } else {
-    urlPath = relPath.substring(0, relPath.length - 5); // strip .html
+    urlPath = relPath.substring(0, relPath.length - 5);
   }
   
   // Custom priorities based on pages
@@ -76,18 +87,6 @@ for (const file of htmlFiles) {
     freq = 'monthly';
   }
   
-  const fullUrl = `${domain}/${urlPath}`.replace(/\/$/, ''); // strip trailing slash except for home page
-  const finalUrl = fullUrl === domain ? `${domain}/` : fullUrl;
-  
-  // Extract true modification date from HTML JSON-LD schema
-  const content = fs.readFileSync(file, 'utf-8');
-  
-  // Skip if page has a noindex directive
-  if (/meta\s+[^>]*content=["'][^"']*noindex[^"']*["']/i.test(content) || /meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["']/i.test(content)) {
-    console.log(`[EXCLUDE] Skipping noindex page: ${relPath}`);
-    continue;
-  }
-  
   let lastmod = today;
   const dateModifiedMatch = content.match(/"dateModified"\s*:\s*"([^"]+)"/i);
   const datePublishedMatch = content.match(/"datePublished"\s*:\s*"([^"]+)"/i);
@@ -97,17 +96,41 @@ for (const file of htmlFiles) {
     lastmod = datePublishedMatch[1].split('T')[0];
   }
 
+  // Generate hreflang links for this route
+  const cleanPath = urlPath ? `/${urlPath}` : '';
+  const hreflangLinks = languages.map(l => {
+    const lPath = l === 'fr' ? cleanPath : `/${l}${cleanPath}`;
+    return `    <xhtml:link rel="alternate" hreflang="${l}" href="${domain}${lPath}"/>`;
+  }).join('\n');
+
+  // Push main / language URL entry
+  const fullUrl = `${domain}${cleanPath}` || `${domain}/`;
   urls.push(`  <url>
-    <loc>${finalUrl}</loc>
+    <loc>${fullUrl}</loc>
+${hreflangLinks}
     <lastmod>${lastmod}</lastmod>
     <changefreq>${freq}</changefreq>
     <priority>${priority}</priority>
   </url>`);
   count++;
+
+  // Add lang-specific entries to sitemap
+  for (const lang of languages) {
+    if (lang === 'fr') continue;
+    const langUrl = `${domain}/${lang}${cleanPath}`;
+    urls.push(`  <url>
+    <loc>${langUrl}</loc>
+${hreflangLinks}
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${freq}</changefreq>
+    <priority>${(parseFloat(priority) * 0.9).toFixed(1)}</priority>
+  </url>`);
+    count++;
+  }
 }
 
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}
 </urlset>`;
 
