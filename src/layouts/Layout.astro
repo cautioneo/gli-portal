@@ -1034,7 +1034,8 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         position: fixed;
         bottom: 24px;
         left: 24px;
-        z-index: 1900;
+        z-index: 2100;
+        transition: bottom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .floating-lang-widget .lang-btn {
         background: #ffffff !important;
@@ -1050,10 +1051,22 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         left: 0 !important;
         right: auto !important;
       }
+      body.has-sticky-cta .floating-lang-widget,
+      body.has-sticky-cta .floating-cta,
+      body.has-sticky-cta .sticky-bottom-btn,
+      body.has-sticky-cta .back-to-top {
+        bottom: 90px !important;
+      }
       @media (max-width: 768px) {
         .floating-lang-widget {
-          bottom: 80px;
+          bottom: 24px;
           left: 16px;
+        }
+        body.has-sticky-cta .floating-lang-widget,
+        body.has-sticky-cta .floating-cta,
+        body.has-sticky-cta .sticky-bottom-btn,
+        body.has-sticky-cta .back-to-top {
+          bottom: 95px !important;
         }
       }
       .lang-selector.active .lang-dropdown {
