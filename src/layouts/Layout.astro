@@ -26,10 +26,24 @@ interface Props {
 }
 
 const { title, description, canonical, noindex = false, breadcrumbs, publishDate, modifiedDate, faqItems, keywords, aggregateRating, image, localBusiness } = Astro.props;
+const siteUrl = "https://cautioneo-gli.com";
 const canonicalUrl = new URL(canonical, Astro.site).href;
 const isBlogPost = Astro.url.pathname.includes('/blog-') || Astro.url.pathname.includes('/guide-') || Astro.url.pathname.includes('/procedures') || Astro.url.pathname.includes('/fiscalite') || Astro.url.pathname.includes('/simulateur') || Astro.url.pathname.includes('/boite-a-outils') || Astro.url.pathname.includes('/checklist') || Astro.url.pathname.includes('/modeles') || Astro.url.pathname.includes('/mega-');
 const defaultImage = "https://cautioneo-gli.com/logo.png";
 const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
+
+const rawPath = Astro.url.pathname || '';
+const pathWithoutLang = rawPath.replace(/^\/(en|es|pt|it|de|ar|nl)(\/|$)/, '/').replace(/\/$/, '');
+const baseCleanPath = pathWithoutLang === '/' ? '' : pathWithoutLang;
+
+const hreflangFr = `${siteUrl}${baseCleanPath}`;
+const hreflangEn = `${siteUrl}/en${baseCleanPath}`;
+const hreflangEs = `${siteUrl}/es${baseCleanPath}`;
+const hreflangPt = `${siteUrl}/pt${baseCleanPath}`;
+const hreflangIt = `${siteUrl}/it${baseCleanPath}`;
+const hreflangDe = `${siteUrl}/de${baseCleanPath}`;
+const hreflangAr = `${siteUrl}/ar${baseCleanPath}`;
+const hreflangNl = `${siteUrl}/nl${baseCleanPath}`;
 ---
 
 <!DOCTYPE html>
@@ -42,6 +56,18 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
     <meta name="description" content={description}/>
     {keywords && <meta name="keywords" content={keywords}/>}
     <link rel="canonical" href={canonicalUrl}/>
+
+    <!-- International SEO: Hreflang annotations for all 8 supported languages -->
+    <link rel="alternate" hreflang="fr" href={hreflangFr} />
+    <link rel="alternate" hreflang="en" href={hreflangEn} />
+    <link rel="alternate" hreflang="es" href={hreflangEs} />
+    <link rel="alternate" hreflang="pt" href={hreflangPt} />
+    <link rel="alternate" hreflang="it" href={hreflangIt} />
+    <link rel="alternate" hreflang="de" href={hreflangDe} />
+    <link rel="alternate" hreflang="ar" href={hreflangAr} />
+    <link rel="alternate" hreflang="nl" href={hreflangNl} />
+    <link rel="alternate" hreflang="x-default" href={hreflangFr} />
+
     <meta content={noindex ? "noindex, follow" : "index, follow"} name="robots"/>
     <meta content="Cautioneo" name="author"/>
     <meta content="Cautioneo" name="publisher"/>
