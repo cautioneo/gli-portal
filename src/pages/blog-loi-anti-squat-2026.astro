@@ -98,6 +98,57 @@ const pageKeywords = "delai expulsion squatteur, squat, locataire, procedure exp
 <li><strong>Décision sous 48h :</strong> Le Préfet a désormais l'obligation légale de répondre dans un délai maximal de 48 heures à compter de la réception de la demande.</li>
 <li><strong><a href="/blog-lettre-mise-en-demeure" title="Lire notre article : Lettre Mise en Demeure">Mise en demeure</a> et évacuation (24h) :</strong> En cas d'accord, le Préfet met en demeure les <a href="/blog-comment-expulser-squatteur" title="Lire notre article : Comment Expulser Squatteur">squatteurs</a> de quitter les lieux sous 24h. Si ces derniers refusent de partir, la force publique (police, gendarmerie) procède immédiatement à l'évacuation forcée.</li>
 </ol>
+
+<!-- Widget Interactif B2B : Simulateur de Délais Loi Anti-Squat 2026 -->
+<div class="anti-squat-timeline-simulator" style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 16px; padding: 28px; margin: 32px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: left;">
+    <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-primary-dark); font-size: 1.35rem; display: flex; align-items: center; gap: 8px;">
+        <span style="background: rgba(74, 58, 255, 0.1); color: var(--color-primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;"><i class="fas fa-shield-alt"></i></span>
+        Simulateur de Procédure : Évacuation Préfectorale vs Expulsion Judiciaire
+    </h3>
+    <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 24px;">Sélectionnez la nature de l'occupation pour comparer le délai d'expulsion sous la loi 2026.</p>
+
+    <div style="margin-bottom: 20px;">
+        <label style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--color-text-main); margin-bottom: 10px;">Type d'occupation sans droit ni titre :</label>
+        <select id="squat-type-select" style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 8px; font-size: 0.95rem; background: white; color: #000; cursor: pointer;">
+            <option value="prefectural-squat">Squat avéré / Effraction de domicile ou logement vacant (Procédure Préfectorale Express)</option>
+            <option value="judicial-unpaid">Locataire défaillant resté dans les lieux après résiliation du bail (Procédure Judiciaire Classique)</option>
+        </select>
+    </div>
+
+    <div id="squat-timeline-result" style="background: #F9FAFB; padding: 20px; border-radius: 12px; border: 1px solid var(--color-border);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <span style="font-weight: 700; font-size: 1.05rem; color: var(--color-primary-dark);" id="squat-res-title">Procédure Préfectorale Express (Loi 2026)</span>
+            <span style="background: #10B981; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;" id="squat-res-badge">Délai global : 3 à 7 jours</span>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin: 0;" id="squat-res-desc">
+            Dépôt de plainte et constat d'OPJ en 24h -> Décision préfectorale sous 48h -> Évacuation d'office par la force publique après mise en demeure 24h. Pas de trêve hivernale applicable.
+        </p>
+    </div>
+</div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+        const select = document.getElementById('squat-type-select');
+        const title = document.getElementById('squat-res-title');
+        const badge = document.getElementById('squat-res-badge');
+        const desc = document.getElementById('squat-res-desc');
+
+        select.addEventListener('change', (e) => {
+            if (e.target.value === 'prefectural-squat') {
+                title.textContent = "Procédure Préfectorale Express (Loi 2026)";
+                badge.textContent = "Délai global : 3 à 7 jours";
+                badge.style.backgroundColor = "#10B981";
+                desc.textContent = "Dépôt de plainte et constat d'OPJ en 24h -> Décision préfectorale sous 48h -> Évacuation d'office par la force publique après mise en demeure 24h. Pas de trêve hivernale applicable.";
+            } else {
+                title.textContent = "Procédure Judiciaire Classique d'Impayés";
+                badge.textContent = "Délai global : 18 à 36 mois";
+                badge.style.backgroundColor = "#EF4444";
+                desc.textContent = "Commandement de payer (6 semaines) -> Assignation au Tribunal -> Audience & Jugement -> Commandement de quitter les lieux (2 mois) -> Trêve hivernale applicable. La GLI Cautioneo indemnise le bailleur durant toute cette période.";
+            }
+        });
+    });
+</script>
+
 <div class="article-cta" style="background-color: rgba(217, 119, 6, 0.1); border-color: var(--color-accent);">
 <h3 style="color: var(--color-accent);">L'exception des loyers impayés classiques</h3>
 <p>Attention à ne pas confondre <strong><a href="/blog-comment-expulser-squatteur" title="Lire notre article : Comment Expulser Squatteur">squat</a></strong> (occupation sans titre ni droit dès le départ) et <strong>loyers impayés</strong> (locataire entré légalement avec un bail mais qui cesse de payer). Pour les impayés de loyer classiques, la procédure reste judiciaire et soumise à des règles strictes. C'est ici que la souscription à une <a href="/blog-gli-prix-fonctionnement" style="font-weight: bold; color: var(--color-accent);" title="Lire notre article : Gli Prix Fonctionnement">GLI Cautioneo</a> (au taux compétitif de 2,75 % CC, assurée par SADA Assurance, groupe Odealim) s'avère indispensable pour sécuriser vos revenus locatifs quoi qu'il arrive.</p>

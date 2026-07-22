@@ -630,7 +630,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
               cta.classList.remove('visible');
               document.body.classList.remove('has-sticky-cta');
             }
-          });
+          }, { passive: true });
         }
 
         // Inject reviews mini badge into article meta
