@@ -416,6 +416,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
                         <button data-lang="fr" class="lang-opt active">FR - Français</button>
                         <button data-lang="en" class="lang-opt">EN - English</button>
                         <button data-lang="es" class="lang-opt">ES - Español</button>
+                        <button data-lang="pt" class="lang-opt">PT - Português</button>
                     </div>
                 </div>
                 <a class="btn btn-outline nav-btn-client" href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank">Espace Client</a>
@@ -608,6 +609,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
                         <button data-lang="fr" class="lang-opt active">FR - Français</button>
                         <button data-lang="en" class="lang-opt">EN - English</button>
                         <button data-lang="es" class="lang-opt">ES - Español</button>
+                        <button data-lang="pt" class="lang-opt">PT - Português</button>
                     </div>
                 </div>
             </div>
@@ -642,6 +644,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
                 <button data-lang="fr" class="lang-opt active">FR - Français</button>
                 <button data-lang="en" class="lang-opt">EN - English</button>
                 <button data-lang="es" class="lang-opt">ES - Español</button>
+                <button data-lang="pt" class="lang-opt">PT - Português</button>
             </div>
         </div>
     </div>
@@ -1113,7 +1116,7 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
       window.googleTranslateElementInit = function() {
         new google.translate.TranslateElement({
           pageLanguage: 'fr',
-          includedLanguages: 'fr,en,es',
+          includedLanguages: 'fr,en,es,pt',
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false
         }, 'google_translate_element_hidden');
@@ -1167,9 +1170,16 @@ const articleImage = image ? new URL(image, Astro.site).href : defaultImage;
         // Smart Auto-Detection Banner Logic
         const navLang = (navigator.language || '').toLowerCase();
         const hasExplicitChoice = localStorage.getItem('preferred-lang');
-        if (!hasExplicitChoice && (navLang.startsWith('en') || navLang.startsWith('es'))) {
-          const targetLang = navLang.startsWith('es') ? 'es' : 'en';
-          const langLabel = targetLang === 'es' ? 'Español' : 'English';
+        if (!hasExplicitChoice && (navLang.startsWith('en') || navLang.startsWith('es') || navLang.startsWith('pt'))) {
+          let targetLang = 'en';
+          let langLabel = 'English';
+          if (navLang.startsWith('es')) {
+            targetLang = 'es';
+            langLabel = 'Español';
+          } else if (navLang.startsWith('pt')) {
+            targetLang = 'pt';
+            langLabel = 'Português';
+          }
           const banner = document.createElement('div');
           banner.className = 'smart-lang-banner';
           banner.style.cssText = 'background: linear-gradient(135deg, #b45309, #92400e); color: white; padding: 10px 16px; font-size: 0.9rem; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 12px; position: relative; z-index: 10000; box-shadow: 0 2px 10px rgba(0,0,0,0.15);';
