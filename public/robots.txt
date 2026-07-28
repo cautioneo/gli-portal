@@ -5,18 +5,27 @@ Disallow: /404.html
 Disallow: /dashboard-demo
 Disallow: /scanner-demo
 
-# LLM Crawlers Optimization (AIO)
+# -------------------------------------------------------------
+# AI Engine Optimization (AIO & GEO 2026 - LLM Crawling Allowed)
+# -------------------------------------------------------------
 # llms-txt: https://cautioneo-gli.com/llms.txt
+
 User-agent: GPTBot
-Allow: /llms.txt
-Allow: /llms/
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
 
 User-agent: ClaudeBot
-Allow: /llms.txt
-Allow: /llms/
+Allow: /
 
 User-agent: PerplexityBot
-Allow: /llms.txt
-Allow: /llms/
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://cautioneo-gli.com/sitemap.xml

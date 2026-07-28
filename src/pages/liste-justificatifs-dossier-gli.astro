@@ -1,0 +1,274 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GLIEligibilityCalculator from '../components/GLIEligibilityCalculator.astro';
+
+const pageTitle = "Justificatifs Obligatoires & Critères Solvabilité GLI Cautioneo (2026)";
+const pageDescription = "Liste officielle des justificatifs obligatoires et critères de solvabilité exigez par l'Assureur Cautioneo GLI (taux d'effort 38% max, pièces par profil).";
+const pageCanonical = "https://cautioneo-gli.com/liste-justificatifs-dossier-gli";
+const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Boîte à Outils", item: "https://cautioneo-gli.com/boite-a-outils" },
+  { name: pageTitle }
+];
+
+const faqItems = [
+  {
+    question: "Quels sont les justificatifs d'identité et d'impôts obligatoires pour tous les locataires ?",
+    answer: "Chaque locataire doit fournir une pièce d'identité en cours de validité (passeport, carte d'identité ou titre de séjour valide > 2 mois à la date d'effet du bail) et l'intégralité du dernier avis d'imposition français (avec QR Code de contrôle)."
+  },
+  {
+    question: "Quel est le taux d'effort maximum accepté par la GLI Cautioneo ?",
+    answer: "Le taux d'effort maximum est de 38% du revenu net hors variable. Pour un locataire en période d'essai (CDI), ce taux d'effort maximal est réduit à 30%."
+  },
+  {
+    question: "Quels sont les revenus complémentaires acceptés ou refusés par l'Assureur ?",
+    answer: "Sont acceptés à 100% : AAH, pension alimentaire, revenus fonciers nets. Sont acceptés à 50% max : APL, ALS, allocations familiales. Sont STRICTEMENT REFUSÉS : le RSA, la prime d'activité CAF et les allocations Pôle Emploi / France Travail (sauf dispense de recherche)."
+  },
+  {
+    question: "Quelles clauses doivent obligatoirement figurer dans le contrat de bail ?",
+    answer: "Le bail doit être signé uniquement APRÈS l'accord de cautionnement, et doit contenir obligatoirement une clause résolutoire ainsi qu'une clause de solidarité en cas de colocation ou pluralité de locataires."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+  <Fragment set:html={`<main>
+  <!-- Hero Banner -->
+  <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">
+    <div class="article-hero-overlay"></div>
+    <div class="container article-hero-content">
+      <span class="article-badge">Guide Officiel Bailleurs 2026</span>
+      <h1>Liste des Justificatifs Obligatoires &amp; Critères de Solvabilité GLI</h1>
+      <p class="article-intro">Retrouvez les pièces exigées par notre Assureur Cautioneo, les règles de calcul des revenus (taux d'effort 38%) et les clauses obligatoires pour un bail conforme.</p>
+    </div>
+  </section>
+
+  <div class="container article-layout">
+    <article class="article-body">
+      <!-- AI OVERVIEW SNIPPET HOOK -->
+      <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.08) 0%, rgba(74,58,255,0.02) 100%); border-left: 5px solid #4F46E5; border-radius: 0 12px 12px 0; padding: 24px; margin: 28px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-size: 1.05rem; line-height: 1.75; color: #1E1B4B;">
+          <strong>En résumé (Guide Justificatifs GLI 2026) :</strong> Pour bénéficier de la garantie loyer impayé Cautioneo, le bailleur doit constituer un dossier complet : <strong>pièce d'identité valide, avis d'imposition français complet</strong> et justificatifs professionnels selon le profil. Le <strong>taux d'effort maximum autorisé est de 38%</strong> (30% en période d'essai CDI). Le bail doit obligatoirement intégrer une clause résolutoire et une clause de solidarité.
+        </p>
+      </div>
+
+      <!-- Alert Box -->
+      <div style="background: #FEF2F2; border: 1px solid #FCA5A5; border-left: 4px solid #EF4444; border-radius: 8px; padding: 18px 22px; margin: 24px 0;">
+        <h4 style="margin: 0 0 6px 0; color: #991B1B; font-size: 1.05rem; font-weight: 700;">⚠️ Directives Impératives de l'Assureur</h4>
+        <ul style="margin: 0; padding-left: 20px; color: #7F1D1D; font-size: 0.95rem; line-height: 1.6;">
+          <li>L'ensemble de vos justificatifs devront être <strong>complets, entiers, nets et lisibles</strong>.</li>
+          <li>Votre bail devra être <strong>strictement conforme</strong> (voir section conformité du bail ci-dessous).</li>
+        </ul>
+      </div>
+
+      <h2 id="justificatifs-communs">1. Justificatifs obligatoires pour TOUS les locataires (Entrants &lt; 20 jours)</h2>
+      <p>Peu importe la situation professionnelle du candidat, les deux pièces suivantes sont strictement obligatoires lors de la constitution du dossier :</p>
+      
+      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 20px 0;">
+        <div style="margin-bottom: 16px;">
+          <h4 style="margin: 0 0 8px 0; color: #4F46E5;">🪪 1. Pièce d'Identité en cours de validité</h4>
+          <ul style="margin: 0; padding-left: 20px; color: #334155;">
+            <li>Copie du <strong>Passeport</strong> en cours de validité</li>
+            <li>OU Carte Nationale d'Identité (CNI) en cours de validité</li>
+            <li>OU Titre de séjour (durée de validité restante &gt; 2 mois au moment de la date d'effet du bail).</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 8px 0; color: #4F46E5;">📄 2. Avis d'Imposition Français Complet</h4>
+          <ul style="margin: 0; padding-left: 20px; color: #334155;">
+            <li>L'ensemble des pages du dernier <strong>avis d'imposition français</strong> (Exemplaire avec <strong>QR Code de contrôle</strong> en page de garde).</li>
+            <li><em>Si locataire rattaché au foyer fiscal des parents :</em> Avis d'imposition des parents + Attestation sur l'honneur de rattachement signée + Pièce d'identité du parent signataire.</li>
+            <li><em>Si étudiant :</em> fournir l'avis d'imposition français de la caution solidaire.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="justificatifs-profils">2. Justificatifs par profil professionnel</h2>
+      <p>En complément des pièces communes, ajoutez les justificatifs spécifiques à la situation de votre locataire :</p>
+
+      <div class="table-responsive">
+        <table class="comparison-table" style="width:100%; border-collapse:collapse; margin:24px 0; font-size:0.95rem;">
+          <thead>
+            <tr style="background:#0F172A; color:white; text-align:left;">
+              <th style="padding:14px; width:28%;">Profil du Locataire</th>
+              <th style="padding:14px;">Justificatifs Exigés par l'Assureur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Salariés privés (CDI / CDD)</strong></td>
+              <td style="padding:14px;">
+                • <strong>3 derniers bulletins de salaire</strong> (ensemble des pages)<br/>
+                • <strong>Attestation employeur</strong> datee de -1 mois (statut CDI ou CDD avec date de fin) OU Contrat de travail intégral et signé.
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Fonctionnaires</strong></td>
+              <td style="padding:14px;">
+                • 3 derniers bulletins de salaire (ensemble des pages)<br/>
+                • Avis de nomination OU Attestation employeur OU Arrêté de titularisation.
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Retraités</strong></td>
+              <td style="padding:14px;">
+                • Décompte de retraite des 3 derniers mois OU notification d'ouverture des droits des caisses principales et complémentaires (facultatif si inscrit sur dernier avis d'imposition).
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Militaires</strong></td>
+              <td style="padding:14px;">
+                • 3 derniers bulletins de salaire (ensemble des pages)<br/>
+                • Certification de position militaire OU contrat d'engagement.
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Indépendants / Artisans / Libéraux</strong></td>
+              <td style="padding:14px;">
+                • Carte professionnelle OU avis d'inscription au répertoire des métiers / Kbis<br/>
+                • Justificatif des revenus non salariés du dernier exercice (déclaration chiffre d'affaires URSSAF ou liasse fiscale).
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Gérants de société</strong></td>
+              <td style="padding:14px;">
+                • Extrait Kbis datant de moins de 3 mois<br/>
+                • 2 derniers bilans OU dernier bilan + 1 attestation d'expert-comptable justifiant les revenus du dirigeant sur l'exercice en cours.
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Intérimaires</strong></td>
+              <td style="padding:14px;">
+                • Contrat de mission en cours de validité<br/>
+                • 3 derniers bulletins de salaire<br/>
+                • Attestation agence intérim récapitulant les missions des 12 derniers mois (dates, heures, rémunération).
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Intermittents du spectacle</strong></td>
+              <td style="padding:14px;">
+                • 3 derniers bulletins de salaire<br/>
+                • Attestation France Travail (ouverture de droit à l'allocation ARE).
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:14px; background:#F8FAFC;"><strong>Étudiants / Apprentis</strong></td>
+              <td style="padding:14px;">
+                • Carte étudiante / Attestation de scolarité année à venir OU Contrat d'apprentissage<br/>
+                • Acte de Caution Solidaire (avec justificatifs identiques à ceux d'un locataire pour le garant).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="revenus-complementaires">3. Revenus complémentaires acceptés vs refusés</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 24px 0;">
+        <!-- Accepted -->
+        <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 12px; padding: 22px;">
+          <h4 style="margin: 0 0 12px 0; color: #166534; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+            <span>✅</span> Revenus complémentaires ACCEPTÉS
+          </h4>
+          <ul style="margin: 0; padding-left: 20px; color: #14532D; font-size: 0.95rem; line-height: 1.7;">
+            <li><strong>AAH (Adultes Handicapés)</strong> : 100% retenu (Attestation CAF / CPAM &lt; 3 mois)</li>
+            <li><strong>Pension Alimentaire / Prestation Compensatoire</strong> : 100% (Jugement ou avis N-1)</li>
+            <li><strong>Revenus Fonciers</strong> : 100% nets après abattement (Avis N-1)</li>
+            <li><strong>13ème mois &amp; Prime de vacances</strong> : Si prévus contractuellement (Contrat de travail)</li>
+            <li><strong>Heures supplémentaires contractuelles</strong> : Si prévues au contrat + bulletins</li>
+            <li><strong>Allocations Logement &amp; Familiales (APL, AF, APE...)</strong> : 50% maximum (Attestation CAF &lt; 3 mois ou simulation signée)</li>
+          </ul>
+        </div>
+
+        <!-- Refused -->
+        <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 22px;">
+          <h4 style="margin: 0 0 12px 0; color: #991B1B; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+            <span>❌</span> Revenus complémentaires REFUSÉS
+          </h4>
+          <ul style="margin: 0; padding-left: 20px; color: #7F1D1D; font-size: 0.95rem; line-height: 1.7;">
+            <li><strong>RSA (Revenu de Solidarité Active)</strong> — Stricte exclusion</li>
+            <li><strong>Prime d'activité CAF</strong> — Non prise en compte</li>
+            <li><strong>Prestations Pôle Emploi / France Travail</strong> — Sauf si le bénéficiaire est dispensé de recherche d'emploi</li>
+            <li><strong>Heures supplémentaires non contractuelles</strong>, primes exceptionnelles, indemnités repas/transport/kilométriques.</li>
+            <li>Toute autre allocation non listée.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="locataire-en-place">4. Cas des locataires déjà en place dans le logement</h2>
+      
+      <div style="background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 12px; padding: 22px; margin: 24px 0;">
+        <h4 style="margin: 0 0 10px 0; color: #3730A3;">📌 Locataire en place depuis +20 jours à -6 mois :</h4>
+        <p style="margin: 0 0 10px 0; color: #312E81; font-size: 0.95rem;">En plus des justificatifs professionnels, vous devez fournir :</p>
+        <ul style="margin: 0; padding-left: 20px; color: #1E1B4B; font-size: 0.95rem; line-height: 1.6;">
+          <li>Copie du <strong>bail conforme</strong> (signé et paraphé sur chaque page)</li>
+          <li>Copie de l'<strong>état des lieux</strong> signé</li>
+          <li>Preuve bancaire du paiement du <strong>dépôt de garantie</strong></li>
+          <li>Preuve bancaire du paiement de <strong>tous les loyers</strong> depuis l'entrée dans les lieux.</li>
+        </ul>
+
+        <h4 style="margin: 16px 0 10px 0; color: #3730A3;">📌 Locataire en place depuis +6 mois :</h4>
+        <ul style="margin: 0; padding-left: 20px; color: #1E1B4B; font-size: 0.95rem; line-height: 1.6;">
+          <li>Copie de la pièce d'identité valide à la signature du bail</li>
+          <li>Copie du bail conforme et état des lieux signé</li>
+          <li>Relevés bancaires attestant du paiement régulier des loyers depuis l'entrée (aucun incident ni litige sur les 6 derniers mois)</li>
+          <li>Attestation du précédent assureur (optionnel).</li>
+        </ul>
+      </div>
+
+      <h2 id="conformite-bail">5. Les 6 Règles de Conformité du Bail Obligatoires</h2>
+      <p>La conformité du bail est obligatoire pour la mise en jeu de la garantie. Veillez au respect strict des points suivants :</p>
+
+      <ol style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; padding: 20px 20px 20px 40px; color: #92400E; font-size: 0.95rem; line-height: 1.8;">
+        <li>Le bail doit être signé <strong>uniquement après</strong> la réception de votre Acte de Cautionnement.</li>
+        <li>Le bail doit obligatoirement contenir une <strong>clause résolutoire</strong>.</li>
+        <li>En cas de pluralité de locataires (colocation, couple non marié), le bail doit contenir une <strong>clause de solidarité</strong>.</li>
+        <li><strong>Bail papier :</strong> paraphé sur chaque page par l'ensemble des locataires et par le propriétaire/mandataire.</li>
+        <li><strong>Bail électronique :</strong> transmettre la certification de la procédure de signature électronique.</li>
+        <li>Le <strong>dépôt de garantie</strong> doit être déposé entre vos mains à la signature du contrat.</li>
+      </ol>
+
+      <h2 id="criteres-solvabilite">6. Critères de Solvabilité &amp; Calcul du Taux d'Effort</h2>
+
+      <div style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); color: white; border-radius: 16px; padding: 28px; margin: 32px 0; text-align: center;">
+        <span style="background: #3B82F6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Norme Assureur</span>
+        <h3 style="margin: 12px 0; font-size: 2.2rem; color: #60A5FA;">Taux d'Effort Max : 38%</h3>
+        <p style="margin: 0; color: #94A3B8; font-size: 1rem;">
+          Calculé sur le revenu net hors variable.<br/>
+          <strong style="color: #F8FAFC;">Réduit à 30%</strong> pour les locataires en période d'essai (CDI).
+        </p>
+      </div>
+
+      <h3>Méthode de calcul du revenu de référence :</h3>
+      <ul>
+        <li><strong>Salarié privé (CDI / CDD) :</strong> Salaire brut hors variables − 21% (non-cadre) ou − 25% (cadre).</li>
+        <li><strong>Salarié en période d'essai CDI :</strong> Salaire brut contractuel − 21% (non-cadre) ou − 25% (cadre). Taux d'effort réduit à 30%.</li>
+        <li><strong>Fonctionnaire / Militaire :</strong> Moyenne des 3 derniers salaires nets avant impôt.</li>
+        <li><strong>Intérimaire :</strong> Moyenne du salaire net mensuel sur 12 mois.</li>
+        <li><strong>Intermittent du spectacle :</strong> Indemnité journalière France Travail × 365 ÷ 12.</li>
+        <li><strong>Indépendant / Retraité :</strong> Revenu net annuel N-1 ÷ 12.</li>
+      </ul>
+
+      <h2 id="motifs-refus">7. Les 8 Motifs Fréquents de Refus (À Éviter)</h2>
+      <ul style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px 20px 20px 40px; color: #334155; font-size: 0.95rem; line-height: 1.8;">
+        <li>❌ Taux d'effort dépassant 38% (ou 30% en période d'essai CDI).</li>
+        <li>❌ Ancienneté insuffisante : CDI &lt; 3 mois, CDD &lt; 8 mois restants, intérim/intermittent &lt; 12 mois, pas d'exercice fiscal N-1 pour les indépendants.</li>
+        <li>❌ Locataire ayant reçu au moins 2 acomptes sur les 3 derniers bulletins de salaire.</li>
+        <li>❌ Locataire faisant l'objet d'une <strong>saisie sur salaire</strong> (ATD, CAF, huissier, opposition, retenue).</li>
+        <li>❌ Revenus déclarés incohérents avec l'avis d'imposition français.</li>
+        <li>❌ Dossier incomplet ou pièces illisibles / tronquées.</li>
+        <li>❌ Bail non conforme (manque clause résolutoire ou de solidarité).</li>
+        <li>❌ Signature du bail antérieure à l'accord de garantie.</li>
+      </ul>
+
+      <!-- Embedded Eligibility Calculator Widget -->
+      <h2 id="simulateur-express">8. Simulez l'Éligibilité de votre Locataire en 1 Clic</h2>
+      <GLIEligibilityCalculator />
+
+    </article>
+  </div>
+  </main>`} />
+</Layout>

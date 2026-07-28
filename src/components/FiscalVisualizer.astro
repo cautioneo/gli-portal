@@ -1,0 +1,95 @@
+---
+// Interactive SVG Fiscal & Yield Visualizer Component (SXO 2026)
+---
+
+<div class="sxo-fiscal-card" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); color: white; border-radius: 16px; padding: 28px; margin: 32px 0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+    <div>
+      <span style="background: #3B82F6; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Simulateur Fiscal 2026</span>
+      <h3 style="margin: 6px 0 0 0; font-size: 1.25rem; color: #F8FAFC;">Comparateur Fiscal : LMNP Réel vs Micro-Foncier</h3>
+    </div>
+    <div style="text-align: right;">
+      <span style="font-size: 0.8125rem; color: #94A3B8;">Économie d'impôt estimée</span>
+      <strong id="tax-saved" style="display: block; font-size: 1.6rem; color: #10B981;">+ 2 450 € / an</strong>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 24px;">
+    <label for="annual-rent-slider" style="display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; color: #CBD5E1; margin-bottom: 8px;">
+      <span>Revenus locatifs annuels (€)</span>
+      <span id="rent-val" style="color: #60A5FA; font-weight: 700;">12 000 € / an (1000 €/mois)</span>
+    </label>
+    <input type="range" id="annual-rent-slider" min="4000" max="30000" step="500" value="12000" style="width: 100%; accent-color: #3B82F6; cursor: pointer;" />
+  </div>
+
+  <!-- SVG Visual Bar Chart -->
+  <div style="background: #0F172A; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+    <svg viewBox="0 0 400 160" width="100%" height="160" style="overflow: visible;">
+      <!-- Grid lines -->
+      <line x1="40" y1="130" x2="380" y2="130" stroke="#334155" stroke-width="1" />
+      <line x1="40" y1="80" x2="380" y2="80" stroke="#334155" stroke-width="1" stroke-dasharray="4" />
+      <line x1="40" y1="30" x2="380" y2="30" stroke="#334155" stroke-width="1" stroke-dasharray="4" />
+
+      <!-- Bar 1: Micro-Foncier Tax -->
+      <rect id="bar-micro" x="100" y="50" width="65" height="80" rx="6" fill="#EF4444" opacity="0.9" />
+      <text id="txt-micro" x="132" y="42" text-anchor="middle" fill="#FCA5A5" font-size="12" font-weight="bold">3 780 €</text>
+      <text x="132" y="148" text-anchor="middle" fill="#94A3B8" font-size="11">Micro-Foncier</text>
+
+      <!-- Bar 2: LMNP Réel Tax -->
+      <rect id="bar-lmnp" x="235" y="100" width="65" height="30" rx="6" fill="#10B981" opacity="0.9" />
+      <text id="txt-lmnp" x="267" y="92" text-anchor="middle" fill="#6EE7B7" font-size="12" font-weight="bold">1 330 €</text>
+      <text x="267" y="148" text-anchor="middle" fill="#94A3B8" font-size="11">LMNP Réel</text>
+    </svg>
+  </div>
+
+  <p style="margin: 0; font-size: 0.875rem; color: #94A3B8; line-height: 1.6;">
+    💡 <strong>Le conseil fiscal Cautioneo :</strong> Grâce à l'amortissement du bien et à la déduction à 100% de votre assurance GLI, le régime réel annule quasi intégralement l'impôt sur vos loyers.
+  </p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('annual-rent-slider');
+    const rentVal = document.getElementById('rent-val');
+    const taxSaved = document.getElementById('tax-saved');
+    const barMicro = document.getElementById('bar-micro');
+    const barLmnp = document.getElementById('bar-lmnp');
+    const txtMicro = document.getElementById('txt-micro');
+    const txtLmnp = document.getElementById('txt-lmnp');
+
+    function updateChart() {
+      if (!slider) return;
+      const rent = parseFloat(slider.value);
+      const monthly = Math.round(rent / 12);
+      rentVal.textContent = `${rent.toLocaleString('fr-FR')} € / an (${monthly} €/mois)`;
+
+      // Tax estimates: Micro-foncier ~ 30% taxable, TMI 30% + PS 17.2% = 47.2% on 70% = ~33% overall tax
+      const taxMicro = Math.round(rent * 0.7 * 0.45);
+      // LMNP Réel ~ amortization & GLI deductions reduce taxable base by ~75%
+      const taxLmnp = Math.round(rent * 0.25 * 0.45);
+      const saved = taxMicro - taxLmnp;
+
+      taxSaved.textContent = `+ ${saved.toLocaleString('fr-FR')} € / an`;
+      txtMicro.textContent = `${taxMicro.toLocaleString('fr-FR')} €`;
+      txtLmnp.textContent = `${taxLmnp.toLocaleString('fr-FR')} €`;
+
+      // SVG bar height calculations (max height 100px at y=30)
+      const maxTax = 12000;
+      const heightMicro = Math.max(10, Math.min(100, (taxMicro / maxTax) * 100));
+      const heightLmnp = Math.max(10, Math.min(100, (taxLmnp / maxTax) * 100));
+
+      barMicro.setAttribute('height', heightMicro.toString());
+      barMicro.setAttribute('y', (130 - heightMicro).toString());
+      txtMicro.setAttribute('y', (122 - heightMicro).toString());
+
+      barLmnp.setAttribute('height', heightLmnp.toString());
+      barLmnp.setAttribute('y', (130 - heightLmnp).toString());
+      txtLmnp.setAttribute('y', (122 - heightLmnp).toString());
+    }
+
+    if (slider) {
+      slider.addEventListener('input', updateChart);
+      updateChart();
+    }
+  });
+</script>

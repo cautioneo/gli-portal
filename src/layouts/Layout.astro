@@ -124,7 +124,20 @@ const hreflangNl = `${siteUrl}/nl${baseCleanPath}`;
       })} />
     )}
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
     {isBlogPost && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".snippet-answer", ".article-intro", ".intro-box"]
+        }
+      })} />
+    )}
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BlogPosting",

@@ -1,0 +1,117 @@
+---
+// GLI Eligibility Calculator Component (SXO 2026)
+---
+
+<div class="sxo-calculator-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px; margin: 32px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
+  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+    <div style="background: #4F46E5; color: white; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">
+      ⚡
+    </div>
+    <div>
+      <h3 style="margin: 0; font-size: 1.25rem; color: #0F172A;">Simulateur d'Éligibilité GLI Express</h3>
+      <p style="margin: 2px 0 0 0; font-size: 0.875rem; color: #64748B;">Calculez en 1 clic le loyer maximum garanti pour votre locataire (règle des 33% à 35%)</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+    <div>
+      <label for="income-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 6px;">
+        Revenus mensuels nets (€)
+      </label>
+      <input type="number" id="income-input" placeholder="ex: 3000" style="width: 100%; padding: 12px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; color: #0F172A; transition: border 0.2s;" min="500" max="20000" />
+    </div>
+    <div>
+      <label for="rent-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 6px;">
+        Loyer cc souhaité (€)
+      </label>
+      <input type="number" id="rent-input" placeholder="ex: 900" style="width: 100%; padding: 12px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; color: #0F172A; transition: border 0.2s;" min="100" max="10000" />
+    </div>
+  </div>
+
+  <div id="calc-result" style="margin-top: 24px; padding: 18px; border-radius: 12px; background: #EEF2FF; border: 1px solid #C7D2FE; display: none;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div>
+        <span id="result-status-badge" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;">Éligible</span>
+        <h4 id="result-title" style="margin: 6px 0 0 0; font-size: 1.1rem; color: #1E1B4B;">Dossier Validé pour la GLI</h4>
+      </div>
+      <div style="text-align: right;">
+        <span style="font-size: 0.8125rem; color: #4338CA; display: block;">Taux d'effort calculé</span>
+        <strong id="effort-rate" style="font-size: 1.5rem; color: #312E81;">30.0%</strong>
+      </div>
+    </div>
+    <p id="result-details" style="margin: 10px 0 0 0; font-size: 0.875rem; color: #3730A3;">
+      Le loyer maximum assurable pour ce profil est de <strong>990 €/mois</strong>.
+    </p>
+  </div>
+
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="https://www.cautioneo.com/" target="_blank" rel="noopener" style="display: inline-block; background: #4F46E5; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: background 0.2s;">
+      Certifier un locataire avec Cautioneo →
+    </a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const incomeInput = document.getElementById('income-input');
+    const rentInput = document.getElementById('rent-input');
+    const resultBox = document.getElementById('calc-result');
+    const badge = document.getElementById('result-status-badge');
+    const title = document.getElementById('result-title');
+    const effortRateEl = document.getElementById('effort-rate');
+    const details = document.getElementById('result-details');
+
+    function calculate() {
+      const income = parseFloat(incomeInput.value);
+      const rent = parseFloat(rentInput.value);
+
+      if (!income || income <= 0) {
+        resultBox.style.display = 'none';
+        return;
+      }
+
+      resultBox.style.display = 'block';
+      const maxRent33 = Math.round(income * 0.33);
+
+      if (rent && rent > 0) {
+        const effort = ((rent / income) * 100).toFixed(1);
+        effortRateEl.textContent = effort + '%';
+
+        if (effort <= 33) {
+          badge.style.background = '#DCFCE7';
+          badge.style.color = '#15803D';
+          badge.textContent = 'Dossier Conforme (≤ 33%)';
+          title.textContent = 'Éligible GLI Sans Réserve';
+          title.style.color = '#14532D';
+          details.innerHTML = `Ce dossier respecte parfaitement les critères bancaires. Loyer max assurable : <strong>${maxRent33} €/mois</strong>.`;
+        } else if (effort <= 35) {
+          badge.style.background = '#FEF9C3';
+          badge.style.color = '#A16207';
+          badge.textContent = 'Acceptable (33% - 35%)';
+          title.textContent = 'Éligible avec Garant ou Cautioneo';
+          title.style.color = '#713F12';
+          details.innerHTML = `L'effort dépasse 33%. La certification Cautioneo permet de valider le dossier jusqu'à 35% d'effort (<strong>${Math.round(income * 0.35)} €/mois</strong>).`;
+        } else {
+          badge.style.background = '#FEE2E2';
+          badge.style.color = '#B91C1C';
+          badge.textContent = 'Avertissement (> 35%)';
+          title.textContent = 'Taux d\'effort Élevé';
+          title.style.color = '#7F1D1D';
+          details.innerHTML = `Le loyer dépasse le plafond recommandé. Avec des revenus de ${income} €, le loyer maximal garanti est de <strong>${maxRent33} €/mois</strong>.`;
+        }
+      } else {
+        badge.style.background = '#E0E7FF';
+        badge.style.color = '#3730A3';
+        badge.textContent = 'Capacité estimée';
+        title.textContent = `Loyer Max Conseillé : ${maxRent33} €/mois`;
+        effortRateEl.textContent = '33.0%';
+        details.innerHTML = `Pour des revenus nets de <strong>${income} €</strong>, le loyer maximum recommandé est de <strong>${maxRent33} €/mois</strong>.`;
+      }
+    }
+
+    if (incomeInput && rentInput) {
+      incomeInput.addEventListener('input', calculate);
+      rentInput.addEventListener('input', calculate);
+    }
+  });
+</script>

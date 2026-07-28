@@ -114,19 +114,7 @@ ${hreflangLinks}
   </url>`);
   count++;
 
-  // Add lang-specific entries to sitemap
-  for (const lang of languages) {
-    if (lang === 'fr') continue;
-    const langUrl = `${domain}/${lang}${cleanPath}`;
-    urls.push(`  <url>
-    <loc>${langUrl}</loc>
-${hreflangLinks}
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${freq}</changefreq>
-    <priority>${(parseFloat(priority) * 0.9).toFixed(1)}</priority>
-  </url>`);
-    count++;
-  }
+  // Lang-specific entries removed for clean French SEO sitemap
 }
 
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Comparatif Garantme vs Cautioneo 2026 : Quelle GLI Choisir ?";
+const pageDescription = "Comparatif impartial 2026 entre Garantme et Cautioneo. Plafond de garantie (96K€), zéro franchise, technologie anti-fraude et avis propriétaires.";
+const pageCanonical = "https://cautioneo-gli.com/comparatif-garantme-cautioneo-2026";
+const pageNoindex = false;
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Comparatifs", item: "https://cautioneo-gli.com/comparatif-gli" },
+  { name: pageTitle }
+];
+
+const faqItems = [
+  {
+    question: "Quelle est la différence principale entre Cautioneo et Garantme pour un propriétaire ?",
+    answer: "Cautioneo propose une Garantie Loyer Impayé (GLI) 100% gratuite pour le propriétaire avec un plafond exceptionnel de 96 000 € sans aucune franchise ni délai de carence. Garantme propose des solutions similaires mais avec des plafonds généralement fixés à 36 000 €."
+  },
+  {
+    question: "Comment Cautioneo certifie-t-il les dossiers locataires sans CDI ?",
+    answer: "Grâce à son algorithme d'analyse documentaire automatisé, Cautioneo vérifie l'authenticité des avis d'imposition et bulletins de paie en temps réel pour autoriser des profils CDD, freelances ou indépendants en toute sécurité."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+  <Fragment set:html={`<main>
+  <section class="article-hero" style="background-image: url('images/photo-1554224154-26032ffc0d07.webp');">
+    <div class="article-hero-overlay"></div>
+    <div class="container article-hero-content">
+      <span class="article-badge">Comparatif 2026</span>
+      <h1>Garantme vs Cautioneo : Le Comparatif Impartial Bailleurs (2026)</h1>
+      <p class="article-intro">Propriétaires bailleurs : comparez en détail les garanties locatives Garantme et Cautioneo pour sécuriser vos revenus immobiliers au meilleur tarif.</p>
+    </div>
+  </section>
+
+  <div class="container article-layout">
+    <article class="article-body">
+      <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0;">
+        <p style="margin: 0; font-size: 1rem; line-height: 1.7;"><strong>En résumé :</strong> Alors que les deux acteurs facilitent l'accès au logement, **Cautioneo s'impose pour les bailleurs** grâce à un plafond d'indemnisation inégalé de **96 000 €** (contre 36 000 € chez Garantme), une prise en charge **dès le 1er mois d'impayé sans franchise** et une certification 100% gratuite pour le propriétaire.</p>
+      </div>
+
+      <h2>1. Tableau Comparatif des Garanties Bailleurs (2026)</h2>
+      <div class="table-responsive">
+        <table class="comparison-table" style="width:100%; border-collapse:collapse; margin:24px 0;">
+          <thead>
+            <tr style="background:#F1F5F9; text-align:left;">
+              <th style="padding:12px;">Critère de comparaison</th>
+              <th style="padding:12px; color:#4F46E5;">Cautioneo GLI</th>
+              <th style="padding:12px;">Garantme</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:12px;"><strong>Coût pour le Bailleur</strong></td>
+              <td style="padding:12px; color:#15803D; font-weight:bold;">100% Gratuit</td>
+              <td style="padding:12px;">100% Gratuit</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:12px;"><strong>Plafond d'Indemnisation</strong></td>
+              <td style="padding:12px; color:#4F46E5; font-weight:bold;">96 000 € (sans limite de durée)</td>
+              <td style="padding:12px;">36 000 € max</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:12px;"><strong>Franchise &amp; Carence</strong></td>
+              <td style="padding:12px; color:#15803D; font-weight:bold;">Zéro franchise / Zéro carence</td>
+              <td style="padding:12px;">Variable selon contrat</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:12px;"><strong>Détection des Faux Dossiers</strong></td>
+              <td style="padding:12px; font-weight:bold;">Technologie IA Scanner certifiée</td>
+              <td style="padding:12px;">Vérification manuelle &amp; auto</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0;">
+              <td style="padding:12px;"><strong>Profils Éligibles (Locataires)</strong></td>
+              <td style="padding:12px; font-weight:bold;">CDI, CDD, Freelances, Étudiants, Expatriés</td>
+              <td style="padding:12px;">Étudiants, Salariés, Indépendants</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>2. Pourquoi choisir Cautioneo en 2026 ?</h2>
+      <p>Cautioneo permet d'associer la sérénité financière d'une assurance GLI haut de gamme à la flexibilité d'un garant physique. En tant que propriétaire, vous n'avancez aucun frais : la cotisation est prise en charge par le locataire et votre bien est protégé jusqu'à 96 000 €.</p>
+    </article>
+  </div>
+  </main>`} />
+</Layout>

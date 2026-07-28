@@ -1,36 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Page Non Trouvée | Cautioneo Bailleurs";
-const pageDescription = "La page demandée n'existe pas ou a été déplacée. Retrouvez nos solutions de garantie loyers impayés pour bailleurs.";
-const pageCanonical = "https://cautioneo-gli.com/404";
+const pageTitle = "Redirection en cours... | Cautioneo";
+const pageDescription = "Redirection automatique vers le contenu le plus pertinent de Cautioneo.";
+const pageCanonical = "https://cautioneo-gli.com/";
 const pageNoindex = true;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
   <Fragment set:html={`<script is:inline>
-  var pathname = window.location.pathname;
-  if (pathname !== '/' && pathname.endsWith('/')) {
-    var cleanPath = pathname.slice(0, -1);
-    window.location.replace(window.location.origin + cleanPath + window.location.search + window.location.hash);
-  } else if (pathname.endsWith('.html')) {
-    var cleanPath = pathname.slice(0, -5);
-    if (cleanPath === '/index') {
-      cleanPath = '/';
+  (function() {
+    var path = window.location.pathname.toLowerCase();
+    
+    // Normalize trailing slashes and .html
+    if (path !== '/' && path.endsWith('/')) {
+      path = path.slice(0, -1);
     }
-    window.location.replace(window.location.origin + cleanPath + window.location.search + window.location.hash);
-  }
+    if (path.endsWith('.html')) {
+      path = path.slice(0, -5);
+    }
+    
+    // Smart legacy URL mapping for old cautioneo.com structures
+    if (path.includes('/blog/') || path.includes('/guides/') || path.includes('/proprietaire/')) {
+      var parts = path.split('/').filter(Boolean);
+      var lastPart = parts[parts.length - 1];
+      if (lastPart) {
+        window.location.replace('https://cautioneo-gli.com/blog-' + lastPart);
+        return;
+      }
+    }
+    
+    // Fallback redirect to homepage after 100ms
+    setTimeout(function() {
+      window.location.replace('https://cautioneo-gli.com/');
+    }, 100);
+  })();
 </script>
-<header class="page-hero vh-80 flex-center" data-reveal="fade-up">
-<div class="container text-center">
-<span class="badge mb-24">Erreur 404</span>
-<h1 class="text-huge">Où est passé votre bail ?</h1>
-<p class="text-lg mb-48 mx-auto max-w-700">La page que vous recherchez semble s'être égarée. Pas d'inquiétude, nos experts sont là pour vous remettre sur le bon chemin.</p>
-<div class="flex-center gap-16">
-<a class="btn btn-primary" href="/" title="Retour à l'accueil">Retour à l'accueil</a>
-<a class="btn btn-outline-white" href="/procedures" title="Accéder à la page : Procedures">Consulter nos guides</a>
-</div>
-</div>
-</header>
-<!-- Footer Partagé Riche -->`} />
+
+<header class="page-hero vh-80 flex-center">
+  <div class="container text-center">
+    <span class="badge mb-24">Redirection automatique</span>
+    <h1 class="text-huge">Page déplacée</h1>
+    <p class="text-lg mb-48 mx-auto max-w-700">Vous allez être réorienté automatiquement vers le contenu mis à jour...</p>
+    <div class="flex-center gap-16">
+      <a class="btn btn-primary" href="/">Retour immédiat à l'accueil</a>
+      <a class="btn btn-outline-white" href="/blog">Consulter nos articles</a>
+    </div>
+  </div>
+</header>`} />
 </Layout>
