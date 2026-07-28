@@ -8,7 +8,7 @@ const pageNoindex = true;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex}>
-  <Fragment set:html={`<script is:inline>
+  <script is:inline>
   (function() {
     var path = window.location.pathname.toLowerCase();
     
@@ -47,5 +47,4 @@ const pageNoindex = true;
       <a class="btn btn-outline-white" href="/blog">Consulter nos articles</a>
     </div>
   </div>
-</header>`} />
-</Layout>
+</header></Layout>

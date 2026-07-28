@@ -35,7 +35,7 @@ const pageKeywords = "gestion locative, lettre, demeure, lettre mise en demeure,
 
 <Layout keywords={pageKeywords} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} faqItems={faqItems}
   aggregateRating={aggregateRating}>
-  <Fragment set:html={`<main>
+  <main>
   <!-- Hero -->
   <section class="article-hero" style="background-image: url('images/photo-1568602471122-7832951cc4c5.webp');">
     <div class="article-hero-overlay"></div>
@@ -358,5 +358,4 @@ const pageKeywords = "gestion locative, lettre, demeure, lettre mise en demeure,
 .sticky-cta-btn:hover { background: #fffbeb; transform: scale(1.03); }
 .sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
 @media (max-width: 640px) { .sticky-cta-text { display: none; } }
-</style>`} />
-</Layout>
+</style></Layout>
