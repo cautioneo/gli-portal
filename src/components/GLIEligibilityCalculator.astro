@@ -2,57 +2,64 @@
 // GLI Eligibility Calculator Component (SXO 2026)
 ---
 
-<div class="sxo-calculator-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px; margin: 32px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
-  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-    <div style="background: #4F46E5; color: white; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">
-      ⚡
+<div class="sxo-calculator-card" style="background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%); color: white; border-radius: 20px; padding: 32px; margin: 32px 0; box-shadow: 0 20px 40px -15px rgba(49, 46, 129, 0.3);">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding-bottom: 20px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div style="background: #6366F1; color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);">
+        ⚡
+      </div>
+      <div>
+        <h3 style="margin: 0; font-size: 1.35rem; color: #FFFFFF; font-weight: 700;">Simulateur d'Éligibilité GLI Express</h3>
+        <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: #C7D2FE;">Calculez en direct le loyer maximal assurable (norme 38% SADA / 30% essai)</p>
+      </div>
     </div>
-    <div>
-      <h3 style="margin: 0; font-size: 1.25rem; color: #0F172A;">Simulateur d'Éligibilité GLI Express</h3>
-      <p style="margin: 2px 0 0 0; font-size: 0.875rem; color: #64748B;">Calculez en 1 clic le loyer maximum garanti pour votre locataire (règle des 33% à 35%)</p>
-    </div>
+    <span style="background: rgba(255, 255, 255, 0.15); color: #EEF2FF; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.2);">
+      Gratuit &amp; Sans Engagement
+    </span>
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
     <div>
-      <label for="income-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 6px;">
+      <label for="income-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #E0E7FF; margin-bottom: 8px;">
         Revenus mensuels nets (€)
       </label>
-      <input type="number" id="income-input" placeholder="ex: 3000" style="width: 100%; padding: 12px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; color: #0F172A; transition: border 0.2s;" min="500" max="20000" />
+      <input type="number" id="income-input" placeholder="ex: 3000" style="width: 100%; padding: 14px 16px; border: 1.5px solid #6366F1; border-radius: 10px; font-size: 1.05rem; background: #FFFFFF; color: #0F172A; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" min="500" max="20000" />
     </div>
     <div>
-      <label for="rent-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 6px;">
+      <label for="rent-input" style="display: block; font-size: 0.875rem; font-weight: 600; color: #E0E7FF; margin-bottom: 8px;">
         Loyer cc souhaité (€)
       </label>
-      <input type="number" id="rent-input" placeholder="ex: 900" style="width: 100%; padding: 12px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; color: #0F172A; transition: border 0.2s;" min="100" max="10000" />
+      <input type="number" id="rent-input" placeholder="ex: 950" style="width: 100%; padding: 14px 16px; border: 1.5px solid #6366F1; border-radius: 10px; font-size: 1.05rem; background: #FFFFFF; color: #0F172A; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" min="100" max="10000" />
     </div>
   </div>
 
-  <div id="calc-result" style="margin-top: 24px; padding: 18px; border-radius: 12px; background: #EEF2FF; border: 1px solid #C7D2FE; display: none;">
+  <div id="calc-result" style="margin-top: 24px; padding: 20px; border-radius: 14px; background: rgba(255, 255, 255, 0.95); border: 1px solid #E0E7FF; color: #0F172A; display: none;">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
       <div>
         <span id="result-status-badge" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase;">Éligible</span>
-        <h4 id="result-title" style="margin: 6px 0 0 0; font-size: 1.1rem; color: #1E1B4B;">Dossier Validé pour la GLI</h4>
+        <h4 id="result-title" style="margin: 6px 0 0 0; font-size: 1.15rem; color: #0F172A; font-weight: 700;">Dossier Validé pour la GLI</h4>
       </div>
       <div style="text-align: right;">
-        <span style="font-size: 0.8125rem; color: #4338CA; display: block;">Taux d'effort calculé</span>
-        <strong id="effort-rate" style="font-size: 1.5rem; color: #312E81;">30.0%</strong>
+        <span style="font-size: 0.8125rem; color: #475569; display: block; font-weight: 600;">Taux d'effort calculé</span>
+        <strong id="effort-rate" style="font-size: 1.6rem; color: #1E1B4B; font-weight: 800;">30.0%</strong>
       </div>
     </div>
-    <p id="result-details" style="margin: 10px 0 0 0; font-size: 0.875rem; color: #3730A3;">
-      Le loyer maximum assurable pour ce profil est de <strong>990 €/mois</strong>.
+    <p id="result-details" style="margin: 12px 0 0 0; font-size: 0.925rem; color: #334155; line-height: 1.5;">
+      Le loyer maximum assurable pour ce profil est de <strong>1 140 €/mois</strong>.
     </p>
   </div>
 
-  <div style="margin-top: 20px; text-align: center;">
-    <a href="https://www.cautioneo.com/" target="_blank" rel="noopener" style="display: inline-block; background: #4F46E5; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: background 0.2s;">
-      Certifier un locataire avec Cautioneo →
+  <!-- Primary Call to Action Button -->
+  <div style="margin-top: 28px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <a href="https://www.cautioneo.com/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; padding: 16px 36px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 1.1rem; box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4); transition: transform 0.2s, box-shadow 0.2s;">
+      🛡️ Obtenir un Accord de Garantie GLI Cautioneo →
     </a>
+    <span style="font-size: 0.825rem; color: #A5B4FC;">Accord immédiat en moins de 24h • Partenaire SADA Assurances</span>
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initCalculator() {
     const incomeInput = document.getElementById('income-input');
     const rentInput = document.getElementById('rent-input');
     const resultBox = document.getElementById('calc-result');
@@ -60,6 +67,8 @@
     const title = document.getElementById('result-title');
     const effortRateEl = document.getElementById('effort-rate');
     const details = document.getElementById('result-details');
+
+    if (!incomeInput || !rentInput || !resultBox) return;
 
     function calculate() {
       const income = parseFloat(incomeInput.value);
@@ -71,47 +80,44 @@
       }
 
       resultBox.style.display = 'block';
-      const maxRent33 = Math.round(income * 0.33);
+      const maxRent38 = Math.round(income * 0.38);
 
       if (rent && rent > 0) {
         const effort = ((rent / income) * 100).toFixed(1);
         effortRateEl.textContent = effort + '%';
 
-        if (effort <= 33) {
+        if (effort <= 38) {
           badge.style.background = '#DCFCE7';
           badge.style.color = '#15803D';
-          badge.textContent = 'Dossier Conforme (≤ 33%)';
-          title.textContent = 'Éligible GLI Sans Réserve';
+          badge.textContent = 'Dossier Conforme (≤ 38%)';
+          title.textContent = 'Éligible GLI SADA / Cautioneo';
           title.style.color = '#14532D';
-          details.innerHTML = `Ce dossier respecte parfaitement les critères bancaires. Loyer max assurable : <strong>${maxRent33} €/mois</strong>.`;
-        } else if (effort <= 35) {
-          badge.style.background = '#FEF9C3';
-          badge.style.color = '#A16207';
-          badge.textContent = 'Acceptable (33% - 35%)';
-          title.textContent = 'Éligible avec Garant ou Cautioneo';
-          title.style.color = '#713F12';
-          details.innerHTML = `L'effort dépasse 33%. La certification Cautioneo permet de valider le dossier jusqu'à 35% d'effort (<strong>${Math.round(income * 0.35)} €/mois</strong>).`;
+          details.innerHTML = `Ce dossier respecte les critères d'éligibilité GLI. Loyer max assurable à 38% : <strong>${maxRent38} €/mois</strong>.`;
         } else {
           badge.style.background = '#FEE2E2';
           badge.style.color = '#B91C1C';
-          badge.textContent = 'Avertissement (> 35%)';
-          title.textContent = 'Taux d\'effort Élevé';
+          badge.textContent = 'Non Éligible (> 38%)';
+          title.textContent = 'Taux d\'effort Trop Élevé';
           title.style.color = '#7F1D1D';
-          details.innerHTML = `Le loyer dépasse le plafond recommandé. Avec des revenus de ${income} €, le loyer maximal garanti est de <strong>${maxRent33} €/mois</strong>.`;
+          details.innerHTML = `Le loyer dépasse le taux d'effort maximum de 38%. Pour des revenus de ${income} €, le loyer maximal assurable est de <strong>${maxRent38} €/mois</strong>.`;
         }
       } else {
         badge.style.background = '#E0E7FF';
         badge.style.color = '#3730A3';
-        badge.textContent = 'Capacité estimée';
-        title.textContent = `Loyer Max Conseillé : ${maxRent33} €/mois`;
-        effortRateEl.textContent = '33.0%';
-        details.innerHTML = `Pour des revenus nets de <strong>${income} €</strong>, le loyer maximum recommandé est de <strong>${maxRent33} €/mois</strong>.`;
+        badge.textContent = 'Plafond estimé';
+        title.textContent = `Loyer Max Assurable (38%) : ${maxRent38} €/mois`;
+        effortRateEl.textContent = '38.0%';
+        details.innerHTML = `Pour des revenus nets de <strong>${income} €</strong>, le loyer maximal garanti par Cautioneo est de <strong>${maxRent38} €/mois</strong>.`;
       }
     }
 
-    if (incomeInput && rentInput) {
-      incomeInput.addEventListener('input', calculate);
-      rentInput.addEventListener('input', calculate);
-    }
-  });
+    incomeInput.addEventListener('input', calculate);
+    rentInput.addEventListener('input', calculate);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalculator);
+  } else {
+    initCalculator();
+  }
 </script>
