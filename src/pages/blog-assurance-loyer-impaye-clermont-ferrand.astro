@@ -43,7 +43,8 @@ const localBusiness = {
   postalCode: "63000",
   telephone: "+33 9 72 10 40 40"
 };
----
+
+import GLIEligibilityCalculator from '../components/GLIEligibilityCalculator.astro';---
 
 <Layout faqItems={faqItems} title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} breadcrumbs={breadcrumbs} keywords="assurance loyer impaye Clermont-Ferrand, assurance proprietaire Clermont-Ferrand, cautioneo Clermont-Ferrand, GLI Clermont-Ferrand"
   aggregateRating={aggregateRating} localBusiness={localBusiness}>
@@ -192,7 +193,8 @@ const localBusiness = {
     </div>
 </div>
 
-        </article>
+            <GLIEligibilityCalculator />
+</article>
     </article>`} />
 
 <section style="margin: 48px 0; padding: 32px; background: var(--bg-subtle, #f9f8ff); border-radius: 12px; border: 1px solid var(--border, #e8e6f5);">
