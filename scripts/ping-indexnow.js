@@ -5,15 +5,15 @@ const key = process.argv[3];
 const keyLocation = process.argv[4];
 
 if (!host || !key || !keyLocation) {
-  console.error("Usage: node ping-indexnow.js <host> <key> <keyLocation>");
-  process.exit(1);
+  console.warn("Usage: node ping-indexnow.js <host> <key> <keyLocation>");
+  process.exit(0);
 }
 
 try {
   const sitemapPath = 'dist/sitemap.xml';
   if (!fs.existsSync(sitemapPath)) {
-    console.error(`Sitemap not found at ${sitemapPath}`);
-    process.exit(1);
+    console.warn(`Sitemap not found at ${sitemapPath}`);
+    process.exit(0);
   }
 
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
@@ -45,10 +45,8 @@ try {
     console.log(`Successfully pinged IndexNow for ${host}. Status: ${response.status}`);
   } else {
     const text = await response.text();
-    console.error(`Failed to ping IndexNow. Status: ${response.status}. Response: ${text}`);
-    process.exit(1);
+    console.warn(`[NON-BLOCKING WARNING] IndexNow returned status: ${response.status}. Response: ${text}`);
   }
 } catch (err) {
-  console.error("Error pinging IndexNow:", err);
-  process.exit(1);
+  console.warn("[NON-BLOCKING WARNING] Error pinging IndexNow:", err.message);
 }
