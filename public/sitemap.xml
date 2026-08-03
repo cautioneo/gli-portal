@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cautioneo-gli.com/agences-immobilieres-gli</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cautioneo-gli.com/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cautioneo-gli.com/en/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cautioneo-gli.com/es/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://cautioneo-gli.com/pt/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://cautioneo-gli.com/it/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cautioneo-gli.com/de/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cautioneo-gli.com/ar/agences-immobilieres-gli"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://cautioneo-gli.com/nl/agences-immobilieres-gli"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cautioneo-gli.com/blog-acte-caution-solidaire-modele</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://cautioneo-gli.com/blog-acte-caution-solidaire-modele"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cautioneo-gli.com/en/blog-acte-caution-solidaire-modele"/>

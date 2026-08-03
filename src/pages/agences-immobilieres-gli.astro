@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Garantie Loyer Impayé pour Agences Immobilières & Administrateurs de Biens | Cautioneo GLI";
+const pageDescription = "Boostez vos mandats de gestion locative avec Cautioneo GLI. Solution 100% digitale sans franchise, indemnisation à 100% et intégration logiciel métier pour agences.";
+const pageCanonical = "https://cautioneo-gli.com/agences-immobilieres-gli";
+const pageKeywords = "agences immobilieres gli, assurance loyer impaye agence, administrateur de biens gli, gestion locative cautioneo";
+
+const faqItems = [
+  {
+    question: "Comment Cautioneo s'intègre-t-il avec les logiciels agences ?",
+    answer: "Cautioneo propose une API ouverte et des connecteurs natifs avec les principaux logiciels de gestion locative (Septeo, Kizeo, Crypto, Tailor, etc.) pour certifier vos dossiers en quelques clics."
+  },
+  {
+    question: "Quel est le coût de la GLI pour les agences partenaires ?",
+    answer: "Nos tarifs négociés pour les agences démarrent à des conditions préférentielles, déductibles des revenus fonciers des bailleurs sans aucun surcoût de gestion pour votre agence."
+  },
+  {
+    question: "Quel est le délai de prise en charge d'un sinistre impayé ?",
+    answer: "Cautioneo indemnise dès le 1er euro sans franchise ni délai de carence. Les déclarations de sinistre s'effectuent en ligne en moins de 5 minutes."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} keywords={pageKeywords} faqItems={faqItems}>
+  <main>
+    <!-- Hero Section B2B Agences -->
+    <header class="page-hero" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: white; padding: 80px 0 60px 0; text-align: center;">
+      <div class="container">
+        <div class="tagline" style="background: rgba(74,58,255,0.2); color: #818CF8; display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin-bottom: 20px;">
+          🏢 Solution Partenaires Agences & ADB
+        </div>
+        <h1 style="font-size: 2.8rem; font-weight: 800; max-width: 900px; margin: 0 auto 20px auto; line-height: 1.2;">
+          Développez votre portefeuille de gestion avec la GLI N°1 des Agences Immobilières
+        </h1>
+        <p style="font-size: 1.2rem; color: #94A3B8; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6;">
+          Sécurisez vos mandats, accélérez la mise en location de vos biens et offrez à vos bailleurs une garantie zéro franchise avec indemnisation dès le 1er euro.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://pro.cautioneo.com/pbi/start/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826" target="_blank" rel="noopener" class="btn btn-primary btn-large" style="background: #4F46E5; color: white; padding: 16px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            Devenir Agence Partenaire <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#avantages-agences" class="btn btn-outline btn-large" style="border: 2px solid #475569; color: white; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none;">
+            Découvrir les avantages agence
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section Avantages Agences -->
+    <section id="avantages-agences" style="padding: 80px 0; background: #F8FAFC;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Pourquoi plus de 1 500 agences font confiance à Cautioneo</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+          <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+            <div style="width: 56px; height: 56px; background: rgba(74,58,255,0.1); color: #4F46E5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px;">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Agrément Dossier Instantané</h3>
+            <p style="color: #64748B; line-height: 1.6;">Certification automatique des pièces justificatives locataires via Open Banking en 48h (7h avec l'Option Express).</p>
+          </div>
+
+          <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+            <div style="width: 56px; height: 56px; background: rgba(16,185,129,0.1); color: #10B981; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px;">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Couverture Zéro Franchise</h3>
+            <p style="color: #64748B; line-height: 1.6;">Prise en charge à 100% des loyers impayés, frais de procédure et dégradations immobilières jusqu'à 96 000€ par sinistre.</p>
+          </div>
+
+          <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+            <div style="width: 56px; height: 56px; background: rgba(245,158,11,0.1); color: #F59E0B; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px;">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Intégration Logiciel Métier</h3>
+            <p style="color: #64748B; line-height: 1.6;">Connecteurs natifs pour votre logiciel d'agence afin de souscrire les contrats en un clic sans re-saisie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section CTA de Contact Agence -->
+    <section style="padding: 60px 0; background: #4F46E5; color: white; text-align: center;">
+      <div class="container">
+        <h2 style="font-size: 2rem; margin-bottom: 16px; color: white;">Prêt à équiper votre agence de la meilleure GLI du marché ?</h2>
+        <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px auto;">Rejoignez notre réseau d'agences partenaires et bénéficiez d'un accompagnement personnalisé.</p>
+        <a href="https://pro.cautioneo.com/pbi/start/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826" target="_blank" rel="noopener" class="btn" style="background: white; color: #4F46E5; padding: 16px 36px; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block;">
+          Ouvrir un compte agence gratuit
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
