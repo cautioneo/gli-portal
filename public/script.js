@@ -71,22 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 5. Exit-Intent Popup Logic
     const exitModalHtml = `
-    <div class="exit-modal-overlay" id="exit-modal">
-        <div class="exit-modal">
-            <button class="exit-modal-close" aria-label="Fermer">&times;</button>
-            <div class="exit-modal-icon"><i class="fas fa-hand-holding-heart"></i></div>
-            <h2>Déjà prêt à partir ?</h2>
-            <p>Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en 48h (7h avec l'Option Express) et rassurez immédiatement les bailleurs.</p>
-            <div class="exit-modal-stats">
-                <div class="exit-stat"><strong>48h</strong><span>Réponse (7h Express)</span></div>
-                <div class="exit-stat"><strong>98%</strong><span>Bailleurs rassurés</span></div>
-                <div class="exit-stat"><strong>4.6/5</strong><span>Avis Vérifiés</span></div>
+            <div id="exitModalOverlay" class="exit-modal-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 999999; padding: 16px;">
+                <div class="exit-modal-card" style="background: #ffffff; border-radius: 16px; padding: 28px 24px; max-width: 480px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); position: relative; text-align: center;">
+                    <button id="closeExitModal" style="position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 20px; color: #64748B; cursor: pointer; padding: 4px 8px;">✕</button>
+                    <div style="font-size: 2rem; margin-bottom: 8px;">👋</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin: 0 0 8px 0;">Déjà prêt à partir ?</h3>
+                    <p style="font-size: 0.9rem; color: #475569; margin: 0 0 20px 0; line-height: 1.5;">Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en <strong>48h (7h avec l'Option Express)</strong> et rassurez immédiatement les bailleurs.</p>
+                    <div style="display: flex; gap: 12px; justify-content: space-around; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; margin-bottom: 20px;">
+                        <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">48h</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Réponse (7h Express)</span></div>
+                        <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">98%</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Bailleurs rassurés</span></div>
+                        <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">4.6/5</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Avis Vérifiés</span></div>
+                    </div>
+                    <a href="https://www.cautioneo.com/r/?referral_id=1b7fa16f-a353-4ff5-b28a-7b6886318826&kind=lessor&returnUrl=https%3A%2F%2Fpro.cautioneo.com%2Fpbi%2Fstart%2F" target="_blank" rel="noopener" style="display: block; width: 100%; background: #4F46E5; color: #ffffff; font-weight: 600; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-size: 0.95rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);">Tester mon éligibilité gratuitement</a>
+                    <button id="dismissExitModal" style="background: none; border: none; color: #94A3B8; font-size: 0.8rem; margin-top: 12px; cursor: pointer; text-decoration: underline;">Continuer ma lecture</button>
+                </div>
             </div>
-            <a href="https://caut.io/NulUSf7" target="_blank" class="btn btn-primary btn-large" style="display: block; text-decoration: none; margin-bottom: 15px; text-align: center;" rel="noopener">Tester mon éligibilité gratuitement</a>
-            <button class="exit-modal-cancel">Continuer ma lecture</button>
-        </div>
-    </div>
-    `;
+            `;
 
     // Inject exit intent modal into body if it doesn't exist
     if (!document.getElementById('exit-modal')) {
