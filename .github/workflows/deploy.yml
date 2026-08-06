@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -27,12 +29,23 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Deploy to gh-pages
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: cautioneo-gli.com
+          force_orphan: true
+        continue-on-error: true
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages Actions
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
 
       - name: Ping IndexNow
         run: node scripts/ping-indexnow.js "cautioneo-gli.com" "0a9cc6ed73475430ea32c09c7171765f" "https://cautioneo-gli.com/0a9cc6ed73475430ea32c09c7171765f.txt"
