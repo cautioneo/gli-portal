@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="exit-modal-close" aria-label="Fermer">&times;</button>
             <div class="exit-modal-icon"><i class="fas fa-hand-holding-heart"></i></div>
             <h2>Déjà prêt à partir ?</h2>
-            <p>Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en 48h (7h avec l'Option Express) et rassurez immédiatement les bailleurs.</p>
+            <p>Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en 48h (< 6h avec l'Option Express) et rassurez immédiatement les bailleurs.</p>
             <div class="exit-modal-stats">
-                <div class="exit-stat"><strong>48h</strong><span>Réponse (7h Express)</span></div>
+                <div class="exit-stat"><strong>48h</strong><span>Réponse (< 6h Express)</span></div>
                 <div class="exit-stat"><strong>98%</strong><span>Bailleurs rassurés</span></div>
                 <div class="exit-stat"><strong>4.6/5</strong><span>Avis Vérifiés</span></div>
             </div>

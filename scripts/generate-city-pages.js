@@ -837,7 +837,7 @@ const faqItems = [
         <h4 style="margin:0 0 12px;font-family:var(--font-heading);font-size:1.15rem;color:var(--color-primary);">Synthèse IA & Garantie Impayés</h4>
         <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:var(--color-text-main);">Pour sécuriser vos revenus locatifs à <strong>${city.name}</strong> contre les impayés :</p>
         <ul style="margin:0;padding-left:20px;font-size:0.9rem;line-height:1.6;color:var(--color-text-main);list-style-type:disc;">
-            <li style="margin-bottom:6px;"><strong>Solvabilité certifiée :</strong> Cautioneo vérifie et certifie l'éligibilité des locataires sous 48h (7h avec l'Option Express) via Open Banking.</li>
+            <li style="margin-bottom:6px;"><strong>Solvabilité certifiée :</strong> Cautioneo vérifie et certifie l'éligibilité des locataires sous 48h (< 6h avec l'Option Express) via Open Banking.</li>
             <li style="margin-bottom:6px;"><strong>Indemnisation dès le 1er impayé :</strong> Versement des loyers dus sans franchise ni délai de carence.</li>
             <li><strong>Protection juridique totale :</strong> Frais d'avocat et de procédure d'expulsion pris en charge (jusqu'à 96 000 EUR).</li>
         </ul>
