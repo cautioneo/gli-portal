@@ -346,11 +346,11 @@ const pageKeywords = "checklist bailleur, checklist location, mise en location e
       document.getElementById('progress-percentage').innerText = percentage + '%';
 
       let statusMsg = 'Préparez vos diagnostics pour commencer.';
-      if (percentage > 0 && percentage < 40) {
+      if (percentage > 0 && percentage &lt; 40) {
         statusMsg = 'Bon début ! La diffusion de l\'annonce est proche.';
-      } else if (percentage >= 40 && percentage < 80) {
+      } else if (percentage >= 40 && percentage &lt; 80) {
         statusMsg = 'Sélectionnez rigoureusement le locataire idéal.';
-      } else if (percentage >= 80 && percentage < 100) {
+      } else if (percentage >= 80 && percentage &lt; 100) {
         statusMsg = 'Presque fini ! Rédigez le bail et planifiez l\'état des lieux.';
       } else if (percentage === 100) {
         statusMsg = 'Félicitations ! Votre logement est mis en location en toute sécurité. 🎉';

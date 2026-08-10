@@ -1093,7 +1093,7 @@ const hreflangNl = `${siteUrl}/nl${baseCleanPath}`;
         if (!articleBody) return;
         
         const headings = Array.from(articleBody.querySelectorAll('h2'));
-        if (headings.length < 2) return;
+        if (headings.length &lt; 2) return;
         
         const tocContainer = document.createElement('div');
         tocContainer.className = 'toc-container';
