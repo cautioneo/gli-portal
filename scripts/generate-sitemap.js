@@ -6,7 +6,7 @@ const distDir = path.resolve('./dist');
 const publicDir = path.resolve('./public');
 const today = new Date().toISOString().split('T')[0];
 
-console.log('=== STARTING AUTOMATED SITEMAP GENERATION (B2B) ===');
+console.log('=== STARTING AUTOMATED SITEMAP GENERATION ===');
 
 if (!fs.existsSync(distDir)) {
   console.error(`[ERROR] dist/ directory not found at ${distDir}. Run build first!`);
@@ -32,34 +32,25 @@ console.log(`Found ${htmlFiles.length} root HTML files in dist/`);
 const urls = [];
 let count = 0;
 
-// Exclude non-user facing pages, templates, and search verification files in B2B
-const excludePages = [
-  '404.html',
-  'blog-post.html',
-  'BingSiteAuth.xml'
-];
-
 const languages = ['fr', 'en', 'es', 'pt', 'it', 'de', 'ar', 'nl'];
 
 for (const file of htmlFiles) {
   const relPath = path.relative(distDir, file).replace(/\\/g, '/');
   const basename = path.basename(file);
   
-  if (excludePages.includes(basename) || /^google[a-f0-9]{16}\.html$/i.test(basename) || basename.includes('demo')) {
+  if (basename === '404.html' || /^google[a-f0-9]{16}\html$/i.test(basename) || basename === 'BingSiteAuth.xml') {
     continue;
   }
 
-  // Extract true modification date from HTML JSON-LD schema
   const content = fs.readFileSync(file, 'utf-8');
   
-  // Skip if page has a noindex directive
   if (/meta\s+[^>]*content=["'][^"']*noindex[^"']*["']/i.test(content) || /meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["']/i.test(content)) {
     console.log(`[EXCLUDE] Skipping noindex page: ${relPath}`);
     continue;
   }
 
   let urlPath = '';
-  let priority = '0.7';
+  let priority = '0.8';
   let freq = 'monthly';
   
   if (relPath === 'index.html') {
@@ -72,18 +63,14 @@ for (const file of htmlFiles) {
     urlPath = relPath.substring(0, relPath.length - 5);
   }
   
-  // Custom priorities based on pages
-  if (urlPath === 'comparatif-gli' || urlPath === 'simulateur-eligibilite-gli' || urlPath === 'procedures') {
+  if (urlPath === 'simulateur-tarif' || urlPath === 'comparateur-garanties' || urlPath === 'comparateur-economies') {
     priority = '0.9';
     freq = 'weekly';
   } else if (urlPath.startsWith('guide-') || urlPath.startsWith('mega-')) {
-    priority = '0.8';
+    priority = '0.9';
     freq = 'monthly';
   } else if (urlPath.startsWith('blog-')) {
-    priority = '0.7';
-    freq = 'monthly';
-  } else if (urlPath === 'mentions-legales' || urlPath === 'confidentialite' || urlPath === 'cgs' || urlPath === 'reclamation') {
-    priority = '0.3';
+    priority = '0.8';
     freq = 'monthly';
   }
   
@@ -96,14 +83,14 @@ for (const file of htmlFiles) {
     lastmod = datePublishedMatch[1].split('T')[0];
   }
 
-  // Generate hreflang links for this route
   const cleanPath = urlPath ? `/${urlPath}` : '';
-  const hreflangLinks = languages.map(l => {
+  const hreflangList = languages.map(l => {
     const lPath = l === 'fr' ? cleanPath : `/${l}${cleanPath}`;
     return `    <xhtml:link rel="alternate" hreflang="${l}" href="${domain}${lPath}"/>`;
-  }).join('\n');
+  });
+  hreflangList.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${domain}${cleanPath}"/>`);
+  const hreflangLinks = hreflangList.join('\n');
 
-  // Push main / language URL entry
   const fullUrl = `${domain}${cleanPath}` || `${domain}/`;
   urls.push(`  <url>
     <loc>${fullUrl}</loc>
@@ -113,8 +100,6 @@ ${hreflangLinks}
     <priority>${priority}</priority>
   </url>`);
   count++;
-
-  // Lang-specific entries removed for clean French SEO sitemap
 }
 
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
@@ -122,7 +107,6 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.join('\n')}
 </urlset>`;
 
-// Write to both public/sitemap.xml and dist/sitemap.xml
 const publicSitemapPath = path.join(publicDir, 'sitemap.xml');
 const distSitemapPath = path.join(distDir, 'sitemap.xml');
 
