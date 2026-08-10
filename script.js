@@ -72,19 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
     // 5. Exit-Intent Popup Logic
     const exitModalHtml = `
-        <div id="exit-modal" class="exit-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); align-items: center; justify-content: center; z-index: 999999; padding: 16px;">
-            <div class="exit-modal-card" style="background: #ffffff; border-radius: 16px; padding: 28px 24px; max-width: 480px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); position: relative; text-align: center;">
-                <button id="closeExitModal" class="exit-modal-close" style="position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 20px; color: #64748B; cursor: pointer; padding: 4px 8px;">✕</button>
-                <div style="font-size: 2rem; margin-bottom: 8px;">👋</div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #0F172A; margin: 0 0 8px 0;">Déjà prêt à partir ?</h3>
-                <p style="font-size: 0.9rem; color: #475569; margin: 0 0 20px 0; line-height: 1.5;">Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en <strong>48h (&lt; 6h avec l'Option Express)</strong> et rassurez immédiatement les bailleurs.</p>
-                <div style="display: flex; gap: 12px; justify-content: space-around; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; margin-bottom: 20px;">
-                    <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">48h</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Réponse (&lt; 6h Express)</span></div>
-                    <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">98%</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Bailleurs rassurés</span></div>
-                    <div style="text-align: center;"><strong style="display: block; font-size: 1.1rem; color: #4F46E5;">4.6/5</strong><span style="display: block; font-size: 0.75rem; color: #64748B; margin-top: 2px;">Avis Vérifiés</span></div>
+        <div id="exit-modal" class="exit-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px); align-items: center; justify-content: center; z-index: 999999; padding: 12px; box-sizing: border-box;">
+            <div class="exit-modal-card" style="background: #ffffff; border-radius: 16px; padding: 24px 20px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); position: relative; text-align: center; box-sizing: border-box; margin: auto;">
+                <button id="closeExitModal" class="exit-modal-close" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.05); border: none; font-size: 20px; color: #64748B; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;" aria-label="Fermer">✕</button>
+                <div style="font-size: 2rem; margin-bottom: 6px;">👋</div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin: 0 0 8px 0; line-height: 1.3;">Déjà prêt à partir ?</h3>
+                <p style="font-size: 0.88rem; color: #475569; margin: 0 0 16px 0; line-height: 1.5;">Ne laissez pas un dossier incomplet ruiner vos chances de louer. Obtenez votre accord de garant Cautioneo en <strong>48h (&lt; 6h avec l'Option Express)</strong> et rassurez immédiatement les bailleurs.</p>
+                <div style="display: flex; gap: 8px; justify-content: space-between; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 10px 8px; margin-bottom: 16px;">
+                    <div style="text-align: center; flex: 1;"><strong style="display: block; font-size: 1rem; color: #4F46E5;">48h</strong><span style="display: block; font-size: 0.72rem; color: #64748B; margin-top: 2px;">Réponse (&lt; 6h)</span></div>
+                    <div style="text-align: center; flex: 1;"><strong style="display: block; font-size: 1rem; color: #4F46E5;">98%</strong><span style="display: block; font-size: 0.72rem; color: #64748B; margin-top: 2px;">Bailleurs</span></div>
+                    <div style="text-align: center; flex: 1;"><strong style="display: block; font-size: 1rem; color: #4F46E5;">4.6/5</strong><span style="display: block; font-size: 0.72rem; color: #64748B; margin-top: 2px;">Avis</span></div>
                 </div>
-                <a href="https://caut.io/NulUSf7" target="_blank" rel="noopener" class="btn-primary" style="display: block; width: 100%; background: #4F46E5; color: #ffffff; font-weight: 600; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-size: 0.95rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);">Tester mon éligibilité gratuitement</a>
-                <button id="dismissExitModal" class="exit-modal-cancel" style="background: none; border: none; color: #94A3B8; font-size: 0.8rem; margin-top: 12px; cursor: pointer; text-decoration: underline;">Continuer ma lecture</button>
+                <a href="https://caut.io/NulUSf7" target="_blank" rel="noopener" class="btn-primary" style="display: block; width: 100%; background: #4F46E5; color: #ffffff; font-weight: 600; padding: 12px 16px; border-radius: 10px; text-decoration: none; font-size: 0.92rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3); box-sizing: border-box;">Tester mon éligibilité gratuitement</a>
+                <button id="dismissExitModal" class="exit-modal-cancel" style="background: none; border: none; color: #94A3B8; font-size: 0.8rem; margin-top: 12px; cursor: pointer; text-decoration: underline; padding: 6px;">Continuer ma lecture</button>
             </div>
         </div>
     `;
@@ -153,6 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st < lastScrollTop - 60 && st < 300) {
+                // Rapid scroll up near top of mobile screen
+                showModal();
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, { passive: true });
+        
         document.addEventListener('mouseleave', (e) => {
             if (e.clientY < 20) {
                 showModal();
