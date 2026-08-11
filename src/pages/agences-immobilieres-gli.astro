@@ -22,7 +22,11 @@ const faqItems = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} keywords={pageKeywords} faqItems={faqItems}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} keywords={pageKeywords} faqItems={faqItems}
+  breadcrumbs={[
+    { name: "Accueil", item: "https://cautioneo-gli.com" },
+    { name: "Agences Immobilieres Gli", item: "https://cautioneo-gli.com/agences-immobilieres-gli" }
+  ]}>
   <main>
     <!-- Hero Section B2B Agences -->
     <header class="page-hero" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: white; padding: 80px 0 60px 0; text-align: center;">
