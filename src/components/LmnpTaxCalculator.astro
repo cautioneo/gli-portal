@@ -1,0 +1,128 @@
+---
+// LmnpTaxCalculator.astro - Interactive LMNP Tax Simulator Component
+---
+
+<div class="lmnp-calculator-card" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08); margin: 32px 0;">
+  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+    <div style="background: #EEF2FF; color: #4F46E5; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">🧮</div>
+    <div>
+      <h3 style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #0F172A;">Simulateur Fiscal LMNP 2026 : Micro-BIC vs Régime Réel</h3>
+      <p style="margin: 4px 0 0 0; font-size: 0.875rem; color: #64748B;">Calculez en direct vos économies d'impôts et choisissez le régime le plus avantageux.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;" class="calc-inputs-grid">
+    <div>
+      <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 8px;">
+        Recettes Locatives Annuelles (€/an) :
+        <span id="lmnp-rent-val" style="color: #4F46E5; font-weight: 700; float: right;">12 000 €</span>
+      </label>
+      <input type="range" id="lmnp-rent" min="3000" max="40000" step="500" value="12000" style="width: 100%; accent-color: #4F46E5;" />
+    </div>
+
+    <div>
+      <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 8px;">
+        Charges & Amortissements Annuels (€/an) :
+        <span id="lmnp-exp-val" style="color: #4F46E5; font-weight: 700; float: right;">6 500 €</span>
+      </label>
+      <input type="range" id="lmnp-exp" min="1000" max="30000" step="500" value="6500" style="width: 100%; accent-color: #4F46E5;" />
+    </div>
+  </div>
+
+  <div style="margin-bottom: 24px;">
+    <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 8px;">Tranche Marginale d'Imposition (TMI) :</label>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <button type="button" class="tmi-btn active" data-tmi="0.11" style="padding: 8px 16px; border-radius: 8px; border: 1px solid #CBD5E1; background: #EEF2FF; color: #4F46E5; font-weight: 600; cursor: pointer;">11%</button>
+      <button type="button" class="tmi-btn" data-tmi="0.30" style="padding: 8px 16px; border-radius: 8px; border: 1px solid #CBD5E1; background: #F8FAFC; color: #475569; font-weight: 600; cursor: pointer;">30%</button>
+      <button type="button" class="tmi-btn" data-tmi="0.41" style="padding: 8px 16px; border-radius: 8px; border: 1px solid #CBD5E1; background: #F8FAFC; color: #475569; font-weight: 600; cursor: pointer;">41%</button>
+      <button type="button" class="tmi-btn" data-tmi="0.45" style="padding: 8px 16px; border-radius: 8px; border: 1px solid #CBD5E1; background: #F8FAFC; color: #475569; font-weight: 600; cursor: pointer;">45%</button>
+    </div>
+  </div>
+
+  <!-- Results comparison -->
+  <div style="background: #F8FAFC; border-radius: 12px; padding: 20px; border: 1px solid #E2E8F0;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="calc-results-grid">
+      <div style="background: #FFFFFF; border-radius: 8px; padding: 16px; border: 1px solid #E2E8F0;">
+        <span style="display: block; font-size: 0.8rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Régime Micro-BIC (Abattement 50%)</span>
+        <div id="micro-tax" style="font-size: 1.5rem; font-weight: 800; color: #DC2626; margin: 8px 0;">2 892 € /an</div>
+        <span style="font-size: 0.8rem; color: #64748B;">Impôt + Prélèvements sociaux (17.2%)</span>
+      </div>
+
+      <div style="background: #ECFDF5; border-radius: 8px; padding: 16px; border: 1px solid #A7F3D0;">
+        <span style="display: block; font-size: 0.8rem; font-weight: 700; color: #065F46; text-transform: uppercase;">Régime Réel (Déduction des Charges)</span>
+        <div id="reel-tax" style="font-size: 1.5rem; font-weight: 800; color: #059669; margin: 8px 0;">1 551 € /an</div>
+        <span style="font-size: 0.8rem; color: #065F46;">Impôt + Prélèvements sociaux (17.2%)</span>
+      </div>
+    </div>
+
+    <div id="lmnp-savings-box" style="margin-top: 16px; background: #10B981; color: #FFFFFF; border-radius: 8px; padding: 12px 16px; text-align: center; font-weight: 700;">
+      💡 Économie estimée avec le Régime Réel : <span id="lmnp-savings">1 341 €</span> / an !
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const rentInput = document.getElementById('lmnp-rent');
+    const expInput = document.getElementById('lmnp-exp');
+    const rentVal = document.getElementById('lmnp-rent-val');
+    const expVal = document.getElementById('lmnp-exp-val');
+    const microTaxEl = document.getElementById('micro-tax');
+    const reelTaxEl = document.getElementById('reel-tax');
+    const savingsEl = document.getElementById('lmnp-savings');
+    const tmiBtns = document.querySelectorAll('.tmi-btn');
+
+    let currentTmi = 0.11;
+
+    function formatEuro(num) {
+      return Math.round(num).toLocaleString('fr-FR') + ' €';
+    }
+
+    function calculateLmnp() {
+      const rent = parseFloat(rentInput.value);
+      const exp = parseFloat(expInput.value);
+
+      rentVal.textContent = formatEuro(rent);
+      expVal.textContent = formatEuro(exp);
+
+      // Micro-BIC: Taxable = 50% of rent
+      const microBase = rent * 0.5;
+      const microTax = microBase * (currentTmi + 0.172);
+
+      // Réel: Taxable = Rent - Expenses
+      const reelBase = Math.max(0, rent - exp);
+      const reelTax = reelBase * (currentTmi + 0.172);
+
+      const savings = microTax - reelTax;
+
+      microTaxEl.textContent = formatEuro(microTax) + ' /an';
+      reelTaxEl.textContent = formatEuro(reelTax) + ' /an';
+
+      if (savings > 0) {
+        savingsEl.textContent = formatEuro(savings);
+      } else {
+        savingsEl.textContent = '0 € (Le Micro-BIC est plus avantageux)';
+      }
+    }
+
+    rentInput?.addEventListener('input', calculateLmnp);
+    expInput?.addEventListener('input', calculateLmnp);
+
+    tmiBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        tmiBtns.forEach(b => {
+          b.classList.remove('active');
+          b.style.background = '#F8FAFC';
+          b.style.color = '#475569';
+        });
+        btn.classList.add('active');
+        btn.style.background = '#EEF2FF';
+        btn.style.color = '#4F46E5';
+        currentTmi = parseFloat(btn.getAttribute('data-tmi'));
+        calculateLmnp();
+      });
+    });
+
+    calculateLmnp();
+  });
+</script>

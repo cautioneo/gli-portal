@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LmnpTaxCalculator from '../components/LmnpTaxCalculator.astro';
 
 const pageTitle = "Fiscalité & Revenus Locatifs | Cautioneo Bailleurs";
 const pageDescription = "Optimisez vos revenus fonciers. Tout comprendre sur le LMNP, le micro-foncier et le régime réel avec Cautioneo.";
@@ -22,6 +23,8 @@ const pageKeywords = "revenus, fiscalite lmnp, lmnp regime reel, declaration rev
 <div class="container">
 <h1>Optimiser votre Fiscalité Immobilière</h1>
 <p>Pinel, <a href="/blog-lmnp-vs-location-nue" title="Lire notre article : Lmnp Vs Location Nue">LMNP</a>, <a href="/blog-deficit-foncier-travaux" title="Lire notre article : Deficit Foncier Travaux">Déficit Foncier</a> : nos guides pour déclarer vos loyers et maximiser votre rentabilité nette.</p>
+
+<LmnpTaxCalculator />
 </div>
 </header>
 <section class="section bg-subtle">
