@@ -40,15 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Simple Navbar background on scroll
+    // 3. Simple Navbar background on scroll (throttled to avoid layout recalculations)
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    if (navbar) {
+        let hasNavbarShadow = false;
+        window.addEventListener('scroll', () => {
+            const shouldShadow = window.scrollY > 50;
+            if (shouldShadow !== hasNavbarShadow) {
+                hasNavbarShadow = shouldShadow;
+                navbar.style.boxShadow = hasNavbarShadow ? '0 4px 20px rgba(0,0,0,0.05)' : 'none';
+            }
+        }, { passive: true });
+    }
 
     // 4. Mobile Menu Toggle (Robust class-based implementation)
     const navToggle = document.querySelector('.nav-toggle');
@@ -125,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const showModal = () => {
             if (hasBeenShownRecently()) return;
             exitModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            // document.body.style.overflow = 'hidden'; (disabled to prevent scroll freeze)
             trackCro('exit_intent_popup_impression');
         };
 
@@ -154,21 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', () => {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st < lastScrollTop - 60 && st < 300) {
-                // Rapid scroll up near top of mobile screen
-                showModal();
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
-        }, { passive: true });
-        
-        document.addEventListener('mouseleave', (e) => {
-            if (e.clientY < 20) {
-                showModal();
-            }
-        });
+        // Exit intent triggered ONLY on desktop with pointer leave at top of viewport
+        // Scroll-triggered popup is removed to prevent scrolling freezes and mobile locks
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mouseleave', (e) => {
+                if (e.clientY < 20) {
+                    showModal();
+                }
+            });
+        }
     }
 
 // 6. Interactive Rent Simulator (4-solution comparison on Homepage)

@@ -804,13 +804,18 @@ const hreflangNl = `${siteUrl}/nl${baseCleanPath}`;
       document.addEventListener('DOMContentLoaded', function() {
         var cta = document.querySelector('.sticky-cta');
         if (cta) {
+          var isCtaVisible = false;
           window.addEventListener('scroll', function() {
-            if (window.scrollY > 400) {
-              cta.classList.add('visible');
-              document.body.classList.add('has-sticky-cta');
-            } else {
-              cta.classList.remove('visible');
-              document.body.classList.remove('has-sticky-cta');
+            var shouldShow = window.scrollY > 400;
+            if (shouldShow !== isCtaVisible) {
+              isCtaVisible = shouldShow;
+              if (isCtaVisible) {
+                cta.classList.add('visible');
+                document.body.classList.add('has-sticky-cta');
+              } else {
+                cta.classList.remove('visible');
+                document.body.classList.remove('has-sticky-cta');
+              }
             }
           }, { passive: true });
         }
