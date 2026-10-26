@@ -340,15 +340,202 @@ const hreflangFr = canonicalUrl;
         margin: 0 auto;
         padding: 0 24px;
       }
-      .navbar {
-        background: white;
+            .navbar {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         position: sticky;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 999;
-        box-shadow: 0 4px 20px rgba(108,92,231,0.05);
-        height: 80px;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(108, 92, 231, 0.06);
+        border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+        height: 76px;
+        transition: all 0.3s ease;
+      }
+      .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 76px !important;
+        max-width: 1360px !important;
+        margin: 0 auto !important;
+        padding: 0 24px !important;
+        gap: 16px !important;
+        flex-wrap: nowrap !important;
+      }
+      .logo-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex: 0 0 auto !important;
+        text-decoration: none !important;
+        min-width: 0 !important;
+        margin-right: 12px !important;
+      }
+      .header-logo {
+        height: 30px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+      }
+      .logo-text {
+        font-size: 1.25rem !important;
+        font-weight: 800 !important;
+        color: var(--primary, #6c5ce7) !important;
+        letter-spacing: -0.5px !important;
+        font-family: var(--font-heading) !important;
+        white-space: nowrap !important;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .nav-links {
+        display: flex !important;
+        align-items: center !important;
+        gap: 18px !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex-shrink: 1 !important;
+      }
+      .nav-links li {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        list-style: none !important;
+      }
+      .nav-links a {
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        color: #2b254d !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+      }
+      .nav-links a:hover {
+        color: var(--primary, #6c5ce7) !important;
+      }
+      .nav-dropdown {
+        position: relative !important;
+        white-space: nowrap !important;
+      }
+      .nav-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex-shrink: 0 !important;
+        margin-left: 8px !important;
+      }
+      .nav-actions .btn {
+        padding: 9px 16px !important;
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+        border-radius: 99px !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+      }
+      .nav-btn-client {
+        margin-right: 0 !important;
+      }
+      .lang-btn {
+        padding: 7px 10px !important;
+        height: 36px !important;
+        font-size: 0.84rem !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+      }
+      .lang-current {
+        white-space: nowrap !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+      }
+
+      @media (max-width: 1120px) {
+        .navbar {
+          height: auto !important;
+        }
+        .nav-container {
+          display: grid !important;
+          grid-template-columns: 1fr auto !important;
+          grid-template-rows: 72px auto auto !important;
+          align-items: center !important;
+          height: auto !important;
+          padding: 0 16px !important;
+        }
+        .logo-wrapper {
+          grid-column: 1 !important;
+          grid-row: 1 !important;
+          margin-right: 0 !important;
+        }
+        .nav-toggle {
+          display: flex !important;
+          grid-column: 2 !important;
+          grid-row: 1 !important;
+          justify-self: end !important;
+          align-items: center !important;
+          justify-content: center !important;
+          width: 40px !important;
+          height: 40px !important;
+          padding: 8px !important;
+          font-size: 1.25rem !important;
+          background: transparent !important;
+          border: 1px solid rgba(108, 92, 231, 0.2) !important;
+          border-radius: 8px !important;
+          outline: none !important;
+          cursor: pointer !important;
+          color: #2b254d !important;
+        }
+        .nav-links {
+          display: none !important;
+          grid-column: 1 / span 2 !important;
+          grid-row: 2 !important;
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 12px !important;
+          padding: 16px 0 !important;
+          border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+          width: 100% !important;
+        }
+        .nav-dropdown-content {
+          position: static !important;
+          box-shadow: none !important;
+          border: none !important;
+          padding: 8px 16px !important;
+          background: #F8FAFC !important;
+          width: 100% !important;
+          border-radius: 8px !important;
+          margin-top: 8px !important;
+          display: block !important;
+        }
+        .nav-actions {
+          display: none !important;
+          grid-column: 1 / span 2 !important;
+          grid-row: 3 !important;
+          flex-direction: column !important;
+          gap: 12px !important;
+          padding: 12px 0 20px !important;
+          width: 100% !important;
+          margin-left: 0 !important;
+          border-top: none !important;
+        }
+        .nav-actions .btn {
+          width: 100% !important;
+          text-align: center !important;
+          justify-content: center !important;
+          margin: 0 !important;
+        }
+        .navbar.nav-open .nav-links,
+        .nav-links.open {
+          display: flex !important;
+        }
+        .navbar.nav-open .nav-actions {
+          display: flex !important;
+        }
       }
     
 /* AEO / GEO Direct Answer Card (2026 AI Search Optimization) */
@@ -1563,7 +1750,13 @@ const hreflangFr = canonicalUrl;
             if (opt.getAttribute('data-lang') === savedLang) {
               opts.forEach(o => o.classList.remove('active'));
               opt.classList.add('active');
-              if (currentSpan) currentSpan.textContent = opt.textContent;
+              if (currentSpan) {
+                if (selector.closest('.nav-actions') || selector.classList.contains('floating-lang-btn')) {
+                  currentSpan.textContent = (opt.getAttribute('data-lang') || 'fr').toUpperCase();
+                } else {
+                  currentSpan.textContent = opt.textContent;
+                }
+              }
             }
           });
 
