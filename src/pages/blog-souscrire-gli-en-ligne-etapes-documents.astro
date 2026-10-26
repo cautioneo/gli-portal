@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Souscrire une GLI en ligne : étapes, QR code fiscal et bail";
+const pageDescription = "Guide pas-à-pas pour souscrire votre GLI Cautioneo en ligne : dépôt du dossier, astuce si le QR code 2D-Doc de l'avis d'impôt est illisible et bail.";
+const pageCanonical = "blog-souscrire-gli-en-ligne-etapes-documents";
+const pageNoindex = false;
+const pageKeywords = "souscrire gli en ligne, souscription gli en ligne, qr code avis imposition illisible gli, activer contrat gli cautioneo";
+
+const breadcrumbs = [
+  { name: "Accueil", item: "https://cautioneo-gli.com/" },
+  { name: "Blog", item: "https://cautioneo-gli.com/blog" },
+  { name: pageTitle }
+];
+
+const faqItems = [
+  {
+    "question": "Combien de temps prend la souscription d'une GLI en ligne sur Cautioneo ?",
+    "answer": "La création de votre espace et le dépôt des pièces prennent moins de 5 minutes. Nos analystes certifient ensuite le dossier du candidat locataire en moins de 24h ouvrées, et votre contrat GLI est activé instantanément dès le téléversement du bail signé."
+  },
+  {
+    "question": "Que faire si la plateforme m'indique que le QR code (2D-Doc) de l'avis d'imposition est illisible ?",
+    "answer": "Ce message apparaît généralement lorsque le candidat vous a envoyé une photo prise au smartphone ou un scan compressé. Demandez-lui le fichier PDF original téléchargé sur impots.gouv.fr, ou transmettez le document à notre support par chat : nos analystes vérifieront manuellement le numéro fiscal et la référence de l'avis sur le portail officiel de la DGFiP."
+  },
+  {
+    "question": "Puis-je commencer ma souscription avant d'avoir signé le bail ?",
+    "answer": "Oui, et c'est même fortement recommandé ! Vous faites d'abord certifier le dossier du candidat pour obtenir votre agrément GLI, puis vous signez le bail en toute sécurité et le déposez dans un second temps pour activer la garantie."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} noindex={pageNoindex} keywords={pageKeywords} breadcrumbs={breadcrumbs} faqItems={faqItems}>
+  <header class="blog-header">
+    <div class="container">
+      <span class="blog-category" style="margin-bottom: 20px;">Tutoriel & Souscription</span>
+      <h1 style="max-width: 900px; margin: 0 auto 20px;">Souscrire une GLI en ligne : étapes, QR code fiscal et bail</h1>
+      <div class="article-meta">
+        <img alt="Expert Cautioneo – gestion locative" class="article-author-img" src="/images/photo-1573496359142-b8d87734a5a2.webp" loading="lazy" decoding="async" width="40" height="40">
+        <span>Par <strong>L'Équipe Cautioneo</strong></span>
+        <span>•</span>
+        <span>Publié le 26 Octobre 2026</span>
+        <span>•</span>
+        <span>Lecture : 6 min</span>
+      </div>
+    </div>
+  </header>
+  <div class="snippet-answer" style="background: linear-gradient(135deg, rgba(74,58,255,0.06) 0%, rgba(74,58,255,0.02) 100%); border-left: 4px solid var(--color-primary, #4F46E5); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px auto; max-width: 1152px;">
+    <p style="margin: 0; font-size: 1rem; line-height: 1.7;"><strong>En résumé (AI Overview 2026) :</strong> Guide pas-à-pas pour souscrire votre GLI Cautioneo en ligne : dépôt du dossier, astuce si le QR code 2D-Doc de l'avis d'impôt est illisible et bail. Cautioneo garantit la protection intégrale des loyers jusqu'à 96 000 € et certifie les dossiers locataires sans franchise.</p>
+  </div>
+
+  <article class="article-container">
+    <div class="article-content" style="max-width: 860px; margin: 0 auto; padding: 0 20px; font-size: 1.05rem; line-height: 1.8;">
+
+      <p>La digitalisation de l'assurance immobilière permet aujourd'hui de <strong>souscrire une Garantie Loyers Impayés (GLI) 100 % en ligne en quelques clics</strong>, sans envoyer de dossier papier par courrier. Néanmoins, certains propriétaires bailleurs rencontrent parfois un blocage technique lors du téléversement des pièces (notamment un QR code fiscal 2D-Doc flou ou un bail en attente de signature). Voici le guide pas-à-pas pour valider votre souscription Cautioneo du premier coup.</p>
+
+      <h2>1. Les 3 étapes du parcours de souscription GLI en ligne</h2>
+      <p>Sur Cautioneo, la mise en place de votre protection s'effectue en trois temps clairement balisés :</p>
+      <ol>
+        <li><strong>Étape 1 — Simulation &amp; Création du bien (2 min)</strong> : Vous renseignez l'adresse du logement, le montant du loyer hors charges et des charges locatives sur notre <a href="/simulateur-eligibilite-gli">simulateur GLI en ligne</a>.</li>
+        <li><strong>Étape 2 — Dépôt et Certification du dossier candidat (&lt; 24h)</strong> : Vous téléversez les justificatifs du candidat (ou l'invitez par lien sécurisé à les déposer lui-même). Vous recevez votre <em>Certificat d'Agrément GLI</em> officiel.</li>
+        <li><strong>Étape 3 — Dépôt du bail signé &amp; Activation du contrat</strong> : Une fois le bail signé et l'état des lieux réalisé, vous déposez le bail conforme et signez électroniquement votre contrat d'assurance GLI.</li>
+      </ol>
+
+      <h2>2. Dépannage express : comment résoudre les 3 blocages techniques les plus fréquents ?</h2>
+
+      <div class="table-responsive" style="overflow-x: auto; margin: 24px 0; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: #F8FAFC; border-bottom: 2px solid #E2E8F0;">
+              <th style="padding: 14px 18px;">Message / Blocage Rencontré</th>
+              <th style="padding: 14px 18px;">Cause Technique</th>
+              <th style="padding: 14px 18px;">Solution Immédiate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #F1F5F9;">
+              <td style="padding: 14px 18px; font-weight: 600;">« QR Code / 2D-Doc de l'avis d'impôt illisible »</td>
+              <td style="padding: 14px 18px;">Scan papier trop compressé, photo WhatsApp pixellisée ou pliure sur le carré 2D-Doc</td>
+              <td style="padding: 14px 18px; color: #10B981; font-weight: 700;">Demandez le PDF natif issu d'impots.gouv.fr ou sollicitez la validation manuelle par chat support</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #F1F5F9;">
+              <td style="padding: 14px 18px; font-weight: 600;">« Pièce justificative incomplète (contrat de travail) »</td>
+              <td style="padding: 14px 18px;">Seule la 1re page du CDI a été jointe (sans la page des signatures)</td>
+              <td style="padding: 14px 18px; color: #10B981; font-weight: 700;">Fusionnez ou ajoutez la dernière page signée + une fiche de paie de moins de 3 mois</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 18px; font-weight: 600;">« Bail non conforme aux conditions GLI »</td>
+              <td style="padding: 14px 18px;">Absence de clause résolutoire ou de clause de solidarité</td>
+              <td style="padding: 14px 18px; color: #10B981; font-weight: 700;">Utilisez notre modèle de bail Loi ALUR ou ajoutez un avenant (<a href="/blog-gli-bail-conforme-points-verifier">voir les clauses obligatoires</a>)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>3. Zoom sur le QR code 2D-Doc de l'avis d'imposition : pourquoi est-il vérifié ?</h2>
+      <p>Depuis la généralisation du cachet électronique visible (2D-Doc) par la Direction Générale des Finances Publiques (DGFiP), chaque avis d'imposition comporte un code matriciel contenant une signature cryptographique infalsifiable. Lors de la souscription :</p>
+      <ul>
+        <li><strong>Le lecteur automatique Cautioneo</strong> décode ce QR code en une seconde pour vérifier que le Revenu Fiscal de Référence n'a pas été modifié.</li>
+        <li><strong>Astuce si le scan automatique échoue</strong> : Ne restez jamais bloqué ! Tant que le <em>Numéro fiscal (13 chiffres)</em> et la <em>Référence de l'avis (13 caractères)</em> sont lisibles en haut à gauche de la première page, nos analystes vérifient directement l'authenticité du document sur le serveur officiel de l'administration fiscale.</li>
+      </ul>
+
+      <h2>4. Checklist interactive : Réussir votre souscription GLI en 5 minutes</h2>
+      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 28px 0;">
+        <h3 style="margin-top: 0; font-size: 1.15rem; color: #1E293B;">Les documents à préparer sur votre ordinateur avant de commencer</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 16px 0 0 0;">
+          <li style="margin-bottom: 12px;"><label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;"><input type="checkbox" style="margin-top: 5px;" /> <span><strong>Dossier du locataire en PDF natif</strong> : Pièce d'identité, contrat de travail signé, 3 derniers bulletins de paie et dernier avis d'imposition complet (<a href="/blog-gli-conditions-locataire">voir les conditions et pièces du locataire</a>).</span></label></li>
+          <li style="margin-bottom: 12px;"><label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;"><input type="checkbox" style="margin-top: 5px;" /> <span><strong>Bail de location signé (après obtention de l'agrément)</strong> : Vérifiez que le montant du loyer et les noms des signataires sont identiques à l'agrément.</span></label></li>
+          <li style="margin-bottom: 12px;"><label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;"><input type="checkbox" style="margin-top: 5px;" /> <span><strong>État des lieux d'entrée contradictoire</strong> : Indispensable pour activer la garantie contre les dégradations locatives jusqu'à 10 000 €.</span></label></li>
+          <li><label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;"><input type="checkbox" style="margin-top: 5px;" /> <span><strong>Votre RIB / IBAN Bailleur</strong> : Pour le prélèvement des cotisations et le versement direct des indemnités en cas d'impayé (<a href="/blog-gli-date-prelevement-echeance-contrat">tout savoir sur les dates de prélèvement et votre contrat</a>).</span></label></li>
+        </ul>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%); border-radius: 16px; padding: 28px; margin: 36px 0; text-align: center; border: 1px solid #C7D2FE;">
+        <h3 style="margin-top: 0; color: #3730A3; font-size: 1.3rem;">Protégez vos loyers dès aujourd'hui avec Cautioneo</h3>
+        <p style="color: #4338CA; margin-bottom: 20px;">Certification du dossier locataire en moins de 24h et couverture jusqu'à 96 000 € sans franchise.</p>
+        <a href="https://caut.io/NulUSf7" class="btn btn-primary" style="background: #4F46E5; color: white; padding: 12px 28px; border-radius: 99px; font-weight: 700; text-decoration: none; display: inline-block;" target="_blank" rel="noopener">Simuler mon tarif GLI Cautioneo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
+</Layout>
