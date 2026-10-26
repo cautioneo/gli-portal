@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# -------------------------------------------------------------
+# AI Engine Optimization (AIO & GEO 2026 - LLM Crawling Allowed)
+# -------------------------------------------------------------
+# llms-txt: https://cautioneo-gli.com/llms.txt
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://cautioneo-gli.com/sitemap.xml

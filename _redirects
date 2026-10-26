@@ -1,0 +1,5 @@
+# Netlify / Cloudflare / Vercel Smart Redirect Rules (301)
+/guides/*    /blog    301
+/proprietaire/* /blog 301
+/locataire/* /blog    301
+/*.html      /:splat  301
