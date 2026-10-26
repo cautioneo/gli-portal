@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404
-Disallow: /404.html
-Disallow: /dashboard-demo
-Disallow: /scanner-demo
 
 # -------------------------------------------------------------
 # AI Engine Optimization (AIO & GEO 2026 - LLM Crawling Allowed)

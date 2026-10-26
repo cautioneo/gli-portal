@@ -83,15 +83,12 @@ for (const file of htmlFiles) {
     lastmod = datePublishedMatch[1].split('T')[0];
   }
 
-  const cleanPath = urlPath ? `/${urlPath}` : '';
-  const hreflangList = languages.map(l => {
-    const lPath = l === 'fr' ? cleanPath : `/${l}${cleanPath}`;
-    return `    <xhtml:link rel="alternate" hreflang="${l}" href="${domain}${lPath}"/>`;
-  });
-  hreflangList.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${domain}${cleanPath}"/>`);
-  const hreflangLinks = hreflangList.join('\n');
-
-  const fullUrl = `${domain}${cleanPath}` || `${domain}/`;
+  const cleanPath = urlPath ? `/${urlPath}` : '/';
+  const fullUrl = `${domain}${cleanPath}`;
+  const hreflangLinks = [
+    `    <xhtml:link rel="alternate" hreflang="fr" href="${fullUrl}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${fullUrl}"/>`
+  ].join('\n');
   urls.push(`  <url>
     <loc>${fullUrl}</loc>
 ${hreflangLinks}

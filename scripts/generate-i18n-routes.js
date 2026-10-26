@@ -34,37 +34,32 @@ function getRootHtmlFiles(dir) {
  * corrupting JSON-LD structured data or inline JavaScript.
  */
 function rewriteAnchorLinks(html, lang) {
-  // Split the HTML into script and non-script segments
-  // We only rewrite links in non-script portions
   const parts = [];
   let lastIndex = 0;
   const scriptTagRegex = /<script[\s\S]*?<\/script>/gi;
   let match;
 
   while ((match = scriptTagRegex.exec(html)) !== null) {
-    // Push the non-script portion before this script block
     parts.push({ type: 'html', content: html.slice(lastIndex, match.index) });
-    // Push the script block verbatim (no rewriting)
     parts.push({ type: 'script', content: match[0] });
     lastIndex = match.index + match[0].length;
   }
-  // Push any remaining HTML after the last script block
   parts.push({ type: 'html', content: html.slice(lastIndex) });
 
-  // Only process 'html' parts for anchor link rewriting
   const anchorLinkRegex = /<a\s+([^>]*\s+)?href=["']\/([a-zA-Z0-9_-]+(?:\.html)?)["']([^>]*)>/gi;
 
   const rewritten = parts.map(part => {
     if (part.type === 'script') return part.content;
     return part.content.replace(anchorLinkRegex, (m, p1, p2, p3) => {
       const target = p2 || '';
-      // Skip asset files
       if (
         target.startsWith('script') ||
         target.startsWith('styles') ||
         target.startsWith('images') ||
+        target.startsWith('fonts') ||
         target.startsWith('favicon') ||
-        target === 'sitemap.xml'
+        target === 'sitemap.xml' ||
+        target === 'robots.txt'
       ) {
         return m;
       }
@@ -93,16 +88,20 @@ for (const lang of languages) {
     let content = fs.readFileSync(srcPath, 'utf-8');
 
     const cleanName = file === 'index.html' ? '' : file.replace(/\.html$/, '');
-    const canonicalLangUrl = cleanName ? `${domain}/${lang}/${cleanName}` : `${domain}/${lang}`;
+    const canonicalFrUrl = cleanName ? `${domain}/${cleanName}` : `${domain}/`;
 
     // 1. Update html lang & dir
     const isRtl = lang === 'ar';
     content = content.replace(/<html\s+lang=["']fr["']/i, `<html lang="${lang}"${isRtl ? ' dir="rtl"' : ''}`);
 
-    // 2. Update Canonical link
-    content = content.replace(/<link\s+rel=["']canonical["']\s+href=["'][^"']+["']\s*\/?>/i, `<link rel="canonical" href="${canonicalLangUrl}" />`);
+    // 2. Keep Canonical link pointing to primary French URL (since translation is client-side via googtrans)
+    content = content.replace(/<link\s+rel=["']canonical["']\s+href=["'][^"']+["']\s*\/?>/i, `<link rel="canonical" href="${canonicalFrUrl}" />`);
 
-    // 3. Inject instant language initialization script in head
+    // 3. Mark client-side googtrans language route as noindex, follow to prevent GSC duplicate canonical errors
+    content = content.replace(/<meta\s+content=["']index,\s*follow["']\s+name=["']robots["']\s*\/?>/i, '<meta content="noindex, follow" name="robots"/>');
+    content = content.replace(/<meta\s+name=["']robots["']\s+content=["']index,\s*follow["']\s*\/?>/i, '<meta name="robots" content="noindex, follow">');
+
+    // 4. Inject instant language initialization script in head
     const langInitScript = `
     <script>
       try {
@@ -114,7 +113,7 @@ for (const lang of languages) {
     `;
     content = content.replace('</head>', `${langInitScript}</head>`);
 
-    // 4. Safely rewrite <a href="/..."> links (skipping <script> blocks)
+    // 5. Safely rewrite <a href="/..."> links (skipping <script> blocks)
     content = rewriteAnchorLinks(content, lang);
 
     // Write to dist/{lang}/{file}
